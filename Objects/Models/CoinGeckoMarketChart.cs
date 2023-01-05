@@ -14,24 +14,24 @@ namespace CoinGecko.Net.Objects.Models
         /// <summary>
         /// Price history
         /// </summary>
-        public IEnumerable<CoinGeckoMarketChartPrice> Prices { get; set; } = Array.Empty<CoinGeckoMarketChartPrice>();
+        public IEnumerable<CoinGeckoMarketChartValue> Prices { get; set; } = Array.Empty<CoinGeckoMarketChartValue>();
         /// <summary>
         /// Market cap history
         /// </summary>
         [JsonProperty("market_caps")]
-        public IEnumerable<CoinGeckoMarketChartPrice> MarketCaps { get; set; } = Array.Empty<CoinGeckoMarketChartPrice>();
+        public IEnumerable<CoinGeckoMarketChartValue> MarketCaps { get; set; } = Array.Empty<CoinGeckoMarketChartValue>();
         /// <summary>
         /// Volume history
         /// </summary>
         [JsonProperty("total_volumes")]
-        public IEnumerable<CoinGeckoMarketChartPrice> TotalVolumes { get; set; } = Array.Empty<CoinGeckoMarketChartPrice>();
+        public IEnumerable<CoinGeckoMarketChartValue> TotalVolumes { get; set; } = Array.Empty<CoinGeckoMarketChartValue>();
     }
 
     /// <summary>
-    /// Price at time info
+    /// Value at time info
     /// </summary>
     [JsonConverter(typeof(ArrayConverter))]
-    public class CoinGeckoMarketChartPrice
+    public class CoinGeckoMarketChartValue
     {
         /// <summary>
         /// Timestamp

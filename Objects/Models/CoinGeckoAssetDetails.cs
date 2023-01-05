@@ -240,11 +240,11 @@ namespace CoinGecko.Net.Objects.Models
         /// <summary>
         /// Base asset
         /// </summary>
-        public string Base { get; set; }
+        public string Base { get; set; } = string.Empty;
         /// <summary>
         /// Quote asset
         /// </summary>
-        public string Targer { get; set; }
+        public string Target { get; set; } = string.Empty;
         /// <summary>
         /// Market info
         /// </summary>
@@ -271,7 +271,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Trust score
         /// </summary>
         [JsonProperty("trust_score")]
-        public string TrustScore { get; set; }
+        public int? TrustScore { get; set; }
         /// <summary>
         /// Difference in percentage between best bid and ask
         /// </summary>
@@ -425,7 +425,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Current price
         /// </summary>
         [JsonProperty("current_price")]
-        public Dictionary<string, decimal> CurrentPrice { get; set; }
+        public Dictionary<string, decimal> CurrentPrice { get; set; } = new Dictionary<string, decimal>();
         /// <summary>
         /// Total value locked
         /// </summary>
@@ -449,37 +449,37 @@ namespace CoinGecko.Net.Objects.Models
         /// All time high prices
         /// </summary>
         [JsonProperty("ath")]
-        public Dictionary<string, decimal> AllTimeHighs { get; set; }
+        public Dictionary<string, decimal> AllTimeHighs { get; set; } = new Dictionary<string, decimal>();
         /// <summary>
         /// Current price change vs all time high
         /// </summary>
         [JsonProperty("ath_change_percentage")]
-        public Dictionary<string, decimal> AllTimeHighChangePercentages { get; set; }
+        public Dictionary<string, decimal> AllTimeHighChangePercentages { get; set; } = new Dictionary<string, decimal>();
         /// <summary>
         /// All time high dates
         /// </summary>
         [JsonProperty("ath_date")]
-        public Dictionary<string, DateTime> AllTimeHighDates { get; set; }
+        public Dictionary<string, DateTime> AllTimeHighDates { get; set; } = new Dictionary<string, DateTime>();
         /// <summary>
         /// All time low prices
         /// </summary>
         [JsonProperty("atl")]
-        public Dictionary<string, decimal> AllTimeLows { get; set; }
+        public Dictionary<string, decimal> AllTimeLows { get; set; } = new Dictionary<string, decimal>();
         /// <summary>
         /// Current price change vs all time low
         /// </summary>
         [JsonProperty("atl_change_percentage")]
-        public Dictionary<string, decimal> AllTimeLowChangePercentages { get; set; }
+        public Dictionary<string, decimal> AllTimeLowChangePercentages { get; set; } = new Dictionary<string, decimal>();
         /// <summary>
         /// All time low dates
         /// </summary>
         [JsonProperty("atl_date")]
-        public Dictionary<string, DateTime> AllTimeLowDates { get; set; }
+        public Dictionary<string, DateTime> AllTimeLowDates { get; set; } = new Dictionary<string, DateTime>();
         /// <summary>
         /// Market caps
         /// </summary>
         [JsonProperty("market_cap")]
-        public Dictionary<string, decimal> MarketCaps { get; set; }
+        public Dictionary<string, decimal> MarketCaps { get; set; } = new Dictionary<string, decimal>();
         /// <summary>
         /// Market cap rank
         /// </summary>
@@ -489,22 +489,22 @@ namespace CoinGecko.Net.Objects.Models
         /// Fully diluted valuation
         /// </summary>
         [JsonProperty("fully_diluted_valuation")]
-        public Dictionary<string, decimal> FullyDilutedValuations { get; set; }
+        public Dictionary<string, decimal> FullyDilutedValuations { get; set; } = new Dictionary<string, decimal>();
         /// <summary>
         /// Total volumes
         /// </summary>
         [JsonProperty("total_volume")]
-        public Dictionary<string, decimal> TotalVolumes { get; set; }
+        public Dictionary<string, decimal> TotalVolumes { get; set; } = new Dictionary<string, decimal>();
         /// <summary>
         /// 24h high prices
         /// </summary>
         [JsonProperty("high_24h")]
-        public Dictionary<string, decimal?> High24h { get; set; }
+        public Dictionary<string, decimal?> High24h { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// 24h low prices
         /// </summary>
         [JsonProperty("low_24h")]
-        public Dictionary<string, decimal?> Low24h { get; set; }
+        public Dictionary<string, decimal?> Low24h { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// 24h price change
         /// </summary>
@@ -559,57 +559,57 @@ namespace CoinGecko.Net.Objects.Models
         /// 24h price changes
         /// </summary>
         [JsonProperty("price_change_24h_in_currency")]
-        public Dictionary<string, decimal?> PriceChanges24h { get; set; }
+        public Dictionary<string, decimal?> PriceChanges24h { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// 1h price changes percentages
         /// </summary>
         [JsonProperty("price_change_percentage_1h_in_currency")]
-        public Dictionary<string, decimal> PriceChangePerecentages1h { get; set; }
+        public Dictionary<string, decimal?> PriceChangePerecentages1h { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// 24h price changes percentages
         /// </summary>
         [JsonProperty("price_change_percentage_24h_in_currency")]
-        public Dictionary<string, decimal?> PriceChangePerecentages24h { get; set; }
+        public Dictionary<string, decimal?> PriceChangePerecentages24h { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// 7d price change percentages
         /// </summary>
         [JsonProperty("price_change_percentage_7d_in_currency")]
-        public Dictionary<string, decimal?> PriceChangePerecentages7d { get; set; }
+        public Dictionary<string, decimal?> PriceChangePerecentages7d { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// 14d price change percentages
         /// </summary>
         [JsonProperty("price_change_percentage_14d_in_currency")]
-        public Dictionary<string, decimal?> PriceChangePerecentages14d { get; set; }
+        public Dictionary<string, decimal?> PriceChangePerecentages14d { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// 30d price change percentages
         /// </summary>
         [JsonProperty("price_change_percentage_30d_in_currency")]
-        public Dictionary<string, decimal?> PriceChangePerecentages30d { get; set; }
+        public Dictionary<string, decimal?> PriceChangePerecentages30d { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// 60d price change percentages
         /// </summary>
         [JsonProperty("price_change_percentage_60d_in_currency")]
-        public Dictionary<string, decimal?> PriceChangePerecentages60d { get; set; }
+        public Dictionary<string, decimal?> PriceChangePerecentages60d { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// 200d price change percentages
         /// </summary>
         [JsonProperty("price_change_percentage_200d_in_currency")]
-        public Dictionary<string, decimal?> PriceChangePerecentages200d { get; set; }
+        public Dictionary<string, decimal?> PriceChangePerecentages200d { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// 1y price change percentages
         /// </summary>
         [JsonProperty("price_change_percentage_1y_in_currency")]
-        public Dictionary<string, decimal?> PriceChangePerecentages1y { get; set; }
+        public Dictionary<string, decimal?> PriceChangePerecentages1y { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// 24h market cap changes
         /// </summary>
         [JsonProperty("market_cap_change_24h_in_currency")]
-        public Dictionary<string, decimal?> MarketCapChanges24h { get; set; }
+        public Dictionary<string, decimal?> MarketCapChanges24h { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// 24h market cap change percentages
         /// </summary>
         [JsonProperty("market_cap_change_percentage_24h_in_currency")]
-        public Dictionary<string, decimal?> MarketCapChangePercentages24h { get; set; }
+        public Dictionary<string, decimal?> MarketCapChangePercentages24h { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// Total supply
         /// </summary>
