@@ -4,6 +4,9 @@
         <name>CoinGecko.Net</name>
     </assembly>
     <members>
+        <member name="T:CoinGecko.Net.Clients.CoinGeckoClient">
+            <inheritdoc />
+        </member>
         <member name="P:CoinGecko.Net.Clients.CoinGeckoClient.Api">
             <inheritdoc />
         </member>
@@ -147,6 +150,16 @@
         </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetServerTimestampAsync">
             <inheritdoc />
+        </member>
+        <member name="T:CoinGecko.Net.Interfaces.ICoinGeckoClient">
+            <summary>
+            Client for accessing the CoinGecko Rest API. 
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Interfaces.ICoinGeckoClient.Api">
+            <summary>
+            Api endpoints
+            </summary>
         </member>
         <member name="T:CoinGecko.Net.Interfaces.ICoinGeckoClientApi">
             <summary>
@@ -1902,6 +1915,11 @@
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoMarketChartValue.Value">
             <summary>
             Value
+            </summary>
+        </member>
+        <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoMarketData">
+            <summary>
+            Market data
             </summary>
         </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoMarketData.CurrentPrice">

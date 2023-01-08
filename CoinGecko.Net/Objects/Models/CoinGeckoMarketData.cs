@@ -6,6 +6,9 @@ using System.Text;
 
 namespace CoinGecko.Net.Objects.Models
 {
+    /// <summary>
+    /// Market data
+    /// </summary>
     public class CoinGeckoMarketData
     {
         /// <summary>
