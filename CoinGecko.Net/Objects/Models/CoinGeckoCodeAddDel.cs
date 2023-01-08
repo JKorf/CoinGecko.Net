@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CoinGecko.Net.Objects.Models
+{
+    /// <summary>
+    /// Code additions/deletions
+    /// </summary>
+    public class CoinGeckoCodeAddDel
+    {
+        /// <summary>
+        /// Lines added
+        /// </summary>
+        public int? Additions { get; set; }
+        /// <summary>
+        /// Lines deleted
+        /// </summary>
+        public int? Deletions { get; set; }
+    }
+}

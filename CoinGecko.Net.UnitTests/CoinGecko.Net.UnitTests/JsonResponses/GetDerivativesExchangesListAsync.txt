@@ -1,0 +1,290 @@
+[
+  {
+    "id": "binance_futures",
+    "name": "Binance (Futures)"
+  },
+  {
+    "id": "btcex_futures",
+    "name": "BTCEX (Futures)"
+  },
+  {
+    "id": "btcc_futures",
+    "name": "BTCC Futures"
+  },
+  {
+    "id": "bingx_futures",
+    "name": "BingX (Futures)"
+  },
+  {
+    "id": "deepcoin_derivatives",
+    "name": "Deepcoin (Derivatives)"
+  },
+  {
+    "id": "bitget_futures",
+    "name": "Bitget Futures"
+  },
+  {
+    "id": "bybit",
+    "name": "Bybit (Futures)"
+  },
+  {
+    "id": "mxc_futures",
+    "name": "MEXC Global (Futures)"
+  },
+  {
+    "id": "okex_swap",
+    "name": "OKX (Futures)"
+  },
+  {
+    "id": "ftx",
+    "name": "FTX (Derivatives)"
+  },
+  {
+    "id": "bitmart_futures",
+    "name": "Bitmart Futures"
+  },
+  {
+    "id": "btse_futures",
+    "name": "BTSE (Futures)"
+  },
+  {
+    "id": "prime_xbt",
+    "name": "Prime XBT"
+  },
+  {
+    "id": "kumex",
+    "name": "KuCoin Futures"
+  },
+  {
+    "id": "gate_futures",
+    "name": "Gate.io (Futures)"
+  },
+  {
+    "id": "bitmex",
+    "name": "BitMEX (Derivative)"
+  },
+  {
+    "id": "deribit",
+    "name": "Deribit"
+  },
+  {
+    "id": "bitrue_futures",
+    "name": "Bitrue (Futures)"
+  },
+  {
+    "id": "phemex_futures",
+    "name": "Phemex (Futures)"
+  },
+  {
+    "id": "dydx_perpetual",
+    "name": "dYdX Perpetual"
+  },
+  {
+    "id": "bitforex_futures",
+    "name": "Bitforex (Futures)"
+  },
+  {
+    "id": "huobi_dm",
+    "name": "Huobi Futures"
+  },
+  {
+    "id": "bitfinex_futures",
+    "name": "Bitfinex (Futures)"
+  },
+  {
+    "id": "crypto_com_futures",
+    "name": "Crypto.com Exchange (Futures)"
+  },
+  {
+    "id": "hopex",
+    "name": "Hopex"
+  },
+  {
+    "id": "kraken_futures",
+    "name": "Kraken (Futures)"
+  },
+  {
+    "id": "coinex_futures",
+    "name": "CoinEx (Futures)"
+  },
+  {
+    "id": "delta_futures",
+    "name": "Delta Exchange (Futures)"
+  },
+  {
+    "id": "woo_network_futures",
+    "name": "WOO Network (Futures)"
+  },
+  {
+    "id": "perpetual_protocol",
+    "name": "Perpetual Protocol"
+  },
+  {
+    "id": "poloniex_futures",
+    "name": "Poloniex Futures"
+  },
+  {
+    "id": "hitbtc_derivatives",
+    "name": "HitBTC (Derivatives)"
+  },
+  {
+    "id": "bigone_futures",
+    "name": "BigONE Futures"
+  },
+  {
+    "id": "bit_com_futures",
+    "name": "BIT (Futures)"
+  },
+  {
+    "id": "bitmax_futures",
+    "name": "AscendEX  (BitMax) (Futures)"
+  },
+  {
+    "id": "zb_derivatives",
+    "name": "ZB (Derivatives)"
+  },
+  {
+    "id": "powertrade_derivatives",
+    "name": "Powertrade (Derivatives)"
+  },
+  {
+    "id": "synfutures",
+    "name": "SynFutures"
+  },
+  {
+    "id": "coinflex_futures",
+    "name": "CoinFLEX (Futures)"
+  },
+  {
+    "id": "mango_markets_derivatives",
+    "name": "Mango Markets (Derivatives)"
+  },
+  {
+    "id": "globe_exchange_derivatives",
+    "name": "Globe (Derivatives)"
+  },
+  {
+    "id": "bitflyer_futures",
+    "name": "Bitflyer (Futures)"
+  },
+  {
+    "id": "gmo_japan_futures",
+    "name": "GMO Japan (Futures)"
+  },
+  {
+    "id": "cme_futures",
+    "name": "CME Group"
+  },
+  {
+    "id": "jex_futures",
+    "name": "Binance JEX (Futures)"
+  },
+  {
+    "id": "bitz_futures",
+    "name": "BitZ (Futures)"
+  },
+  {
+    "id": "bibox_futures",
+    "name": "Bibox (Futures)"
+  },
+  {
+    "id": "bakkt",
+    "name": "Bakkt"
+  },
+  {
+    "id": "basefex",
+    "name": "BaseFEX"
+  },
+  {
+    "id": "fmex",
+    "name": "FMex"
+  },
+  {
+    "id": "hbtc_futures",
+    "name": "BHEX (Futures)"
+  },
+  {
+    "id": "dydx_perpetual_l1",
+    "name": "dYdX Perpetual (L1)"
+  },
+  {
+    "id": "cointiger_futures",
+    "name": "CoinTiger (Futures)"
+  },
+  {
+    "id": "btcmex",
+    "name": "BTCMEX"
+  },
+  {
+    "id": "liquid_derivatives",
+    "name": "Liquid Perpetuals"
+  },
+  {
+    "id": "biki_futures",
+    "name": "Biki (Futures)"
+  },
+  {
+    "id": "bithumb_futures",
+    "name": "Bithumb (Futures)"
+  },
+  {
+    "id": "zbg_futures",
+    "name": "ZBG Futures"
+  },
+  {
+    "id": "duedex",
+    "name": "DueDEX"
+  },
+  {
+    "id": "mcdex",
+    "name": "MCDEX (Arbitrum)"
+  },
+  {
+    "id": "mycoinstory",
+    "name": "MCS"
+  },
+  {
+    "id": "aax_futures",
+    "name": "AAX Futures"
+  },
+  {
+    "id": "acdx_futures",
+    "name": "ACDX Futures"
+  },
+  {
+    "id": "stormgain_futures",
+    "name": "Stormgain Futures"
+  },
+  {
+    "id": "c_trade",
+    "name": "C-Trade"
+  },
+  {
+    "id": "futureswap",
+    "name": "Futureswap"
+  },
+  {
+    "id": "alpha_five",
+    "name": "Alpha5"
+  },
+  {
+    "id": "leverj",
+    "name": "Leverj"
+  },
+  {
+    "id": "equos_perpetual",
+    "name": "EQONEX (Perpetual)"
+  },
+  {
+    "id": "mcdex_bsc",
+    "name": "MCDEX (BSC)"
+  },
+  {
+    "id": "injective_futures",
+    "name": "Helix (Futures)"
+  },
+  {
+    "id": "drift_protocol",
+    "name": "Drift Protocol"
+  }
+]
