@@ -25,4 +25,7 @@ A Discord server is available [here](https://discord.gg/MSpeEtSY8t). For discuss
 
 ## Release notes
 * Version 1.0.0 - 08 Jan 2023
+    * Initial release
+
+* Version 1.0.0 - 08 Jan 2023
 	* Initial release
