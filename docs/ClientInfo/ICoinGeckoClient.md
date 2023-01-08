@@ -8,4 +8,4 @@ has_children: true
   
 ***
 *Api endpoints*  
-**[ICoinGeckoClientApi](Api/ICoinGeckoClientApi.html) Api { get; }**  
+**[ICoinGeckoClientApi](ICoinGeckoClientApi.html) Api { get; }**  

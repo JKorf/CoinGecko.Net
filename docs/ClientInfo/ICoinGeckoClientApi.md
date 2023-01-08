@@ -1,6 +1,7 @@
 ---
 title: ICoinGeckoClientApi
 has_children: true
+parent: IICoinGeckoClientApi
 ---
 *[generated documentation]*  
 ### CoinGeckoClient  
@@ -21,7 +22,7 @@ has_children: true
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetAssetCategoriesAsync();  
+var result = await client.Api.GetAssetCategoriesAsync();  
 ```  
 
 ```csharp  
@@ -45,7 +46,7 @@ Task<WebCallResult<IEnumerable<CoinGeckoCategory>>> GetAssetCategoriesAsync(Canc
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetAssetDetailsAsync(/* parameters */);  
+var result = await client.Api.GetAssetDetailsAsync(/* parameters */);  
 ```  
 
 ```csharp  
@@ -76,7 +77,7 @@ Task<WebCallResult<CoinGeckoAssetDetails>> GetAssetDetailsAsync(string assetId, 
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetAssetDetailsFromContractAsync(/* parameters */);  
+var result = await client.Api.GetAssetDetailsFromContractAsync(/* parameters */);  
 ```  
 
 ```csharp  
@@ -102,7 +103,7 @@ Task<WebCallResult<CoinGeckoAssetDetails>> GetAssetDetailsFromContractAsync(stri
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetAssetHistoryAsync(/* parameters */);  
+var result = await client.Api.GetAssetHistoryAsync(/* parameters */);  
 ```  
 
 ```csharp  
@@ -129,7 +130,7 @@ Task<WebCallResult<CoinGeckoAssetHistory>> GetAssetHistoryAsync(string assetId, 
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetAssetPlatformsAsync();  
+var result = await client.Api.GetAssetPlatformsAsync();  
 ```  
 
 ```csharp  
@@ -154,7 +155,7 @@ Task<WebCallResult<IEnumerable<CoinGeckoAssetPlatform>>> GetAssetPlatformsAsync(
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetAssetsAsync();  
+var result = await client.Api.GetAssetsAsync();  
 ```  
 
 ```csharp  
@@ -179,7 +180,7 @@ Task<WebCallResult<IEnumerable<CoinGeckoAsset>>> GetAssetsAsync(bool? includePla
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetBtcExchangeRatesAsync();  
+var result = await client.Api.GetBtcExchangeRatesAsync();  
 ```  
 
 ```csharp  
@@ -203,7 +204,7 @@ Task<WebCallResult<CoinGeckoExchangeRates>> GetBtcExchangeRatesAsync(Cancellatio
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetDerivativesAsync();  
+var result = await client.Api.GetDerivativesAsync();  
 ```  
 
 ```csharp  
@@ -228,7 +229,7 @@ Task<WebCallResult<IEnumerable<CoinGeckoDerivative>>> GetDerivativesAsync(string
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetDerivativesExchangesListAsync();  
+var result = await client.Api.GetDerivativesExchangesListAsync();  
 ```  
 
 ```csharp  
@@ -252,7 +253,7 @@ Task<WebCallResult<IEnumerable<CoinGeckoListItem>>> GetDerivativesExchangesListA
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetExchangeDerivativesAsync();  
+var result = await client.Api.GetExchangeDerivativesAsync();  
 ```  
 
 ```csharp  
@@ -279,7 +280,7 @@ Task<WebCallResult<IEnumerable<CoinGeckoExchangeDerivative>>> GetExchangeDerivat
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetExchangeDetailsAsync(/* parameters */);  
+var result = await client.Api.GetExchangeDetailsAsync(/* parameters */);  
 ```  
 
 ```csharp  
@@ -304,7 +305,7 @@ Task<WebCallResult<CoinGeckoExchangeDetails>> GetExchangeDetailsAsync(string exc
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetExchangeMarketsAsync();  
+var result = await client.Api.GetExchangeMarketsAsync();  
 ```  
 
 ```csharp  
@@ -328,7 +329,7 @@ Task<WebCallResult<IEnumerable<CoinGeckoListItem>>> GetExchangeMarketsAsync(Canc
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetExchangesAsync();  
+var result = await client.Api.GetExchangesAsync();  
 ```  
 
 ```csharp  
@@ -354,7 +355,7 @@ Task<WebCallResult<IEnumerable<CoinGeckoExchange>>> GetExchangesAsync(int? page 
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetExchangeTickersAsync(/* parameters */);  
+var result = await client.Api.GetExchangeTickersAsync(/* parameters */);  
 ```  
 
 ```csharp  
@@ -384,7 +385,7 @@ Task<WebCallResult<CoinGeckoTickers>> GetExchangeTickersAsync(string exchangeId,
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetExchangeVolumeHistoryAsync(/* parameters */);  
+var result = await client.Api.GetExchangeVolumeHistoryAsync(/* parameters */);  
 ```  
 
 ```csharp  
@@ -410,7 +411,7 @@ Task<WebCallResult<IEnumerable<CoinGeckoMarketChartValue>>> GetExchangeVolumeHis
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetGlobalDataAsync();  
+var result = await client.Api.GetGlobalDataAsync();  
 ```  
 
 ```csharp  
@@ -434,7 +435,7 @@ Task<WebCallResult<CoinGeckoGlobalData>> GetGlobalDataAsync(CancellationToken ct
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetGlobalDefiDataAsync();  
+var result = await client.Api.GetGlobalDefiDataAsync();  
 ```  
 
 ```csharp  
@@ -457,7 +458,7 @@ Task<WebCallResult<CoinGeckoGlobalDefiData>> GetGlobalDefiDataAsync(Cancellation
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetIndexesAsync();  
+var result = await client.Api.GetIndexesAsync();  
 ```  
 
 ```csharp  
@@ -482,7 +483,7 @@ Task<WebCallResult<IEnumerable<CoinGeckoIndex>>> GetIndexesAsync(int? page = def
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetIndexesListAsync();  
+var result = await client.Api.GetIndexesListAsync();  
 ```  
 
 ```csharp  
@@ -506,7 +507,7 @@ Task<WebCallResult<IEnumerable<CoinGeckoListItem>>> GetIndexesListAsync(Cancella
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetMarketChartAsync(/* parameters */);  
+var result = await client.Api.GetMarketChartAsync(/* parameters */);  
 ```  
 
 ```csharp  
@@ -534,7 +535,7 @@ Task<WebCallResult<CoinGeckoMarketChart>> GetMarketChartAsync(string assetId, st
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetMarketChartAsync(/* parameters */);  
+var result = await client.Api.GetMarketChartAsync(/* parameters */);  
 ```  
 
 ```csharp  
@@ -562,7 +563,7 @@ Task<WebCallResult<CoinGeckoMarketChart>> GetMarketChartAsync(string assetId, st
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetMarketChartFromContractAsync(/* parameters */);  
+var result = await client.Api.GetMarketChartFromContractAsync(/* parameters */);  
 ```  
 
 ```csharp  
@@ -591,7 +592,7 @@ Task<WebCallResult<CoinGeckoMarketChart>> GetMarketChartFromContractAsync(string
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetMarketChartFromContractAsync(/* parameters */);  
+var result = await client.Api.GetMarketChartFromContractAsync(/* parameters */);  
 ```  
 
 ```csharp  
@@ -619,7 +620,7 @@ Task<WebCallResult<CoinGeckoMarketChart>> GetMarketChartFromContractAsync(string
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetMarketDataCategoriesAsync();  
+var result = await client.Api.GetMarketDataCategoriesAsync();  
 ```  
 
 ```csharp  
@@ -644,7 +645,7 @@ Task<WebCallResult<IEnumerable<CoinGeckoMarketDataCategory>>> GetMarketDataCateg
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetMarketsAsync(/* parameters */);  
+var result = await client.Api.GetMarketsAsync(/* parameters */);  
 ```  
 
 ```csharp  
@@ -676,7 +677,7 @@ Task<WebCallResult<IEnumerable<CoinGeckoMarket>>> GetMarketsAsync(string quoteAs
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetNftAsync(/* parameters */);  
+var result = await client.Api.GetNftAsync(/* parameters */);  
 ```  
 
 ```csharp  
@@ -701,7 +702,7 @@ Task<WebCallResult<CoinGeckoNftDetails>> GetNftAsync(string id, CancellationToke
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetNftByContractAddressAsync(/* parameters */);  
+var result = await client.Api.GetNftByContractAddressAsync(/* parameters */);  
 ```  
 
 ```csharp  
@@ -727,7 +728,7 @@ Task<WebCallResult<CoinGeckoNftDetails>> GetNftByContractAddressAsync(string pla
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetNftsAsync();  
+var result = await client.Api.GetNftsAsync();  
 ```  
 
 ```csharp  
@@ -755,7 +756,7 @@ Task<WebCallResult<IEnumerable<CoinGeckoNft>>> GetNftsAsync(string? order = defa
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetOhlcAsync(/* parameters */);  
+var result = await client.Api.GetOhlcAsync(/* parameters */);  
 ```  
 
 ```csharp  
@@ -782,7 +783,7 @@ Task<WebCallResult<IEnumerable<CoinGeckoOhlc>>> GetOhlcAsync(string assetId, str
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetPricesAsync(/* parameters */);  
+var result = await client.Api.GetPricesAsync(/* parameters */);  
 ```  
 
 ```csharp  
@@ -813,7 +814,7 @@ Task<WebCallResult<Dictionary<string, Dictionary<string, GetPricesAsync(IEnumera
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetQuoteAssetsAsync();  
+var result = await client.Api.GetQuoteAssetsAsync();  
 ```  
 
 ```csharp  
@@ -837,7 +838,7 @@ Task<WebCallResult<IEnumerable<string>>> GetQuoteAssetsAsync(CancellationToken c
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetTickersAsync(/* parameters */);  
+var result = await client.Api.GetTickersAsync(/* parameters */);  
 ```  
 
 ```csharp  
@@ -867,7 +868,7 @@ Task<WebCallResult<CoinGeckoTickers>> GetTickersAsync(string assetId, IEnumerabl
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetTokenPricesAsync(/* parameters */);  
+var result = await client.Api.GetTokenPricesAsync(/* parameters */);  
 ```  
 
 ```csharp  
@@ -899,7 +900,7 @@ Task<WebCallResult<Dictionary<string, Dictionary<string, GetTokenPricesAsync(str
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..GetTrendingSearchesAsync();  
+var result = await client.Api.GetTrendingSearchesAsync();  
 ```  
 
 ```csharp  
@@ -923,7 +924,7 @@ Task<WebCallResult<CoinGeckoTrendingSearch>> GetTrendingSearchesAsync(Cancellati
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..PingAsync();  
+var result = await client.Api.PingAsync();  
 ```  
 
 ```csharp  
@@ -947,7 +948,7 @@ Task<WebCallResult<string>> PingAsync(CancellationToken ct = default);
 
 ```csharp  
 var client = new CoinGeckoClient();  
-var result = await client..SearchAsync(/* parameters */);  
+var result = await client.Api.SearchAsync(/* parameters */);  
 ```  
 
 ```csharp  
