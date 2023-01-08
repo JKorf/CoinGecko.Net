@@ -12,69 +12,6 @@ has_children: true
 
 ***
 
-## decimal?>>>> GetPricesAsync  
-
-[https://www.coingecko.com/en/api/documentation?deepLinking=1#/simple/get_simple_price](https://www.coingecko.com/en/api/documentation?deepLinking=1#/simple/get_simple_price)  
-<p>
-
-*Get prices for specific assets*  
-
-```csharp  
-var client = new CoinGeckoClient();  
-var result = await client..decimal?>>>> GetPricesAsync(/* parameters */);  
-```  
-
-```csharp  
-Task<WebCallResult<Dictionary<string, Dictionary<string, decimal?>>>> GetPricesAsync(IEnumerable<string> ids, IEnumerable<string> quoteAssets, bool? includeMarketCap, bool? include24hrVolume, bool? include24hrChange, bool? includeLastUpdatedAt, string? precision = default, CancellationToken ct = default);  
-```  
-
-|Parameter|Description|
-|---|---|
-|ids|Asset ids to get data for|
-|quoteAssets|Quote assets|
-|includeMarketCap|Include market cap|
-|include24hrVolume|Include 24h volume|
-|include24hrChange|Include 24h change|
-|includeLastUpdatedAt|Include last updated at|
-|_[Optional]_ precision|Precision|
-|_[Optional]_ ct|Cancellation token|
-
-</p>
-
-***
-
-## decimal?>>>> GetTokenPricesAsync  
-
-[https://www.coingecko.com/en/api/documentation?deepLinking=1#/simple/get_simple_token_price__id_](https://www.coingecko.com/en/api/documentation?deepLinking=1#/simple/get_simple_token_price__id_)  
-<p>
-
-*Get prices by token contract addresses*  
-
-```csharp  
-var client = new CoinGeckoClient();  
-var result = await client..decimal?>>>> GetTokenPricesAsync(/* parameters */);  
-```  
-
-```csharp  
-Task<WebCallResult<Dictionary<string, Dictionary<string, decimal?>>>> GetTokenPricesAsync(string platformId, IEnumerable<string> contractAddresses, IEnumerable<string> quoteAssets, bool? includeMarketCap, bool? include24hrVolume, bool? include24hrChange, bool? includeLastUpdatedAt, string? precision = default, CancellationToken ct = default);  
-```  
-
-|Parameter|Description|
-|---|---|
-|platformId|Platform id|
-|contractAddresses|Contract addresses|
-|quoteAssets|Quote assets|
-|includeMarketCap|Include market cap|
-|include24hrVolume|Include 24h volume|
-|include24hrChange|Include 24h change|
-|includeLastUpdatedAt|Include last updated at|
-|_[Optional]_ precision|Precision|
-|_[Optional]_ ct|Cancellation token|
-
-</p>
-
-***
-
 ## GetAssetCategoriesAsync  
 
 [https://www.coingecko.com/en/api/documentation?deepLinking=1#/categories/get_coins_categories](https://www.coingecko.com/en/api/documentation?deepLinking=1#/categories/get_coins_categories)  
@@ -836,6 +773,37 @@ Task<WebCallResult<IEnumerable<CoinGeckoOhlc>>> GetOhlcAsync(string assetId, str
 
 ***
 
+## GetPricesAsync  
+
+[https://www.coingecko.com/en/api/documentation?deepLinking=1#/simple/get_simple_price](https://www.coingecko.com/en/api/documentation?deepLinking=1#/simple/get_simple_price)  
+<p>
+
+*Get prices for specific assets*  
+
+```csharp  
+var client = new CoinGeckoClient();  
+var result = await client..GetPricesAsync(/* parameters */);  
+```  
+
+```csharp  
+Task<WebCallResult<Dictionary<string, Dictionary<string, GetPricesAsync(IEnumerable<string> ids, IEnumerable<string> quoteAssets, bool? includeMarketCap, bool? include24hrVolume, bool? include24hrChange, bool? includeLastUpdatedAt, string? precision = default, CancellationToken ct = default);  
+```  
+
+|Parameter|Description|
+|---|---|
+|ids|Asset ids to get data for|
+|quoteAssets|Quote assets|
+|includeMarketCap|Include market cap|
+|include24hrVolume|Include 24h volume|
+|include24hrChange|Include 24h change|
+|includeLastUpdatedAt|Include last updated at|
+|_[Optional]_ precision|Precision|
+|_[Optional]_ ct|Cancellation token|
+
+</p>
+
+***
+
 ## GetQuoteAssetsAsync  
 
 [https://www.coingecko.com/en/api/documentation?deepLinking=1#/simple/get_simple_supported_vs_currencies](https://www.coingecko.com/en/api/documentation?deepLinking=1#/simple/get_simple_supported_vs_currencies)  
@@ -884,6 +852,38 @@ Task<WebCallResult<CoinGeckoTickers>> GetTickersAsync(string assetId, IEnumerabl
 |_[Optional]_ page|Page|
 |_[Optional]_ order|Sorting|
 |_[Optional]_ depth|Include 2% order book depth info|
+|_[Optional]_ ct|Cancellation token|
+
+</p>
+
+***
+
+## GetTokenPricesAsync  
+
+[https://www.coingecko.com/en/api/documentation?deepLinking=1#/simple/get_simple_token_price__id_](https://www.coingecko.com/en/api/documentation?deepLinking=1#/simple/get_simple_token_price__id_)  
+<p>
+
+*Get prices by token contract addresses*  
+
+```csharp  
+var client = new CoinGeckoClient();  
+var result = await client..GetTokenPricesAsync(/* parameters */);  
+```  
+
+```csharp  
+Task<WebCallResult<Dictionary<string, Dictionary<string, GetTokenPricesAsync(string platformId, IEnumerable<string> contractAddresses, IEnumerable<string> quoteAssets, bool? includeMarketCap, bool? include24hrVolume, bool? include24hrChange, bool? includeLastUpdatedAt, string? precision = default, CancellationToken ct = default);  
+```  
+
+|Parameter|Description|
+|---|---|
+|platformId|Platform id|
+|contractAddresses|Contract addresses|
+|quoteAssets|Quote assets|
+|includeMarketCap|Include market cap|
+|include24hrVolume|Include 24h volume|
+|include24hrChange|Include 24h change|
+|includeLastUpdatedAt|Include last updated at|
+|_[Optional]_ precision|Precision|
 |_[Optional]_ ct|Cancellation token|
 
 </p>
