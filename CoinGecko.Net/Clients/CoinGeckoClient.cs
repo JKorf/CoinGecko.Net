@@ -4,6 +4,7 @@ using CryptoExchange.Net;
 
 namespace CoinGecko.Net.Clients
 {
+    /// <inheritdoc />
     public class CoinGeckoClient: BaseRestClient, ICoinGeckoClient
     {
         /// <inheritdoc />
