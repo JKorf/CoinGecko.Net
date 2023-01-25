@@ -156,7 +156,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Status updates
         /// </summary>
         [JsonProperty("status_updates")]
-        public IEnumerable<string> StatusUpdates { get; set; } = Array.Empty<string>();
+        public IEnumerable<CoinGeckoStatusUpdate> StatusUpdates { get; set; } = Array.Empty<CoinGeckoStatusUpdate>();
         /// <summary>
         /// Community data
         /// </summary>
