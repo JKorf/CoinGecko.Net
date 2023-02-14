@@ -24,6 +24,9 @@ Alternatively, sponsor me on Github using [Github Sponsors](https://github.com/s
 A Discord server is available [here](https://discord.gg/MSpeEtSY8t). For discussion and/or questions around the CryptoExchange.Net and implementation libraries, feel free to join.
 
 ## Release notes
+* Version 1.0.2 - 14 Feb 2023
+    * Updated CryptoExchange.Net
+
 * Version 1.0.1 - 25 Jan 2023
     * Fixed mapping of status updates in GetAssetDetailsAsync
 
