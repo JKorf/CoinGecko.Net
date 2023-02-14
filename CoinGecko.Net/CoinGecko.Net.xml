@@ -148,9 +148,6 @@
         <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.CreateAuthenticationProvider(CryptoExchange.Net.Authentication.ApiCredentials)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetServerTimestampAsync">
-            <inheritdoc />
-        </member>
         <member name="T:CoinGecko.Net.Interfaces.ICoinGeckoClient">
             <summary>
             Client for accessing the CoinGecko Rest API. 
@@ -164,11 +161,6 @@
         <member name="T:CoinGecko.Net.Interfaces.ICoinGeckoClientApi">
             <summary>
             CoinGecko API endpoints
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.RequestFactory">
-            <summary>
-            The factory for creating requests. Used for unit testing
             </summary>
         </member>
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetAssetCategoriesAsync(System.Threading.CancellationToken)">

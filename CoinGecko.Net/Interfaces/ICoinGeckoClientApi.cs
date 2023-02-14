@@ -11,13 +11,8 @@ namespace CoinGecko.Net.Interfaces
     /// <summary>
     /// CoinGecko API endpoints
     /// </summary>
-    public interface ICoinGeckoClientApi
+    public interface ICoinGeckoClientApi: IRestApiClient
     {
-        /// <summary>
-        /// The factory for creating requests. Used for unit testing
-        /// </summary>
-        IRequestFactory RequestFactory { get; set; }
-
         /// <summary>
         /// Get asset categories
         /// <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/categories/get_coins_categories" /></para>

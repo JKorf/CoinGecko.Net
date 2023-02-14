@@ -577,12 +577,10 @@ namespace CoinGecko.Net.Clients
         }
 
         /// <inheritdoc />
-        public override TimeSpan GetTimeOffset() => TimeSpan.Zero;
+        public override TimeSpan? GetTimeOffset() => null;
         /// <inheritdoc />
-        public override TimeSyncInfo GetTimeSyncInfo() => throw new NotImplementedException();
+        public override TimeSyncInfo? GetTimeSyncInfo() => null;
         /// <inheritdoc />
         protected override AuthenticationProvider CreateAuthenticationProvider(ApiCredentials credentials) => null!;
-        /// <inheritdoc />
-        protected override Task<WebCallResult<DateTime>> GetServerTimestampAsync() => throw new NotImplementedException();
     }
 }
