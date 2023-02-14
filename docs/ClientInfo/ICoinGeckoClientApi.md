@@ -7,9 +7,6 @@ parent: IICoinGeckoClientApi
 ### CoinGeckoClient  
 *CoinGecko API endpoints*
   
-***
-*The factory for creating requests. Used for unit testing*  
-**IRequestFactory RequestFactory { get; set; }**  
 
 ***
 
