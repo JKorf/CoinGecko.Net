@@ -42,6 +42,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="CryptoExchange.Net" Version="5.4.0" />
+    <PackageReference Include="CryptoExchange.Net" Version="5.4.1" />
   </ItemGroup>
 </Project>
