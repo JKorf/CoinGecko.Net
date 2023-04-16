@@ -24,6 +24,9 @@ Alternatively, sponsor me on Github using [Github Sponsors](https://github.com/s
 A Discord server is available [here](https://discord.gg/MSpeEtSY8t). For discussion and/or questions around the CryptoExchange.Net and implementation libraries, feel free to join.
 
 ## Release notes
+* Version 1.0.4 - 16 Apr 2023
+    * Fixed some calls returning a 401 Unauthorized error
+
 * Version 1.0.3 - 18 Mar 2023
     * Updated CryptoExchange.Net
 
