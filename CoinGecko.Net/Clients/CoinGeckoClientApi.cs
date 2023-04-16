@@ -9,6 +9,7 @@ using CryptoExchange.Net.Objects;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -19,6 +20,12 @@ namespace CoinGecko.Net.Clients
     {
         internal CoinGeckoClientApi(Log log, CoinGeckoClientOptions options) : base(log, options, options.ApiOptions)
         {
+            var version = Assembly.GetAssembly(typeof(RestApiClient)).GetName().Version;
+
+            StandardRequestHeaders = new Dictionary<string, string>
+            {
+                { "User-Agent", "CryptoExchange.Net/" + version.ToString() }
+            };
         }
 
         #region Ping
