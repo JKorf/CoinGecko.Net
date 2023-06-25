@@ -3,11 +3,11 @@
     /// <summary>
     /// Client for accessing the CoinGecko Rest API. 
     /// </summary>
-    public interface ICoinGeckoClient
+    public interface ICoinGeckoRestClient
     {
         /// <summary>
         /// Api endpoints
         /// </summary>
-        ICoinGeckoClientApi Api { get; }
+        ICoinGeckoRestClientApi Api { get; }
     }
 }

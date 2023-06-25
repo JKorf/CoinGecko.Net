@@ -1,11 +1,11 @@
 ﻿using CoinGecko.Net.Interfaces;
-using CoinGecko.Net.Objects;
 using CoinGecko.Net.Objects.Models;
+using CoinGecko.Net.Objects.Options;
 using CryptoExchange.Net;
 using CryptoExchange.Net.Authentication;
 using CryptoExchange.Net.Converters;
-using CryptoExchange.Net.Logging;
 using CryptoExchange.Net.Objects;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -16,9 +16,10 @@ using System.Threading.Tasks;
 namespace CoinGecko.Net.Clients
 {
     /// <inheritdoc />
-    public class CoinGeckoClientApi : RestApiClient, ICoinGeckoClientApi
+    public class CoinGeckoRestClientApi : RestApiClient, ICoinGeckoRestClientApi
     {
-        internal CoinGeckoClientApi(Log log, CoinGeckoClientOptions options) : base(log, options, options.ApiOptions)
+        internal CoinGeckoRestClientApi(ILogger logger, HttpClient? httpClient, CoinGeckoRestOptions options) 
+            : base(logger, httpClient, options.Environment.RestApiAddress, options, options.ApiOptions)
         {
             var version = Assembly.GetAssembly(typeof(RestApiClient)).GetName().Version;
 

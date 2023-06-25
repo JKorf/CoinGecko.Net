@@ -1,5 +1,4 @@
 ﻿using CryptoExchange.Net.Interfaces;
-using CryptoExchange.Net.Logging;
 using Moq;
 using System;
 using System.Collections.Concurrent;
@@ -16,6 +15,7 @@ using System.Threading.Tasks;
 using System.Collections;
 using CoinGecko.Net.Clients;
 using CoinGecko.Net.Objects;
+using CoinGecko.Net.Objects.Options;
 
 namespace CoinGecko.Net.UnitTests
 {
@@ -55,22 +55,22 @@ namespace CoinGecko.Net.UnitTests
             return self == to;
         }
 
-        public static CoinGeckoClient CreateClient(CoinGeckoClientOptions options = null)
+        public static CoinGeckoRestClient CreateClient(Action<CoinGeckoRestOptions> options = null)
         {
-            CoinGeckoClient client;
-            client = options != null ? new CoinGeckoClient(options) : new CoinGeckoClient();
+            CoinGeckoRestClient client;
+            client = options != null ? new CoinGeckoRestClient(options) : new CoinGeckoRestClient();
             client.Api.RequestFactory = Mock.Of<IRequestFactory>();
             return client;
         }
 
-        public static CoinGeckoClient CreateResponseClient(string response, CoinGeckoClientOptions options = null, HttpStatusCode code = HttpStatusCode.OK)
+        public static CoinGeckoRestClient CreateResponseClient(string response, Action<CoinGeckoRestOptions> options = null, HttpStatusCode code = HttpStatusCode.OK)
         {
             var client = CreateClient(options);
             SetResponse(client, response, code);
             return client;
         }
 
-        public static Mock<IRequest> SetResponse(CoinGeckoClient client, string responseData, HttpStatusCode code = HttpStatusCode.OK)
+        public static Mock<IRequest> SetResponse(CoinGeckoRestClient client, string responseData, HttpStatusCode code = HttpStatusCode.OK)
         {
             var expectedBytes = Encoding.UTF8.GetBytes(responseData);
             var responseStream = new MemoryStream();

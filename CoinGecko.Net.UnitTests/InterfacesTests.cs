@@ -13,7 +13,7 @@ namespace CoinGecko.Net.UnitTests
         [Test]
         public void CheckRestInterfaces()
         {
-            var assembly = Assembly.GetAssembly(typeof(CoinGeckoClient));
+            var assembly = Assembly.GetAssembly(typeof(CoinGeckoRestClient));
             var ignore = new string[] { "ICoinGeckoClient" };
             var clientInterfaces = assembly.GetTypes().Where(t => t.Name.StartsWith("ICoinGeckoClient") && !ignore.Contains(t.Name));
 

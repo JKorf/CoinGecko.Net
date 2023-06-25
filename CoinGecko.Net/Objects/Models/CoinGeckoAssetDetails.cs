@@ -116,7 +116,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Coin gecko rank
         /// </summary>
         [JsonProperty("coingecko_rank")]
-        public int CoinGeckoRank { get; set; }
+        public int? CoinGeckoRank { get; set; }
         /// <summary>
         /// Coin gecko score
         /// </summary>

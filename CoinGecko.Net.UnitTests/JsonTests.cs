@@ -11,15 +11,11 @@ namespace CoinGecko.Net.UnitTests
     [TestFixture]
     public class JsonTests
     {
-        private JsonToObjectComparer<CoinGeckoClient> _comparer = new JsonToObjectComparer<CoinGeckoClient>((json) => TestHelpers.CreateResponseClient(json, new CoinGeckoClientOptions()
+        private JsonToObjectComparer<CoinGeckoRestClient> _comparer = new JsonToObjectComparer<CoinGeckoRestClient>((json) => TestHelpers.CreateResponseClient(json, x =>
         {
-            ApiCredentials = new CryptoExchange.Net.Authentication.ApiCredentials("123", "123"),
-            LogLevel = Microsoft.Extensions.Logging.LogLevel.Trace,
-            ApiOptions = new CryptoExchange.Net.Objects.RestApiClientOptions
-            {
-                RateLimiters = new List<IRateLimiter>(),
-                OutputOriginalData = true
-            }
+            x.ApiCredentials = new CryptoExchange.Net.Authentication.ApiCredentials("123", "123");
+            x.ApiOptions.OutputOriginalData = true;
+            x.ApiOptions.RateLimiters = new List<IRateLimiter>();
         },
             System.Net.HttpStatusCode.OK));
 

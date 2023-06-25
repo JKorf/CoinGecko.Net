@@ -4,166 +4,216 @@
         <name>CoinGecko.Net</name>
     </assembly>
     <members>
-        <member name="T:CoinGecko.Net.Clients.CoinGeckoClient">
+        <member name="T:CoinGecko.Net.Clients.CoinGeckoRestClient">
             <inheritdoc />
         </member>
-        <member name="P:CoinGecko.Net.Clients.CoinGeckoClient.Api">
+        <member name="P:CoinGecko.Net.Clients.CoinGeckoRestClient.Api">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClient.#ctor">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClient.#ctor(System.Action{CoinGecko.Net.Objects.Options.CoinGeckoRestOptions})">
             <summary>
-            Create a new instance of the BybitClient using the default options
+            Create a new instance of the CoinGeckoClient using provided options
+            </summary>
+            <param name="optionsDelegate">Option configuration delegate</param>
+        </member>
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClient.#ctor(Microsoft.Extensions.Logging.ILoggerFactory,System.Net.Http.HttpClient)">
+            <summary>
+            Create a new instance of the CoinGeckoClient using default options
             </summary>
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClient.#ctor(CoinGecko.Net.Objects.CoinGeckoClientOptions)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClient.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Logging.ILoggerFactory,System.Action{CoinGecko.Net.Objects.Options.CoinGeckoRestOptions})">
             <summary>
-            Create a new instance of the BybitClient using provided options
+            Create a new instance of the CoinGeckoClient
             </summary>
-            <param name="options">The options to use for this client</param>
+            <param name="optionsDelegate">Option configuration delegate</param>
+            <param name="loggerFactory">The logger factory</param>
+            <param name="httpClient">Http client for this client</param>
         </member>
-        <member name="T:CoinGecko.Net.Clients.CoinGeckoClientApi">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClient.SetDefaultOptions(System.Action{CoinGecko.Net.Objects.Options.CoinGeckoRestOptions})">
+            <summary>
+            Set the default options to be used when creating new clients
+            </summary>
+            <param name="optionsDelegate">Option configuration delegate</param>
+        </member>
+        <member name="T:CoinGecko.Net.Clients.CoinGeckoRestClientApi">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.PingAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.PingAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetAssetsAsync(System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetAssetsAsync(System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetMarketsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetMarketsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetAssetDetailsAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetAssetDetailsAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetAssetHistoryAsync(System.String,System.DateTime,System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetAssetHistoryAsync(System.String,System.DateTime,System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetMarketChartAsync(System.String,System.String,System.Int32,System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetMarketChartAsync(System.String,System.String,System.Int32,System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetMarketChartAsync(System.String,System.String,System.DateTime,System.DateTime,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetMarketChartAsync(System.String,System.String,System.DateTime,System.DateTime,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetOhlcAsync(System.String,System.String,System.Int32,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetOhlcAsync(System.String,System.String,System.Int32,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetPricesAsync(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetPricesAsync(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetTokenPricesAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetTokenPricesAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetQuoteAssetsAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetQuoteAssetsAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetAssetDetailsFromContractAsync(System.String,System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetAssetDetailsFromContractAsync(System.String,System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetMarketChartFromContractAsync(System.String,System.String,System.String,System.Int32,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetMarketChartFromContractAsync(System.String,System.String,System.String,System.Int32,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetMarketChartFromContractAsync(System.String,System.String,System.String,System.DateTime,System.DateTime,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetMarketChartFromContractAsync(System.String,System.String,System.String,System.DateTime,System.DateTime,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetAssetPlatformsAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetAssetPlatformsAsync(System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetAssetCategoriesAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetAssetCategoriesAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetMarketDataCategoriesAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetMarketDataCategoriesAsync(System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetExchangesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetExchangeMarketsAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangeMarketsAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetExchangeDetailsAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangeDetailsAsync(System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetExchangeTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangeTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetExchangeVolumeHistoryAsync(System.String,System.Int32,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangeVolumeHistoryAsync(System.String,System.Int32,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetDerivativesAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetDerivativesAsync(System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetExchangeDerivativesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangeDerivativesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetDerivativesExchangesListAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetDerivativesExchangesListAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetBtcExchangeRatesAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetBtcExchangeRatesAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetGlobalDataAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetGlobalDataAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetGlobalDefiDataAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetGlobalDefiDataAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetNftsAsync(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetNftsAsync(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetNftAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetNftAsync(System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetNftByContractAddressAsync(System.String,System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetNftByContractAddressAsync(System.String,System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.SearchAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.SearchAsync(System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetTrendingSearchesAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetTrendingSearchesAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetIndexesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetIndexesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetIndexesListAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetIndexesListAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetUrl(System.String)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetUrl(System.String)">
             <summary>
             Get url for an endpoint
             </summary>
             <param name="endpoint"></param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetTimeOffset">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetTimeOffset">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.GetTimeSyncInfo">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetTimeSyncInfo">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoClientApi.CreateAuthenticationProvider(CryptoExchange.Net.Authentication.ApiCredentials)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.CreateAuthenticationProvider(CryptoExchange.Net.Authentication.ApiCredentials)">
             <inheritdoc />
         </member>
-        <member name="T:CoinGecko.Net.Interfaces.ICoinGeckoClient">
+        <member name="T:CoinGecko.Net.CoinGeckoEnvironment">
+            <summary>
+            CoinGecko Environments
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.CoinGeckoEnvironment.RestApiAddress">
+            <summary>
+            Rest client address
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.CoinGeckoEnvironment.Live">
+            <summary>
+            Live environment
+            </summary>
+        </member>
+        <member name="M:CoinGecko.Net.CoinGeckoEnvironment.CreateCustom(System.String,System.String)">
+            <summary>
+            Create a custom environment
+            </summary>
+            <param name="name"></param>
+            <param name="restAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CoinGecko.Net.CoinGeckoHelpers">
+            <summary>
+            CoinGecko helpers
+            </summary>
+        </member>
+        <member name="M:CoinGecko.Net.CoinGeckoHelpers.AddCoinGecko(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{CoinGecko.Net.Objects.Options.CoinGeckoRestOptions})">
+            <summary>
+            Add the ICoinGeckoClient to the sevice collection so they can be injected
+            </summary>
+            <param name="services">The service collection</param>
+            <param name="defaultRestOptionsDelegate">Set default options for the rest client</param>
+            <returns></returns>
+        </member>
+        <member name="T:CoinGecko.Net.Interfaces.ICoinGeckoRestClient">
             <summary>
             Client for accessing the CoinGecko Rest API. 
             </summary>
         </member>
-        <member name="P:CoinGecko.Net.Interfaces.ICoinGeckoClient.Api">
+        <member name="P:CoinGecko.Net.Interfaces.ICoinGeckoRestClient.Api">
             <summary>
             Api endpoints
             </summary>
         </member>
-        <member name="T:CoinGecko.Net.Interfaces.ICoinGeckoClientApi">
+        <member name="T:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi">
             <summary>
             CoinGecko API endpoints
             </summary>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetAssetCategoriesAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetAssetCategoriesAsync(System.Threading.CancellationToken)">
             <summary>
             Get asset categories
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/categories/get_coins_categories" /></para>
@@ -171,7 +221,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetAssetDetailsAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetAssetDetailsAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <summary>
             Get asset details
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/coins/get_coins__id_" /></para>
@@ -186,7 +236,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetAssetDetailsFromContractAsync(System.String,System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetAssetDetailsFromContractAsync(System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Get asset details by contract address
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/contract/get_coins__id__contract__contract_address_" /></para>
@@ -196,7 +246,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetAssetPlatformsAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetAssetPlatformsAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Get asset platforms list
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/asset_platforms/get_asset_platforms" /></para>
@@ -205,7 +255,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetAssetsAsync(System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetAssetsAsync(System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <summary>
             Get list of all assets
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/coins/get_coins_list" /></para>
@@ -214,7 +264,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetBtcExchangeRatesAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetBtcExchangeRatesAsync(System.Threading.CancellationToken)">
             <summary>
             Get BTC-to-Currency exchange rates
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/exchange_rates/get_exchange_rates" /></para>
@@ -222,7 +272,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetDerivativesAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetDerivativesAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Get list of derivative tickers
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/derivatives/get_derivatives" /></para>
@@ -231,7 +281,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetDerivativesExchangesListAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetDerivativesExchangesListAsync(System.Threading.CancellationToken)">
             <summary>
             List all derivatives exchanges name and identifier
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/derivatives/get_derivatives_exchanges_list" /></para>
@@ -239,7 +289,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetExchangeDerivativesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeDerivativesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)">
             <summary>
             Get all derivatives exchanges
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/derivatives/get_derivatives_exchanges" /></para>
@@ -250,7 +300,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetExchangeDetailsAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeDetailsAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Get exchange details
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/exchanges/get_exchanges__id_" /></para>
@@ -259,7 +309,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetExchangeMarketsAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeMarketsAsync(System.Threading.CancellationToken)">
             <summary>
             Get all exchange markets 
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/exchanges/get_exchanges_list" /></para>
@@ -267,7 +317,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetExchangesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get all exchanges
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/exchanges/get_exchanges" /></para>
@@ -277,7 +327,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetExchangeTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
             <summary>
             Get exchange tickers
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/exchanges/get_exchanges__id__tickers" /></para>
@@ -291,7 +341,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetExchangeVolumeHistoryAsync(System.String,System.Int32,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeVolumeHistoryAsync(System.String,System.Int32,System.Threading.CancellationToken)">
             <summary>
             Get volume chart data for an exchange
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/exchanges/get_exchanges__id__volume_chart" /></para>
@@ -301,7 +351,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetAssetHistoryAsync(System.String,System.DateTime,System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetAssetHistoryAsync(System.String,System.DateTime,System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <summary>
             Get asset history info
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/coins/get_coins__id__history" /></para>
@@ -312,7 +362,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetMarketChartAsync(System.String,System.String,System.DateTime,System.DateTime,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketChartAsync(System.String,System.String,System.DateTime,System.DateTime,System.Threading.CancellationToken)">
             <summary>
             Get historical market data
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/coins/get_coins__id__market_chart_range" /></para>
@@ -324,7 +374,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetMarketChartAsync(System.String,System.String,System.Int32,System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketChartAsync(System.String,System.String,System.Int32,System.String,System.Threading.CancellationToken)">
             <summary>
             Get historical market data
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/coins/get_coins__id__market_chart" /></para>
@@ -336,7 +386,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetMarketChartFromContractAsync(System.String,System.String,System.String,System.DateTime,System.DateTime,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketChartFromContractAsync(System.String,System.String,System.String,System.DateTime,System.DateTime,System.Threading.CancellationToken)">
             <summary>
             Get historical market data by contract
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/contract/get_coins__id__contract__contract_address__market_chart_range" /></para>
@@ -349,7 +399,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetMarketChartFromContractAsync(System.String,System.String,System.String,System.Int32,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketChartFromContractAsync(System.String,System.String,System.String,System.Int32,System.Threading.CancellationToken)">
             <summary>
             Get historical market data by contract
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/contract/get_coins__id__contract__contract_address__market_chart_" /></para>
@@ -361,7 +411,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetMarketDataCategoriesAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketDataCategoriesAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Get market data categories
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/categories/get_coins_categories" /></para>
@@ -370,7 +420,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetMarketsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
             <summary>
             Get coins market data
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/coins/get_coins_markets" /></para>
@@ -386,7 +436,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetOhlcAsync(System.String,System.String,System.Int32,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetOhlcAsync(System.String,System.String,System.Int32,System.Threading.CancellationToken)">
             <summary>
             Get Open/High/Low/Close data
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/coins/get_coins__id__ohlc" /></para>
@@ -397,7 +447,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetPricesAsync(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetPricesAsync(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
             <summary>
             Get prices for specific assets
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/simple/get_simple_price" /></para>
@@ -412,7 +462,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetQuoteAssetsAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetQuoteAssetsAsync(System.Threading.CancellationToken)">
             <summary>
             Get list of quote assets
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/simple/get_simple_supported_vs_currencies" /></para>
@@ -420,7 +470,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <summary>
             Get tickers for an asset
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/coins/get_coins__id__tickers" /></para>
@@ -434,7 +484,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetTokenPricesAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetTokenPricesAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
             <summary>
             Get prices by token contract addresses
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/simple/get_simple_token_price__id_" /></para>
@@ -450,7 +500,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.PingAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.PingAsync(System.Threading.CancellationToken)">
             <summary>
             Ping the server
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/ping/get_ping" /></para>
@@ -458,7 +508,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetGlobalDataAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetGlobalDataAsync(System.Threading.CancellationToken)">
             <summary>
             Get global crypto data
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/global/get_global" /></para>
@@ -466,7 +516,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetGlobalDefiDataAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetGlobalDefiDataAsync(System.Threading.CancellationToken)">
             <summary>
             Get global defi crypto data
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/global/get_global_decentralized_finance_defi" /></para>
@@ -474,7 +524,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetNftsAsync(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetNftsAsync(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get list of nfts
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/nfts%20(beta)/get_nfts_list" /></para>
@@ -486,7 +536,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetNftAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetNftAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Get details on an NFT
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/nfts%20(beta)/get_nfts__id_" /></para>
@@ -495,7 +545,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetNftByContractAddressAsync(System.String,System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetNftByContractAddressAsync(System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Get nft info by contract address
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/nfts%20(beta)/get_nfts__asset_platform_id__contract__contract_address_" /></para>
@@ -505,7 +555,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.SearchAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.SearchAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Search for assets, exchanges, categories or nfts
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/search/get_search" /></para>
@@ -514,7 +564,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetTrendingSearchesAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetTrendingSearchesAsync(System.Threading.CancellationToken)">
             <summary>
             Get trending searches
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/trending/get_search_trending" /></para>
@@ -522,7 +572,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetIndexesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetIndexesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get indexes
             </summary>
@@ -531,7 +581,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoClientApi.GetIndexesListAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetIndexesListAsync(System.Threading.CancellationToken)">
             <summary>
             Get indexes list
             </summary>
@@ -552,32 +602,6 @@
             <summary>
             The default addresses to connect to the Bybit.com API
             </summary>
-        </member>
-        <member name="T:CoinGecko.Net.Objects.CoinGeckoClientOptions">
-            <summary>
-            Options for the CoinGecko client
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.CoinGeckoClientOptions.Default">
-            <summary>
-            Default options for the CoinGecko client
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.CoinGeckoClientOptions.ApiOptions">
-            <summary>
-            API options
-            </summary>
-        </member>
-        <member name="M:CoinGecko.Net.Objects.CoinGeckoClientOptions.#ctor">
-            <summary>
-            ctor
-            </summary>
-        </member>
-        <member name="M:CoinGecko.Net.Objects.CoinGeckoClientOptions.#ctor(CoinGecko.Net.Objects.CoinGeckoClientOptions)">
-            <summary>
-            ctor
-            </summary>
-            <param name="baseOn">Base the new options on other options</param>
         </member>
         <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoAsset">
             <summary>
@@ -2738,6 +2762,21 @@
         <member name="P:CoinGecko.Net.Objects.Models.ItemWrapper`1.Item">
             <summary>
             Item info
+            </summary>
+        </member>
+        <member name="T:CoinGecko.Net.Objects.Options.CoinGeckoRestOptions">
+            <summary>
+            CoinGecko Rest API options
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Options.CoinGeckoRestOptions.Default">
+            <summary>
+            Default options for the CoinGecko client
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Options.CoinGeckoRestOptions.ApiOptions">
+            <summary>
+            Api options
             </summary>
         </member>
     </members>
