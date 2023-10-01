@@ -39,7 +39,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Market cap rank
         /// </summary>
         [JsonProperty("market_cap_rank")]
-        public decimal MarketCapRank { get; set; }
+        public decimal? MarketCapRank { get; set; }
         /// <summary>
         /// Fully diluted valuation
         /// </summary>
