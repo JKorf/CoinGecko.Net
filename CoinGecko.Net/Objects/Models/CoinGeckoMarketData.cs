@@ -20,7 +20,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Total value locked
         /// </summary>
         [JsonProperty("total_value_locked")]
-        public decimal? TotalValueLocked { get; set; }
+        public Dictionary<string, decimal>? TotalValueLocked { get; set; }
         /// <summary>
         /// Market cap to total value locked ratio
         /// </summary>
