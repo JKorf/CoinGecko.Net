@@ -2779,5 +2779,17 @@
             Api options
             </summary>
         </member>
+        <member name="T:CryptoExchange.Net.Clients.CryptoClientExtensions">
+            <summary>
+            Extensions for the ICryptoRestClient and ICryptoSocketClient interfaces
+            </summary>
+        </member>
+        <member name="M:CryptoExchange.Net.Clients.CryptoClientExtensions.CoinGecko(CryptoExchange.Net.Clients.ICryptoRestClient)">
+            <summary>
+            Get the CoinGecko REST Api client
+            </summary>
+            <param name="baseClient"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
