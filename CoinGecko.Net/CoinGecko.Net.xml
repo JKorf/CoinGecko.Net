@@ -185,19 +185,6 @@
             <param name="restAddress"></param>
             <returns></returns>
         </member>
-        <member name="T:CoinGecko.Net.CoinGeckoHelpers">
-            <summary>
-            CoinGecko helpers
-            </summary>
-        </member>
-        <member name="M:CoinGecko.Net.CoinGeckoHelpers.AddCoinGecko(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{CoinGecko.Net.Objects.Options.CoinGeckoRestOptions})">
-            <summary>
-            Add the ICoinGeckoClient to the sevice collection so they can be injected
-            </summary>
-            <param name="services">The service collection</param>
-            <param name="defaultRestOptionsDelegate">Set default options for the rest client</param>
-            <returns></returns>
-        </member>
         <member name="T:CoinGecko.Net.Interfaces.ICoinGeckoRestClient">
             <summary>
             Client for accessing the CoinGecko Rest API. 
@@ -2779,16 +2766,29 @@
             Api options
             </summary>
         </member>
-        <member name="T:CryptoExchange.Net.Clients.CryptoClientExtensions">
+        <member name="T:CryptoExchange.Net.Interfaces.CryptoClientExtensions">
             <summary>
             Extensions for the ICryptoRestClient and ICryptoSocketClient interfaces
             </summary>
         </member>
-        <member name="M:CryptoExchange.Net.Clients.CryptoClientExtensions.CoinGecko(CryptoExchange.Net.Clients.ICryptoRestClient)">
+        <member name="M:CryptoExchange.Net.Interfaces.CryptoClientExtensions.CoinGecko(CryptoExchange.Net.Interfaces.ICryptoRestClient)">
             <summary>
             Get the CoinGecko REST Api client
             </summary>
             <param name="baseClient"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions">
+            <summary>
+            Extensions for DI
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddCoinGecko(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{CoinGecko.Net.Objects.Options.CoinGeckoRestOptions})">
+            <summary>
+            Add the ICoinGeckoClient to the sevice collection so they can be injected
+            </summary>
+            <param name="services">The service collection</param>
+            <param name="defaultRestOptionsDelegate">Set default options for the rest client</param>
             <returns></returns>
         </member>
     </members>
