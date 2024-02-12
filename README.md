@@ -44,8 +44,6 @@ A Discord server is available [here](https://discord.gg/MSpeEtSY8t). Feel free t
 
 ## Supported functionality
 
-*The library currently uses the V1 API, it will be updated to V2 soon*
-
 ### V3 API
 |API|Supported|Location|
 |--|--:|--|
