@@ -1,17 +1,19 @@
 ﻿using CoinGecko.Net.Clients;
 using CoinGecko.Net.Interfaces;
 using CoinGecko.Net.Objects.Options;
+using CryptoExchange.Net.Clients;
+using CryptoExchange.Net.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Net;
 using System.Net.Http;
 
-namespace CoinGecko.Net
+namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
-    /// CoinGecko helpers
+    /// Extensions for DI
     /// </summary>
-    public static class CoinGeckoHelpers
+    public static class ServiceCollectionExtensions
     {
         /// <summary>
         /// Add the ICoinGeckoClient to the sevice collection so they can be injected
@@ -34,7 +36,8 @@ namespace CoinGecko.Net
             services.AddHttpClient<ICoinGeckoRestClient, CoinGeckoRestClient>(options =>
             {
                 options.Timeout = restOptions.RequestTimeout;
-            }).ConfigurePrimaryHttpMessageHandler(() => {
+            }).ConfigurePrimaryHttpMessageHandler(() =>
+            {
                 var handler = new HttpClientHandler();
                 if (restOptions.Proxy != null)
                 {
@@ -47,7 +50,7 @@ namespace CoinGecko.Net
                 return handler;
             });
 
-            services.AddTransient<ICoinGeckoRestClient, CoinGeckoRestClient>();
+            services.AddTransient<ICryptoRestClient, CryptoRestClient>();
             return services;
         }
     }
