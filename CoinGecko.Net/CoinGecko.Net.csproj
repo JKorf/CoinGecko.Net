@@ -7,12 +7,12 @@
   <PropertyGroup>
     <PackageId>CoinGecko.Net</PackageId>
     <Authors>JKorf</Authors>
-    <PackageVersion>2.1.0-beta1</PackageVersion>
+    <PackageVersion>2.1.0</PackageVersion>
     <AssemblyVersion>2.1.0</AssemblyVersion>
     <FileVersion>2.1.0</FileVersion>
-    <Description>CoinGecko.Net is a .Net wrapper for the CoinGecko API. It includes all features the API provides using clear and readable objects.</Description>
+    <Description>CoinGecko.Net is a client library for accessing the CoinGecko REST API. All data is mapped to readable models and enum values.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageTags>CoinGecko CoinGecko.Net C# .Net CryptoCurrency Exchange API wrapper</PackageTags>
+    <PackageTags>CoinGecko;CoinGecko.Net;CoinGecko Client;CoinGecko API;CryptoCurrency</PackageTags>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/JKorf/CoinGecko.Net.git</RepositoryUrl>
     <PackageProjectUrl>https://github.com/JKorf/CoinGecko.Net</PackageProjectUrl>
@@ -21,7 +21,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <NeutralLanguage>en</NeutralLanguage>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageReleaseNotes>2.1.0-beta1 - Updated CryptoExchange.Net</PackageReleaseNotes>
+    <PackageReleaseNotes>https://github.com/JKorf/CoinEx.Net?tab=readme-ov-file#release-notes</PackageReleaseNotes>
   </PropertyGroup>
   <PropertyGroup>
     <DocumentationFile>CoinGecko.Net.xml</DocumentationFile>
