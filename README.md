@@ -23,13 +23,14 @@ The library is targeting both `.NET Standard 2.0` and `.NET Standard 2.1` for op
 	dotnet add package CoinGecko.Net
 
 ## How to use
-* REST Endpoints
-	```csharp
-	// Get the ETH/USDT ticker via rest request
-	var restClient = new CoinGeckoRestClient();
-	var tickerResult = await restClient.Api.GetMarketsAsync("USD");
-	var lastPrice = tickerResult.Data.First().CurrentPrice;
-	```
+*REST Endpoints*  
+
+```csharp
+// Get the ETH/USDT ticker via rest request
+var restClient = new CoinGeckoRestClient();
+var tickerResult = await restClient.Api.GetMarketsAsync("USD");
+var lastPrice = tickerResult.Data.First().CurrentPrice;
+```
 
 For information on the clients, dependency injection, response processing and more see the [documentation](https://jkorf.github.io/CryptoExchange.Net), or have a look at the examples  [here](https://github.com/JKorf/CryptoExchange.Net/tree/master/Examples).
 
