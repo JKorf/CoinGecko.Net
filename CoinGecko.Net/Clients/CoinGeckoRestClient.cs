@@ -1,10 +1,10 @@
 ﻿using CoinGecko.Net.Interfaces;
 using CoinGecko.Net.Objects;
-using CryptoExchange.Net;
 using Microsoft.Extensions.Logging;
 using System.Net.Http;
 using System;
 using CoinGecko.Net.Objects.Options;
+using CryptoExchange.Net.Clients;
 
 namespace CoinGecko.Net.Clients
 {
