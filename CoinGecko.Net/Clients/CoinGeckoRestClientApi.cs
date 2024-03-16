@@ -3,6 +3,7 @@ using CoinGecko.Net.Objects.Models;
 using CoinGecko.Net.Objects.Options;
 using CryptoExchange.Net;
 using CryptoExchange.Net.Authentication;
+using CryptoExchange.Net.Clients;
 using CryptoExchange.Net.Converters;
 using CryptoExchange.Net.Objects;
 using Microsoft.Extensions.Logging;

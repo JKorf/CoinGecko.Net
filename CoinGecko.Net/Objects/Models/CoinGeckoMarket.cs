@@ -54,32 +54,32 @@ namespace CoinGecko.Net.Objects.Models
         /// 24 hour high price
         /// </summary>
         [JsonProperty("high_24h")]
-        public decimal High24h { get; set; }
+        public decimal? High24h { get; set; }
         /// <summary>
         /// 24 hour low price
         /// </summary>
         [JsonProperty("low_24h")]
-        public decimal Low24h { get; set; }
+        public decimal? Low24h { get; set; }
         /// <summary>
         /// 24 hour price change
         /// </summary>
         [JsonProperty("price_change_24h")]
-        public decimal PriceChange24h { get; set; }
+        public decimal? PriceChange24h { get; set; }
         /// <summary>
         /// 24 hour price change percentage
         /// </summary>
         [JsonProperty("price_change_percentage_24h")]
-        public decimal PriceChangePercentage24h { get; set; }
+        public double? PriceChangePercentage24h { get; set; }
         /// <summary>
         /// 24 hour market cap change
         /// </summary>
         [JsonProperty("market_cap_change_24h")]
-        public decimal MarketCapChange24h { get; set; }
+        public decimal? MarketCapChange24h { get; set; }
         /// <summary>
         /// 24 hour market cap change percentage
         /// </summary>
         [JsonProperty("market_cap_change_percentage_24h")]
-        public decimal MarketCapChangePercentage24h { get; set; }
+        public double? MarketCapChangePercentage24h { get; set; }
         /// <summary>
         /// Circulating supply
         /// </summary>
@@ -104,7 +104,7 @@ namespace CoinGecko.Net.Objects.Models
         /// All time high change percentage
         /// </summary>
         [JsonProperty("ath_change_percentage")]
-        public decimal AllTimeHighChangePercentage { get; set; }
+        public double AllTimeHighChangePercentage { get; set; }
         /// <summary>
         /// All time high time
         /// </summary>
@@ -120,7 +120,7 @@ namespace CoinGecko.Net.Objects.Models
         /// All time low change percentage
         /// </summary>
         [JsonProperty("atl_change_percentage")]
-        public decimal AllTimeLowChangePercentage { get; set; }
+        public double AllTimeLowChangePercentage { get; set; }
         /// <summary>
         /// All time low time
         /// </summary>
