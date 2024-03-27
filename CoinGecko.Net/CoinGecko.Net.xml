@@ -16,11 +16,6 @@
             </summary>
             <param name="optionsDelegate">Option configuration delegate</param>
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClient.#ctor(Microsoft.Extensions.Logging.ILoggerFactory,System.Net.Http.HttpClient)">
-            <summary>
-            Create a new instance of the CoinGeckoClient using default options
-            </summary>
-        </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClient.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Logging.ILoggerFactory,System.Action{CoinGecko.Net.Objects.Options.CoinGeckoRestOptions})">
             <summary>
             Create a new instance of the CoinGeckoClient
