@@ -19,14 +19,7 @@ namespace CoinGecko.Net.Clients
         /// Create a new instance of the CoinGeckoClient using provided options
         /// </summary>
         /// <param name="optionsDelegate">Option configuration delegate</param>
-        public CoinGeckoRestClient(Action<CoinGeckoRestOptions> optionsDelegate) : this(null, null, optionsDelegate)
-        {
-        }
-
-        /// <summary>
-        /// Create a new instance of the CoinGeckoClient using default options
-        /// </summary>
-        public CoinGeckoRestClient(ILoggerFactory? loggerFactory = null, HttpClient? httpClient = null) : this(httpClient, loggerFactory, null)
+        public CoinGeckoRestClient(Action<CoinGeckoRestOptions>? optionsDelegate = null) : this(null, null, optionsDelegate)
         {
         }
 
