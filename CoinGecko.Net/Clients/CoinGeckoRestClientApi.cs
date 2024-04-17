@@ -36,7 +36,7 @@ namespace CoinGecko.Net.Clients
         public async Task<WebCallResult<string>> PingAsync(CancellationToken ct = default)
         {
             var parameters = new Dictionary<string, object>();
-            var result = await SendRequestAsync<Dictionary<string, string>>(GetUrl("api/v3/ping"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            var result = await SendRequestAsync<Dictionary<string, string>>(GetUrl("api/v3/ping"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
             if (!result)
                 return result.As<string>(default);
 
@@ -53,7 +53,7 @@ namespace CoinGecko.Net.Clients
             var parameters = new Dictionary<string, object>();
             parameters.AddOptionalParameter("includePlatform", includePlatform);
 
-            return await SendRequestAsync<IEnumerable<CoinGeckoAsset>>(GetUrl("api/v3/coins/list"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<IEnumerable<CoinGeckoAsset>>(GetUrl("api/v3/coins/list"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -82,7 +82,7 @@ namespace CoinGecko.Net.Clients
             parameters.AddOptionalParameter("sparkline", sparkline);
             parameters.AddOptionalParameter("price_change_percentage", priceChangePercentages == null ? null : string.Join(", ", priceChangePercentages));
 
-            return await SendRequestAsync<IEnumerable<CoinGeckoMarket>>(GetUrl("api/v3/coins/markets"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<IEnumerable<CoinGeckoMarket>>(GetUrl("api/v3/coins/markets"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -108,7 +108,7 @@ namespace CoinGecko.Net.Clients
             parameters.AddOptionalParameter("developer_data", developerData);
             parameters.AddOptionalParameter("sparkline", sparkline);
 
-            return await SendRequestAsync<CoinGeckoAssetDetails>(GetUrl("api/v3/coins/" + assetId), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<CoinGeckoAssetDetails>(GetUrl("api/v3/coins/" + assetId), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -132,7 +132,7 @@ namespace CoinGecko.Net.Clients
             parameters.AddOptionalParameter("order", order);
             parameters.AddOptionalParameter("depth", depth);
 
-            return await SendRequestAsync<CoinGeckoTickers>(GetUrl("api/v3/coins/" + coinId + "/tickers"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<CoinGeckoTickers>(GetUrl("api/v3/coins/" + coinId + "/tickers"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -150,7 +150,7 @@ namespace CoinGecko.Net.Clients
             parameters.AddParameter("date", date.ToString("dd-MM-yyyy"));
             parameters.AddOptionalParameter("localization", localization);
 
-            return await SendRequestAsync<CoinGeckoAssetHistory>(GetUrl("api/v3/coins/" + coinId + "/history"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<CoinGeckoAssetHistory>(GetUrl("api/v3/coins/" + coinId + "/history"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -170,7 +170,7 @@ namespace CoinGecko.Net.Clients
             parameters.AddParameter("days", days);
             parameters.AddOptionalParameter("interval", interval);
 
-            return await SendRequestAsync<CoinGeckoMarketChart>(GetUrl("api/v3/coins/" + coinId + "/market_chart"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<CoinGeckoMarketChart>(GetUrl("api/v3/coins/" + coinId + "/market_chart"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -190,7 +190,7 @@ namespace CoinGecko.Net.Clients
             parameters.AddParameter("from", DateTimeConverter.ConvertToSeconds(from));
             parameters.AddParameter("to", DateTimeConverter.ConvertToSeconds(to));
 
-            return await SendRequestAsync<CoinGeckoMarketChart>(GetUrl("api/v3/coins/" + coinId + "/market_chart/range"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<CoinGeckoMarketChart>(GetUrl("api/v3/coins/" + coinId + "/market_chart/range"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -208,7 +208,7 @@ namespace CoinGecko.Net.Clients
             parameters.AddParameter("vs_currency", quoteAsset);
             parameters.AddParameter("days", days);
 
-            return await SendRequestAsync<IEnumerable<CoinGeckoOhlc>>(GetUrl("api/v3/coins/" + coinId + "/ohlc"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<IEnumerable<CoinGeckoOhlc>>(GetUrl("api/v3/coins/" + coinId + "/ohlc"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -234,7 +234,7 @@ namespace CoinGecko.Net.Clients
             parameters.AddOptionalParameter("include_24hr_change", include24hrChange);
             parameters.AddOptionalParameter("include_last_updated_at", includeLastUpdatedAt);
             parameters.AddOptionalParameter("precision", precision);
-            return await SendRequestAsync<Dictionary<string, Dictionary<string, decimal?>>>(GetUrl("api/v3/simple/price"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<Dictionary<string, Dictionary<string, decimal?>>>(GetUrl("api/v3/simple/price"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
         #endregion
 
@@ -260,7 +260,7 @@ namespace CoinGecko.Net.Clients
             parameters.AddOptionalParameter("include_24hr_change", include24hrChange);
             parameters.AddOptionalParameter("include_last_updated_at", includeLastUpdatedAt);
             parameters.AddOptionalParameter("precision", precision);
-            return await SendRequestAsync<Dictionary<string, Dictionary<string, decimal?>>>(GetUrl("api/v3/simple/token_price/" + platformId), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<Dictionary<string, Dictionary<string, decimal?>>>(GetUrl("api/v3/simple/token_price/" + platformId), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -271,7 +271,7 @@ namespace CoinGecko.Net.Clients
         public async Task<WebCallResult<IEnumerable<string>>> GetQuoteAssetsAsync(CancellationToken ct = default)
         {
             var parameters = new Dictionary<string, object>();
-            return await SendRequestAsync<IEnumerable<string>>(GetUrl("api/v3/simple/supported_vs_currencies"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<IEnumerable<string>>(GetUrl("api/v3/simple/supported_vs_currencies"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -282,7 +282,7 @@ namespace CoinGecko.Net.Clients
         public async Task<WebCallResult<CoinGeckoAssetDetails>> GetAssetDetailsFromContractAsync(string id, string contractAddress, CancellationToken ct = default)
         {
             var parameters = new Dictionary<string, object>();
-            return await SendRequestAsync<CoinGeckoAssetDetails>(GetUrl($"api/v3/coins/{id}/contract/{contractAddress}"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<CoinGeckoAssetDetails>(GetUrl($"api/v3/coins/{id}/contract/{contractAddress}"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -301,7 +301,7 @@ namespace CoinGecko.Net.Clients
             parameters.AddParameter("vs_currency", quoteAsset);
             parameters.AddParameter("days", days);
 
-            return await SendRequestAsync<CoinGeckoMarketChart>(GetUrl($"api/v3/coins/{coinId}/contract/{contractAddress}/market_chart"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<CoinGeckoMarketChart>(GetUrl($"api/v3/coins/{coinId}/contract/{contractAddress}/market_chart"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -322,7 +322,7 @@ namespace CoinGecko.Net.Clients
             parameters.AddParameter("from", DateTimeConverter.ConvertToSeconds(from));
             parameters.AddParameter("to", DateTimeConverter.ConvertToSeconds(to));
 
-            return await SendRequestAsync<CoinGeckoMarketChart>(GetUrl($"api/v3/coins/{coinId}/contract/{contractAddress}/market_chart/range"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<CoinGeckoMarketChart>(GetUrl($"api/v3/coins/{coinId}/contract/{contractAddress}/market_chart/range"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -337,7 +337,7 @@ namespace CoinGecko.Net.Clients
             var parameters = new Dictionary<string, object>();
             parameters.AddOptionalParameter("filter", filter);
 
-            return await SendRequestAsync<IEnumerable<CoinGeckoAssetPlatform>>(GetUrl($"api/v3/asset_platforms"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<IEnumerable<CoinGeckoAssetPlatform>>(GetUrl($"api/v3/asset_platforms"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -348,7 +348,7 @@ namespace CoinGecko.Net.Clients
         public async Task<WebCallResult<IEnumerable<CoinGeckoCategory>>> GetAssetCategoriesAsync(CancellationToken ct = default)
         {
             var parameters = new Dictionary<string, object>();
-            return await SendRequestAsync<IEnumerable<CoinGeckoCategory>>(GetUrl($"api/v3/coins/categories/list"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<IEnumerable<CoinGeckoCategory>>(GetUrl($"api/v3/coins/categories/list"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -360,7 +360,7 @@ namespace CoinGecko.Net.Clients
         {
             var parameters = new Dictionary<string, object>();
             parameters.AddOptionalParameter("order", order);
-            return await SendRequestAsync<IEnumerable<CoinGeckoMarketDataCategory>>(GetUrl($"api/v3/coins/categories"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<IEnumerable<CoinGeckoMarketDataCategory>>(GetUrl($"api/v3/coins/categories"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -373,7 +373,7 @@ namespace CoinGecko.Net.Clients
             var parameters = new Dictionary<string, object>();
             parameters.AddOptionalParameter("per_page", pageSize);
             parameters.AddOptionalParameter("page", page);
-            return await SendRequestAsync<IEnumerable<CoinGeckoExchange>>(GetUrl($"api/v3/exchanges"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<IEnumerable<CoinGeckoExchange>>(GetUrl($"api/v3/exchanges"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -384,7 +384,7 @@ namespace CoinGecko.Net.Clients
         public async Task<WebCallResult<IEnumerable<CoinGeckoListItem>>> GetExchangeMarketsAsync(CancellationToken ct = default)
         {
             var parameters = new Dictionary<string, object>();
-            return await SendRequestAsync<IEnumerable<CoinGeckoListItem>>(GetUrl($"api/v3/exchanges/list"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<IEnumerable<CoinGeckoListItem>>(GetUrl($"api/v3/exchanges/list"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -395,7 +395,7 @@ namespace CoinGecko.Net.Clients
         public async Task<WebCallResult<CoinGeckoExchangeDetails>> GetExchangeDetailsAsync(string exchangeId, CancellationToken ct = default)
         {
             var parameters = new Dictionary<string, object>();
-            return await SendRequestAsync<CoinGeckoExchangeDetails>(GetUrl($"api/v3/exchanges/{exchangeId}"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<CoinGeckoExchangeDetails>(GetUrl($"api/v3/exchanges/{exchangeId}"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -410,7 +410,7 @@ namespace CoinGecko.Net.Clients
             parameters.AddOptionalParameter("page", page);
             parameters.AddOptionalParameter("depth", depth);
             parameters.AddOptionalParameter("order", order);
-            return await SendRequestAsync<CoinGeckoTickers>(GetUrl($"api/v3/exchanges/{exchangeId}/tickers"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<CoinGeckoTickers>(GetUrl($"api/v3/exchanges/{exchangeId}/tickers"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -421,7 +421,7 @@ namespace CoinGecko.Net.Clients
         {
             var parameters = new Dictionary<string, object>();
             parameters.AddParameter("days", days);
-            return await SendRequestAsync<IEnumerable<CoinGeckoMarketChartValue>>(GetUrl($"api/v3/exchanges/{exchangeId}/volume_chart"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<IEnumerable<CoinGeckoMarketChartValue>>(GetUrl($"api/v3/exchanges/{exchangeId}/volume_chart"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -432,7 +432,7 @@ namespace CoinGecko.Net.Clients
         {
             var parameters = new Dictionary<string, object>();
             parameters.AddOptionalParameter("include_tickers", includeTickers);
-            return await SendRequestAsync<IEnumerable<CoinGeckoDerivative>>(GetUrl($"api/v3/derivatives"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<IEnumerable<CoinGeckoDerivative>>(GetUrl($"api/v3/derivatives"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -445,7 +445,7 @@ namespace CoinGecko.Net.Clients
             parameters.AddOptionalParameter("page", page);
             parameters.AddOptionalParameter("pageSize", pageSize);
             parameters.AddOptionalParameter("order", order);
-            return await SendRequestAsync<IEnumerable<CoinGeckoExchangeDerivative>>(GetUrl($"api/v3/derivatives/exchanges"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<IEnumerable<CoinGeckoExchangeDerivative>>(GetUrl($"api/v3/derivatives/exchanges"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -455,7 +455,7 @@ namespace CoinGecko.Net.Clients
         public async Task<WebCallResult<IEnumerable<CoinGeckoListItem>>> GetDerivativesExchangesListAsync(CancellationToken ct = default)
         {
             var parameters = new Dictionary<string, object>();
-            return await SendRequestAsync<IEnumerable<CoinGeckoListItem>>(GetUrl($"api/v3/derivatives/exchanges/list"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<IEnumerable<CoinGeckoListItem>>(GetUrl($"api/v3/derivatives/exchanges/list"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -465,7 +465,7 @@ namespace CoinGecko.Net.Clients
         public async Task<WebCallResult<CoinGeckoExchangeRates>> GetBtcExchangeRatesAsync(CancellationToken ct = default)
         {
             var parameters = new Dictionary<string, object>();
-            return await SendRequestAsync<CoinGeckoExchangeRates>(GetUrl($"api/v3/exchange_rates"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<CoinGeckoExchangeRates>(GetUrl($"api/v3/exchange_rates"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -475,7 +475,7 @@ namespace CoinGecko.Net.Clients
         public async Task<WebCallResult<CoinGeckoGlobalData>> GetGlobalDataAsync(CancellationToken ct = default)
         {
             var parameters = new Dictionary<string, object>();
-            var data = await SendRequestAsync<CoinGeckoGlobalDataWrapper>(GetUrl($"api/v3/global"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            var data = await SendRequestAsync<CoinGeckoGlobalDataWrapper>(GetUrl($"api/v3/global"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
             if (!data)
                 return data.As<CoinGeckoGlobalData>(null);
 
@@ -489,7 +489,7 @@ namespace CoinGecko.Net.Clients
         public async Task<WebCallResult<CoinGeckoGlobalDefiData>> GetGlobalDefiDataAsync(CancellationToken ct = default)
         {
             var parameters = new Dictionary<string, object>();
-            var data = await SendRequestAsync<CoinGeckoGlobalDefiDataWrapper>(GetUrl($"api/v3/global/decentralized_finance_defi"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            var data = await SendRequestAsync<CoinGeckoGlobalDefiDataWrapper>(GetUrl($"api/v3/global/decentralized_finance_defi"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
             if (!data)
                 return data.As<CoinGeckoGlobalDefiData>(null);
 
@@ -507,7 +507,7 @@ namespace CoinGecko.Net.Clients
             parameters.AddOptionalParameter("asset_platform_id", assetPlatformId);
             parameters.AddOptionalParameter("page", page);
             parameters.AddOptionalParameter("per_page", pageSize);
-            return await SendRequestAsync<IEnumerable<CoinGeckoNft>>(GetUrl($"api/v3/nfts/list"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<IEnumerable<CoinGeckoNft>>(GetUrl($"api/v3/nfts/list"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -517,7 +517,7 @@ namespace CoinGecko.Net.Clients
         public async Task<WebCallResult<CoinGeckoNftDetails>> GetNftAsync(string id, CancellationToken ct = default)
         {
             var parameters = new Dictionary<string, object>();
-            return await SendRequestAsync<CoinGeckoNftDetails>(GetUrl($"api/v3/nfts/{id}"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<CoinGeckoNftDetails>(GetUrl($"api/v3/nfts/{id}"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -527,7 +527,7 @@ namespace CoinGecko.Net.Clients
         public async Task<WebCallResult<CoinGeckoNftDetails>> GetNftByContractAddressAsync(string platformId, string contractAddress, CancellationToken ct = default)
         {
             var parameters = new Dictionary<string, object>();
-            return await SendRequestAsync<CoinGeckoNftDetails>(GetUrl($"api/v3/nfts/{platformId}/contract/{contractAddress}"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<CoinGeckoNftDetails>(GetUrl($"api/v3/nfts/{platformId}/contract/{contractAddress}"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -538,7 +538,7 @@ namespace CoinGecko.Net.Clients
         {
             var parameters = new Dictionary<string, object>();
             parameters.AddParameter("query", query);
-            return await SendRequestAsync<CoinGeckoSearchResult>(GetUrl($"api/v3/search"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<CoinGeckoSearchResult>(GetUrl($"api/v3/search"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -548,7 +548,7 @@ namespace CoinGecko.Net.Clients
         public async Task<WebCallResult<CoinGeckoTrendingSearch>> GetTrendingSearchesAsync(CancellationToken ct = default)
         {
             var parameters = new Dictionary<string, object>();
-            return await SendRequestAsync<CoinGeckoTrendingSearch>(GetUrl($"api/v3/search/trending"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<CoinGeckoTrendingSearch>(GetUrl($"api/v3/search/trending"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -560,7 +560,7 @@ namespace CoinGecko.Net.Clients
             var parameters = new Dictionary<string, object>();
             parameters.AddOptionalParameter("page", page);
             parameters.AddOptionalParameter("per_page", pageSize);
-            return await SendRequestAsync<IEnumerable<CoinGeckoIndex>>(GetUrl($"api/v3/indexes"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<IEnumerable<CoinGeckoIndex>>(GetUrl($"api/v3/indexes"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
@@ -570,7 +570,7 @@ namespace CoinGecko.Net.Clients
         public async Task<WebCallResult<IEnumerable<CoinGeckoListItem>>> GetIndexesListAsync(CancellationToken ct = default)
         {
             var parameters = new Dictionary<string, object>();
-            return await SendRequestAsync<IEnumerable<CoinGeckoListItem>>(GetUrl($"api/v3/indexes/list"), HttpMethod.Get, ct, parameters).ConfigureAwait(false);
+            return await SendRequestAsync<IEnumerable<CoinGeckoListItem>>(GetUrl($"api/v3/indexes/list"), HttpMethod.Get, ct, parameters, requestWeight: 0).ConfigureAwait(false);
         }
 
         #endregion
