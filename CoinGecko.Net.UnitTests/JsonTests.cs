@@ -15,7 +15,6 @@ namespace CoinGecko.Net.UnitTests
         {
             x.ApiCredentials = new CryptoExchange.Net.Authentication.ApiCredentials("123", "123");
             x.ApiOptions.OutputOriginalData = true;
-            x.ApiOptions.RateLimiters = new List<IRateLimiter>();
         },
             System.Net.HttpStatusCode.OK));
 
