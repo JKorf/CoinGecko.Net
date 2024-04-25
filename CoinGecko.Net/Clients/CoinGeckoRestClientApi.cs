@@ -30,6 +30,9 @@ namespace CoinGecko.Net.Clients
             };
         }
 
+        /// <inheritdoc />
+        public override string FormatSymbol(string baseAsset, string quoteAsset) => throw new NotImplementedException();
+
         #region Ping
 
         /// <inheritdoc />
