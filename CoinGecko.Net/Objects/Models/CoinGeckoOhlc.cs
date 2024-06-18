@@ -10,7 +10,7 @@ namespace CoinGecko.Net.Objects.Models
     /// Open High Low Close data
     /// </summary>
     [JsonConverter(typeof(ArrayConverter))]
-    public class CoinGeckoOhlc
+    public record CoinGeckoOhlc
     {
         /// <summary>
         /// Timestamp

@@ -9,7 +9,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Ticker info
     /// </summary>
-    public class CoinGeckoTicker
+    public record CoinGeckoTicker
     {
         /// <summary>
         /// Base asset

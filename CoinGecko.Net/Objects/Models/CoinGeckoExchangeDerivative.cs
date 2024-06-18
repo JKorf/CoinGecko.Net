@@ -5,7 +5,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Exchange info
     /// </summary>
-    public class CoinGeckoExchangeDerivative
+    public record CoinGeckoExchangeDerivative
     {
         /// <summary>
         /// Mame

@@ -2,7 +2,7 @@
 
 namespace CoinGecko.Net.Objects.Models
 {
-    internal class CoinGeckoGlobalDefiDataWrapper
+    internal record CoinGeckoGlobalDefiDataWrapper
     {
         public CoinGeckoGlobalDefiData? Data { get; set; }
     }
@@ -10,7 +10,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Global defi data
     /// </summary>
-    public class CoinGeckoGlobalDefiData
+    public record CoinGeckoGlobalDefiData
     {
         /// <summary>
         /// Defi market cap

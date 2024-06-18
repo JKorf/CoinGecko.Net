@@ -7,7 +7,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Derivative info
     /// </summary>
-    public class CoinGeckoDerivative
+    public record CoinGeckoDerivative
     {
         /// <summary>
         /// Market

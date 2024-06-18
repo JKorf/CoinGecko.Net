@@ -7,7 +7,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Ico information
     /// </summary>
-    public class CoinGeckoIcoData
+    public record CoinGeckoIcoData
     {
         /// <summary>
         /// Ico start date

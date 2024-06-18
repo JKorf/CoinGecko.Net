@@ -5,7 +5,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Nft info
     /// </summary>
-    public class CoinGeckoNftDetails
+    public record CoinGeckoNftDetails
     {
         /// <summary>
         /// Id
@@ -79,7 +79,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Nft value info
     /// </summary>
-    public class CoinGeckoNftValue
+    public record CoinGeckoNftValue
     {
         /// <summary>
         /// In native currency

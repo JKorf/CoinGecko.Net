@@ -3,7 +3,7 @@
     /// <summary>
     /// Image links
     /// </summary>
-    public class CoinGeckoImages
+    public record CoinGeckoImages
     {
         /// <summary>
         /// Thumbnail

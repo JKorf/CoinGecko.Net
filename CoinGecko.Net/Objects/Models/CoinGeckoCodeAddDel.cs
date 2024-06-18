@@ -7,7 +7,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Code additions/deletions
     /// </summary>
-    public class CoinGeckoCodeAddDel
+    public record CoinGeckoCodeAddDel
     {
         /// <summary>
         /// Lines added

@@ -5,7 +5,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Platform info
     /// </summary>
-    public class CoinGeckoAssetPlatform
+    public record CoinGeckoAssetPlatform
     {
         /// <summary>
         /// Platform id

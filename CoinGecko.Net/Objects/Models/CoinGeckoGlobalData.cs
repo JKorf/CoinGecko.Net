@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace CoinGecko.Net.Objects.Models
 {
-    internal class CoinGeckoGlobalDataWrapper
+    internal record CoinGeckoGlobalDataWrapper
     {
         public CoinGeckoGlobalData? Data { get; set; }
     }
@@ -13,7 +13,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Global crypto data
     /// </summary>
-    public class CoinGeckoGlobalData
+    public record CoinGeckoGlobalData
     {
         /// <summary>
         /// Active crypto currencies

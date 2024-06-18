@@ -5,7 +5,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Nft
     /// </summary>
-    public class CoinGeckoNft
+    public record CoinGeckoNft
     {
         /// <summary>
         /// Id

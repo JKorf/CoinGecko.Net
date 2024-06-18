@@ -3,7 +3,7 @@
     /// <summary>
     /// List item
     /// </summary>
-    public class CoinGeckoListItem
+    public record CoinGeckoListItem
     {
         /// <summary>
         /// Id

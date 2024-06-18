@@ -7,7 +7,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Trending searches
     /// </summary>
-    public class CoinGeckoTrendingSearch
+    public record CoinGeckoTrendingSearch
     {
         /// <summary>
         /// Trending assets
@@ -19,7 +19,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Trending asset
     /// </summary>
-    public class CoinGeckoTrendingAsset
+    public record CoinGeckoTrendingAsset
     {
         /// <summary>
         /// Id
@@ -77,7 +77,7 @@ namespace CoinGecko.Net.Objects.Models
     /// Item
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class ItemWrapper<T>
+    public record ItemWrapper<T>
     {
         /// <summary>
         /// Item info

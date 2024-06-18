@@ -8,7 +8,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Links
     /// </summary>
-    public class CoinGeckoLinks
+    public record CoinGeckoLinks
     {
         /// <summary>
         /// Homepage

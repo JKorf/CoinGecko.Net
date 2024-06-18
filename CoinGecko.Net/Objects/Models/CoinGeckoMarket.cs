@@ -7,7 +7,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Market info
     /// </summary>
-    public class CoinGeckoMarket
+    public record CoinGeckoMarket
     {
         /// <summary>
         /// Market id
@@ -142,7 +142,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Market raturn on investment info
     /// </summary>
-    public class CoinGeckoMarketRoi
+    public record CoinGeckoMarketRoi
     {
         /// <summary>
         /// Times

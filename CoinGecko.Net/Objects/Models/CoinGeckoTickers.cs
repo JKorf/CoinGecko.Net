@@ -7,7 +7,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Tickers
     /// </summary>
-    public class CoinGeckoTickers
+    public record CoinGeckoTickers
     {
         /// <summary>
         /// Coin name

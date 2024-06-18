@@ -3,7 +3,7 @@
     /// <summary>
     /// Asset info
     /// </summary>
-    public class CoinGeckoAsset
+    public record CoinGeckoAsset
     {
         /// <summary>
         /// Id of the asset

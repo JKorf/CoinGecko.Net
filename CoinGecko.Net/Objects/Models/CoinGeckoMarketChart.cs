@@ -9,7 +9,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Price history info
     /// </summary>
-    public class CoinGeckoMarketChart
+    public record CoinGeckoMarketChart
     {
         /// <summary>
         /// Price history
@@ -31,7 +31,7 @@ namespace CoinGecko.Net.Objects.Models
     /// Value at time info
     /// </summary>
     [JsonConverter(typeof(ArrayConverter))]
-    public class CoinGeckoMarketChartValue
+    public record CoinGeckoMarketChartValue
     {
         /// <summary>
         /// Timestamp

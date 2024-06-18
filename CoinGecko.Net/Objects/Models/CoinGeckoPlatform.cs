@@ -8,7 +8,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Platform info
     /// </summary>
-    public class CoinGeckoPlatform
+    public record CoinGeckoPlatform
     {
         /// <summary>
         /// Decimal places

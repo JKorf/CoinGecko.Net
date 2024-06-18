@@ -5,7 +5,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Exchange rates
     /// </summary>
-    public class CoinGeckoExchangeRates
+    public record CoinGeckoExchangeRates
     {
         /// <summary>
         /// Rates dictionary
@@ -16,7 +16,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Exchange rate
     /// </summary>
-    public class CoinGeckoExchangeRate
+    public record CoinGeckoExchangeRate
     {
         /// <summary>
         /// Name

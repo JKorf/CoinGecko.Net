@@ -8,7 +8,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Developer data
     /// </summary>
-    public class CoinGeckoDeveloperData
+    public record CoinGeckoDeveloperData
     {
         /// <summary>
         /// Forks

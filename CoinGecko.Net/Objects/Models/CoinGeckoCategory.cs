@@ -5,7 +5,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Category
     /// </summary>
-    public class CoinGeckoCategory
+    public record CoinGeckoCategory
     {
         /// <summary>
         /// Category id

@@ -8,7 +8,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Asset details
     /// </summary>
-    public class CoinGeckoAssetDetails
+    public record CoinGeckoAssetDetails
     {
         /// <summary>
         /// Id of the asset

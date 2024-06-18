@@ -5,7 +5,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Asset market info
     /// </summary>
-    public class CoinGeckoAssetMarket
+    public record CoinGeckoAssetMarket
     {
         /// <summary>
         /// Name

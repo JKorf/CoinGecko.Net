@@ -6,7 +6,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// History info
     /// </summary>
-    public class CoinGeckoAssetHistory
+    public record CoinGeckoAssetHistory
     {
         /// <summary>
         /// Id

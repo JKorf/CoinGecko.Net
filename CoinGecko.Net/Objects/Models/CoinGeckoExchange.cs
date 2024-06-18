@@ -5,7 +5,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Exchange info
     /// </summary>
-    public class CoinGeckoExchange
+    public record CoinGeckoExchange
     {
         /// <summary>
         /// Id

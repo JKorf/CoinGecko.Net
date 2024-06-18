@@ -8,7 +8,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Category info
     /// </summary>
-    public class CoinGeckoMarketDataCategory
+    public record CoinGeckoMarketDataCategory
     {
         /// <summary>
         /// Id

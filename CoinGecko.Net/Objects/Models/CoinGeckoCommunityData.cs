@@ -8,7 +8,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Community data
     /// </summary>
-    public class CoinGeckoCommunityData
+    public record CoinGeckoCommunityData
     {
         /// <summary>
         /// Facebook likes

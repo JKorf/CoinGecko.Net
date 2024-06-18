@@ -5,7 +5,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Public interest statistics
     /// </summary>
-    public class CoinGeckoPublicInterestStats
+    public record CoinGeckoPublicInterestStats
     {
         /// <summary>
         /// Alexa rank

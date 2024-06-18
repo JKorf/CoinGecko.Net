@@ -9,7 +9,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Market data
     /// </summary>
-    public class CoinGeckoMarketData
+    public record CoinGeckoMarketData
     {
         /// <summary>
         /// Current price

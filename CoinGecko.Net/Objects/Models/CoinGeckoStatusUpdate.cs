@@ -7,7 +7,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Status update
     /// </summary>
-    public class CoinGeckoStatusUpdate
+    public record CoinGeckoStatusUpdate
     {
         /// <summary>
         /// Description
@@ -45,7 +45,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Project info
     /// </summary>
-    public class CoinGeckoProject
+    public record CoinGeckoProject
     {
         /// <summary>
         /// Type

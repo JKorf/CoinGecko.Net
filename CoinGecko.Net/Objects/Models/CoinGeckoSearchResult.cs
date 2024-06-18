@@ -7,7 +7,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Search results
     /// </summary>
-    public class CoinGeckoSearchResult
+    public record CoinGeckoSearchResult
     {
         /// <summary>
         /// Assets found
@@ -31,7 +31,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Asset result
     /// </summary>
-    public class CoinGeckoAssetResult
+    public record CoinGeckoAssetResult
     {
         /// <summary>
         /// Id
@@ -70,7 +70,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Exchange search result
     /// </summary>
-    public class CoinGeckoExchangeResult
+    public record CoinGeckoExchangeResult
     {
         /// <summary>
         /// Id
@@ -100,7 +100,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Category search result
     /// </summary>
-    public class CoinGeckoCategoryResult
+    public record CoinGeckoCategoryResult
     {
         /// <summary>
         /// Id
@@ -115,7 +115,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Nft search result
     /// </summary>
-    public class CoinGeckoNftResult
+    public record CoinGeckoNftResult
     {
         /// <summary>
         /// Id

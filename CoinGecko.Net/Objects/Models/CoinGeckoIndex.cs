@@ -5,7 +5,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Index info
     /// </summary>
-    public class CoinGeckoIndex
+    public record CoinGeckoIndex
     {
         /// <summary>
         /// Id
