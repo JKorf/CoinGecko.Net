@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 namespace CoinGecko.Net.Clients
 {
     /// <inheritdoc />
-    public class CoinGeckoRestClientApi : RestApiClient, ICoinGeckoRestClientApi
+    internal class CoinGeckoRestClientApi : RestApiClient, ICoinGeckoRestClientApi
     {
         internal CoinGeckoRestClientApi(ILogger logger, HttpClient? httpClient, CoinGeckoRestOptions options) 
             : base(logger, httpClient, options.Environment.RestApiAddress, options, options.ApiOptions)
