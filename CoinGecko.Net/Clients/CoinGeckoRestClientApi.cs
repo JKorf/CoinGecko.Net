@@ -31,7 +31,7 @@ namespace CoinGecko.Net.Clients
         }
 
         /// <inheritdoc />
-        public override string FormatSymbol(string baseAsset, string quoteAsset, FuturesType? futuresType = null) => throw new NotImplementedException();
+        public override string FormatSymbol(string baseAsset, string quoteAsset, ApiType? futuresType = null) => throw new NotImplementedException();
 
         #region Ping
 
