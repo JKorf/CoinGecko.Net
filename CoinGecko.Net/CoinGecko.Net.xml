@@ -33,7 +33,7 @@
         <member name="T:CoinGecko.Net.Clients.CoinGeckoRestClientApi">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.FormatSymbol(System.String,System.String)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.FormatSymbol(System.String,System.String,System.Nullable{CryptoExchange.Net.Objects.FuturesType})">
             <inheritdoc />
         </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.PingAsync(System.Threading.CancellationToken)">
