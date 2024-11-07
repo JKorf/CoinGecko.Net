@@ -1,8 +1,6 @@
 ﻿using CryptoExchange.Net.Converters;
-using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
 {

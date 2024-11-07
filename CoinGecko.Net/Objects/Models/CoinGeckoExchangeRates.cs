@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
 {
@@ -10,6 +11,7 @@ namespace CoinGecko.Net.Objects.Models
         /// <summary>
         /// Rates dictionary
         /// </summary>
+        [JsonPropertyName("rates")]
         public Dictionary<string, CoinGeckoExchangeRate> Rates { get; set; } = new Dictionary<string, CoinGeckoExchangeRate>();
     }
 
@@ -21,18 +23,22 @@ namespace CoinGecko.Net.Objects.Models
         /// <summary>
         /// Name
         /// </summary>
+        [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
         /// <summary>
         /// Unit
         /// </summary>
+        [JsonPropertyName("unit")]
         public string Unit { get; set; } = string.Empty;
         /// <summary>
         /// Value
         /// </summary>
+        [JsonPropertyName("value")]
         public decimal? Value { get; set; }
         /// <summary>
         /// Type
         /// </summary>
+        [JsonPropertyName("type")]
         public string Type { get; set; } = string.Empty;
     }
 }

@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
 {
@@ -10,12 +10,12 @@ namespace CoinGecko.Net.Objects.Models
         /// <summary>
         /// Alexa rank
         /// </summary>
-        [JsonProperty("alexa_rank")]
+        [JsonPropertyName("alexa_rank")]
         public int? AlexaRank { get; set; }
         /// <summary>
         /// Bing matches
         /// </summary>
-        [JsonProperty("bing_matches")]
+        [JsonPropertyName("bing_matches")]
         public int? BingMatches { get; set; }
     }
 }

@@ -33,6 +33,12 @@
         <member name="T:CoinGecko.Net.Clients.CoinGeckoRestClientApi">
             <inheritdoc />
         </member>
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.CreateAccessor">
+            <inheritdoc />
+        </member>
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.CreateSerializer">
+            <inheritdoc />
+        </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.FormatSymbol(System.String,System.String,CryptoExchange.Net.SharedApis.TradingMode,System.Nullable{System.DateTime})">
             <inheritdoc />
         </member>
@@ -42,7 +48,7 @@
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetAssetsAsync(System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetMarketsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetMarketsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetAssetDetailsAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
@@ -54,13 +60,13 @@
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetAssetHistoryAsync(System.String,System.DateTime,System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetMarketChartAsync(System.String,System.String,System.Int32,System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetMarketChartAsync(System.String,System.String,System.Int32,System.String,System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetMarketChartAsync(System.String,System.String,System.DateTime,System.DateTime,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetMarketChartAsync(System.String,System.String,System.DateTime,System.DateTime,System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetOhlcAsync(System.String,System.String,System.Int32,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetOhlcAsync(System.String,System.String,System.Int32,System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetPricesAsync(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
@@ -93,7 +99,7 @@
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangeMarketsAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangeListAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangeDetailsAsync(System.String,System.Threading.CancellationToken)">
@@ -105,7 +111,10 @@
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangeVolumeHistoryAsync(System.String,System.Int32,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetDerivativesAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetDerivativesAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangeDerivativesDetailsAsync(System.String,System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangeDerivativesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)">
@@ -123,7 +132,7 @@
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetGlobalDefiDataAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetNftsAsync(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetNftsAsync(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetNftAsync(System.String,System.Threading.CancellationToken)">
@@ -159,6 +168,36 @@
         </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.CreateAuthenticationProvider(CryptoExchange.Net.Authentication.ApiCredentials)">
             <inheritdoc />
+        </member>
+        <member name="T:CoinGecko.Net.CoinGeckoApi">
+            <summary>
+            CoinGecko information and configuration
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.CoinGeckoApi.Url">
+            <summary>
+            Url to the main website
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.CoinGeckoApi.ApiDocsUrl">
+            <summary>
+            Urls to the API documentation
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.CoinGeckoApi.RateLimiter">
+            <summary>
+            Rate limiter configuration for the CoinGecko API
+            </summary>
+        </member>
+        <member name="T:CoinGecko.Net.CoinGeckoRateLimiters">
+            <summary>
+            Rate limiter configuration for the CoinGecko API
+            </summary>
+        </member>
+        <member name="E:CoinGecko.Net.CoinGeckoRateLimiters.RateLimitTriggered">
+            <summary>
+            Event for when a rate limit is triggered
+            </summary>
         </member>
         <member name="T:CoinGecko.Net.CoinGeckoEnvironment">
             <summary>
@@ -226,7 +265,7 @@
             Get asset details by contract address
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/contract/get_coins__id__contract__contract_address_" /></para>
             </summary>
-            <param name="platformId">Id of the platform</param>
+            <param name="assetId">Id of the asset</param>
             <param name="contractAddress">Contract address</param>
             <param name="ct">Cancellation token</param>
             <returns></returns>
@@ -257,12 +296,11 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetDerivativesAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetDerivativesAsync(System.Threading.CancellationToken)">
             <summary>
             Get list of derivative tickers
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/derivatives/get_derivatives" /></para>
             </summary>
-            <param name="includeTickers">Include tickers for `all` or only `unexpired`</param>
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
@@ -285,6 +323,16 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeDerivativesDetailsAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get exchange derivative details
+            <para><a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-exchanges-id" /></para>
+            </summary>
+            <param name="exchangeId">Exchange id</param>
+            <param name="includeTickers">Include tickers, 'all' or 'unexpired'</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeDetailsAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Get exchange details
@@ -294,7 +342,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeMarketsAsync(System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeListAsync(System.Threading.CancellationToken)">
             <summary>
             Get all exchange markets 
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/exchanges/get_exchanges_list" /></para>
@@ -328,7 +376,7 @@
         </member>
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeVolumeHistoryAsync(System.String,System.Int32,System.Threading.CancellationToken)">
             <summary>
-            Get volume chart data for an exchange
+            Get volume chart data for an exchange, interval is determined automatically: 1 day -> 10 minutes, 7-14 days -> 1 hour, 30+ days -> 1 day
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/exchanges/get_exchanges__id__volume_chart" /></para>
             </summary>
             <param name="exchangeId">Exchange id</param>
@@ -347,7 +395,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketChartAsync(System.String,System.String,System.DateTime,System.DateTime,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketChartAsync(System.String,System.String,System.DateTime,System.DateTime,System.String,System.Threading.CancellationToken)">
             <summary>
             Get historical market data
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/coins/get_coins__id__market_chart_range" /></para>
@@ -356,10 +404,11 @@
             <param name="quoteAsset">Quote asset</param>
             <param name="from">From date</param>
             <param name="to">To date</param>
+            <param name="precision">Decimal place for currency price value</param>
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketChartAsync(System.String,System.String,System.Int32,System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketChartAsync(System.String,System.String,System.Int32,System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Get historical market data
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/coins/get_coins__id__market_chart" /></para>
@@ -368,6 +417,7 @@
             <param name="quoteAsset">Quote asset</param>
             <param name="days">Days back</param>
             <param name="interval">Data interval</param>
+            <param name="precision">Decimal place for currency price value</param>
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
@@ -405,7 +455,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Get coins market data
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/coins/get_coins_markets" /></para>
@@ -418,17 +468,20 @@
             <param name="pageSize">PageSize</param>
             <param name="sparkline">Include sparkline</param>
             <param name="priceChangePercentages">Include price change percentages</param>
+            <param name="locale">Language, defaults to `en`</param>
+            <param name="precision">Decimal place for currency price value</param>
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetOhlcAsync(System.String,System.String,System.Int32,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetOhlcAsync(System.String,System.String,System.Int32,System.String,System.Threading.CancellationToken)">
             <summary>
-            Get Open/High/Low/Close data
+            Get Open/High/Low/Close data, interval is determined automatically: 1-2 days -> 30 minutes, 3-30 days -> 4 hours, 31+ days -> 4 days
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/coins/get_coins__id__ohlc" /></para>
             </summary>
             <param name="assetId">Asset id</param>
             <param name="quoteAsset">Quote asset</param>
             <param name="days">Days back</param>
+            <param name="precision">Decimal place for currency price value</param>
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
@@ -509,13 +562,12 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetNftsAsync(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetNftsAsync(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get list of nfts
             <para><a href="https://www.coingecko.com/en/api/documentation?deepLinking=1#/nfts%20(beta)/get_nfts_list" /></para>
             </summary>
             <param name="order">Sort</param>
-            <param name="assetPlatformId">Platform id</param>
             <param name="page">Page</param>
             <param name="pageSize">Page size</param>
             <param name="ct">Cancellation token</param>
@@ -608,6 +660,11 @@
             Name of the asset
             </summary>
         </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAsset.Platforms">
+            <summary>
+            Asset platform and contract address
+            </summary>
+        </member>
         <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails">
             <summary>
             Asset details
@@ -626,6 +683,11 @@
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.Name">
             <summary>
             Name of the asset
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.WebSlug">
+            <summary>
+            Asset web slug
             </summary>
         </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.AssetPlatformId">
@@ -656,6 +718,11 @@
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.Categories">
             <summary>
             Categories
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.PreviewListing">
+            <summary>
+            Preview listing
             </summary>
         </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.PublicNotice">
@@ -698,11 +765,6 @@
             Genesis block date
             </summary>
         </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.ContractAddress">
-            <summary>
-            Contract address
-            </summary>
-        </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.SentimentVotesUpPercentage">
             <summary>
             Sentiment up votes percentage
@@ -713,54 +775,14 @@
             Sentiment down votes percentage
             </summary>
         </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.IcoData">
-            <summary>
-            Ico data
-            </summary>
-        </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.MarketCapRank">
             <summary>
             Market cap rank
             </summary>
         </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.CoinGeckoRank">
-            <summary>
-            Coin gecko rank
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.CoinGeckoScore">
-            <summary>
-            Coin gecko score
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.DeveloperScore">
-            <summary>
-            Developer score
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.CommunityScore">
-            <summary>
-            Community score
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.LiquidityScore">
-            <summary>
-            Liquidity score
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.PublicInterestScore">
-            <summary>
-            Public interest score
-            </summary>
-        </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.MarketData">
             <summary>
             Market data
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.PublicInterestStats">
-            <summary>
-            Public interest statistics
             </summary>
         </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.StatusUpdates">
@@ -786,6 +808,31 @@
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetDetails.Tickers">
             <summary>
             Tickers
+            </summary>
+        </member>
+        <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoAssetExchange">
+            <summary>
+            Asset exchange info
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetExchange.Name">
+            <summary>
+            Exchange name
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetExchange.Identifier">
+            <summary>
+            Identifier
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetExchange.HasTradingIncentive">
+            <summary>
+            Has trading incentive
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetExchange.Logo">
+            <summary>
+            Logo
             </summary>
         </member>
         <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoAssetHistory">
@@ -838,24 +885,24 @@
             Public interest stats
             </summary>
         </member>
-        <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoAssetMarket">
+        <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoMarketDataBasic">
             <summary>
-            Asset market info
+            Basic market data
             </summary>
         </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetMarket.Name">
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoMarketDataBasic.CurrentPrice">
             <summary>
-            Name
+            Current price
             </summary>
         </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetMarket.Identifier">
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoMarketDataBasic.MarketCaps">
             <summary>
-            Identifier
+            Market caps
             </summary>
         </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetMarket.HasTradingIncentive">
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoMarketDataBasic.TotalVolumes">
             <summary>
-            Has trading incentive
+            Total volumes
             </summary>
         </member>
         <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoAssetPlatform">
@@ -881,6 +928,16 @@
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetPlatform.ShortName">
             <summary>
             Short name
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetPlatform.NativeCoinId">
+            <summary>
+            Chain native coin id
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoAssetPlatform.Image">
+            <summary>
+            Platform image
             </summary>
         </member>
         <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoCategory">
@@ -1026,6 +1083,96 @@
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivative.ExpiredAt">
             <summary>
             Expired at
+            </summary>
+        </member>
+        <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker">
+            <summary>
+            Derivatives ticker
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.Symbol">
+            <summary>
+            Symbol
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.Base">
+            <summary>
+            Base asset
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.Target">
+            <summary>
+            Target asset
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.TradeUrl">
+            <summary>
+            Trade url
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.ContractType">
+            <summary>
+            Contract type
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.LastPrice">
+            <summary>
+            Last price
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.H24PercentageChange">
+            <summary>
+            24 hour percentage change
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.IndexPrice">
+            <summary>
+            Index price
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.IndexBasisPercentage">
+            <summary>
+            Index basis percentage
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.BidAskSpread">
+            <summary>
+            Bid ask spread
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.FundingRate">
+            <summary>
+            Funding rate
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.OpenInterestUsd">
+            <summary>
+            Open interest usd
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.H24Volume">
+            <summary>
+            24 hour volume
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.ConvertedVolume">
+            <summary>
+            Converted volume
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.ConvertedLast">
+            <summary>
+            Converted last
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.LastTradeTime">
+            <summary>
+            Last trade time
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.ExpireTime">
+            <summary>
+            Expired time
             </summary>
         </member>
         <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoDeveloperData">
@@ -1208,6 +1355,11 @@
             Url
             </summary>
         </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoExchangeDerivative.Tickers">
+            <summary>
+            Tickers
+            </summary>
+        </member>
         <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoExchangeDetails">
             <summary>
             Exchange details
@@ -1323,11 +1475,6 @@
             Tickers
             </summary>
         </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoExchangeDetails.StatusUpdates">
-            <summary>
-            Status updates
-            </summary>
-        </member>
         <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoExchangeRates">
             <summary>
             Exchange rates
@@ -1388,9 +1535,9 @@
             Ended icos
             </summary>
         </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoGlobalData.Markets">
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoGlobalData.Exchanges">
             <summary>
-            Markets
+            Exchanges
             </summary>
         </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoGlobalData.TotalMarketCap">
@@ -1663,6 +1810,11 @@
             Homepage
             </summary>
         </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoLinks.WhitePaper">
+            <summary>
+            White paper link
+            </summary>
+        </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoLinks.BlockchainSites">
             <summary>
             Blockchain explorer links
@@ -1865,7 +2017,7 @@
         </member>
         <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoMarketRoi">
             <summary>
-            Market raturn on investment info
+            Market return on investment info
             </summary>
         </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoMarketRoi.Times">
@@ -1991,6 +2143,11 @@
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoMarketData.FullyDilutedValuations">
             <summary>
             Fully diluted valuation
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoMarketData.MarketCapToFullyDilutedValuationRatio">
+            <summary>
+            Market cap to fully diluted valuation ratio
             </summary>
         </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoMarketData.TotalVolumes">
@@ -2233,9 +2390,19 @@
             Name
             </summary>
         </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.Symbol">
+            <summary>
+            Symbol
+            </summary>
+        </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.Images">
             <summary>
             Images
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.BannerImage">
+            <summary>
+            Banner image
             </summary>
         </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.Description">
@@ -2246,6 +2413,11 @@
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.NativeCurrency">
             <summary>
             Native currency
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.NativeCurrencySymbol">
+            <summary>
+            Native currency symbol
             </summary>
         </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.FloorPriceInUsd24hPercentageChange">
@@ -2261,6 +2433,11 @@
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.NumberOfUniqueAddresses24hChangePercentage">
             <summary>
             Number of unique address 24h change percentage
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.VolumeInUsd24hPercentageChange">
+            <summary>
+            Volume 24h change percentage in USD
             </summary>
         </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.TotalSupply">
@@ -2283,6 +2460,96 @@
             Floor price
             </summary>
         </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.FloorPrice24hPercentageChange">
+            <summary>
+            Floor price 24h percentage change
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.MarketCap24hPercentageChange">
+            <summary>
+            Market cap 24h percentage change
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.Volume24hPercentageChange">
+            <summary>
+            Volume 24h percentage change
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.OneDaySales">
+            <summary>
+            One day sales
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.OneDaySales24hPercentageChange">
+            <summary>
+            One day sales percentage change
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.OneDayAverageSalesPrice">
+            <summary>
+            One day average sales price
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.OneDayAverageSalesPrice24hPercentageChange">
+            <summary>
+            One day sales percentage change
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.FloorPrice7dPercentageChange">
+            <summary>
+            Floor price 7 day percentage change
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.FloorPrice14dPercentageChange">
+            <summary>
+            Floor price 14 day percentage change
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.FloorPrice30dPercentageChange">
+            <summary>
+            Floor price 30 day percentage change
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.FloorPrice60dPercentageChange">
+            <summary>
+            Floor price 60 day percentage change
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.FloorPrice1yPercentageChange">
+            <summary>
+            Floor price 1 year percentage change
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.UserFavoritesCount">
+            <summary>
+            Nft collection user favorites count
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.AllTimeHigh">
+            <summary>
+            All time high price
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.AllTimeHighChangePercentage">
+            <summary>
+            All time high price change percentage
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.AllTimeHighDate">
+            <summary>
+            All time high price date
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.Links">
+            <summary>
+            Explorer links
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDetails.Exlorers">
+            <summary>
+            Explorer links
+            </summary>
+        </member>
         <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoNftValue">
             <summary>
             Nft value info
@@ -2296,6 +2563,36 @@
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftValue.Usd">
             <summary>
             In usd
+            </summary>
+        </member>
+        <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoNftDate">
+            <summary>
+            Nft value info
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDate.NativeCurrency">
+            <summary>
+            In native currency
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftDate.Usd">
+            <summary>
+            In usd
+            </summary>
+        </member>
+        <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoNftLink">
+            <summary>
+            Nft value info
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftLink.Name">
+            <summary>
+            Link name
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoNftLink.Link">
+            <summary>
+            Link
             </summary>
         </member>
         <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoOhlc">
@@ -2381,6 +2678,11 @@
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoSearchResult.Nfts">
             <summary>
             Nfts found
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoSearchResult.Icos">
+            <summary>
+            Icos
             </summary>
         </member>
         <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoAssetResult">
@@ -2573,9 +2875,9 @@
             Quote asset
             </summary>
         </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTicker.Market">
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTicker.Exchange">
             <summary>
-            Market info
+            Exchange info
             </summary>
         </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTicker.Last">
@@ -2660,7 +2962,7 @@
         </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTickers.Name">
             <summary>
-            Coin name
+            Asset name
             </summary>
         </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTickers.Tickers">
@@ -2676,6 +2978,16 @@
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingSearch.Assets">
             <summary>
             Trending assets
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingSearch.Nfts">
+            <summary>
+            Trending NFTs
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingSearch.Categories">
+            <summary>
+            Trending Categories
             </summary>
         </member>
         <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoTrendingAsset">
@@ -2736,6 +3048,156 @@
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingAsset.Score">
             <summary>
             Score
+            </summary>
+        </member>
+        <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoTrendingNft">
+            <summary>
+            Nft
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingNft.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingNft.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingNft.Symbol">
+            <summary>
+            Symbol
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingNft.Thumb">
+            <summary>
+            Thumb image
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingNft.NftContractId">
+            <summary>
+            Nft contract id
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingNft.NativeAssetSymbol">
+            <summary>
+            Native asset symbol
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingNft.FloorPriceInNativeAsset">
+            <summary>
+            Floor price in native asset
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingNft.FloorPrice24hPercentageChange">
+            <summary>
+            Floor price 24h percentage change
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingNft.Data">
+            <summary>
+            Data
+            </summary>
+        </member>
+        <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoTrendingNftData">
+            <summary>
+            Nft data
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingNftData.FloorPrice">
+            <summary>
+            Floor price
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingNftData.FloorPriceInUsd24hPercentageChange">
+            <summary>
+            Floor price in usd 24h percentage change
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingNftData.H24Volume">
+            <summary>
+            Volume 24h
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingNftData.H24AverageSalePrice">
+            <summary>
+            Average sale price 24h
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingNftData.Sparkline">
+            <summary>
+            Sparkline
+            </summary>
+        </member>
+        <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoTrendingCategory">
+            <summary>
+            Trending category
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingCategory.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingCategory.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingCategory.MarketCap1hChange">
+            <summary>
+            Market cap 1 hour change
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingCategory.Slug">
+            <summary>
+            Slug
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingCategory.CoinsCount">
+            <summary>
+            Coins count
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingCategory.Data">
+            <summary>
+            Data
+            </summary>
+        </member>
+        <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoTrendingCategoryData">
+            <summary>
+            Category date
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingCategoryData.MarketCap">
+            <summary>
+            Market cap
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingCategoryData.MarketCapBtc">
+            <summary>
+            Market cap btc
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingCategoryData.TotalVolume">
+            <summary>
+            Total volume
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingCategoryData.TotalVolumeBtc">
+            <summary>
+            Total volume btc
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingCategoryData.MarketCapChangePercentage24h">
+            <summary>
+            Market cap change percentage24h
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoTrendingCategoryData.Sparkline">
+            <summary>
+            Sparkline
             </summary>
         </member>
         <member name="T:CoinGecko.Net.Objects.Models.ItemWrapper`1">

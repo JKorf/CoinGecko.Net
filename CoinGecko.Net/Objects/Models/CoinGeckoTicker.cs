@@ -1,8 +1,7 @@
-﻿using CryptoExchange.Net.Converters;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
 {
@@ -14,89 +13,95 @@ namespace CoinGecko.Net.Objects.Models
         /// <summary>
         /// Base asset
         /// </summary>
+        [JsonPropertyName("base")]
         public string Base { get; set; } = string.Empty;
         /// <summary>
         /// Quote asset
         /// </summary>
+        [JsonPropertyName("target")]
         public string Target { get; set; } = string.Empty;
         /// <summary>
-        /// Market info
+        /// Exchange info
         /// </summary>
-        public CoinGeckoAssetMarket? Market { get; set; }
+        [JsonPropertyName("market")]
+        public CoinGeckoAssetExchange? Exchange { get; set; }
         /// <summary>
         /// Last price
         /// </summary>
+        [JsonPropertyName("last")]
         public decimal? Last { get; set; }
         /// <summary>
         /// Trade volume
         /// </summary>
+        [JsonPropertyName("volume")]
         public decimal? Volume { get; set; }
         /// <summary>
         /// Converted last
         /// </summary>
-        [JsonProperty("converted_last")]
+        [JsonPropertyName("converted_last")]
         public Dictionary<string, decimal> ConvertedLast { get; set; } = new Dictionary<string, decimal>();
         /// <summary>
         /// Converted volume
         /// </summary>
-        [JsonProperty("converted_volume")]
+        [JsonPropertyName("converted_volume")]
         public Dictionary<string, decimal> ConvertedVolume { get; set; } = new Dictionary<string, decimal>();
         /// <summary>
         /// Trust score
         /// </summary>
-        [JsonProperty("trust_score")]
+        [JsonPropertyName("trust_score")]
         public string? TrustScore { get; set; }
         /// <summary>
         /// Difference in percentage between best bid and ask
         /// </summary>
-        [JsonProperty("bid_ask_spread_percentage")]
+        [JsonPropertyName("bid_ask_spread_percentage")]
         public decimal? BidAskSpreadPercentage { get; set; }
         /// <summary>
         /// Timestamp
         /// </summary>
         [JsonConverter(typeof(DateTimeConverter))]
+        [JsonPropertyName("timestamp")]
         public DateTime? Timestamp { get; set; }
         /// <summary>
         /// Last trade timestamp
         /// </summary>
         [JsonConverter(typeof(DateTimeConverter))]
-        [JsonProperty("last_traded_at")]
+        [JsonPropertyName("last_traded_at")]
         public DateTime? LastTradedAt { get; set; }
         /// <summary>
         /// Last fetch timestamp
         /// </summary>
         [JsonConverter(typeof(DateTimeConverter))]
-        [JsonProperty("last_fetch_at")]
+        [JsonPropertyName("last_fetch_at")]
         public DateTime? LastFetchAt { get; set; }
         /// <summary>
         /// Is anomaly
         /// </summary>
-        [JsonProperty("is_anomaly")]
+        [JsonPropertyName("is_anomaly")]
         public bool IsAnomaly { get; set; }
         /// <summary>
         /// Is stale
         /// </summary>
-        [JsonProperty("is_stale")]
+        [JsonPropertyName("is_stale")]
         public bool IsStale { get; set; }
         /// <summary>
         /// Trade url
         /// </summary>
-        [JsonProperty("trade_url")]
+        [JsonPropertyName("trade_url")]
         public string? TradeUrl { get; set; }
         /// <summary>
         /// Token info url
         /// </summary>
-        [JsonProperty("token_info_url")]
+        [JsonPropertyName("token_info_url")]
         public string? TokenInfoUrl { get; set; }
         /// <summary>
         /// Coin id
         /// </summary>
-        [JsonProperty("coin_id")]
+        [JsonPropertyName("coin_id")]
         public string? CoinId { get; set; }
         /// <summary>
         /// Target coin id
         /// </summary>
-        [JsonProperty("target_coin_id")]
+        [JsonPropertyName("target_coin_id")]
         public string? TargetCoinId { get; set; }
     }
 }

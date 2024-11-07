@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿
+using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
 {
@@ -26,7 +27,7 @@ namespace CoinGecko.Net.Objects.Models
         /// <summary>
         /// Is multi asset composite index
         /// </summary>
-        [JsonProperty("is_multi_asset_composite")]
+        [JsonPropertyName("is_multi_asset_composite")]
         public bool? IsMultiAssetComposite { get; set; }
     }
 }
