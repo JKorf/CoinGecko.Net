@@ -6,9 +6,13 @@
     public class CoinGeckoApiAddresses
     {
         /// <summary>
-        /// The address used by the BybitClient for the Spot rest API
+        /// The address used by the CoinGeckoRestClient for the public API
         /// </summary>
-        public string RestClientAddress { get; set; } = "";
+        public string RestClientAddressPublic { get; set; } = "";
+        /// <summary>
+        /// The address used by the CoinGeckoRestClient for the pro API
+        /// </summary>
+        public string RestClientAddressPro { get; set; } = "";
 
 
         /// <summary>
@@ -16,7 +20,8 @@
         /// </summary>
         public static CoinGeckoApiAddresses Default = new CoinGeckoApiAddresses
         {
-            RestClientAddress = "https://api.coingecko.com/"
+            RestClientAddressPublic = "https://api.coingecko.com/",
+            RestClientAddressPro = "https://pro-api.coingecko.com/"
         };
     }
 }

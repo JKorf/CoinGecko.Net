@@ -9,14 +9,20 @@ namespace CoinGecko.Net
     public class CoinGeckoEnvironment : TradeEnvironment
     {
         /// <summary>
-        /// Rest client address
+        /// Rest client address public API
         /// </summary>
-        public string RestApiAddress { get; }
+        public string RestApiAddressPublic { get; }
+        /// <summary>
+        /// Rest client address pro API
+        /// </summary>
+        public string RestApiAddressPro { get; }
 
         internal CoinGeckoEnvironment(string name,
-            string restBaseAddress) : base(name)
+            string restBaseAddressPublic,
+            string restBaseAddressPro) : base(name)
         {
-            RestApiAddress = restBaseAddress;
+            RestApiAddressPublic = restBaseAddressPublic;
+            RestApiAddressPro = restBaseAddressPro;
         }
 
         /// <summary>
@@ -24,17 +30,17 @@ namespace CoinGecko.Net
         /// </summary>
         public static CoinGeckoEnvironment Live { get; }
             = new CoinGeckoEnvironment(TradeEnvironmentNames.Live,
-                                     CoinGeckoApiAddresses.Default.RestClientAddress);
+                                     CoinGeckoApiAddresses.Default.RestClientAddressPublic,
+                                     CoinGeckoApiAddresses.Default.RestClientAddressPro);
 
         /// <summary>
         /// Create a custom environment
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="restAddress"></param>
         /// <returns></returns>
         public static CoinGeckoEnvironment CreateCustom(
                         string name,
-                        string restAddress)
-            => new CoinGeckoEnvironment(name, restAddress);
+                        string restAddressPublic,
+                        string restAddressPro)
+            => new CoinGeckoEnvironment(name, restAddressPublic, restAddressPro);
     }
 }
