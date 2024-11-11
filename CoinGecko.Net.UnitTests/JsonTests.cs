@@ -13,7 +13,7 @@ namespace CoinGecko.Net.UnitTests
     {
         private JsonToObjectComparer<CoinGeckoRestClient> _comparer = new JsonToObjectComparer<CoinGeckoRestClient>((json) => TestHelpers.CreateResponseClient(json, x =>
         {
-            x.ApiCredentials = new CryptoExchange.Net.Authentication.ApiCredentials("123", "123");
+            x.ApiCredentials = new CoinGeckoApiCredentials("123");
             x.ApiOptions.OutputOriginalData = true;
         },
             System.Net.HttpStatusCode.OK));
