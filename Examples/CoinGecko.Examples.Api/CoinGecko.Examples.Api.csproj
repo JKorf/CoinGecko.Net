@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\CryptoClients.Net\CryptoClients.Net\CryptoClients.Net.csproj" />
+    <ProjectReference Include="..\..\CoinGecko.Net\CoinGecko.Net.csproj" />
   </ItemGroup>
 
 </Project>

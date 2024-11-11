@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinGecko.Examples.Console"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinGecko.Examples.Api", "CoinGecko.Examples.Api\CoinGecko.Examples.Api.csproj", "{2E6BB5F7-6F04-4122-8CB6-6B89E822040A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoClients.Net", "..\..\CryptoClients.Net\CryptoClients.Net\CryptoClients.Net.csproj", "{C0206645-0CBD-4D74-9242-B213C691BD01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinGecko.Net", "..\CoinGecko.Net\CoinGecko.Net.csproj", "{746FABEF-5160-499C-ACE4-9B1C40E38B7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{2E6BB5F7-6F04-4122-8CB6-6B89E822040A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E6BB5F7-6F04-4122-8CB6-6B89E822040A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E6BB5F7-6F04-4122-8CB6-6B89E822040A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C0206645-0CBD-4D74-9242-B213C691BD01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0206645-0CBD-4D74-9242-B213C691BD01}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0206645-0CBD-4D74-9242-B213C691BD01}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0206645-0CBD-4D74-9242-B213C691BD01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{746FABEF-5160-499C-ACE4-9B1C40E38B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{746FABEF-5160-499C-ACE4-9B1C40E38B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{746FABEF-5160-499C-ACE4-9B1C40E38B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{746FABEF-5160-499C-ACE4-9B1C40E38B7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
