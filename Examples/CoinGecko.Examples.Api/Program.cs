@@ -1,5 +1,4 @@
 using CoinGecko.Net.Interfaces;
-using CryptoExchange.Net.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,10 +13,7 @@ builder.Services.AddCoinGecko();
 /*
 builder.Services.AddCoinGecko(restOptions =>
 {
-    restOptions.RequestTimeout = TimeSpan.FromSeconds(5);
-}, socketOptions =>
-{
-    socketOptions.ApiCredentials = new ApiCredentials("<APIKEY>", "<APISECRET>");
+    restOptions.ApiCredentials = new CoinGeckoApiCredentials("<APIKEY>");
 });
 */
 

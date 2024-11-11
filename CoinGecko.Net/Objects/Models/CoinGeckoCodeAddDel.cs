@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+
+using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
 {
@@ -12,10 +12,12 @@ namespace CoinGecko.Net.Objects.Models
         /// <summary>
         /// Lines added
         /// </summary>
+        [JsonPropertyName("additions")]
         public int? Additions { get; set; }
         /// <summary>
         /// Lines deleted
         /// </summary>
+        [JsonPropertyName("deletions")]
         public int? Deletions { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
 {
@@ -10,56 +10,62 @@ namespace CoinGecko.Net.Objects.Models
         /// <summary>
         /// Id
         /// </summary>
+        [JsonPropertyName("id")]
         public string Id { get; set; } = string.Empty;
         /// <summary>
         /// Name
         /// </summary>
+        [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
         /// <summary>
         /// Year established
         /// </summary>
-        [JsonProperty("year_established")]
+        [JsonPropertyName("year_established")]
         public int? YearEstablished { get; set; }
         /// <summary>
         /// Country
         /// </summary>
+        [JsonPropertyName("country")]
         public string Country { get; set; } = string.Empty;
         /// <summary>
         /// Description
         /// </summary>
+        [JsonPropertyName("description")]
         public string Description { get; set; } = string.Empty;
         /// <summary>
         /// Url
         /// </summary>
+        [JsonPropertyName("url")]
         public string Url { get; set; } = string.Empty;
         /// <summary>
         /// Image
         /// </summary>
+        [JsonPropertyName("image")]
         public string Image { get; set; } = string.Empty;
         /// <summary>
         /// Has a trading incentive
         /// </summary>
-        [JsonProperty("has_trading_incentive")]
+        [JsonPropertyName("has_trading_incentive")]
         public bool? HasTradingIncentive { get; set; }
         /// <summary>
         /// Trust score
         /// </summary>
-        [JsonProperty("trust_score")]
-        public string? TrustScore { get; set; }
+        [JsonPropertyName("trust_score")]
+        public int? TrustScore { get; set; }
         /// <summary>
         /// Trust score rank
         /// </summary>
-        [JsonProperty("trust_score_rank")]
+        [JsonPropertyName("trust_score_rank")]
         public int? TrustScoreRank { get; set; }
         /// <summary>
         /// Trading volume in btc last 24h
         /// </summary>
-        [JsonProperty("trade_volume_24h_btc")]
+        [JsonPropertyName("trade_volume_24h_btc")]
         public decimal? TradeVolume24hBtc { get; set; }
         /// <summary>
         /// Normalized trading volume in btc last 24h
         /// </summary>
-        [JsonProperty("trade_volume_24h_btc_normalized")]
+        [JsonPropertyName("trade_volume_24h_btc_normalized")]
         public decimal? TradeVolume24hBtcNormalized { get; set; }
     }
 }

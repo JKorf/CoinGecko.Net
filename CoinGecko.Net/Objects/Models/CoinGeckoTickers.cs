@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
 {
@@ -10,12 +11,14 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoTickers
     {
         /// <summary>
-        /// Coin name
+        /// Asset name
         /// </summary>
+        [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
         /// <summary>
         /// Tickers
         /// </summary>
+        [JsonPropertyName("tickers")]
         public IEnumerable<CoinGeckoTicker> Tickers { get; set; } = Array.Empty<CoinGeckoTicker>();
     }
 }

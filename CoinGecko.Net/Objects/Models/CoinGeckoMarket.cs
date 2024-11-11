@@ -1,6 +1,5 @@
-﻿using CryptoExchange.Net.Converters;
-using Newtonsoft.Json;
-using System;
+﻿using System;
+using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
 {
@@ -12,150 +11,157 @@ namespace CoinGecko.Net.Objects.Models
         /// <summary>
         /// Market id
         /// </summary>
+        [JsonPropertyName("id")]
         public string Id { get; set; } = string.Empty;
         /// <summary>
         /// Market symbol
         /// </summary>
+        [JsonPropertyName("symbol")]
         public string Symbol { get; set; } = string.Empty;
         /// <summary>
         /// Name
         /// </summary>
+        [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
         /// <summary>
         /// Image
         /// </summary>
+        [JsonPropertyName("image")]
         public string Image { get; set; } = string.Empty;
         /// <summary>
         /// Current price
         /// </summary>
-        [JsonProperty("current_price")]
+        [JsonPropertyName("current_price")]
         public decimal CurrentPrice { get; set; }
         /// <summary>
         /// Market cap
         /// </summary>
-        [JsonProperty("market_cap")]
+        [JsonPropertyName("market_cap")]
         public decimal MarketCap { get; set; }
         /// <summary>
         /// Market cap rank
         /// </summary>
-        [JsonProperty("market_cap_rank")]
+        [JsonPropertyName("market_cap_rank")]
         public decimal? MarketCapRank { get; set; }
         /// <summary>
         /// Fully diluted valuation
         /// </summary>
-        [JsonProperty("fully_diluted_valuation")]
+        [JsonPropertyName("fully_diluted_valuation")]
         public decimal? FullyDilutedValuation { get; set; }
         /// <summary>
         /// Total trade volume
         /// </summary>
-        [JsonProperty("total_volume")]
+        [JsonPropertyName("total_volume")]
         public decimal TotalVolume { get; set; }
         /// <summary>
         /// 24 hour high price
         /// </summary>
-        [JsonProperty("high_24h")]
+        [JsonPropertyName("high_24h")]
         public decimal? High24h { get; set; }
         /// <summary>
         /// 24 hour low price
         /// </summary>
-        [JsonProperty("low_24h")]
+        [JsonPropertyName("low_24h")]
         public decimal? Low24h { get; set; }
         /// <summary>
         /// 24 hour price change
         /// </summary>
-        [JsonProperty("price_change_24h")]
+        [JsonPropertyName("price_change_24h")]
         public decimal? PriceChange24h { get; set; }
         /// <summary>
         /// 24 hour price change percentage
         /// </summary>
-        [JsonProperty("price_change_percentage_24h")]
+        [JsonPropertyName("price_change_percentage_24h")]
         public double? PriceChangePercentage24h { get; set; }
         /// <summary>
         /// 24 hour market cap change
         /// </summary>
-        [JsonProperty("market_cap_change_24h")]
+        [JsonPropertyName("market_cap_change_24h")]
         public decimal? MarketCapChange24h { get; set; }
         /// <summary>
         /// 24 hour market cap change percentage
         /// </summary>
-        [JsonProperty("market_cap_change_percentage_24h")]
+        [JsonPropertyName("market_cap_change_percentage_24h")]
         public double? MarketCapChangePercentage24h { get; set; }
         /// <summary>
         /// Circulating supply
         /// </summary>
-        [JsonProperty("circulating_supply")]
+        [JsonPropertyName("circulating_supply")]
         public decimal CiculationSupply { get; set; }
         /// <summary>
         /// Total supply
         /// </summary>
-        [JsonProperty("total_supply")]
+        [JsonPropertyName("total_supply")]
         public decimal? TotalSupply { get; set; }
         /// <summary>
         /// Max supply
         /// </summary>
-        [JsonProperty("max_supply")]
+        [JsonPropertyName("max_supply")]
         public decimal? MaxSupply { get; set; }
         /// <summary>
         /// All time high price
         /// </summary>
-        [JsonProperty("ath")]
+        [JsonPropertyName("ath")]
         public decimal AllTimeHigh { get; set; }
         /// <summary>
         /// All time high change percentage
         /// </summary>
-        [JsonProperty("ath_change_percentage")]
+        [JsonPropertyName("ath_change_percentage")]
         public double AllTimeHighChangePercentage { get; set; }
         /// <summary>
         /// All time high time
         /// </summary>
         [JsonConverter(typeof(DateTimeConverter))]
-        [JsonProperty("ath_date")]
+        [JsonPropertyName("ath_date")]
         public DateTime AllTimeHighTimestamp { get; set; }
         /// <summary>
         /// All time low price
         /// </summary>
-        [JsonProperty("atl")]
+        [JsonPropertyName("atl")]
         public decimal AllTimeLow { get; set; }
         /// <summary>
         /// All time low change percentage
         /// </summary>
-        [JsonProperty("atl_change_percentage")]
+        [JsonPropertyName("atl_change_percentage")]
         public double AllTimeLowChangePercentage { get; set; }
         /// <summary>
         /// All time low time
         /// </summary>
         [JsonConverter(typeof(DateTimeConverter))]
-        [JsonProperty("atl_date")]
+        [JsonPropertyName("atl_date")]
         public DateTime AllTimeLowTimestamp { get; set; }
         /// <summary>
         /// Return on investment
         /// </summary>
+        [JsonPropertyName("roi")]
         public CoinGeckoMarketRoi? Roi { get; set; }
         /// <summary>
         /// Last updated timestamp
         /// </summary>
         [JsonConverter(typeof(DateTimeConverter))]
-        [JsonProperty("last_updated")]
+        [JsonPropertyName("last_updated")]
         public DateTime LastUpdated { get; set; }
     }
 
     /// <summary>
-    /// Market raturn on investment info
+    /// Market return on investment info
     /// </summary>
     public record CoinGeckoMarketRoi
     {
         /// <summary>
         /// Times
         /// </summary>
+        [JsonPropertyName("times")]
         public decimal Times { get; set; }
         /// <summary>
         /// Investment asset
         /// </summary>
-        [JsonProperty("currency")]
+        [JsonPropertyName("currency")]
         public string Asset { get; set; } = string.Empty;
         /// <summary>
         /// Profit percentage
         /// </summary>
+        [JsonPropertyName("percentage")]
         public decimal Percentage { get; set; }
     }
 }

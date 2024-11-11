@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
 {
@@ -10,11 +10,12 @@ namespace CoinGecko.Net.Objects.Models
         /// <summary>
         /// Category id
         /// </summary>
-        [JsonProperty("category_id")]
+        [JsonPropertyName("category_id")]
         public string CategoryId { get; set; } = string.Empty;
         /// <summary>
         /// Category name
         /// </summary>
+        [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
     }
 }
