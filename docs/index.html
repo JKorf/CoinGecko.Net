@@ -191,27 +191,23 @@
         </section>
         		        		
 		<hr class="divider">
-		
-		<!-- FAQ
-		<section id="idocs_faq">
-          <h2>FAQ</h2>
-          <b>I occasionally get a NullReferenceException, what's wrong?</b><br />
-		  <p>
-		  You probably don't check the result status of a call and just assume the data is always there. <code>NullReferenceExecption</code> will happen when you have code like this <code>var symbol = client.GetTickersAync().Result.Data.Symbol</code> because the <code>Data</code> property is null when the call fails. Instead check if the call is successful:
-<pre><code>var tickerResult = await client.SpotApi.ExchangeData.GetTickersAync();
-if(!tickerResult.Success)
-{
-  // Handle error
-}
-else
-{
-  // Handle result, it is now safe to access the Data property
-  var symbol = tickerResult.Data.Symbol;
-}</code></pre>
-		  </p>
-		  
-		<hr class="divider">
-        -->
+		<section id="idocs_examples">
+          <h2>Examples</h2>
+          		  
+		  <b id="idocs_example_symbols">Get Asset info</b><br />
+		  <p>Get details on an asset</p>
+		  <pre><code>var coinGeckoClient = new CoinGeckoRestClient();
+
+var result = await restClient.Api.GetAssetDetailsAsync("ethereum");
+</code></pre>
+		  <b id="idocs_example_symbols">Get tickers</b><br />
+		  <p>Get tickers for an asset</p>
+		  <pre><code>var coinGeckoClient = new CoinGeckoRestClient();
+
+var result = await restClient.Api.GetTickersAsync("ethereum");
+</code></pre>
+        </section>
+
       </div>
     </div>
   </div>

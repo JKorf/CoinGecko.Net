@@ -56,8 +56,6 @@ namespace CoinGecko.Net
             CoinGecko.RateLimitTriggered += (x) => RateLimitTriggered?.Invoke(x);
         }
 
-
         internal IRateLimitGate CoinGecko { get; private set; }
-
     }
 }

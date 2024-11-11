@@ -147,6 +147,12 @@
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetTrendingSearchesAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetCompanyHoldingsAsync(System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetApiUsageAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetTimeOffset">
             <inheritdoc />
         </member>
@@ -604,6 +610,22 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetCompanyHoldingsAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get public company holdings for an asset
+            <para><a href="https://docs.coingecko.com/reference/companies-public-treasury" /></para>
+            </summary>
+            <param name="asset">Asset name</param>
+            <param name="ct">Cancellation token</param>
+        </member>
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetApiUsageAsync(System.Threading.CancellationToken)">
+            <summary>
+            Get current API usage stats
+            <para><a href="https://docs.coingecko.com/reference/api-usage" /></para>
+            </summary>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
         <member name="T:CoinGecko.Net.Objects.CoinGeckoApiAddresses">
             <summary>
             Api addresses usable for the CoinGecko client
@@ -646,6 +668,36 @@
             Copy
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoApiUsage">
+            <summary>
+            API usage info
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoApiUsage.Plan">
+            <summary>
+            Plan
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoApiUsage.RateLimitRequestPerMinute">
+            <summary>
+            Rate limit request per minute
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoApiUsage.MonthlyCallCredit">
+            <summary>
+            Monthly call credit
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoApiUsage.CurrentTotalMonthlyCalls">
+            <summary>
+            Current total monthly calls
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoApiUsage.CurrentRemainingMonthlyCalls">
+            <summary>
+            Current remaining monthly calls
+            </summary>
         </member>
         <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoAsset">
             <summary>
@@ -1015,6 +1067,71 @@
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoCommunityData.TelegramChannelUserCount">
             <summary>
             Telegram channel user count
+            </summary>
+        </member>
+        <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoCompanyHolding">
+            <summary>
+            Company holdings
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoCompanyHolding.TotalHoldings">
+            <summary>
+            Total holdings
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoCompanyHolding.TotalValueUsd">
+            <summary>
+            Total value in USD
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoCompanyHolding.MarketCapDominance">
+            <summary>
+            Market cap dominance
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoCompanyHolding.Companies">
+            <summary>
+            Companies
+            </summary>
+        </member>
+        <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoCompanyAsset">
+            <summary>
+            Company holding
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoCompanyAsset.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoCompanyAsset.Symbol">
+            <summary>
+            Symbol
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoCompanyAsset.Country">
+            <summary>
+            Country
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoCompanyAsset.TotalHoldings">
+            <summary>
+            Total holdings
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoCompanyAsset.TotalEntryValueUsd">
+            <summary>
+            Total entry value USD
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoCompanyAsset.TotalCurrentValueUsd">
+            <summary>
+            Total current value USD
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoCompanyAsset.PercentageOfTotalSupply">
+            <summary>
+            Percentage of total supply
             </summary>
         </member>
         <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoDerivative">
@@ -1612,151 +1729,6 @@
             Top defi asset dominance
             </summary>
         </member>
-        <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoIcoData">
-            <summary>
-            Ico information
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.IcoStartDate">
-            <summary>
-            Ico start date
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.IcoEndDate">
-            <summary>
-            Ico end date
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.ShortDescription">
-            <summary>
-            Short description
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.Description">
-            <summary>
-            Description
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.SoftcapCurrency">
-            <summary>
-            Soft cap currency
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.HardcapCurrency">
-            <summary>
-            Hard cap currency
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.TotalRaisedCurrency">
-            <summary>
-            Total raised currency
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.SoftcapAmount">
-            <summary>
-            Softcap
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.HardcapAmount">
-            <summary>
-            Hardcap amount
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.TotalRaised">
-            <summary>
-            Total raised
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.QuotePreSaleCurrency">
-            <summary>
-            Quote pre-sale currency
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.BasePreSaleAmount">
-            <summary>
-            Base pre sale amount
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.QuotePreSaleAmount">
-            <summary>
-            Quote pre sale amount
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.QuotePublicSaleCurrency">
-            <summary>
-            Quote public sale currency
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.BasePublicSaleAmount">
-            <summary>
-            Base public sale amount
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.QuotePublicSaleAmount">
-            <summary>
-            Quote public sale amount
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.AcceptingCurrencies">
-            <summary>
-            Accepting currencies
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.CountryOrigin">
-            <summary>
-            Country origin
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.PreSaleStartDate">
-            <summary>
-            Pre sale start date
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.PreSaleEndDate">
-            <summary>
-            Pre sale end date
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.WhitelistUrl">
-            <summary>
-            Whitelist url
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.WhitelistStartDate">
-            <summary>
-            Whitelist start date
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.WhitelistEndDate">
-            <summary>
-            Whitelist end date
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.BountyDetailUrl">
-            <summary>
-            Bounty detail url
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.AmountForSale">
-            <summary>
-            Amount for sale
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.KycRequired">
-            <summary>
-            KYC required
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.WhitelistAvailable">
-            <summary>
-            Whitelist available
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIcoData.PreSaleEnded">
-            <summary>
-            Pre sale ended
-            </summary>
-        </member>
         <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoImages">
             <summary>
             Image links
@@ -1775,36 +1747,6 @@
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoImages.Large">
             <summary>
             Large image
-            </summary>
-        </member>
-        <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoIndex">
-            <summary>
-            Index info
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIndex.Id">
-            <summary>
-            Id
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIndex.Name">
-            <summary>
-            Name
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIndex.Market">
-            <summary>
-            Market
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIndex.Last">
-            <summary>
-            Last
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoIndex.IsMultiAssetComposite">
-            <summary>
-            Is multi asset composite index
             </summary>
         </member>
         <member name="T:CoinGecko.Net.Objects.Models.CoinGeckoLinks">

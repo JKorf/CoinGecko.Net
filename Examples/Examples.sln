@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinGecko.Examples.Console", "CoinGecko.Examples.Console\CoinGecko.Examples.Console.csproj", "{72F29164-3C3E-4EB1-9C2B-BC9BA5FCD5AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinGecko.Examples.Console", "CoinGecko.Examples.Console\CoinGecko.Examples.Console.csproj", "{72F29164-3C3E-4EB1-9C2B-BC9BA5FCD5AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinGecko.Examples.Api", "CoinGecko.Examples.Api\CoinGecko.Examples.Api.csproj", "{2E6BB5F7-6F04-4122-8CB6-6B89E822040A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinGecko.Examples.Api", "CoinGecko.Examples.Api\CoinGecko.Examples.Api.csproj", "{2E6BB5F7-6F04-4122-8CB6-6B89E822040A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoClients.Net", "..\..\CryptoClients.Net\CryptoClients.Net\CryptoClients.Net.csproj", "{C0206645-0CBD-4D74-9242-B213C691BD01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2E6BB5F7-6F04-4122-8CB6-6B89E822040A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E6BB5F7-6F04-4122-8CB6-6B89E822040A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E6BB5F7-6F04-4122-8CB6-6B89E822040A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0206645-0CBD-4D74-9242-B213C691BD01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0206645-0CBD-4D74-9242-B213C691BD01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0206645-0CBD-4D74-9242-B213C691BD01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0206645-0CBD-4D74-9242-B213C691BD01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

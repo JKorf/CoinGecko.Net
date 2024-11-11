@@ -36,10 +36,10 @@ The NuGet package files are added along side the source with the latest GitHub r
 *REST Endpoints*  
 
 ```csharp
-// Get the ETH/USDT ticker via rest request
-var restClient = new CoinGeckoRestClient();
+// Get the ETH price via rest request
 var tickerResult = await restClient.Api.GetMarketsAsync("USD");
-var lastPrice = tickerResult.Data.First().CurrentPrice;
+var lastPrice = tickerResult.Data.Single(x => x.Name == "Ethereum").CurrentPrice;
+Console.ReadLine();
 ```
 
 For information on the clients, dependency injection, response processing and more see the [CoinGecko.Net documentation](https://jkorf.github.io/CoinGecko.Net), [CryptoExchange.Net documentation](https://jkorf.github.io/CryptoExchange.Net), or have a look at the examples [here](https://github.com/JKorf/CoinGecko.Net/tree/master/Examples) or [here](https://github.com/JKorf/CryptoExchange.Net/tree/master/Examples).
@@ -73,24 +73,26 @@ CryptoExchange.Net also allows for [easy access to different exchange API's](htt
 A Discord server is available [here](https://discord.gg/MSpeEtSY8t). Feel free to join for discussion and/or questions around the CryptoExchange.Net and implementation libraries.
 
 ## Supported functionality
+Note that only the public endpoints are supported, but setting API key is supported and the correct API urls will be selected.
 
 ### V3 API
 |API|Supported|Location|
 |--|--:|--|
 |Ping|✓|`restClient.Api`|
+|Key|✓|`restClient.Api`|
 |Simple|✓|`restClient.Api`|
 |Coins|✓|`restClient.Api`|
-|Contract|X||
+|Contract|✓|`restClient.Api`|
 |Asset Platforms|✓|`restClient.Api`|
 |Categories|✓|`restClient.Api`|
 |Exchanges|✓|`restClient.Api`|
 |Derivatives|✓|`restClient.Api`|
-|Nfts|X||
+|Nfts|✓|`restClient.Api`|
 |Exchange Rates|✓|`restClient.Api`|
 |Search|✓|`restClient.Api`|
 |Trending|✓|`restClient.Api`|
 |Global|✓|`restClient.Api`|
-|Companies|X||
+|Companies|✓|`restClient.Api`|
 
 ## Support the project
 Any support is greatly appreciated.

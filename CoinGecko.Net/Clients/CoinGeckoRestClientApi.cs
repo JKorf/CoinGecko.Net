@@ -5,9 +5,7 @@ using CoinGecko.Net.Objects.Options;
 using CryptoExchange.Net;
 using CryptoExchange.Net.Authentication;
 using CryptoExchange.Net.Clients;
-using CryptoExchange.Net.Converters;
 using CryptoExchange.Net.Converters.MessageParsing;
-using CryptoExchange.Net.Converters.SystemTextJson;
 using CryptoExchange.Net.Interfaces;
 using CryptoExchange.Net.Objects;
 using CryptoExchange.Net.SharedApis;
@@ -620,6 +618,28 @@ namespace CoinGecko.Net.Clients
 
         #endregion
 
+        #region Get Company Holdings
+
+        /// <inheritdoc />
+        public async Task<WebCallResult<CoinGeckoCompanyHolding>> GetCompanyHoldingsAsync(string asset, CancellationToken ct = default)
+        {
+            var request = _definitions.GetOrCreate(HttpMethod.Get, $"/api/v3/companies/public_treasury/{asset}", CoinGeckoApi.RateLimiter.CoinGecko, 1, false);
+            var result = await SendAsync<CoinGeckoCompanyHolding>(GetBaseAddress(), request, null, ct).ConfigureAwait(false);
+            return result;
+        }
+
+        #endregion
+
+        #region Get Api Usage
+        /// <inheritdoc />
+        public async Task<WebCallResult<CoinGeckoApiUsage>> GetApiUsageAsync(CancellationToken ct = default)
+        {
+            var request = _definitions.GetOrCreate(HttpMethod.Get, $"api/v3/key", CoinGeckoApi.RateLimiter.CoinGecko, 1, true);
+            return await SendAsync<CoinGeckoApiUsage>(GetBaseAddress(), request, null, ct).ConfigureAwait(false);
+        }
+
+        #endregion
+
         protected override Error ParseErrorResponse(int httpStatusCode, IEnumerable<KeyValuePair<string, IEnumerable<string>>> responseHeaders, IMessageAccessor accessor)
         {
             if (!accessor.IsJson)
@@ -628,10 +648,14 @@ namespace CoinGecko.Net.Clients
             var code = accessor.GetValue<int?>(MessagePath.Get().Property("error_code"));
             var msg = accessor.GetValue<string?>(MessagePath.Get().Property("status").Property("error_message"));
 
-            if (code == null || msg == null)
-                return new ServerError(httpStatusCode, accessor.GetOriginalString());
+            if (code != null && msg != null)
+                return new ServerError(code.Value, msg);
 
-            return new ServerError(code.Value, msg);
+            code = accessor.GetValue<int?>(MessagePath.Get().Property("status").Property("error_code"));
+            if (code != null && msg != null)
+                return new ServerError(code.Value, msg);
+
+            return new ServerError(httpStatusCode, accessor.GetOriginalString());
         }
 
         private string GetBaseAddress()

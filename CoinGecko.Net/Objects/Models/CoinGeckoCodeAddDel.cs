@@ -1,5 +1,7 @@
 ﻿
 
+using System.Text.Json.Serialization;
+
 namespace CoinGecko.Net.Objects.Models
 {
     /// <summary>
@@ -10,10 +12,12 @@ namespace CoinGecko.Net.Objects.Models
         /// <summary>
         /// Lines added
         /// </summary>
+        [JsonPropertyName("additions")]
         public int? Additions { get; set; }
         /// <summary>
         /// Lines deleted
         /// </summary>
+        [JsonPropertyName("deletions")]
         public int? Deletions { get; set; }
     }
 }

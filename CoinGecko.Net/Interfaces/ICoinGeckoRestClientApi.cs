@@ -370,5 +370,21 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
         Task<WebCallResult<CoinGeckoTrendingSearch>> GetTrendingSearchesAsync(CancellationToken ct = default);
+
+        /// <summary>
+        /// Get public company holdings for an asset
+        /// <para><a href="https://docs.coingecko.com/reference/companies-public-treasury" /></para>
+        /// </summary>
+        /// <param name="asset">Asset name</param>
+        /// <param name="ct">Cancellation token</param>
+        Task<WebCallResult<CoinGeckoCompanyHolding>> GetCompanyHoldingsAsync(string asset, CancellationToken ct = default);
+
+        /// <summary>
+        /// Get current API usage stats
+        /// <para><a href="https://docs.coingecko.com/reference/api-usage" /></para>
+        /// </summary>
+        /// <param name="ct">Cancellation token</param>
+        /// <returns></returns>
+        Task<WebCallResult<CoinGeckoApiUsage>> GetApiUsageAsync(CancellationToken ct = default);
     }
 }

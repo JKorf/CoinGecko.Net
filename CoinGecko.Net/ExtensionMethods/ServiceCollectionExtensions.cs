@@ -3,7 +3,6 @@ using CoinGecko.Net.Interfaces;
 using CoinGecko.Net.Objects.Options;
 using CryptoExchange.Net.Clients;
 using CryptoExchange.Net.Interfaces;
-using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Net;
 using System.Net.Http;
