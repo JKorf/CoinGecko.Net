@@ -5,6 +5,7 @@ using System.Net.Http;
 using System;
 using CoinGecko.Net.Objects.Options;
 using CryptoExchange.Net.Clients;
+using Microsoft.Extensions.Options;
 
 namespace CoinGecko.Net.Clients
 {
@@ -19,25 +20,23 @@ namespace CoinGecko.Net.Clients
         /// Create a new instance of the CoinGeckoClient using provided options
         /// </summary>
         /// <param name="optionsDelegate">Option configuration delegate</param>
-        public CoinGeckoRestClient(Action<CoinGeckoRestOptions>? optionsDelegate = null) : this(null, null, optionsDelegate)
+        public CoinGeckoRestClient(Action<CoinGeckoRestOptions>? optionsDelegate = null)
+            : this(null, null, Options.Create(ApplyOptionsDelegate(optionsDelegate)))
         {
         }
 
         /// <summary>
         /// Create a new instance of the CoinGeckoClient
         /// </summary>
-        /// <param name="optionsDelegate">Option configuration delegate</param>
+        /// <param name="options">Option configuration</param>
         /// <param name="loggerFactory">The logger factory</param>
         /// <param name="httpClient">Http client for this client</param>
-        public CoinGeckoRestClient(HttpClient? httpClient, ILoggerFactory? loggerFactory, Action<CoinGeckoRestOptions>? optionsDelegate = null)
+        public CoinGeckoRestClient(HttpClient? httpClient, ILoggerFactory? loggerFactory, IOptions<CoinGeckoRestOptions> options)
             : base(loggerFactory, "CoinGecko")
         {
-            var options = CoinGeckoRestOptions.Default.Copy();
-            if (optionsDelegate != null)
-                optionsDelegate(options);
-            Initialize(options);
+            Initialize(options.Value);
 
-            Api = AddApiClient(new CoinGeckoRestClientApi(_logger, httpClient, options));
+            Api = AddApiClient(new CoinGeckoRestClientApi(_logger, httpClient, options.Value));
         }
         #endregion
 
@@ -47,9 +46,7 @@ namespace CoinGecko.Net.Clients
         /// <param name="optionsDelegate">Option configuration delegate</param>
         public static void SetDefaultOptions(Action<CoinGeckoRestOptions> optionsDelegate)
         {
-            var options = CoinGeckoRestOptions.Default.Copy();
-            optionsDelegate(options);
-            CoinGeckoRestOptions.Default = options;
+            CoinGeckoRestOptions.Default = ApplyOptionsDelegate(optionsDelegate);
         }
     }
 }

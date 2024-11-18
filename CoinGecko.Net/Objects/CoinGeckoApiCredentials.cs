@@ -15,9 +15,9 @@ namespace CoinGecko.Net.Objects
         /// <summary>
         /// ctor
         /// </summary>
-        /// <param name="apiKey">The API key</param>
+        /// <param name="key">The API key</param>
         /// <param name="demoKey">Whether or not this is a demo key</param>
-        public CoinGeckoApiCredentials(string apiKey, bool demoKey = false) : base(apiKey, "-")
+        public CoinGeckoApiCredentials(string key, bool demoKey = false) : base(key, "-")
         {
             DemoKey = demoKey;
         }
