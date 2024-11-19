@@ -10,21 +10,29 @@ namespace CoinGecko.Net.Objects.Options
         /// <summary>
         /// Default options for the CoinGecko client
         /// </summary>
-        public static CoinGeckoRestOptions Default { get; set; } = new CoinGeckoRestOptions()
+        internal static CoinGeckoRestOptions Default { get; set; } = new CoinGeckoRestOptions()
         {
             Environment = CoinGeckoEnvironment.Live
         };
+
+        /// <summary>
+        /// ctor
+        /// </summary>
+        public CoinGeckoRestOptions()
+        {
+            Default?.Set(this);
+        }
 
         /// <summary>
         /// Api options
         /// </summary>
         public RestApiOptions ApiOptions { get; private set; } = new RestApiOptions();
 
-        internal CoinGeckoRestOptions Copy()
+        internal CoinGeckoRestOptions Set(CoinGeckoRestOptions targetOptions)
         {
-            var options = Copy<CoinGeckoRestOptions>();
-            options.ApiOptions = ApiOptions.Copy<RestApiOptions>();
-            return options;
+            targetOptions = base.Set<CoinGeckoRestOptions>(targetOptions);
+            targetOptions.ApiOptions = ApiOptions.Set(targetOptions.ApiOptions);
+            return targetOptions;
         }
     }
 }
