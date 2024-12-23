@@ -1,4 +1,6 @@
-﻿namespace CoinGecko.Net.Interfaces
+﻿using CryptoExchange.Net.Objects.Options;
+
+namespace CoinGecko.Net.Interfaces
 {
     /// <summary>
     /// Client for accessing the CoinGecko Rest API. 
@@ -9,5 +11,11 @@
         /// Api endpoints
         /// </summary>
         ICoinGeckoRestClientApi Api { get; }
+
+        /// <summary>
+        /// Update specific options
+        /// </summary>
+        /// <param name="options">Options to update. Only specific options are changable after the client has been created</param>
+        void SetOptions(UpdateOptions options);
     }
 }

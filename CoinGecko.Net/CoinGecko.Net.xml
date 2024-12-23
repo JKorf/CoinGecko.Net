@@ -24,6 +24,9 @@
             <param name="loggerFactory">The logger factory</param>
             <param name="httpClient">Http client for this client</param>
         </member>
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClient.SetOptions(CryptoExchange.Net.Objects.Options.UpdateOptions)">
+            <inheritdoc />
+        </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClient.SetDefaultOptions(System.Action{CoinGecko.Net.Objects.Options.CoinGeckoRestOptions})">
             <summary>
             Set the default options to be used when creating new clients
@@ -242,6 +245,12 @@
             <summary>
             Api endpoints
             </summary>
+        </member>
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClient.SetOptions(CryptoExchange.Net.Objects.Options.UpdateOptions)">
+            <summary>
+            Update specific options
+            </summary>
+            <param name="options">Options to update. Only specific options are changable after the client has been created</param>
         </member>
         <member name="T:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi">
             <summary>

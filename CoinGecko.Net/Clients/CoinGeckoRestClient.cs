@@ -6,6 +6,7 @@ using System;
 using CoinGecko.Net.Objects.Options;
 using CryptoExchange.Net.Clients;
 using Microsoft.Extensions.Options;
+using CryptoExchange.Net.Objects.Options;
 
 namespace CoinGecko.Net.Clients
 {
@@ -39,6 +40,12 @@ namespace CoinGecko.Net.Clients
             Api = AddApiClient(new CoinGeckoRestClientApi(_logger, httpClient, options.Value));
         }
         #endregion
+
+        /// <inheritdoc />
+        public void SetOptions(UpdateOptions options)
+        {
+            Api.SetOptions(options);
+        }
 
         /// <summary>
         /// Set the default options to be used when creating new clients
