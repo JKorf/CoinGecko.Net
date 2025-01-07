@@ -76,7 +76,7 @@ namespace Bybit.Net.UnitTests
                 }
 
                 var buffer = new byte[file.Length];
-                await file.ReadAsync(buffer, 0, buffer.Length);
+                _ = await file.ReadAsync(buffer, 0, buffer.Length);
                 file.Close();
 
                 var json = Encoding.UTF8.GetString(buffer);
