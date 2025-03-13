@@ -1,4 +1,5 @@
-﻿using System;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
@@ -7,6 +8,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Asset details
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoAssetDetails
     {
         /// <summary>
@@ -58,7 +60,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Categories
         /// </summary>
         [JsonPropertyName("categories")]
-        public IEnumerable<string> Categories { get; set; } = Array.Empty<string>();
+        public string[] Categories { get; set; } = Array.Empty<string>();
         /// <summary>
         /// Preview listing
         /// </summary>
@@ -73,7 +75,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Additional notices
         /// </summary>
         [JsonPropertyName("additional_notices")]
-        public IEnumerable<string> AdditionalNotice { get; set; } = Array.Empty<string>();
+        public string[] AdditionalNotice { get; set; } = Array.Empty<string>();
         /// <summary>
         /// Name in different languages
         /// </summary>
@@ -129,7 +131,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Status updates
         /// </summary>
         [JsonPropertyName("status_updates")]
-        public IEnumerable<CoinGeckoStatusUpdate> StatusUpdates { get; set; } = Array.Empty<CoinGeckoStatusUpdate>();
+        public CoinGeckoStatusUpdate[] StatusUpdates { get; set; } = Array.Empty<CoinGeckoStatusUpdate>();
         /// <summary>
         /// Community data
         /// </summary>
@@ -149,6 +151,6 @@ namespace CoinGecko.Net.Objects.Models
         /// Tickers
         /// </summary>
         [JsonPropertyName("tickers")]
-        public IEnumerable<CoinGeckoTicker> Tickers { get; set; } = Array.Empty<CoinGeckoTicker>();
+        public CoinGeckoTicker[] Tickers { get; set; } = Array.Empty<CoinGeckoTicker>();
     }
 }

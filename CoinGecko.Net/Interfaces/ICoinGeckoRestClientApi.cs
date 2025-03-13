@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
@@ -19,7 +19,7 @@ namespace CoinGecko.Net.Interfaces
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<IEnumerable<CoinGeckoCategory>>> GetAssetCategoriesAsync(CancellationToken ct = default);
+        Task<WebCallResult<CoinGeckoCategory[]>> GetAssetCategoriesAsync(CancellationToken ct = default);
         /// <summary>
         /// Get asset details
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-id" /></para>
@@ -50,7 +50,7 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="filter">Filter</param>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<IEnumerable<CoinGeckoAssetPlatform>>> GetAssetPlatformsAsync(string? filter = null, CancellationToken ct = default);
+        Task<WebCallResult<CoinGeckoAssetPlatform[]>> GetAssetPlatformsAsync(string? filter = null, CancellationToken ct = default);
         /// <summary>
         /// Get list of all assets
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-list" /></para>
@@ -58,7 +58,7 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="includePlatform">Include platform contract address</param>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<IEnumerable<CoinGeckoAsset>>> GetAssetsAsync(bool? includePlatform = null, CancellationToken ct = default);
+        Task<WebCallResult<CoinGeckoAsset[]>> GetAssetsAsync(bool? includePlatform = null, CancellationToken ct = default);
         /// <summary>
         /// Get BTC-to-Currency exchange rates
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchange-rates" /></para>
@@ -72,14 +72,14 @@ namespace CoinGecko.Net.Interfaces
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<IEnumerable<CoinGeckoDerivative>>> GetDerivativesAsync(CancellationToken ct = default);
+        Task<WebCallResult<CoinGeckoDerivative[]>> GetDerivativesAsync(CancellationToken ct = default);
         /// <summary>
         /// List all derivatives exchanges name and identifier
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-exchanges-list" /></para>
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<IEnumerable<CoinGeckoListItem>>> GetDerivativesExchangesListAsync(CancellationToken ct = default);
+        Task<WebCallResult<CoinGeckoListItem[]>> GetDerivativesExchangesListAsync(CancellationToken ct = default);
         /// <summary>
         /// Get all derivatives exchanges
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-exchanges" /></para>
@@ -89,7 +89,7 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="order">Sort order</param>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<IEnumerable<CoinGeckoExchangeDerivative>>> GetExchangeDerivativesAsync(int? page = null, int? pageSize = null, string? order = null, CancellationToken ct = default);
+        Task<WebCallResult<CoinGeckoExchangeDerivative[]>> GetExchangeDerivativesAsync(int? page = null, int? pageSize = null, string? order = null, CancellationToken ct = default);
 
         /// <summary>
         /// Get exchange derivative details
@@ -115,7 +115,7 @@ namespace CoinGecko.Net.Interfaces
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<IEnumerable<CoinGeckoListItem>>> GetExchangeListAsync(CancellationToken ct = default);
+        Task<WebCallResult<CoinGeckoListItem[]>> GetExchangeListAsync(CancellationToken ct = default);
         /// <summary>
         /// Get all exchanges
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchanges" /></para>
@@ -124,7 +124,7 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="pageSize">Page size</param>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<IEnumerable<CoinGeckoExchange>>> GetExchangesAsync(int? page = null, int? pageSize = null, CancellationToken ct = default);
+        Task<WebCallResult<CoinGeckoExchange[]>> GetExchangesAsync(int? page = null, int? pageSize = null, CancellationToken ct = default);
         /// <summary>
         /// Get exchange tickers
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-id-tickers" /></para>
@@ -146,7 +146,7 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="days">Days history</param>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<IEnumerable<CoinGeckoMarketChartValue>>> GetExchangeVolumeHistoryAsync(string exchangeId, int days, CancellationToken ct = default);
+        Task<WebCallResult<CoinGeckoMarketChartValue[]>> GetExchangeVolumeHistoryAsync(string exchangeId, int days, CancellationToken ct = default);
         /// <summary>
         /// Get asset history info
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-history" /></para>
@@ -211,7 +211,7 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="order">Sorting</param>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<IEnumerable<CoinGeckoMarketDataCategory>>> GetMarketDataCategoriesAsync(string? order = null, CancellationToken ct = default);
+        Task<WebCallResult<CoinGeckoMarketDataCategory[]>> GetMarketDataCategoriesAsync(string? order = null, CancellationToken ct = default);
         /// <summary>
         /// Get coins market data
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-markets" /></para>
@@ -228,7 +228,7 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="precision">Decimal place for currency price value</param>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<IEnumerable<CoinGeckoMarket>>> GetMarketsAsync(
+        Task<WebCallResult<CoinGeckoMarket[]>> GetMarketsAsync(
             string quoteAsset, 
             IEnumerable<string>? assetIds = null, 
             string? category = null,
@@ -251,7 +251,7 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="precision">Decimal place for currency price value</param>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<IEnumerable<CoinGeckoOhlc>>> GetOhlcAsync(string assetId, string quoteAsset, int days, string? precision = null, CancellationToken ct = default);
+        Task<WebCallResult<CoinGeckoOhlc[]>> GetOhlcAsync(string assetId, string quoteAsset, int days, string? precision = null, CancellationToken ct = default);
 
         /// <summary>
         /// Get prices for specific assets
@@ -273,7 +273,7 @@ namespace CoinGecko.Net.Interfaces
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<IEnumerable<string>>> GetQuoteAssetsAsync(CancellationToken ct = default);
+        Task<WebCallResult<string[]>> GetQuoteAssetsAsync(CancellationToken ct = default);
         /// <summary>
         /// Get tickers for an asset
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-tickers" /></para>
@@ -333,7 +333,7 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="pageSize">Page size</param>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<IEnumerable<CoinGeckoNft>>> GetNftsAsync(string? order = null, int? page = null, int? pageSize = null, CancellationToken ct = default);
+        Task<WebCallResult<CoinGeckoNft[]>> GetNftsAsync(string? order = null, int? page = null, int? pageSize = null, CancellationToken ct = default);
 
         /// <summary>
         /// Get details on an NFT

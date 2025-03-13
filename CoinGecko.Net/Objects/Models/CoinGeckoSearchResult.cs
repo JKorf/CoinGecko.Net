@@ -1,4 +1,5 @@
-﻿using System;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
@@ -7,38 +8,40 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Search results
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoSearchResult
     {
         /// <summary>
         /// Assets found
         /// </summary>
         [JsonPropertyName("coins")]
-        public IEnumerable<CoinGeckoAssetResult> Assets { get; set; } = Array.Empty<CoinGeckoAssetResult>();
+        public CoinGeckoAssetResult[] Assets { get; set; } = Array.Empty<CoinGeckoAssetResult>();
         /// <summary>
         /// Exchanges found
         /// </summary>
         [JsonPropertyName("exchanges")]
-        public IEnumerable<CoinGeckoExchangeResult> Exchanges { get; set; } = Array.Empty<CoinGeckoExchangeResult>();
+        public CoinGeckoExchangeResult[] Exchanges { get; set; } = Array.Empty<CoinGeckoExchangeResult>();
         /// <summary>
         /// Categories found
         /// </summary>
         [JsonPropertyName("categories")]
-        public IEnumerable<CoinGeckoCategoryResult> Categories { get; set; } = Array.Empty<CoinGeckoCategoryResult>();
+        public CoinGeckoCategoryResult[] Categories { get; set; } = Array.Empty<CoinGeckoCategoryResult>();
         /// <summary>
         /// Nfts found
         /// </summary>
         [JsonPropertyName("nfts")]
-        public IEnumerable<CoinGeckoNftResult> Nfts { get; set; } = Array.Empty<CoinGeckoNftResult>();
+        public CoinGeckoNftResult[] Nfts { get; set; } = Array.Empty<CoinGeckoNftResult>();
         /// <summary>
         /// Icos
         /// </summary>
         [JsonPropertyName("icos")]
-        public IEnumerable<string> Icos { get; set; } = Array.Empty<string>();
+        public string[] Icos { get; set; } = Array.Empty<string>();
     }
 
     /// <summary>
     /// Asset result
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoAssetResult
     {
         /// <summary>
@@ -81,6 +84,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Exchange search result
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoExchangeResult
     {
         /// <summary>
@@ -113,6 +117,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Category search result
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoCategoryResult
     {
         /// <summary>
@@ -130,6 +135,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Nft search result
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoNftResult
     {
         /// <summary>

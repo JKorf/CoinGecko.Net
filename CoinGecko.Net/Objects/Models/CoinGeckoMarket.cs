@@ -1,4 +1,5 @@
-﻿using System;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using System;
 using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
@@ -6,6 +7,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Market info
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoMarket
     {
         /// <summary>
@@ -146,6 +148,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Market return on investment info
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoMarketRoi
     {
         /// <summary>

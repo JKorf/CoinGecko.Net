@@ -1,4 +1,5 @@
-﻿
+using CryptoExchange.Net.Converters.SystemTextJson;
+
 
 using System.Text.Json.Serialization;
 
@@ -7,6 +8,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Code additions/deletions
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoCodeAddDel
     {
         /// <summary>
