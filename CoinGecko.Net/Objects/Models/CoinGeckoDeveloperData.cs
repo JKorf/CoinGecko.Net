@@ -59,6 +59,6 @@ namespace CoinGecko.Net.Objects.Models
         /// Commits series last 4 weeks
         /// </summary>
         [JsonPropertyName("last_4_weeks_commit_activity_series")]
-        public int[] Last4WeeksCommitActivitySeries { get; set; } = new List<int>();
+        public int[] Last4WeeksCommitActivitySeries { get; set; } = [];
     }
 }
