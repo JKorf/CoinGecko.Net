@@ -25,15 +25,13 @@ namespace CoinGecko.Net.Clients
         private static readonly RequestDefinitionCache _definitions = new RequestDefinitionCache();
         private readonly CoinGeckoRestOptions _options;
 
-        internal CoinGeckoRestClientApi(ILogger logger, HttpClient? httpClient, CoinGeckoRestOptions options) 
+        internal CoinGeckoRestClientApi(CoinGeckoRestClient baseClient, ILogger logger, HttpClient? httpClient, CoinGeckoRestOptions options) 
             : base(logger, httpClient, options.Environment.RestApiAddressPublic, options, options.ApiOptions)
         {
             _options = options;
-            var version = Assembly.GetAssembly(typeof(RestApiClient)).GetName().Version;
-
             StandardRequestHeaders = new Dictionary<string, string>
             {
-                { "User-Agent", "CryptoExchange.Net/" + version.ToString() }
+                { "User-Agent", "CryptoExchange.Net/" + baseClient.CryptoExchangeLibVersion.ToString() }
             };
         }
 
