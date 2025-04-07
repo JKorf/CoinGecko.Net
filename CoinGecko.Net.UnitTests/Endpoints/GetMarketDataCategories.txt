@@ -1,0 +1,24 @@
+GET
+/api/v3/coins/categories
+false
+[
+  {
+    "id": "layer-1",
+    "name": "Layer 1 (L1)",
+    "market_cap": 2061406861196.14,
+    "market_cap_change_24h": -0.66091235190398,
+    "content": "",
+    "top_3_coins_id": [
+      "bitcoin",
+      "ethereum",
+      "binancecoin"
+    ],
+    "top_3_coins": [
+      "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1696501400",
+      "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1696501628",
+      "https://assets.coingecko.com/coins/images/825/small/bnb-icon2_2x.png?1696501970"
+    ],
+    "volume_24h": 61146432400.1739,
+    "updated_at": "2024-04-06T08:25:46.402Z"
+  }
+]

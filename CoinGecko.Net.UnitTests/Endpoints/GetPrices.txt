@@ -1,0 +1,4 @@
+GET
+/api/v3/simple/price
+false
+{"ethereum":{"usd":1498.64}}

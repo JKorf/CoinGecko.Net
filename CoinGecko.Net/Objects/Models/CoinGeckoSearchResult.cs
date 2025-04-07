@@ -124,7 +124,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Id
         /// </summary>
         [JsonPropertyName("id")]
-        public int Id { get; set; }
+        public string Id { get; set; } = string.Empty;
         /// <summary>
         /// Name
         /// </summary>

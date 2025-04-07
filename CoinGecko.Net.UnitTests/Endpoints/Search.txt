@@ -1,0 +1,98 @@
+GET
+/api/v3/search
+false
+{
+  "coins": [
+    {
+      "id": "ethereum",
+      "name": "Ethereum",
+      "api_symbol": "ethereum",
+      "symbol": "ETH",
+      "market_cap_rank": 2,
+      "thumb": "https://assets.coingecko.com/coins/images/279/thumb/ethereum.png",
+      "large": "https://assets.coingecko.com/coins/images/279/large/ethereum.png"
+    },
+    {
+      "id": "ethereum-classic",
+      "name": "Ethereum Classic",
+      "api_symbol": "ethereum-classic",
+      "symbol": "ETC",
+      "market_cap_rank": 27,
+      "thumb": "https://assets.coingecko.com/coins/images/453/thumb/ethereum-classic-logo.png",
+      "large": "https://assets.coingecko.com/coins/images/453/large/ethereum-classic-logo.png"
+    },
+    {
+      "id": "sweth",
+      "name": "Swell Ethereum",
+      "api_symbol": "sweth",
+      "symbol": "SWETH",
+      "market_cap_rank": 142,
+      "thumb": "https://assets.coingecko.com/coins/images/30326/thumb/_lB7zEtS_400x400.jpg",
+      "large": "https://assets.coingecko.com/coins/images/30326/large/_lB7zEtS_400x400.jpg"
+    }
+  ],
+  "exchanges": [
+    {
+      "id": "uniswap_v3",
+      "name": "Uniswap V3 (Ethereum)",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/665/thumb/uniswap-v3.png",
+      "large": "https://assets.coingecko.com/markets/images/665/large/uniswap-v3.png"
+    },
+    {
+      "id": "uniswap_v2",
+      "name": "Uniswap V2 (Ethereum)",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/535/thumb/256x256_Black-1.png",
+      "large": "https://assets.coingecko.com/markets/images/535/large/256x256_Black-1.png"
+    },
+    {
+      "id": "curve_ethereum",
+      "name": "Curve (Ethereum)",
+      "market_type": "spot",
+      "thumb": "https://assets.coingecko.com/markets/images/538/thumb/Curve.png",
+      "large": "https://assets.coingecko.com/markets/images/538/large/Curve.png"
+    }
+  ],
+  "icos": [],
+  "categories": [
+    {
+      "id": "ethereum-ecosystem",
+      "name": "Ethereum Ecosystem"
+    },
+    {
+      "id": "ethereum-classic-ecosystem",
+      "name": "Ethereum Classic Ecosystem"
+    },
+    {
+      "id": "ethereumpow-ecosystem",
+      "name": "EthereumPoW Ecosystem"
+    }
+  ],
+  "nfts": [
+    {
+      "id": "cyberkongz-genkai",
+      "name": "CyberKongz Genkai (Ethereum)",
+      "symbol": "GENKAI",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3388/thumb/cyberkongz-genkai.png"
+    },
+    {
+      "id": "ethereum-peppets",
+      "name": "Ethereum Peppets",
+      "symbol": "PEPPET",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/3880/thumb/ethereum-peppets.png"
+    },
+    {
+      "id": "ens-ethereum-name-service",
+      "name": "ENS: Ethereum Name Service",
+      "symbol": "ENS",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/373/thumb/ens-ethereum-name-service.png"
+    },
+    {
+      "id": "league-of-kingdoms-ethereum",
+      "name": "League of Kingdoms (Ethereum)",
+      "symbol": "LOKR",
+      "thumb": "https://assets.coingecko.com/nft_contracts/images/1001/thumb/league-of-kingdoms-ethereum.jpg"
+    }
+  ]
+}

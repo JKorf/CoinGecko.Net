@@ -1,3 +1,6 @@
+GET
+/api/v3/simple/supported_vs_currencies
+false
 [
   "btc",
   "eth",
@@ -26,6 +29,7 @@
   "dkk",
   "eur",
   "gbp",
+  "gel",
   "hkd",
   "huf",
   "idr",

@@ -68,6 +68,11 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("subreddit_url")]
         public string? SubredditUrl { get; set; } = string.Empty;
         /// <summary>
+        /// Snapshot url
+        /// </summary>
+        [JsonPropertyName("snapshot_url")]
+        public string? SnapshotUrl { get; set; }
+        /// <summary>
         /// Git repository urls
         /// </summary>
         [JsonPropertyName("repos_url")]

@@ -1,0 +1,37 @@
+GET
+/api/v3/derivatives
+false
+[
+  {
+    "market": "Deepcoin (Derivatives)",
+    "symbol": "ETHUSDT",
+    "index_id": "ETH",
+    "price": "3395.91",
+    "price_percentage_change_24h": 1.5274069068216,
+    "contract_type": "perpetual",
+    "index": 3393.5342,
+    "basis": -0.0523015571479482,
+    "spread": 0.01,
+    "funding_rate": -0.007182,
+    "open_interest": 9327998764.66,
+    "volume_24h": 392642535.232121,
+    "last_traded_at": 1712467658,
+    "expired_at": null
+  },
+  {
+    "market": "BYDFi (Futures)",
+    "symbol": "BTC-PERPUSDT",
+    "index_id": "BTC",
+    "price": "69434.1",
+    "price_percentage_change_24h": 2.04057930105749,
+    "contract_type": "perpetual",
+    "index": 69407.5,
+    "basis": -0.000576303273834822,
+    "spread": 0.01,
+    "funding_rate": 0.012,
+    "open_interest": 7690212057.6,
+    "volume_24h": 132888173.547,
+    "last_traded_at": 1712467920,
+    "expired_at": null
+  }
+]

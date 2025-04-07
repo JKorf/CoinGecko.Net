@@ -1,0 +1,20 @@
+GET
+/api/v3/coins/list
+false
+[
+  {
+    "id": "0chain",
+    "symbol": "zcn",
+    "name": "Zus",
+    "platforms": {
+      "ethereum": "0xb9ef770b6a5e12e45983c5d80545258aa38f3b78",
+      "polygon-pos": "0x8bb30e0e67b11b978a5040144c410e1ccddcba30"
+    }
+  },
+  {
+    "id": "01coin",
+    "symbol": "zoc",
+    "name": "01coin",
+    "platforms": {}
+  }
+]

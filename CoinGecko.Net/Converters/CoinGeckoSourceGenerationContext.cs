@@ -5,7 +5,8 @@ using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Converters
 {
-    
+    [JsonSerializable(typeof(Dictionary<string, Dictionary<string, decimal?>>))]
+
     // End manual defined attributes
 
     [JsonSerializable(typeof(IDictionary<string, object>))]

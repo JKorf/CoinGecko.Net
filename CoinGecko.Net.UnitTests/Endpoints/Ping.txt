@@ -1,0 +1,6 @@
+GET
+/api/v3/ping
+false
+{
+  "gecko_says": "(V3) To the Moon!"
+}

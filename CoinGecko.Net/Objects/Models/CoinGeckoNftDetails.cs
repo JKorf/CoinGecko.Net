@@ -38,6 +38,11 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("symbol")]
         public string Symbol { get; set; } = string.Empty;
         /// <summary>
+        /// Market cap rank
+        /// </summary>
+        [JsonPropertyName("market_cap_rank")]
+        public int? MarketCapRank { get; set; }
+        /// <summary>
         /// Images
         /// </summary>
         [JsonPropertyName("image")]
@@ -191,7 +196,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Explorer links
         /// </summary>
         [JsonPropertyName("explorers")]
-        public CoinGeckoNftLink[] Exlorers { get; set; } = Array.Empty<CoinGeckoNftLink>();
+        public CoinGeckoNftLink[] Explorers { get; set; } = Array.Empty<CoinGeckoNftLink>();
     }
 
     /// <summary>

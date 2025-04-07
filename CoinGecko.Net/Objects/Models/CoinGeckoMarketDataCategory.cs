@@ -37,6 +37,11 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("content")]
         public string Content { get; set; } = string.Empty;
         /// <summary>
+        /// Top 3 coin id
+        /// </summary>
+        [JsonPropertyName("top_3_coins_id")]
+        public string[] Top3CoinIds { get; set; } = Array.Empty<string>();
+        /// <summary>
         /// Top 3 coins
         /// </summary>
         [JsonPropertyName("top_3_coins")]

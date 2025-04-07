@@ -38,6 +38,16 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("volume")]
         public decimal? Volume { get; set; }
         /// <summary>
+        /// Cost to move up in usd
+        /// </summary>
+        [JsonPropertyName("cost_to_move_up_usd")]
+        public decimal? CostToMoveUpUsd { get; set; }
+        /// <summary>
+        /// Cost to move down in usd
+        /// </summary>
+        [JsonPropertyName("cost_to_move_down_usd")]
+        public decimal? CostToMoveDownUsd { get; set; }
+        /// <summary>
         /// Converted last
         /// </summary>
         [JsonPropertyName("converted_last")]

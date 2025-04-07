@@ -117,6 +117,16 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("trade_volume_24h_btc_normalized")]
         public decimal? TradeVolume24hBtcNormalized { get; set; }
         /// <summary>
+        /// Number of assets
+        /// </summary>
+        [JsonPropertyName("coins")]
+        public int Assets { get; set; }
+        /// <summary>
+        /// Number of symbols
+        /// </summary>
+        [JsonPropertyName("pairs")]
+        public int Symbols { get; set; }
+        /// <summary>
         /// Tickers
         /// </summary>
         [JsonPropertyName("tickers")]

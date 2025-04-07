@@ -58,7 +58,7 @@ namespace CoinGecko.Net.Objects.Models
         /// <summary>
         /// Description
         /// </summary>
-        [JsonPropertyName("decription")]
+        [JsonPropertyName("description")]
         public string Description { get; set; } = string.Empty;
         /// <summary>
         /// Url

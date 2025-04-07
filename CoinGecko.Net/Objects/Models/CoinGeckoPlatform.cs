@@ -12,8 +12,8 @@ namespace CoinGecko.Net.Objects.Models
         /// <summary>
         /// Decimal places
         /// </summary>
-        [JsonPropertyName("decimail_places")]
-        public int DecimalPlaces { get; set; }
+        [JsonPropertyName("decimal_place")]
+        public int? DecimalPlaces { get; set; }
         /// <summary>
         /// Address
         /// </summary>

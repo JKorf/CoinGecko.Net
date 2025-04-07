@@ -1,0 +1,13 @@
+GET
+/api/v3/coins/categories/list
+false
+[
+  {
+    "category_id": "aave-tokens",
+    "name": "Aave Tokens"
+  },
+  {
+    "category_id": "aaccount-abstraction",
+    "name": "Account Abstraction"
+  }
+]

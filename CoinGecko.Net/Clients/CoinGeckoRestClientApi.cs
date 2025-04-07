@@ -506,7 +506,6 @@ namespace CoinGecko.Net.Clients
 
         #endregion
 
-
         #region Get Derivatives Exchanges list
         /// <inheritdoc />
         public async Task<WebCallResult<CoinGeckoListItem[]>> GetDerivativesExchangesListAsync(CancellationToken ct = default)
@@ -535,7 +534,6 @@ namespace CoinGecko.Net.Clients
         {
             var request = _definitions.GetOrCreate(HttpMethod.Get, $"api/v3/global", CoinGeckoApi.RateLimiter.CoinGecko, 1, false);
             var data = await SendAsync<CoinGeckoGlobalDataWrapper>(GetBaseAddress(), request, null, ct).ConfigureAwait(false);
-            var parameters = new ParameterCollection();
             if (!data)
                 return data.As<CoinGeckoGlobalData>(null);
 
@@ -665,6 +663,7 @@ namespace CoinGecko.Net.Clients
 
                 return _options.Environment.RestApiAddressPro;
             }
+
             return _options.Environment.RestApiAddressPublic;
         }
 

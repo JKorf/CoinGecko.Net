@@ -1,0 +1,4 @@
+GET
+/api/v3/derivatives/exchanges/gdax
+false
+{"name":"Binance (Futures)","open_interest_btc":232443.43,"trade_volume_24h_btc":"1589231.95","number_of_perpetual_pairs":472,"number_of_futures_pairs":66,"image":"https://coin-images.coingecko.com/markets/images/466/small/binance_futures.jpg?1706864452","year_established":2019,"country":null,"description":"","url":"https://www.binance.com/"}

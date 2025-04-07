@@ -1,0 +1,19 @@
+GET
+/api/v3/nfts/list
+false
+[
+  {
+    "id": "bored-ape-yacht-club",
+    "contract_address": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+    "name": "Bored Ape Yacht Club",
+    "asset_platform_id": "ethereum",
+    "symbol": "BAYC"
+  },
+  {
+    "id": "pudgy-penguins",
+    "contract_address": "0xBd3531dA5CF5857e7CfAA92426877b022e612cf8",
+    "name": "Pudgy Penguins",
+    "asset_platform_id": "ethereum",
+    "symbol": "PPG"
+  }
+]

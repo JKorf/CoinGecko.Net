@@ -52,10 +52,15 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("block_time_in_minutes")]
         public int? BlockTimeInMinutes { get; set; }
         /// <summary>
-        /// Hasing algorithm
+        /// Hashing algorithm
         /// </summary>
         [JsonPropertyName("hashing_algorithm")]
         public string HashingAlgorithm { get; set; } = string.Empty;
+        /// <summary>
+        /// Contract address
+        /// </summary>
+        [JsonPropertyName("contract_address")]
+        public string? ContractAddress { get; set; }
         /// <summary>
         /// Categories
         /// </summary>
@@ -117,6 +122,11 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("sentiment_votes_down_percentage")]
         public decimal? SentimentVotesDownPercentage { get; set; }
+        /// <summary>
+        /// Watchlist portfolio users
+        /// </summary>
+        [JsonPropertyName("watchlist_portfolio_users")]
+        public int? WatchListPortfolioUsers { get; set; }
         /// <summary>
         /// Market cap rank
         /// </summary>

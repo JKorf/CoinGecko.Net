@@ -1,0 +1,17 @@
+GET
+/api/v3/exchanges/list
+false
+[
+  {
+    "id": "10kswap-starknet-alpha",
+    "name": "10KSwap"
+  },
+  {
+    "id": "1bch",
+    "name": "1BCH"
+  },
+  {
+    "id": "3xcalibur",
+    "name": "3xcalibur"
+  }
+]
