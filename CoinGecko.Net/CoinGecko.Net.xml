@@ -964,12 +964,13 @@
             <summary>
             Api endpoints
             </summary>
+            <see cref="T:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi"/>
         </member>
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClient.SetOptions(CryptoExchange.Net.Objects.Options.UpdateOptions)">
             <summary>
             Update specific options
             </summary>
-            <param name="options">Options to update. Only specific options are changable after the client has been created</param>
+            <param name="options">Options to update. Only specific options are changeable after the client has been created</param>
         </member>
         <member name="T:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi">
             <summary>
