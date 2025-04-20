@@ -5,7 +5,7 @@
 CoinGecko.Net is a strongly typed client library for accessing the [CoinGecko REST API](https://www.coingecko.com/en/api/documentation). All data is mapped to readable models and enum values.
 
 ## Supported Frameworks
-The library is targeting both `.NET Standard 2.0` and `.NET Standard 2.1` for optimal compatibility
+The library is targeting both `.NET Standard 2.0` and `.NET Standard 2.1` for optimal compatibility, as well as dotnet 8.0 and 9.0 to use the latest framework features.
 
 |.NET implementation|Version Support|
 |--|--|
