@@ -1,6 +1,6 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	  <TargetFrameworks>net8.0;net9.0;netstandard2.0;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>net8.0;net9.0;netstandard2.0;netstandard2.1</TargetFrameworks>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
@@ -9,7 +9,7 @@
     <Authors>JKorf</Authors>
     <PackageVersion>4.0.0-beta1</PackageVersion>
     <AssemblyVersion>4.0.0</AssemblyVersion>
-    <FileVersion>4.0.0-beta1</FileVersion>
+    <FileVersion>4.0.0</FileVersion>
     <Description>CoinGecko.Net is a client library for accessing the CoinGecko REST API. All data is mapped to readable models and enum values.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>CoinGecko;CoinGecko.Net;CoinGecko Client;CoinGecko API;CryptoCurrency</PackageTags>
@@ -23,9 +23,9 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageReleaseNotes>https://github.com/JKorf/CoinEx.Net?tab=readme-ov-file#release-notes</PackageReleaseNotes>
   </PropertyGroup>
-	<PropertyGroup Label="AOT" Condition=" '$(TargetFramework)' == 'NET8_0' Or '$(TargetFramework)' == 'NET9_0' ">
-		<IsAotCompatible>true</IsAotCompatible>
-	</PropertyGroup>
+  <PropertyGroup Label="AOT" Condition=" '$(TargetFramework)' == 'NET8_0' Or '$(TargetFramework)' == 'NET9_0' ">
+    <IsAotCompatible>true</IsAotCompatible>
+  </PropertyGroup>
   <PropertyGroup>
     <DocumentationFile>CoinGecko.Net.xml</DocumentationFile>
   </PropertyGroup>
