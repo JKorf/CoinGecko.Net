@@ -112,6 +112,14 @@ Make a one time donation in a crypto currency of your choice. If you prefer to d
 Alternatively, sponsor me on Github using [Github Sponsors](https://github.com/sponsors/JKorf). 
 
 ## Release notes
+* Version 4.0.0-beta1 - 22 Apr 2025
+    * Updated CryptoExchange.Net to version 9.0.0-beta1, see https://github.com/JKorf/CryptoExchange.Net/releases/
+    * Added support for Native AOT compilation
+    * Updated all IEnumerable response and model types to array response types
+    * Updated some response models
+    * Removed Newtonsoft.Json dependency
+    * Fixed some typos
+
 * Version 3.4.0 - 11 Feb 2025
     * Updated CryptoExchange.Net to version 8.8.0, see https://github.com/JKorf/CryptoExchange.Net/releases/
     * Fix Mono runtime exception on rest client construction using DI
