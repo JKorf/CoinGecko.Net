@@ -7,7 +7,7 @@
   <PropertyGroup>
     <PackageId>CoinGecko.Net</PackageId>
     <Authors>JKorf</Authors>
-    <PackageVersion>4.0.0-beta2</PackageVersion>
+    <PackageVersion>4.0.0-beta3</PackageVersion>
     <AssemblyVersion>4.0.0</AssemblyVersion>
     <FileVersion>4.0.0</FileVersion>
     <Description>CoinGecko.Net is a client library for accessing the CoinGecko REST API. All data is mapped to readable models and enum values.</Description>
