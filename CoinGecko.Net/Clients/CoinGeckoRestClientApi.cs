@@ -636,22 +636,22 @@ namespace CoinGecko.Net.Clients
 
         #endregion
 
-        protected override Error ParseErrorResponse(int httpStatusCode, KeyValuePair<string, string[]>[] responseHeaders, IMessageAccessor accessor)
+        protected override Error ParseErrorResponse(int httpStatusCode, KeyValuePair<string, string[]>[] responseHeaders, IMessageAccessor accessor, Exception? exception)
         {
             if (!accessor.IsJson)
-                return new ServerError(accessor.GetOriginalString());
+                return new ServerError(null, "Unknown request error", exception: exception);
 
             var code = accessor.GetValue<int?>(MessagePath.Get().Property("error_code"));
             var msg = accessor.GetValue<string?>(MessagePath.Get().Property("status").Property("error_message"));
 
             if (code != null && msg != null)
-                return new ServerError(code.Value, msg);
+                return new ServerError(code.Value, msg, exception);
 
             code = accessor.GetValue<int?>(MessagePath.Get().Property("status").Property("error_code"));
             if (code != null && msg != null)
-                return new ServerError(code.Value, msg);
+                return new ServerError(code.Value, msg, exception);
 
-            return new ServerError(httpStatusCode, accessor.GetOriginalString());
+            return new ServerError(httpStatusCode, "Unknown request error", exception: exception);
         }
 
         private string GetBaseAddress()
