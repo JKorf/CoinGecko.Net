@@ -34,7 +34,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Value at time info
     /// </summary>
-    [JsonConverter(typeof(ArrayConverter<CoinGeckoMarketChartValue, CoinGeckoSourceGenerationContext>))]
+    [JsonConverter(typeof(ArrayConverter<CoinGeckoMarketChartValue>))]
     [SerializationModel]
     public record CoinGeckoMarketChartValue
     {

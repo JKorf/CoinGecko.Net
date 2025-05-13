@@ -9,7 +9,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Open High Low Close data
     /// </summary>
-    [JsonConverter(typeof(ArrayConverter<CoinGeckoOhlc, CoinGeckoSourceGenerationContext>))]
+    [JsonConverter(typeof(ArrayConverter<CoinGeckoOhlc>))]
     [SerializationModel]
     public record CoinGeckoOhlc
     {
