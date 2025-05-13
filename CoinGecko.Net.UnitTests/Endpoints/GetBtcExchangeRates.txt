@@ -1,0 +1,37 @@
+GET
+/api/v3/exchange_rates
+false
+{
+  "rates": {
+    "btc": {
+      "name": "Bitcoin",
+      "unit": "BTC",
+      "value": 1,
+      "type": "crypto"
+    },
+    "eth": {
+      "name": "Ether",
+      "unit": "ETH",
+      "value": 20.656,
+      "type": "crypto"
+    },
+    "ltc": {
+      "name": "Litecoin",
+      "unit": "LTC",
+      "value": 684.945,
+      "type": "crypto"
+    },
+    "bch": {
+      "name": "Bitcoin Cash",
+      "unit": "BCH",
+      "value": 102.254,
+      "type": "crypto"
+    },
+    "bnb": {
+      "name": "Binance Coin",
+      "unit": "BNB",
+      "value": 119.846,
+      "type": "crypto"
+    }
+  }
+}

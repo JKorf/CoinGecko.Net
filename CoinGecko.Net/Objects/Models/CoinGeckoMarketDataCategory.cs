@@ -1,4 +1,5 @@
-﻿using System;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
@@ -7,6 +8,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Category info
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoMarketDataCategory
     {
         /// <summary>
@@ -35,10 +37,15 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("content")]
         public string Content { get; set; } = string.Empty;
         /// <summary>
+        /// Top 3 coin id
+        /// </summary>
+        [JsonPropertyName("top_3_coins_id")]
+        public string[] Top3CoinIds { get; set; } = Array.Empty<string>();
+        /// <summary>
         /// Top 3 coins
         /// </summary>
         [JsonPropertyName("top_3_coins")]
-        public IEnumerable<string> Top3Coins { get; set; } = Array.Empty<string>();
+        public string[] Top3Coins { get; set; } = Array.Empty<string>();
         /// <summary>
         /// Volume last 24h
         /// </summary>

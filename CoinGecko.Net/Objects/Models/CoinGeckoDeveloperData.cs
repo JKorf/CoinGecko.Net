@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
@@ -6,6 +7,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Developer data
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoDeveloperData
     {
         /// <summary>
@@ -57,6 +59,6 @@ namespace CoinGecko.Net.Objects.Models
         /// Commits series last 4 weeks
         /// </summary>
         [JsonPropertyName("last_4_weeks_commit_activity_series")]
-        public IEnumerable<int> Last4WeeksCommitActivitySeries { get; set; } = new List<int>();
+        public int[] Last4WeeksCommitActivitySeries { get; set; } = [];
     }
 }

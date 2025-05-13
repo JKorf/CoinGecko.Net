@@ -1,37 +1,41 @@
-﻿using CryptoExchange.Net.Converters;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using CryptoExchange.Net.Converters;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
+using CoinGecko.Net.Converters;
 
 namespace CoinGecko.Net.Objects.Models
 {
     /// <summary>
     /// Price history info
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoMarketChart
     {
         /// <summary>
         /// Price history
         /// </summary>
         [JsonPropertyName("prices")]
-        public IEnumerable<CoinGeckoMarketChartValue> Prices { get; set; } = Array.Empty<CoinGeckoMarketChartValue>();
+        public CoinGeckoMarketChartValue[] Prices { get; set; } = Array.Empty<CoinGeckoMarketChartValue>();
         /// <summary>
         /// Market cap history
         /// </summary>
         [JsonPropertyName("market_caps")]
-        public IEnumerable<CoinGeckoMarketChartValue> MarketCaps { get; set; } = Array.Empty<CoinGeckoMarketChartValue>();
+        public CoinGeckoMarketChartValue[] MarketCaps { get; set; } = Array.Empty<CoinGeckoMarketChartValue>();
         /// <summary>
         /// Volume history
         /// </summary>
         [JsonPropertyName("total_volumes")]
-        public IEnumerable<CoinGeckoMarketChartValue> TotalVolumes { get; set; } = Array.Empty<CoinGeckoMarketChartValue>();
+        public CoinGeckoMarketChartValue[] TotalVolumes { get; set; } = Array.Empty<CoinGeckoMarketChartValue>();
     }
 
     /// <summary>
     /// Value at time info
     /// </summary>
-    [JsonConverter(typeof(ArrayConverter))]
+    [JsonConverter(typeof(ArrayConverter<CoinGeckoMarketChartValue>))]
+    [SerializationModel]
     public record CoinGeckoMarketChartValue
     {
         /// <summary>

@@ -1,0 +1,14 @@
+GET
+/api/v3/global/decentralized_finance_defi
+false
+{
+  "data": {
+    "defi_market_cap": "105273842288.229620442228701667",
+    "eth_market_cap": "406184911478.5772415794509920285",
+    "defi_to_eth_ratio": "25.9177136602677348904422532573101031788841174510865443130135278",
+    "trading_volume_24h": "5046503746.288261648853195485635",
+    "defi_dominance": "3.8676503084614763642371703099489945457095080090859886",
+    "top_coin_name": "Lido Staked Ether",
+    "top_coin_defi_dominance": 30.589442518868
+  }
+}

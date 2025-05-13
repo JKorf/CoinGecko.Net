@@ -1,10 +1,12 @@
-﻿using System.Text.Json.Serialization;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
 {
     /// <summary>
     /// Nft
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoNft
     {
         /// <summary>

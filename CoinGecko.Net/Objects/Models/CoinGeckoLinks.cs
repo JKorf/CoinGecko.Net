@@ -1,4 +1,5 @@
-﻿using System;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -8,13 +9,14 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Links
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoLinks
     {
         /// <summary>
         /// Homepage
         /// </summary>
         [JsonPropertyName("homepage")]
-        public IEnumerable<string> Homepage { get; set; } = Array.Empty<string>();
+        public string[] Homepage { get; set; } = Array.Empty<string>();
         /// <summary>
         /// White paper link
         /// </summary>
@@ -24,22 +26,22 @@ namespace CoinGecko.Net.Objects.Models
         /// Blockchain explorer links
         /// </summary>
         [JsonPropertyName("blockchain_site")]
-        public IEnumerable<string> BlockchainSites { get; set; } = Array.Empty<string>();
+        public string[] BlockchainSites { get; set; } = Array.Empty<string>();
         /// <summary>
         /// Official forum urls
         /// </summary>
         [JsonPropertyName("official_forum_url")]
-        public IEnumerable<string> OfficialForumUrls { get; set; } = Array.Empty<string>();
+        public string[] OfficialForumUrls { get; set; } = Array.Empty<string>();
         /// <summary>
         /// Chat urls
         /// </summary>
         [JsonPropertyName("chat_url")]
-        public IEnumerable<string> ChatUrls { get; set; } = Array.Empty<string>();
+        public string[] ChatUrls { get; set; } = Array.Empty<string>();
         /// <summary>
         /// Announcement urls
         /// </summary>
         [JsonPropertyName("announcement_url")]
-        public IEnumerable<string> AnnouncementUrls { get; set; } = Array.Empty<string>();
+        public string[] AnnouncementUrls { get; set; } = Array.Empty<string>();
         /// <summary>
         /// Twitter name
         /// </summary>
@@ -65,6 +67,11 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("subreddit_url")]
         public string? SubredditUrl { get; set; } = string.Empty;
+        /// <summary>
+        /// Snapshot url
+        /// </summary>
+        [JsonPropertyName("snapshot_url")]
+        public string? SnapshotUrl { get; set; }
         /// <summary>
         /// Git repository urls
         /// </summary>

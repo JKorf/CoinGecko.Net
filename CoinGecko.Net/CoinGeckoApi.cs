@@ -7,6 +7,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using CryptoExchange.Net.SharedApis;
+using CoinGecko.Net.Converters;
+using CryptoExchange.Net.Converters;
+using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net
 {
@@ -26,6 +29,8 @@ namespace CoinGecko.Net
         public static string[] ApiDocsUrl { get; } = new[] {
             "https://docs.coingecko.com/"
             };
+
+        internal static JsonSerializerContext SerializationContext { get; } = JsonSerializerContextCache.GetOrCreate<CoinGeckoSourceGenerationContext>();
 
         /// <summary>
         /// Rate limiter configuration for the CoinGecko API

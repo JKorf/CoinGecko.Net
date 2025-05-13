@@ -1,4 +1,5 @@
-﻿using System;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
@@ -8,6 +9,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Nft info
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoNftDetails
     {
         /// <summary>
@@ -35,6 +37,11 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("symbol")]
         public string Symbol { get; set; } = string.Empty;
+        /// <summary>
+        /// Market cap rank
+        /// </summary>
+        [JsonPropertyName("market_cap_rank")]
+        public int? MarketCapRank { get; set; }
         /// <summary>
         /// Images
         /// </summary>
@@ -189,12 +196,13 @@ namespace CoinGecko.Net.Objects.Models
         /// Explorer links
         /// </summary>
         [JsonPropertyName("explorers")]
-        public IEnumerable<CoinGeckoNftLink> Exlorers { get; set; } = Array.Empty<CoinGeckoNftLink>();
+        public CoinGeckoNftLink[] Explorers { get; set; } = Array.Empty<CoinGeckoNftLink>();
     }
 
     /// <summary>
     /// Nft value info
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoNftValue
     {
         /// <summary>
@@ -212,6 +220,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Nft value info
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoNftDate
     {
         /// <summary>
@@ -229,6 +238,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Nft value info
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoNftLink
     {
         /// <summary>

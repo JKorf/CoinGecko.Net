@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
@@ -6,6 +7,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Exchange rates
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoExchangeRates
     {
         /// <summary>
@@ -18,6 +20,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Exchange rate
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoExchangeRate
     {
         /// <summary>

@@ -1,0 +1,100 @@
+GET
+/api/v3/nfts/pudgy-penguins
+false
+{
+  "id": "pudgy-penguins",
+  "contract_address": "0xBd3531dA5CF5857e7CfAA92426877b022e612cf8",
+  "asset_platform_id": "ethereum",
+  "name": "Pudgy Penguins",
+  "symbol": "PPG",
+  "image": {
+    "small": "https://coin-images.coingecko.com/nft_contracts/images/38/small/pudgy.jpg?1730778323",
+    "small_2x": "https://coin-images.coingecko.com/nft_contracts/images/38/small_2x/pudgy.jpg?1730778323"
+  },
+  "banner_image": "https://coin-images.coingecko.com/nft_contracts/images/20/bored-ape-yacht-club-banner.png?1708416120",
+  "description": "Pudgy Penguins is a collection of 8,888 unique NFTs featuring cute cartoon penguins, which are generated from a collection of 150 different hand-drawn traits.",
+  "native_currency": "ethereum",
+  "native_currency_symbol": "ETH",
+  "market_cap_rank": 3,
+  "floor_price": {
+    "native_currency": 12.5,
+    "usd": 42317
+  },
+  "market_cap": {
+    "native_currency": 111100,
+    "usd": 376114941
+  },
+  "volume_24h": {
+    "native_currency": 429.88,
+    "usd": 1455314
+  },
+  "floor_price_in_usd_24h_percentage_change": 1.07067,
+  "floor_price_24h_percentage_change": {
+    "usd": 1.07067060717791,
+    "native_currency": 1.21457489878543
+  },
+  "market_cap_24h_percentage_change": {
+    "usd": 1.07067060717767,
+    "native_currency": -0.404858299595142
+  },
+  "volume_24h_percentage_change": {
+    "usd": -3.19833776698741,
+    "native_currency": -1.80185531390094
+  },
+  "number_of_unique_addresses": 4752,
+  "number_of_unique_addresses_24h_percentage_change": 0.08425,
+  "volume_in_usd_24h_percentage_change": -3.19834,
+  "total_supply": 8888,
+  "one_day_sales": 36,
+  "one_day_sales_24h_percentage_change": -2.7027027027027,
+  "one_day_average_sale_price": 11.9411943888889,
+  "one_day_average_sale_price_24h_percentage_change": 0.925870927379588,
+  "links": {
+    "homepage": "https://www.pudgypenguins.com/",
+    "twitter": "https://twitter.com/pudgypenguins",
+    "discord": "https://discord.gg/pudgypenguins"
+  },
+  "floor_price_7d_percentage_change": {
+    "usd": -18.0014948262365,
+    "native_currency": -13.7931034482759
+  },
+  "floor_price_14d_percentage_change": {
+    "usd": -8.63235339431041,
+    "native_currency": -8.61905110022663
+  },
+  "floor_price_30d_percentage_change": {
+    "usd": -14.3765649314409,
+    "native_currency": -0.777901254167328
+  },
+  "floor_price_60d_percentage_change": {
+    "usd": 15.2779758703282,
+    "native_currency": -18.0327868852459
+  },
+  "floor_price_1y_percentage_change": {
+    "usd": 429.5685372855,
+    "native_currency": 196.208530805687
+  },
+  "explorers": [
+    {
+      "name": "Etherscan",
+      "link": "https://etherscan.io/token/0xBd3531dA5CF5857e7CfAA92426877b022e612cf8"
+    },
+    {
+      "name": "Ethplorer",
+      "link": "https://ethplorer.io/address/0xBd3531dA5CF5857e7CfAA92426877b022e612cf8"
+    }
+  ],
+  "user_favorites_count": 3660,
+  "ath": {
+    "native_currency": 22.9,
+    "usd": 67535
+  },
+  "ath_change_percentage": {
+    "native_currency": -59.825327510917,
+    "usd": -64.3396788440525
+  },
+  "ath_date": {
+    "native_currency": "2024-02-17T09:25:05.056Z",
+    "usd": "2024-02-29T11:45:08.150Z"
+  }
+}

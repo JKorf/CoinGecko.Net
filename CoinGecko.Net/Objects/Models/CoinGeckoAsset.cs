@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
@@ -6,6 +7,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Asset info
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoAsset
     {
         /// <summary>

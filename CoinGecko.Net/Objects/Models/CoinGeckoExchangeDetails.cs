@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using System.Text.Json.Serialization;
 using System;
 using System.Collections.Generic;
 
@@ -7,6 +8,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Exchange details
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoExchangeDetails
     {
         /// <summary>
@@ -115,9 +117,19 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("trade_volume_24h_btc_normalized")]
         public decimal? TradeVolume24hBtcNormalized { get; set; }
         /// <summary>
+        /// Number of assets
+        /// </summary>
+        [JsonPropertyName("coins")]
+        public int Assets { get; set; }
+        /// <summary>
+        /// Number of symbols
+        /// </summary>
+        [JsonPropertyName("pairs")]
+        public int Symbols { get; set; }
+        /// <summary>
         /// Tickers
         /// </summary>
         [JsonPropertyName("tickers")]
-        public IEnumerable<CoinGeckoTicker> Tickers { get; set; } = Array.Empty<CoinGeckoTicker>();
+        public CoinGeckoTicker[] Tickers { get; set; } = Array.Empty<CoinGeckoTicker>();
     }
 }

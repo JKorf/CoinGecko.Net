@@ -1,0 +1,65 @@
+GET
+/api/v3/exchanges/gdax
+false
+{
+  "name": "Binance",
+  "year_established": 2017,
+  "country": "Cayman Islands",
+  "description": "",
+  "url": "https://www.binance.com/",
+  "image": "https://assets.coingecko.com/markets/images/52/small/binance.jpg?1706864274",
+  "facebook_url": "https://www.facebook.com/binanceexchange",
+  "reddit_url": "https://www.reddit.com/r/binance/",
+  "telegram_url": "",
+  "slack_url": "",
+  "other_url_1": "https://medium.com/binanceexchange",
+  "other_url_2": "https://steemit.com/@binanceexchange",
+  "twitter_handle": "binance",
+  "has_trading_incentive": false,
+  "centralized": true,
+  "public_notice": "",
+  "alert_notice": "",
+  "trust_score": 9,
+  "trust_score_rank": 6,
+  "trade_volume_24h_btc": 207319.133772613,
+  "trade_volume_24h_btc_normalized": 81673.2971244154,
+  "coins": 384,
+  "pairs": 1281,
+  "tickers": [
+    {
+      "base": "BTC",
+      "target": "USDT",
+      "market": {
+        "name": "Binance",
+        "identifier": "binance",
+        "has_trading_incentive": false,
+        "logo": "https://assets.coingecko.com/markets/images/52/small/binance.jpg?1706864274"
+      },
+      "last": 69476,
+      "volume": 20242.03975,
+      "cost_to_move_up_usd": 19320706.3958517,
+      "cost_to_move_down_usd": 16360235.3694131,
+      "converted_last": {
+        "btc": 1.000205,
+        "eth": 20.291404,
+        "usd": 69498
+      },
+      "converted_volume": {
+        "btc": 20249,
+        "eth": 410802,
+        "usd": 1406996874
+      },
+      "trust_score": "green",
+      "bid_ask_spread_percentage": 0.010014,
+      "timestamp": "2024-04-08T04:02:01+00:00",
+      "last_traded_at": "2024-04-08T04:02:01+00:00",
+      "last_fetch_at": "2024-04-08T04:03:00+00:00",
+      "is_anomaly": false,
+      "is_stale": false,
+      "trade_url": "https://www.binance.com/en/trade/BTC_USDT?ref=37754157",
+      "token_info_url": null,
+      "coin_id": "bitcoin",
+      "target_coin_id": "tether"
+    }
+  ]
+}

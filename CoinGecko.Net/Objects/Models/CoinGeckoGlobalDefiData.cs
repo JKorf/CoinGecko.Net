@@ -1,7 +1,9 @@
-﻿using System.Text.Json.Serialization;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
 {
+    [SerializationModel]
     internal record CoinGeckoGlobalDefiDataWrapper
     {
         [JsonPropertyName("data")]
@@ -11,6 +13,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Global defi data
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoGlobalDefiData
     {
         /// <summary>

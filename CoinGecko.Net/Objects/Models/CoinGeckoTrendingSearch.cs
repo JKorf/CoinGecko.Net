@@ -1,4 +1,5 @@
-﻿using System;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
@@ -7,28 +8,30 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Trending searches
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoTrendingSearch
     {
         /// <summary>
         /// Trending assets
         /// </summary>
         [JsonPropertyName("coins")]
-        public IEnumerable<ItemWrapper<CoinGeckoTrendingAsset>> Assets { get; set; } = Array.Empty<ItemWrapper<CoinGeckoTrendingAsset>>();
+        public ItemWrapper<CoinGeckoTrendingAsset>[] Assets { get; set; } = Array.Empty<ItemWrapper<CoinGeckoTrendingAsset>>();
         /// <summary>
         /// Trending NFTs
         /// </summary>
         [JsonPropertyName("nfts")]
-        public IEnumerable<CoinGeckoTrendingNft> Nfts { get; set; } = Array.Empty<CoinGeckoTrendingNft>();
+        public CoinGeckoTrendingNft[] Nfts { get; set; } = Array.Empty<CoinGeckoTrendingNft>();
         /// <summary>
         /// Trending Categories
         /// </summary>
         [JsonPropertyName("categories")]
-        public IEnumerable<CoinGeckoTrendingCategory> Categories { get; set; } = Array.Empty<CoinGeckoTrendingCategory>();
+        public CoinGeckoTrendingCategory[] Categories { get; set; } = Array.Empty<CoinGeckoTrendingCategory>();
     }
 
     /// <summary>
     /// Trending asset
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoTrendingAsset
     {
         /// <summary>
@@ -91,6 +94,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Nft
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoTrendingNft
     {
         /// <summary>
@@ -143,6 +147,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Nft data
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoTrendingNftData
     {
         /// <summary>
@@ -175,6 +180,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Trending category
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoTrendingCategory
     {
         /// <summary>
@@ -212,6 +218,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Category date
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoTrendingCategoryData
     {
         /// <summary>
@@ -252,6 +259,7 @@ namespace CoinGecko.Net.Objects.Models
     /// Item
     /// </summary>
     /// <typeparam name="T"></typeparam>
+    [SerializationModel]
     public record ItemWrapper<T>
     {
         /// <summary>

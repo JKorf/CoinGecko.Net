@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
@@ -6,10 +7,11 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Exchange info
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoExchangeDerivative
     {
         /// <summary>
-        /// Mame
+        /// Name
         /// </summary>
         [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
@@ -56,7 +58,7 @@ namespace CoinGecko.Net.Objects.Models
         /// <summary>
         /// Description
         /// </summary>
-        [JsonPropertyName("decription")]
+        [JsonPropertyName("description")]
         public string Description { get; set; } = string.Empty;
         /// <summary>
         /// Url
@@ -67,6 +69,6 @@ namespace CoinGecko.Net.Objects.Models
         /// Tickers
         /// </summary>
         [JsonPropertyName("tickers")]
-        public IEnumerable<CoinGeckoDerivativeTicker>? Tickers { get; set; }
+        public CoinGeckoDerivativeTicker[]? Tickers { get; set; }
     }
 }

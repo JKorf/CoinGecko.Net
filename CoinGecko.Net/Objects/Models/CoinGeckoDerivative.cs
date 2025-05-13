@@ -1,4 +1,5 @@
-﻿using System;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using System;
 using System.Text.Json.Serialization;
 
 namespace CoinGecko.Net.Objects.Models
@@ -6,6 +7,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Derivative info
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoDerivative
     {
         /// <summary>

@@ -1,0 +1,10 @@
+GET
+/api/v3/key
+true
+{
+  "plan": "Other",
+  "rate_limit_request_per_minute": 1000,
+  "monthly_call_credit": 1000000,
+  "current_total_monthly_calls": 104,
+  "current_remaining_monthly_calls": 999896
+}

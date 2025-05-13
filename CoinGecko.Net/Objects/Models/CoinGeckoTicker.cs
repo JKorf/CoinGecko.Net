@@ -1,4 +1,5 @@
-﻿using System;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -8,6 +9,7 @@ namespace CoinGecko.Net.Objects.Models
     /// <summary>
     /// Ticker info
     /// </summary>
+    [SerializationModel]
     public record CoinGeckoTicker
     {
         /// <summary>
@@ -35,6 +37,16 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("volume")]
         public decimal? Volume { get; set; }
+        /// <summary>
+        /// Cost to move up in usd
+        /// </summary>
+        [JsonPropertyName("cost_to_move_up_usd")]
+        public decimal? CostToMoveUpUsd { get; set; }
+        /// <summary>
+        /// Cost to move down in usd
+        /// </summary>
+        [JsonPropertyName("cost_to_move_down_usd")]
+        public decimal? CostToMoveDownUsd { get; set; }
         /// <summary>
         /// Converted last
         /// </summary>
