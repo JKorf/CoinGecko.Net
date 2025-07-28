@@ -5,6 +5,7 @@ using System;
 using CoinGecko.Net.Objects.Models;
 using CryptoExchange.Net.Objects;
 using CryptoExchange.Net.Interfaces;
+using CoinGecko.Net.Enums;
 
 namespace CoinGecko.Net.Interfaces
 {
@@ -31,9 +32,19 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="communityData">Include community data</param>
         /// <param name="developerData">Include developer data</param>
         /// <param name="sparkline">Include sparkline</param>
+        /// <param name="dexPairFormat">Dex pair formatting. Defaults to ContractAddress</param>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<CoinGeckoAssetDetails>> GetAssetDetailsAsync(string assetId, bool? localization = null, bool? tickers = null, bool? marketData = null, bool? communityData = null, bool? developerData = null, bool? sparkline = null, CancellationToken ct = default);
+        Task<WebCallResult<CoinGeckoAssetDetails>> GetAssetDetailsAsync(
+            string assetId, 
+            bool? localization = null, 
+            bool? tickers = null, 
+            bool? marketData = null,
+            bool? communityData = null,
+            bool? developerData = null, 
+            bool? sparkline = null,
+            DexPairFormat? dexPairFormat = null,
+            CancellationToken ct = default);
         /// <summary>
         /// Get asset details by contract address
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-contract-address" /></para>
@@ -106,9 +117,13 @@ namespace CoinGecko.Net.Interfaces
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-id" /></para>
         /// </summary>
         /// <param name="exchangeId">Id of the exchange</param>
+        /// <param name="dexPairFormat">Dex pair formatting. Defaults to ContractAddress</param>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<CoinGeckoExchangeDetails>> GetExchangeDetailsAsync(string exchangeId, CancellationToken ct = default);
+        Task<WebCallResult<CoinGeckoExchangeDetails>> GetExchangeDetailsAsync(
+            string exchangeId, 
+            DexPairFormat? dexPairFormat = null,
+            CancellationToken ct = default);
         /// <summary>
         /// Get all exchanges 
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-list" /></para>
@@ -135,9 +150,18 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="page">Page</param>
         /// <param name="depth">Include orderbook 2% depth</param>
         /// <param name="order">Sort</param>
+        /// <param name="dexPairFormat">Dex pair formatting. Defaults to ContractAddress</param>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<CoinGeckoTickers>> GetExchangeTickersAsync(string exchangeId, IEnumerable<string>? assetIds = null, bool? includeExchangeLogo = null, int? page = null, bool? depth = null, string? order = null, CancellationToken ct = default);
+        Task<WebCallResult<CoinGeckoTickers>> GetExchangeTickersAsync(
+            string exchangeId,
+            IEnumerable<string>? assetIds = null,
+            bool? includeExchangeLogo = null,
+            int? page = null,
+            bool? depth = null, 
+            string? order = null,
+            DexPairFormat? dexPairFormat = null,
+            CancellationToken ct = default);
         /// <summary>
         /// Get volume chart data for an exchange, interval is determined automatically: 1 day -> 10 minutes, 7-14 days -> 1 hour, 30+ days -> 1 day
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-id-volume-chart" /></para>
@@ -297,9 +321,18 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="page">Page</param>
         /// <param name="order">Sorting</param>
         /// <param name="depth">Include 2% order book depth info</param>
+        /// <param name="dexPairFormat">Dex pair formatting. Defaults to ContractAddress</param>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<CoinGeckoTickers>> GetTickersAsync(string assetId, IEnumerable<string>? exchangeIds = null, bool? includeExchangeLogo = null, int? page = null, string? order = null, bool? depth = null, CancellationToken ct = default);
+        Task<WebCallResult<CoinGeckoTickers>> GetTickersAsync(
+            string assetId,
+            IEnumerable<string>? exchangeIds = null,
+            bool? includeExchangeLogo = null,
+            int? page = null,
+            string? order = null,
+            bool? depth = null, 
+            DexPairFormat? dexPairFormat = null, 
+            CancellationToken ct = default);
         /// <summary>
         /// Get prices by token contract addresses
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/simple-token-price" /></para>

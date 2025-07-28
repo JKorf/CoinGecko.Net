@@ -1,3 +1,4 @@
+using CoinGecko.Net.Enums;
 using CoinGecko.Net.Interfaces;
 using CoinGecko.Net.Objects;
 using CoinGecko.Net.Objects.Models;
@@ -121,6 +122,7 @@ namespace CoinGecko.Net.Clients
             bool? communityData = null,
             bool? developerData = null,
             bool? sparkline = null,
+            DexPairFormat? dexPairFormat = null,
             CancellationToken ct = default)
         {
             var parameters = new ParameterCollection();
@@ -130,6 +132,7 @@ namespace CoinGecko.Net.Clients
             parameters.AddOptionalParameter("community_data", communityData);
             parameters.AddOptionalParameter("developer_data", developerData);
             parameters.AddOptionalParameter("sparkline", sparkline);
+            parameters.AddOptionalEnum("dex_pair_format", dexPairFormat);
 
             var request = _definitions.GetOrCreate(HttpMethod.Get, "/api/v3/coins/" + assetId, CoinGeckoApi.RateLimiter.CoinGecko, 1, false);
             return await SendAsync<CoinGeckoAssetDetails>(GetBaseAddress(), request, parameters, ct).ConfigureAwait(false);
@@ -147,6 +150,7 @@ namespace CoinGecko.Net.Clients
             int? page = null,
             string? order = null,
             bool? depth = null,
+            DexPairFormat? dexPairFormat = null,
             CancellationToken ct = default)
         {
             var parameters = new ParameterCollection();
@@ -155,6 +159,7 @@ namespace CoinGecko.Net.Clients
             parameters.AddOptionalParameter("page", page);
             parameters.AddOptionalParameter("order", order);
             parameters.AddOptionalParameter("depth", depth);
+            parameters.AddOptionalEnum("dex_pair_format", dexPairFormat);
 
             var request = _definitions.GetOrCreate(HttpMethod.Get, "/api/v3/coins/" + assetId + "/tickers", CoinGeckoApi.RateLimiter.CoinGecko, 1, false);
             return await SendAsync<CoinGeckoTickers>(GetBaseAddress(), request, parameters, ct).ConfigureAwait(false);
@@ -437,17 +442,30 @@ namespace CoinGecko.Net.Clients
         #region Get Exchange Details
 
         /// <inheritdoc />
-        public async Task<WebCallResult<CoinGeckoExchangeDetails>> GetExchangeDetailsAsync(string exchangeId, CancellationToken ct = default)
+        public async Task<WebCallResult<CoinGeckoExchangeDetails>> GetExchangeDetailsAsync(
+            string exchangeId,
+            DexPairFormat? dexPairFormat = null,
+            CancellationToken ct = default)
         {
+            var parameters = new ParameterCollection();
+            parameters.AddOptionalEnum("dex_pair_format", dexPairFormat);
             var request = _definitions.GetOrCreate(HttpMethod.Get, $"api/v3/exchanges/{exchangeId}", CoinGeckoApi.RateLimiter.CoinGecko, 1, false);
-            return await SendAsync<CoinGeckoExchangeDetails> (GetBaseAddress(), request, null, ct).ConfigureAwait(false);
+            return await SendAsync<CoinGeckoExchangeDetails> (GetBaseAddress(), request, parameters, ct).ConfigureAwait(false);
         }
 
         #endregion
 
         #region Get Exchange Tickers
         /// <inheritdoc />
-        public async Task<WebCallResult<CoinGeckoTickers>> GetExchangeTickersAsync(string exchangeId, IEnumerable<string>? coinIds = null, bool? includeExchangeLogo = null, int? page = null, bool? depth = null, string? order = null, CancellationToken ct = default)
+        public async Task<WebCallResult<CoinGeckoTickers>> GetExchangeTickersAsync(
+            string exchangeId,
+            IEnumerable<string>? coinIds = null,
+            bool? includeExchangeLogo = null,
+            int? page = null,
+            bool? depth = null,
+            string? order = null,
+            DexPairFormat? dexPairFormat = null,
+            CancellationToken ct = default)
         {
             var parameters = new ParameterCollection();
             parameters.AddOptionalParameter("coin_ids", coinIds == null ? null : string.Join(",", coinIds));
@@ -455,6 +473,7 @@ namespace CoinGecko.Net.Clients
             parameters.AddOptionalParameter("page", page);
             parameters.AddOptionalParameter("depth", depth);
             parameters.AddOptionalParameter("order", order);
+            parameters.AddOptionalEnum("dex_pair_format", dexPairFormat);
 
             var request = _definitions.GetOrCreate(HttpMethod.Get, $"api/v3/exchanges/{exchangeId}/tickers", CoinGeckoApi.RateLimiter.CoinGecko, 1, false);
             return await SendAsync<CoinGeckoTickers>(GetBaseAddress(), request, parameters, ct).ConfigureAwait(false);
