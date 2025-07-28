@@ -217,7 +217,8 @@ namespace CoinGecko.Net.Interfaces
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-markets" /></para>
         /// </summary>
         /// <param name="quoteAsset">Quote asset</param>
-        /// <param name="assetIds">Asset ids</param>
+        /// <param name="assetIds">Asset ids, for example `bitcoin` and `tether`</param>
+        /// <param name="symbols">Symbols, for example `btc` and `usdt`</param>
         /// <param name="category">Category filter</param>
         /// <param name="order">Sorting</param>
         /// <param name="page">Page</param>
@@ -231,6 +232,7 @@ namespace CoinGecko.Net.Interfaces
         Task<WebCallResult<CoinGeckoMarket[]>> GetMarketsAsync(
             string quoteAsset, 
             IEnumerable<string>? assetIds = null, 
+            IEnumerable<string>? symbols = null,
             string? category = null,
             string? order = null,
             int? page = null,
@@ -257,8 +259,9 @@ namespace CoinGecko.Net.Interfaces
         /// Get prices for specific assets
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/simple-price" /></para>
         /// </summary>
-        /// <param name="ids">Asset ids to get data for</param>
+        /// <param name="ids">Asset ids to get data for, for example `bitcoin` and `tether`</param>
         /// <param name="quoteAssets">Quote assets</param>
+        /// <param name="symbols">Symbols, for example `btc` and `usdt`</param>
         /// <param name="includeMarketCap">Include market cap</param>
         /// <param name="include24hrVolume">Include 24h volume</param>
         /// <param name="include24hrChange">Include 24h change</param>
@@ -266,7 +269,17 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="precision">Precision</param>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<Dictionary<string, Dictionary<string, decimal?>>>> GetPricesAsync(IEnumerable<string> ids, IEnumerable<string> quoteAssets, bool? includeMarketCap = false, bool? include24hrVolume = false, bool? include24hrChange = false, bool? includeLastUpdatedAt = false, string? precision = null, CancellationToken ct = default);
+        Task<WebCallResult<Dictionary<string, Dictionary<string, decimal?>>>> GetPricesAsync(
+            IEnumerable<string> ids,
+            IEnumerable<string> quoteAssets,
+            IEnumerable<string>? symbols = null,
+            bool? includeMarketCap = false, 
+            bool? include24hrVolume = false, 
+            bool? include24hrChange = false, 
+            bool? includeLastUpdatedAt = false,
+            string? precision = null,
+            CancellationToken ct = default);
+
         /// <summary>
         /// Get list of quote assets
         /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/simple-supported-currencies" /></para>

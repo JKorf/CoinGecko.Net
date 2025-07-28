@@ -12,6 +12,7 @@ using CryptoExchange.Net.SharedApis;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Reflection;
 using System.Threading;
@@ -79,6 +80,7 @@ namespace CoinGecko.Net.Clients
         public async Task<WebCallResult<CoinGeckoMarket[]>> GetMarketsAsync(
             string quoteAsset,
             IEnumerable<string>? assetIds = null,
+            IEnumerable<string>? symbols = null,
             string? category = null,
             string? order = null,
             int? page = null,
@@ -92,6 +94,7 @@ namespace CoinGecko.Net.Clients
             var parameters = new ParameterCollection();
             parameters.AddParameter("vs_currency", quoteAsset);
             parameters.AddOptionalParameter("ids", assetIds == null ? null : string.Join(",", assetIds));
+            parameters.AddOptionalParameter("symbols", symbols == null ? null : string.Join(",", symbols));
             parameters.AddOptionalParameter("category", category);
             parameters.AddOptionalParameter("order", order);
             parameters.AddOptionalParameter("per_page", pageSize);
@@ -251,6 +254,7 @@ namespace CoinGecko.Net.Clients
         public async Task<WebCallResult<Dictionary<string, Dictionary<string, decimal?>>>> GetPricesAsync(
             IEnumerable<string> ids,
             IEnumerable<string> quoteAssets,
+            IEnumerable<string> symbols,
             bool? includeMarketCap = false,
             bool? include24hrVolume = false,
             bool? include24hrChange = false,
@@ -259,7 +263,8 @@ namespace CoinGecko.Net.Clients
             CancellationToken ct = default)
         {
             var parameters = new ParameterCollection();
-            parameters.AddParameter("ids", string.Join(",", ids));
+            parameters.AddOptionalParameter("ids", ids?.Any() == true ? string.Join(",", ids) : null);
+            parameters.AddOptionalParameter("symbols", symbols?.Any() == true ? string.Join(",", symbols) : null);
             parameters.AddParameter("vs_currencies", string.Join(",", quoteAssets));
             parameters.AddOptionalParameter("include_market_cap", includeMarketCap);
             parameters.AddOptionalParameter("include_24hr_vol", include24hrVolume);

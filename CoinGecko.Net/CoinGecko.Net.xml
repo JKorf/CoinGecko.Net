@@ -51,7 +51,7 @@
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetAssetsAsync(System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetMarketsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetMarketsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetAssetDetailsAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
@@ -72,7 +72,7 @@
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetOhlcAsync(System.String,System.String,System.Int32,System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetPricesAsync(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetPricesAsync(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetTokenPricesAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
@@ -1195,13 +1195,14 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Get coins market data
             <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-markets" /></para>
             </summary>
             <param name="quoteAsset">Quote asset</param>
-            <param name="assetIds">Asset ids</param>
+            <param name="assetIds">Asset ids, for example `bitcoin` and `tether`</param>
+            <param name="symbols">Symbols, for example `btc` and `usdt`</param>
             <param name="category">Category filter</param>
             <param name="order">Sorting</param>
             <param name="page">Page</param>
@@ -1225,13 +1226,14 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetPricesAsync(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetPricesAsync(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
             <summary>
             Get prices for specific assets
             <para><a href="https://docs.coingecko.com/v3.0.1/reference/simple-price" /></para>
             </summary>
-            <param name="ids">Asset ids to get data for</param>
+            <param name="ids">Asset ids to get data for, for example `bitcoin` and `tether`</param>
             <param name="quoteAssets">Quote assets</param>
+            <param name="symbols">Symbols, for example `btc` and `usdt`</param>
             <param name="includeMarketCap">Include market cap</param>
             <param name="include24hrVolume">Include 24h volume</param>
             <param name="include24hrChange">Include 24h change</param>
