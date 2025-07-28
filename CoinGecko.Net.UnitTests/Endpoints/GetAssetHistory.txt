@@ -234,7 +234,6 @@ false
   },
   "community_data": {
     "facebook_likes": null,
-    "twitter_followers": null,
     "reddit_average_posts_48h": 0,
     "reddit_average_comments_48h": 0,
     "reddit_subscribers": null,
