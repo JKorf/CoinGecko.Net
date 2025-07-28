@@ -54,10 +54,10 @@
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetMarketsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetAssetDetailsAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetAssetDetailsAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{CoinGecko.Net.Enums.DexPairFormat},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Nullable{CoinGecko.Net.Enums.DexPairFormat},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetAssetHistoryAsync(System.String,System.DateTime,System.Nullable{System.Boolean},System.Threading.CancellationToken)">
@@ -105,10 +105,10 @@
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangeListAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangeDetailsAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangeDetailsAsync(System.String,System.Nullable{CoinGecko.Net.Enums.DexPairFormat},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangeTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangeTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.String,System.Nullable{CoinGecko.Net.Enums.DexPairFormat},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetExchangeVolumeHistoryAsync(System.String,System.Int32,System.Threading.CancellationToken)">
@@ -955,6 +955,21 @@
         <member name="M:CoinGecko.Net.Converters.CoinGeckoSourceGenerationContext.GetTypeInfo(System.Type)">
             <inheritdoc/>
         </member>
+        <member name="T:CoinGecko.Net.Enums.DexPairFormat">
+            <summary>
+            DEX pair formatting
+            </summary>
+        </member>
+        <member name="F:CoinGecko.Net.Enums.DexPairFormat.Symbol">
+            <summary>
+            As symbol, for example `USDC`
+            </summary>
+        </member>
+        <member name="F:CoinGecko.Net.Enums.DexPairFormat.ContractAddress">
+            <summary>
+            As contract address
+            </summary>
+        </member>
         <member name="T:CoinGecko.Net.Interfaces.ICoinGeckoRestClient">
             <summary>
             Client for accessing the CoinGecko Rest API. 
@@ -985,7 +1000,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetAssetDetailsAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetAssetDetailsAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{CoinGecko.Net.Enums.DexPairFormat},System.Threading.CancellationToken)">
             <summary>
             Get asset details
             <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-id" /></para>
@@ -997,6 +1012,7 @@
             <param name="communityData">Include community data</param>
             <param name="developerData">Include developer data</param>
             <param name="sparkline">Include sparkline</param>
+            <param name="dexPairFormat">Dex pair formatting. Defaults to ContractAddress</param>
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
@@ -1073,12 +1089,13 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeDetailsAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeDetailsAsync(System.String,System.Nullable{CoinGecko.Net.Enums.DexPairFormat},System.Threading.CancellationToken)">
             <summary>
             Get exchange details
             <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-id" /></para>
             </summary>
             <param name="exchangeId">Id of the exchange</param>
+            <param name="dexPairFormat">Dex pair formatting. Defaults to ContractAddress</param>
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
@@ -1100,7 +1117,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.String,System.Nullable{CoinGecko.Net.Enums.DexPairFormat},System.Threading.CancellationToken)">
             <summary>
             Get exchange tickers
             <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-id-tickers" /></para>
@@ -1111,6 +1128,7 @@
             <param name="page">Page</param>
             <param name="depth">Include orderbook 2% depth</param>
             <param name="order">Sort</param>
+            <param name="dexPairFormat">Dex pair formatting. Defaults to ContractAddress</param>
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
@@ -1250,7 +1268,7 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Nullable{CoinGecko.Net.Enums.DexPairFormat},System.Threading.CancellationToken)">
             <summary>
             Get tickers for an asset
             <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-tickers" /></para>
@@ -1261,6 +1279,7 @@
             <param name="page">Page</param>
             <param name="order">Sorting</param>
             <param name="depth">Include 2% order book depth info</param>
+            <param name="dexPairFormat">Dex pair formatting. Defaults to ContractAddress</param>
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
@@ -1788,11 +1807,6 @@
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoCommunityData.FacebookLikes">
             <summary>
             Facebook likes
-            </summary>
-        </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoCommunityData.TwitterFollowers">
-            <summary>
-            Twitter followers
             </summary>
         </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoCommunityData.RedditAveragePostsPer48h">

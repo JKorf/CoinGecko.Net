@@ -15,11 +15,6 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("facebook_likes")]
         public int? FacebookLikes { get; set; }
         /// <summary>
-        /// Twitter followers
-        /// </summary>
-        [JsonPropertyName("twitter_followers")]
-        public int? TwitterFollowers { get; set; }
-        /// <summary>
         /// Average amount of reddit posts per 48 hours
         /// </summary>
         [JsonPropertyName("reddit_average_posts_48h")]
