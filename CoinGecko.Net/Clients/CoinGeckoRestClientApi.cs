@@ -259,7 +259,7 @@ namespace CoinGecko.Net.Clients
         public async Task<WebCallResult<Dictionary<string, Dictionary<string, decimal?>>>> GetPricesAsync(
             IEnumerable<string> ids,
             IEnumerable<string> quoteAssets,
-            IEnumerable<string> symbols,
+            IEnumerable<string>? symbols = null,
             bool? includeMarketCap = false,
             bool? include24hrVolume = false,
             bool? include24hrChange = false,
