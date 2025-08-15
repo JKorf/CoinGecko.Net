@@ -9,6 +9,7 @@ using CryptoExchange.Net.Clients;
 using CryptoExchange.Net.Converters.MessageParsing;
 using CryptoExchange.Net.Interfaces;
 using CryptoExchange.Net.Objects;
+using CryptoExchange.Net.Objects.Errors;
 using CryptoExchange.Net.SharedApis;
 using Microsoft.Extensions.Logging;
 using System;
@@ -663,19 +664,19 @@ namespace CoinGecko.Net.Clients
         protected override Error ParseErrorResponse(int httpStatusCode, KeyValuePair<string, string[]>[] responseHeaders, IMessageAccessor accessor, Exception? exception)
         {
             if (!accessor.IsValid)
-                return new ServerError(null, "Unknown request error", exception: exception);
+                return new ServerError(ErrorInfo.Unknown, exception: exception);
 
             var code = accessor.GetValue<int?>(MessagePath.Get().Property("error_code"));
             var msg = accessor.GetValue<string?>(MessagePath.Get().Property("status").Property("error_message"));
 
             if (code != null && msg != null)
-                return new ServerError(code.Value, msg, exception);
+                return new ServerError(code.Value, GetErrorInfo(code.Value, msg));
 
             code = accessor.GetValue<int?>(MessagePath.Get().Property("status").Property("error_code"));
             if (code != null && msg != null)
-                return new ServerError(code.Value, msg, exception);
+                return new ServerError(code.Value, GetErrorInfo(code.Value, msg));
 
-            return new ServerError(httpStatusCode, "Unknown request error", exception: exception);
+            return new ServerError(ErrorInfo.Unknown, exception: exception);
         }
 
         private string GetBaseAddress()
