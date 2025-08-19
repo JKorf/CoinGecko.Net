@@ -20,23 +20,12 @@ namespace CoinGecko.Net
         {
         }
 
-        public override void AuthenticateRequest(
-            RestApiClient apiClient,
-            Uri uri,
-            HttpMethod method,
-            ref IDictionary<string, object>? uriParameters,
-            ref IDictionary<string, object>? bodyParameters,
-            ref Dictionary<string, string>? headers,
-            bool auth,
-            ArrayParametersSerialization arraySerialization,
-            HttpMethodParameterPosition parameterPosition,
-            RequestBodyFormat requestBodyFormat)
+        public override void ProcessRequest(RestApiClient apiClient, RestRequestConfiguration request)
         {
-            uriParameters ??= new ParameterCollection();
             if (_credentials.DemoKey)
-                uriParameters.Add("x_cg_demo_api_key", _credentials.Key);
+                request.QueryParameters.Add("x_cg_demo_api_key", _credentials.Key);
             else
-                uriParameters.Add("x_cg_pro_api_key", _credentials.Key);
+                request.QueryParameters.Add("x_cg_pro_api_key", _credentials.Key);
         }
     }
 }
