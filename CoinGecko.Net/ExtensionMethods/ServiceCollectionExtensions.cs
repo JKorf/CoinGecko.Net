@@ -2,6 +2,7 @@
 using CoinGecko.Net.Clients;
 using CoinGecko.Net.Interfaces;
 using CoinGecko.Net.Objects.Options;
+using CryptoExchange.Net;
 using CryptoExchange.Net.Clients;
 using CryptoExchange.Net.Interfaces;
 using Microsoft.Extensions.Configuration;
@@ -64,25 +65,8 @@ namespace Microsoft.Extensions.DependencyInjection
                 client.Timeout = options.RequestTimeout;
                 return new CoinGeckoRestClient(client, serviceProvider.GetRequiredService<ILoggerFactory>(), serviceProvider.GetRequiredService<IOptions<CoinGeckoRestOptions>>());
             }).ConfigurePrimaryHttpMessageHandler((serviceProvider) => {
-                var handler = new HttpClientHandler();
-                try
-                {
-                    handler.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
-                    handler.DefaultProxyCredentials = CredentialCache.DefaultCredentials;
-                }
-                catch (PlatformNotSupportedException) { }
-                catch (NotImplementedException) { } // Mono runtime throws NotImplementedException for DefaultProxyCredentials setting
-
                 var options = serviceProvider.GetRequiredService<IOptions<CoinGeckoRestOptions>>().Value;
-                if (options.Proxy != null)
-                {
-                    handler.Proxy = new WebProxy
-                    {
-                        Address = new Uri($"{options.Proxy.Host}:{options.Proxy.Port}"),
-                        Credentials = options.Proxy.Password == null ? null : new NetworkCredential(options.Proxy.Login, options.Proxy.Password)
-                    };
-                }
-                return handler;
+                return LibraryHelpers.CreateHttpClientMessageHandler(options.Proxy, options.HttpKeepAliveInterval);
             });
 
             services.AddTransient<ICryptoRestClient, CryptoRestClient>();
