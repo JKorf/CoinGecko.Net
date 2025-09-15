@@ -55,7 +55,7 @@ namespace CoinGecko.Net.Objects.Models
         /// <summary>
         /// BitcoinTalk thread identifier
         /// </summary>
-        [JsonPropertyName("bitcointalk_thread_identifier")]
+        [JsonPropertyName("bitcointalk_thread_identifier"), JsonConverter(typeof(NumberStringConverter))]
         public string? BitcoinTalkThreadIdentifier { get; set; } = string.Empty;
         /// <summary>
         /// Telegram channel identifier
