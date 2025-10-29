@@ -1994,6 +1994,16 @@
             Target asset
             </summary>
         </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.CoinId">
+            <summary>
+            Coin id
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.TargetCoinId">
+            <summary>
+            Target coin id
+            </summary>
+        </member>
         <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoDerivativeTicker.TradeUrl">
             <summary>
             Trade url

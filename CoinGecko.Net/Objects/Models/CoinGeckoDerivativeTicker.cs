@@ -28,6 +28,16 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("target")]
         public string Target { get; set; } = string.Empty;
         /// <summary>
+        /// Coin id
+        /// </summary>
+        [JsonPropertyName("coin_id")]
+        public string? CoinId { get; set; }
+        /// <summary>
+        /// Target coin id
+        /// </summary>
+        [JsonPropertyName("target_coin_id")]
+        public string? TargetCoinId { get; set; }
+        /// <summary>
         /// Trade url
         /// </summary>
         [JsonPropertyName("trade_url")]
