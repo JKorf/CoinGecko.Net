@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net8.0;net9.0;netstandard2.0;netstandard2.1</TargetFrameworks>
     <Nullable>enable</Nullable>
@@ -7,9 +7,9 @@
   <PropertyGroup>
     <PackageId>CoinGecko.Net</PackageId>
     <Authors>JKorf</Authors>
-    <PackageVersion>4.11.0</PackageVersion>
-    <AssemblyVersion>4.11.0</AssemblyVersion>
-    <FileVersion>4.11.0</FileVersion>
+    <PackageVersion>4.12.0</PackageVersion>
+    <AssemblyVersion>4.12.0</AssemblyVersion>
+    <FileVersion>4.12.0</FileVersion>
     <Description>CoinGecko.Net is a client library for accessing the CoinGecko REST API. All data is mapped to readable models and enum values.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>CoinGecko;CoinGecko.Net;CoinGecko Client;CoinGecko API;CryptoCurrency;CryptoExchange.Net</PackageTags>
