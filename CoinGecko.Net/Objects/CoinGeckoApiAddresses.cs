@@ -16,7 +16,7 @@
 
 
         /// <summary>
-        /// The default addresses to connect to the Bybit.com API
+        /// The default addresses to connect to the CoinGecko.com API
         /// </summary>
         public static CoinGeckoApiAddresses Default = new CoinGeckoApiAddresses
         {

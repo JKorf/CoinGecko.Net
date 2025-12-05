@@ -22,7 +22,7 @@
     <NeutralLanguage>en</NeutralLanguage>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <EnableConfigurationBindingGenerator>true</EnableConfigurationBindingGenerator>
-    <PackageReleaseNotes>https://github.com/JKorf/CoinEx.Net?tab=readme-ov-file#release-notes</PackageReleaseNotes>
+    <PackageReleaseNotes>https://github.com/JKorf/CoinGecko.Net?tab=readme-ov-file#release-notes</PackageReleaseNotes>
   </PropertyGroup>
   <PropertyGroup Label="AOT" Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net7.0'))">
     <IsAotCompatible>true</IsAotCompatible>
