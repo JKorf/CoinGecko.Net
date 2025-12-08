@@ -1,5 +1,4 @@
 ﻿using CoinGecko.Net.Interfaces;
-using CoinGecko.Net.Objects;
 using Microsoft.Extensions.Logging;
 using System.Net.Http;
 using System;

@@ -1403,7 +1403,7 @@
         </member>
         <member name="F:CoinGecko.Net.Objects.CoinGeckoApiAddresses.Default">
             <summary>
-            The default addresses to connect to the Bybit.com API
+            The default addresses to connect to the CoinGecko.com API
             </summary>
         </member>
         <member name="T:CoinGecko.Net.Objects.CoinGeckoApiCredentials">
