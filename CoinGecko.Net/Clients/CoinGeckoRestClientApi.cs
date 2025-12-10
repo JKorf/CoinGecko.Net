@@ -1,3 +1,4 @@
+using CoinGecko.Net.Clients.MessageHandlers;
 using CoinGecko.Net.Enums;
 using CoinGecko.Net.Interfaces;
 using CoinGecko.Net.Objects;
@@ -7,6 +8,7 @@ using CryptoExchange.Net;
 using CryptoExchange.Net.Authentication;
 using CryptoExchange.Net.Clients;
 using CryptoExchange.Net.Converters.MessageParsing;
+using CryptoExchange.Net.Converters.MessageParsing.DynamicConverters;
 using CryptoExchange.Net.Interfaces;
 using CryptoExchange.Net.Objects;
 using CryptoExchange.Net.Objects.Errors;
@@ -26,6 +28,8 @@ namespace CoinGecko.Net.Clients
     {
         private static readonly RequestDefinitionCache _definitions = new RequestDefinitionCache();
         private readonly CoinGeckoRestOptions _options;
+
+        protected override IRestMessageHandler MessageHandler { get; } = new CoinGeckoRestMessageHandler(new ErrorMapping([]));
 
         internal CoinGeckoRestClientApi(CoinGeckoRestClient baseClient, ILogger logger, HttpClient? httpClient, CoinGeckoRestOptions options) 
             : base(logger, httpClient, options.Environment.RestApiAddressPublic, options, options.ApiOptions)
@@ -659,24 +663,6 @@ namespace CoinGecko.Net.Clients
         }
 
         #endregion
-
-        protected override Error ParseErrorResponse(int httpStatusCode, KeyValuePair<string, string[]>[] responseHeaders, IMessageAccessor accessor, Exception? exception)
-        {
-            if (!accessor.IsValid)
-                return new ServerError(ErrorInfo.Unknown, exception: exception);
-
-            var code = accessor.GetValue<int?>(MessagePath.Get().Property("error_code"));
-            var msg = accessor.GetValue<string?>(MessagePath.Get().Property("status").Property("error_message"));
-
-            if (code != null && msg != null)
-                return new ServerError(code.Value, GetErrorInfo(code.Value, msg));
-
-            code = accessor.GetValue<int?>(MessagePath.Get().Property("status").Property("error_code"));
-            if (code != null && msg != null)
-                return new ServerError(code.Value, GetErrorInfo(code.Value, msg));
-
-            return new ServerError(ErrorInfo.Unknown, exception: exception);
-        }
 
         private string GetBaseAddress()
         {
