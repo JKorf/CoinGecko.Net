@@ -1,5 +1,6 @@
 ﻿using CoinGecko.Net.Clients;
 using CoinGecko.Net.Interfaces;
+using CryptoExchange.Net.Interfaces.Clients;
 
 namespace CryptoExchange.Net.Interfaces
 {
