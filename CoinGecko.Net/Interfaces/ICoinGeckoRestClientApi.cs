@@ -6,6 +6,7 @@ using CoinGecko.Net.Objects.Models;
 using CryptoExchange.Net.Objects;
 using CryptoExchange.Net.Interfaces;
 using CoinGecko.Net.Enums;
+using CryptoExchange.Net.Interfaces.Clients;
 
 namespace CoinGecko.Net.Interfaces
 {
