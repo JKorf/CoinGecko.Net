@@ -44,7 +44,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Current price change vs all time high
         /// </summary>
         [JsonPropertyName("ath_change_percentage")]
-        public Dictionary<string, decimal> AllTimeHighChangePercentages { get; set; } = new Dictionary<string, decimal>();
+        public Dictionary<string, decimal?> AllTimeHighChangePercentages { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// All time high dates
         /// </summary>
@@ -59,7 +59,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Current price change vs all time low
         /// </summary>
         [JsonPropertyName("atl_change_percentage")]
-        public Dictionary<string, decimal> AllTimeLowChangePercentages { get; set; } = new Dictionary<string, decimal>();
+        public Dictionary<string, decimal?> AllTimeLowChangePercentages { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// All time low dates
         /// </summary>

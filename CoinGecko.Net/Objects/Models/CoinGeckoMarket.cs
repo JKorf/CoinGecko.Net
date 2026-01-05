@@ -108,7 +108,7 @@ namespace CoinGecko.Net.Objects.Models
         /// All time high change percentage
         /// </summary>
         [JsonPropertyName("ath_change_percentage")]
-        public double AllTimeHighChangePercentage { get; set; }
+        public double? AllTimeHighChangePercentage { get; set; }
         /// <summary>
         /// All time high time
         /// </summary>
@@ -124,7 +124,7 @@ namespace CoinGecko.Net.Objects.Models
         /// All time low change percentage
         /// </summary>
         [JsonPropertyName("atl_change_percentage")]
-        public double AllTimeLowChangePercentage { get; set; }
+        public double? AllTimeLowChangePercentage { get; set; }
         /// <summary>
         /// All time low time
         /// </summary>
