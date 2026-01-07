@@ -13,17 +13,17 @@ namespace CoinGecko.Net.Objects.Models
         /// Total holdings
         /// </summary>
         [JsonPropertyName("total_holdings")]
-        public decimal TotalHoldings { get; set; }
+        public decimal? TotalHoldings { get; set; }
         /// <summary>
         /// Total value in USD
         /// </summary>
         [JsonPropertyName("total_value_usd")]
-        public decimal TotalValueUsd { get; set; }
+        public decimal? TotalValueUsd { get; set; }
         /// <summary>
         /// Market cap dominance
         /// </summary>
         [JsonPropertyName("market_cap_dominance")]
-        public decimal MarketCapDominance { get; set; }
+        public decimal? MarketCapDominance { get; set; }
         /// <summary>
         /// Companies
         /// </summary>
@@ -56,22 +56,22 @@ namespace CoinGecko.Net.Objects.Models
         /// Total holdings
         /// </summary>
         [JsonPropertyName("total_holdings")]
-        public decimal TotalHoldings { get; set; }
+        public decimal? TotalHoldings { get; set; }
         /// <summary>
         /// Total entry value USD
         /// </summary>
         [JsonPropertyName("total_entry_value_usd")]
-        public decimal TotalEntryValueUsd { get; set; }
+        public decimal? TotalEntryValueUsd { get; set; }
         /// <summary>
         /// Total current value USD
         /// </summary>
         [JsonPropertyName("total_current_value_usd")]
-        public decimal TotalCurrentValueUsd { get; set; }
+        public decimal? TotalCurrentValueUsd { get; set; }
         /// <summary>
         /// Percentage of total supply
         /// </summary>
         [JsonPropertyName("percentage_of_total_supply")]
-        public decimal PercentageOfTotalSupply { get; set; }
+        public decimal? PercentageOfTotalSupply { get; set; }
     }
 
 

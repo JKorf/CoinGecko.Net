@@ -156,12 +156,6 @@
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetApiUsageAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetTimeOffset">
-            <inheritdoc />
-        </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.GetTimeSyncInfo">
-            <inheritdoc />
-        </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.CreateAuthenticationProvider(CryptoExchange.Net.Authentication.ApiCredentials)">
             <inheritdoc />
         </member>
@@ -866,7 +860,7 @@
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
         </member>
-        <member name="P:CoinGecko.Net.Converters.CoinGeckoSourceGenerationContext.DictionaryStringDateTime">
+        <member name="P:CoinGecko.Net.Converters.CoinGeckoSourceGenerationContext.DictionaryStringNullableDateTime">
             <summary>
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
@@ -2704,7 +2698,7 @@
             24 hour market cap change percentage
             </summary>
         </member>
-        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoMarket.CiculationSupply">
+        <member name="P:CoinGecko.Net.Objects.Models.CoinGeckoMarket.CirculatingSupply">
             <summary>
             Circulating supply
             </summary>

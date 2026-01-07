@@ -39,7 +39,7 @@ namespace CoinGecko.Net.Objects.Models
         /// All time high prices
         /// </summary>
         [JsonPropertyName("ath")]
-        public Dictionary<string, decimal> AllTimeHighs { get; set; } = new Dictionary<string, decimal>();
+        public Dictionary<string, decimal?> AllTimeHighs { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// Current price change vs all time high
         /// </summary>
@@ -49,12 +49,12 @@ namespace CoinGecko.Net.Objects.Models
         /// All time high dates
         /// </summary>
         [JsonPropertyName("ath_date")]
-        public Dictionary<string, DateTime> AllTimeHighDates { get; set; } = new Dictionary<string, DateTime>();
+        public Dictionary<string, DateTime?> AllTimeHighDates { get; set; } = new Dictionary<string, DateTime?>();
         /// <summary>
         /// All time low prices
         /// </summary>
         [JsonPropertyName("atl")]
-        public Dictionary<string, decimal> AllTimeLows { get; set; } = new Dictionary<string, decimal>();
+        public Dictionary<string, decimal?> AllTimeLows { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// Current price change vs all time low
         /// </summary>
@@ -64,12 +64,12 @@ namespace CoinGecko.Net.Objects.Models
         /// All time low dates
         /// </summary>
         [JsonPropertyName("atl_date")]
-        public Dictionary<string, DateTime> AllTimeLowDates { get; set; } = new Dictionary<string, DateTime>();
+        public Dictionary<string, DateTime?> AllTimeLowDates { get; set; } = new Dictionary<string, DateTime?>();
         /// <summary>
         /// Market caps
         /// </summary>
         [JsonPropertyName("market_cap")]
-        public Dictionary<string, decimal> MarketCaps { get; set; } = new Dictionary<string, decimal>();
+        public Dictionary<string, decimal?> MarketCaps { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// Market cap rank
         /// </summary>
@@ -79,7 +79,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Fully diluted valuation
         /// </summary>
         [JsonPropertyName("fully_diluted_valuation")]
-        public Dictionary<string, decimal> FullyDilutedValuations { get; set; } = new Dictionary<string, decimal>();
+        public Dictionary<string, decimal?> FullyDilutedValuations { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// Market cap to fully diluted valuation ratio
         /// </summary>
@@ -89,7 +89,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Total volumes
         /// </summary>
         [JsonPropertyName("total_volume")]
-        public Dictionary<string, decimal> TotalVolumes { get; set; } = new Dictionary<string, decimal>();
+        public Dictionary<string, decimal?> TotalVolumes { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// 24h high prices
         /// </summary>
@@ -114,32 +114,32 @@ namespace CoinGecko.Net.Objects.Models
         /// 7 day price change percentage
         /// </summary>
         [JsonPropertyName("price_change_percentage_7d")]
-        public decimal PriceChangePercentage7d { get; set; }
+        public decimal? PriceChangePercentage7d { get; set; }
         /// <summary>
         /// 14 day price change percentage
         /// </summary>
         [JsonPropertyName("price_change_percentage_14d")]
-        public decimal PriceChangePercentage14d { get; set; }
+        public decimal? PriceChangePercentage14d { get; set; }
         /// <summary>
         /// 30 day price change percentage
         /// </summary>
         [JsonPropertyName("price_change_percentage_30d")]
-        public decimal PriceChangePercentage30d { get; set; }
+        public decimal? PriceChangePercentage30d { get; set; }
         /// <summary>
         /// 60 day price change percentage
         /// </summary>
         [JsonPropertyName("price_change_percentage_60d")]
-        public decimal PriceChangePercentage60d { get; set; }
+        public decimal? PriceChangePercentage60d { get; set; }
         /// <summary>
         /// 200 day price change percentage
         /// </summary>
         [JsonPropertyName("price_change_percentage_200d")]
-        public decimal PriceChangePercentage200d { get; set; }
+        public decimal? PriceChangePercentage200d { get; set; }
         /// <summary>
         /// 1 year price change percentage
         /// </summary>
         [JsonPropertyName("price_change_percentage_1y")]
-        public decimal PriceChangePercentage1y { get; set; }
+        public decimal? PriceChangePercentage1y { get; set; }
         /// <summary>
         /// 24 hour market cap change
         /// </summary>

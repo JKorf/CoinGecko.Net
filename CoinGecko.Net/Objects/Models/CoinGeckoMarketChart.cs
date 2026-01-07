@@ -44,6 +44,6 @@ namespace CoinGecko.Net.Objects.Models
         /// Value
         /// </summary>
         [ArrayProperty(1)]
-        public decimal Value { get; set; }
+        public decimal? Value { get; set; }
     }
 }

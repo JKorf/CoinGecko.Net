@@ -678,10 +678,6 @@ namespace CoinGecko.Net.Clients
         }
 
         /// <inheritdoc />
-        public override TimeSpan? GetTimeOffset() => null;
-        /// <inheritdoc />
-        public override TimeSyncInfo? GetTimeSyncInfo() => null;
-        /// <inheritdoc />
         protected override AuthenticationProvider CreateAuthenticationProvider(ApiCredentials credentials) => new CoinGeckoAuthenticationProvider((CoinGeckoApiCredentials)credentials);
     }
 }

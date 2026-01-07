@@ -120,7 +120,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Nft contract id
         /// </summary>
         [JsonPropertyName("nft_contract_id")]
-        public int NftContractId { get; set; }
+        public int? NftContractId { get; set; }
         /// <summary>
         /// Native asset symbol
         /// </summary>
@@ -130,12 +130,12 @@ namespace CoinGecko.Net.Objects.Models
         /// Floor price in native asset
         /// </summary>
         [JsonPropertyName("floor_price_in_native_currency")]
-        public decimal FloorPriceInNativeAsset { get; set; }
+        public decimal? FloorPriceInNativeAsset { get; set; }
         /// <summary>
         /// Floor price 24h percentage change
         /// </summary>
         [JsonPropertyName("floor_price_24h_percentage_change")]
-        public decimal FloorPrice24hPercentageChange { get; set; }
+        public decimal? FloorPrice24hPercentageChange { get; set; }
         /// <summary>
         /// Data
         /// </summary>
@@ -158,7 +158,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Floor price in usd 24h percentage change
         /// </summary>
         [JsonPropertyName("floor_price_in_usd_24h_percentage_change")]
-        public decimal FloorPriceInUsd24hPercentageChange { get; set; }
+        public decimal? FloorPriceInUsd24hPercentageChange { get; set; }
         /// <summary>
         /// Volume 24h
         /// </summary>
@@ -196,7 +196,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Market cap 1 hour change
         /// </summary>
         [JsonPropertyName("market_cap_1h_change")]
-        public decimal MarketCap1hChange { get; set; }
+        public decimal? MarketCap1hChange { get; set; }
         /// <summary>
         /// Slug
         /// </summary>
@@ -206,7 +206,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Coins count
         /// </summary>
         [JsonPropertyName("coins_count")]
-        public decimal CoinsCount { get; set; }
+        public decimal? CoinsCount { get; set; }
         /// <summary>
         /// Data
         /// </summary>
@@ -224,22 +224,22 @@ namespace CoinGecko.Net.Objects.Models
         /// Market cap
         /// </summary>
         [JsonPropertyName("market_cap")]
-        public decimal MarketCap { get; set; }
+        public decimal? MarketCap { get; set; }
         /// <summary>
         /// Market cap btc
         /// </summary>
         [JsonPropertyName("market_cap_btc")]
-        public decimal MarketCapBtc { get; set; }
+        public decimal? MarketCapBtc { get; set; }
         /// <summary>
         /// Total volume
         /// </summary>
         [JsonPropertyName("total_volume")]
-        public decimal TotalVolume { get; set; }
+        public decimal? TotalVolume { get; set; }
         /// <summary>
         /// Total volume btc
         /// </summary>
         [JsonPropertyName("total_volume_btc")]
-        public decimal TotalVolumeBtc { get; set; }
+        public decimal? TotalVolumeBtc { get; set; }
         /// <summary>
         /// Market cap change percentage24h
         /// </summary>
@@ -251,8 +251,6 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("sparkline")]
         public string Sparkline { get; set; } = string.Empty;
     }
-
-
 
     /// <summary>
     /// Item

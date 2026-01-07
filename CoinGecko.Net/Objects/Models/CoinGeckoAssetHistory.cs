@@ -66,16 +66,16 @@ namespace CoinGecko.Net.Objects.Models
         /// Current price
         /// </summary>
         [JsonPropertyName("current_price")]
-        public Dictionary<string, decimal> CurrentPrice { get; set; } = new Dictionary<string, decimal>();
+        public Dictionary<string, decimal?> CurrentPrice { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// Market caps
         /// </summary>
         [JsonPropertyName("market_cap")]
-        public Dictionary<string, decimal> MarketCaps { get; set; } = new Dictionary<string, decimal>();
+        public Dictionary<string, decimal?> MarketCaps { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// Total volumes
         /// </summary>
         [JsonPropertyName("total_volume")]
-        public Dictionary<string, decimal> TotalVolumes { get; set; } = new Dictionary<string, decimal>();
+        public Dictionary<string, decimal?> TotalVolumes { get; set; } = new Dictionary<string, decimal?>();
     }
 }

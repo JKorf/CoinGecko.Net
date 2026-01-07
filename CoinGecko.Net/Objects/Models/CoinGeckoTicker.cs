@@ -49,12 +49,12 @@ namespace CoinGecko.Net.Objects.Models
         /// Converted last
         /// </summary>
         [JsonPropertyName("converted_last")]
-        public Dictionary<string, decimal> ConvertedLast { get; set; } = new Dictionary<string, decimal>();
+        public Dictionary<string, decimal?> ConvertedLast { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// Converted volume
         /// </summary>
         [JsonPropertyName("converted_volume")]
-        public Dictionary<string, decimal> ConvertedVolume { get; set; } = new Dictionary<string, decimal>();
+        public Dictionary<string, decimal?> ConvertedVolume { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
         /// Trust score
         /// </summary>

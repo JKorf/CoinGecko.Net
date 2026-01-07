@@ -49,52 +49,52 @@ namespace CoinGecko.Net.Objects.Models
         /// Last price
         /// </summary>
         [JsonPropertyName("last")]
-        public decimal LastPrice { get; set; }
+        public decimal? LastPrice { get; set; }
         /// <summary>
         /// 24 hour percentage change
         /// </summary>
         [JsonPropertyName("h24_percentage_change")]
-        public decimal H24PercentageChange { get; set; }
+        public decimal? H24PercentageChange { get; set; }
         /// <summary>
         /// Index price
         /// </summary>
         [JsonPropertyName("index")]
-        public decimal IndexPrice { get; set; }
+        public decimal? IndexPrice { get; set; }
         /// <summary>
         /// Index basis percentage
         /// </summary>
         [JsonPropertyName("index_basis_percentage")]
-        public decimal IndexBasisPercentage { get; set; }
+        public decimal? IndexBasisPercentage { get; set; }
         /// <summary>
         /// Bid ask spread
         /// </summary>
         [JsonPropertyName("bid_ask_spread")]
-        public decimal BidAskSpread { get; set; }
+        public decimal? BidAskSpread { get; set; }
         /// <summary>
         /// Funding rate
         /// </summary>
         [JsonPropertyName("funding_rate")]
-        public decimal FundingRate { get; set; }
+        public decimal? FundingRate { get; set; }
         /// <summary>
         /// Open interest usd
         /// </summary>
         [JsonPropertyName("open_interest_usd")]
-        public decimal OpenInterestUsd { get; set; }
+        public decimal? OpenInterestUsd { get; set; }
         /// <summary>
         /// 24 hour volume
         /// </summary>
         [JsonPropertyName("h24_volume")]
-        public decimal H24Volume { get; set; }
+        public decimal? H24Volume { get; set; }
         /// <summary>
         /// Converted volume
         /// </summary>
         [JsonPropertyName("converted_volume")]
-        public Dictionary<string, decimal> ConvertedVolume { get; set; } = null!;
+        public Dictionary<string, decimal?> ConvertedVolume { get; set; } = null!;
         /// <summary>
         /// Converted last
         /// </summary>
         [JsonPropertyName("converted_last")]
-        public Dictionary<string, decimal> ConvertedLast { get; set; } = null!;
+        public Dictionary<string, decimal?> ConvertedLast { get; set; } = null!;
         /// <summary>
         /// Last trade time
         /// </summary>

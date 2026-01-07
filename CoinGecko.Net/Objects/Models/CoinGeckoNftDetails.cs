@@ -89,7 +89,7 @@ namespace CoinGecko.Net.Objects.Models
         /// Total supply
         /// </summary>
         [JsonPropertyName("total_supply")]
-        public decimal TotalSupply { get; set; }
+        public decimal? TotalSupply { get; set; }
         /// <summary>
         /// Floor price
         /// </summary>
@@ -124,22 +124,22 @@ namespace CoinGecko.Net.Objects.Models
         /// One day sales
         /// </summary>
         [JsonPropertyName("one_day_sales")]
-        public decimal OneDaySales { get; set; }
+        public decimal? OneDaySales { get; set; }
         /// <summary>
         /// One day sales percentage change
         /// </summary>
         [JsonPropertyName("one_day_sales_24h_percentage_change")]
-        public decimal OneDaySales24hPercentageChange { get; set; }
+        public decimal? OneDaySales24hPercentageChange { get; set; }
         /// <summary>
         /// One day average sales price
         /// </summary>
         [JsonPropertyName("one_day_average_sale_price")]
-        public decimal OneDayAverageSalesPrice { get; set; }
+        public decimal? OneDayAverageSalesPrice { get; set; }
         /// <summary>
         /// One day sales percentage change
         /// </summary>
         [JsonPropertyName("one_day_average_sale_price_24h_percentage_change")]
-        public decimal OneDayAverageSalesPrice24hPercentageChange { get; set; }
+        public decimal? OneDayAverageSalesPrice24hPercentageChange { get; set; }
         /// <summary>
         /// Floor price 7 day percentage change
         /// </summary>
