@@ -36,9 +36,6 @@
         <member name="T:CoinGecko.Net.Clients.CoinGeckoRestClientApi">
             <inheritdoc />
         </member>
-        <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.CreateAccessor">
-            <inheritdoc />
-        </member>
         <member name="M:CoinGecko.Net.Clients.CoinGeckoRestClientApi.CreateSerializer">
             <inheritdoc />
         </member>
@@ -162,6 +159,11 @@
         <member name="T:CoinGecko.Net.CoinGeckoApi">
             <summary>
             CoinGecko information and configuration
+            </summary>
+        </member>
+        <member name="P:CoinGecko.Net.CoinGeckoApi.Metadata">
+            <summary>
+            Platform metadata
             </summary>
         </member>
         <member name="P:CoinGecko.Net.CoinGeckoApi.Url">

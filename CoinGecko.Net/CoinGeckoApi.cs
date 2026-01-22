@@ -4,6 +4,7 @@ using System;
 using CoinGecko.Net.Converters;
 using CryptoExchange.Net.Converters;
 using System.Text.Json.Serialization;
+using CryptoExchange.Net.Objects;
 
 namespace CoinGecko.Net
 {
@@ -12,6 +13,19 @@ namespace CoinGecko.Net
     /// </summary>
     public static class CoinGeckoApi
     {
+        /// <summary>
+        /// Platform metadata
+        /// </summary>
+        public static PlatformInfo Metadata { get; } = new PlatformInfo(
+                "CoinGecko",
+                "CoinGecko",
+                "https://raw.githubusercontent.com/JKorf/CoinGecko.Net/master/CoinGecko.Net/Icon/icon.png",
+                "https://www.coingecko.com",
+                ["https://docs.coingecko.com/"],
+                PlatformType.Other,
+                CentralizationType.Centralized
+                );
+
         /// <summary>
         /// Url to the main website
         /// </summary>
