@@ -991,7 +991,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetAssetCategoriesAsync(System.Threading.CancellationToken)">
             <summary>
             Get asset categories
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-categories-list" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/coins-categories-list" /><br />
+            Endpoint:<br />
+            GET /api/v3/coins/categories/list
+            </para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns></returns>
@@ -999,7 +1004,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetAssetDetailsAsync(System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{CoinGecko.Net.Enums.DexPairFormat},System.Threading.CancellationToken)">
             <summary>
             Get asset details
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-id" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/coins-id" /><br />
+            Endpoint:<br />
+            GET /api/v3/coins/{assetId}
+            </para>
             </summary>
             <param name="assetId">The asset id</param>
             <param name="localization">Include localization</param>
@@ -1015,7 +1025,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetAssetDetailsFromContractAsync(System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Get asset details by contract address
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-contract-address" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/coins-contract-address" /><br />
+            Endpoint:<br />
+            GET /api/v3/coins/{assetId}/contract/{contractAddress}
+            </para>
             </summary>
             <param name="assetId">Id of the asset</param>
             <param name="contractAddress">Contract address</param>
@@ -1025,7 +1040,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetAssetPlatformsAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Get asset platforms list
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/asset-platforms-list" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/asset-platforms-list" /><br />
+            Endpoint:<br />
+            GET /api/v3/asset_platforms
+            </para>
             </summary>
             <param name="filter">Filter</param>
             <param name="ct">Cancellation token</param>
@@ -1034,7 +1054,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetAssetsAsync(System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <summary>
             Get list of all assets
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-list" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/coins-list" /><br />
+            Endpoint:<br />
+            GET /api/v3/coins/list
+            </para>
             </summary>
             <param name="includePlatform">Include platform contract address</param>
             <param name="ct">Cancellation token</param>
@@ -1043,7 +1068,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetBtcExchangeRatesAsync(System.Threading.CancellationToken)">
             <summary>
             Get BTC-to-Currency exchange rates
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchange-rates" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/exchange-rates" /><br />
+            Endpoint:<br />
+            GET /api/v3/exchange_rates
+            </para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns></returns>
@@ -1051,7 +1081,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetDerivativesAsync(System.Threading.CancellationToken)">
             <summary>
             Get list of derivative tickers
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-tickers" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-tickers" /><br />
+            Endpoint:<br />
+            GET /api/v3/derivatives
+            </para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns></returns>
@@ -1059,7 +1094,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetDerivativesExchangesListAsync(System.Threading.CancellationToken)">
             <summary>
             List all derivatives exchanges name and identifier
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-exchanges-list" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-exchanges-list" /><br />
+            Endpoint:<br />
+            GET /api/v3/derivatives/exchanges/list
+            </para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns></returns>
@@ -1067,7 +1107,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeDerivativesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)">
             <summary>
             Get all derivatives exchanges
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-exchanges" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-exchanges" /><br />
+            Endpoint:<br />
+            GET /api/v3/derivatives/exchanges
+            </para>
             </summary>
             <param name="page">Page</param>
             <param name="pageSize">Page size</param>
@@ -1078,7 +1123,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeDerivativesDetailsAsync(System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Get exchange derivative details
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-exchanges-id" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-exchanges-id" /><br />
+            Endpoint:<br />
+            GET /api/v3/derivatives/exchanges/{exchangeId}
+            </para>
             </summary>
             <param name="exchangeId">Exchange id</param>
             <param name="includeTickers">Include tickers, 'all' or 'unexpired'</param>
@@ -1088,7 +1138,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeDetailsAsync(System.String,System.Nullable{CoinGecko.Net.Enums.DexPairFormat},System.Threading.CancellationToken)">
             <summary>
             Get exchange details
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-id" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-id" /><br />
+            Endpoint:<br />
+            GET /api/v3/exchanges/{exchangeId}
+            </para>
             </summary>
             <param name="exchangeId">Id of the exchange</param>
             <param name="dexPairFormat">Dex pair formatting. Defaults to ContractAddress</param>
@@ -1098,7 +1153,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeListAsync(System.Threading.CancellationToken)">
             <summary>
             Get all exchanges 
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-list" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-list" /><br />
+            Endpoint:<br />
+            GET /api/v3/exchanges/list
+            </para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns></returns>
@@ -1106,7 +1166,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get all exchanges
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchanges" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/exchanges" /><br />
+            Endpoint:<br />
+            GET /api/v3/exchanges
+            </para>
             </summary>
             <param name="page">Page</param>
             <param name="pageSize">Page size</param>
@@ -1116,7 +1181,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.String,System.Nullable{CoinGecko.Net.Enums.DexPairFormat},System.Threading.CancellationToken)">
             <summary>
             Get exchange tickers
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-id-tickers" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-id-tickers" /><br />
+            Endpoint:<br />
+            GET /api/v3/exchanges/{exchangeId}/tickers
+            </para>
             </summary>
             <param name="exchangeId">Exchange id</param>
             <param name="assetIds">Asset ids filter</param>
@@ -1131,7 +1201,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetExchangeVolumeHistoryAsync(System.String,System.Int32,System.Threading.CancellationToken)">
             <summary>
             Get volume chart data for an exchange, interval is determined automatically: 1 day -> 10 minutes, 7-14 days -> 1 hour, 30+ days -> 1 day
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-id-volume-chart" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-id-volume-chart" /><br />
+            Endpoint:<br />
+            GET /api/v3/exchanges/{exchangeId}/volume_chart
+            </para>
             </summary>
             <param name="exchangeId">Exchange id</param>
             <param name="days">Days history</param>
@@ -1141,7 +1216,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetAssetHistoryAsync(System.String,System.DateTime,System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <summary>
             Get asset history info
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-history" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-history" /><br />
+            Endpoint:<br />
+            GET /api/v3/coins/{assetId}/history
+            </para>
             </summary>
             <param name="assetId">Asset id</param>
             <param name="date">Date snapshot time</param>
@@ -1152,7 +1232,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketChartAsync(System.String,System.String,System.DateTime,System.DateTime,System.String,System.Threading.CancellationToken)">
             <summary>
             Get historical market data
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-market-chart-range" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-market-chart-range" /><br />
+            Endpoint:<br />
+            GET /api/v3/coins/{assetId}/market_chart/range
+            </para>
             </summary>
             <param name="assetId">Asset id</param>
             <param name="quoteAsset">Quote asset</param>
@@ -1165,7 +1250,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketChartAsync(System.String,System.String,System.Int32,System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Get historical market data
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-market-chart" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-market-chart" /><br />
+            Endpoint:<br />
+            GET /api/v3/coins/{assetId}/market_chart
+            </para>
             </summary>
             <param name="assetId">Asset id</param>
             <param name="quoteAsset">Quote asset</param>
@@ -1178,7 +1268,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketChartFromContractAsync(System.String,System.String,System.String,System.DateTime,System.DateTime,System.Threading.CancellationToken)">
             <summary>
             Get historical market data by contract
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/contract-address-market-chart-range" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/contract-address-market-chart-range" /><br />
+            Endpoint:<br />
+            GET /api/v3/coins/{assetId}/contract/{contractAddress}/market_chart/range
+            </para>
             </summary>
             <param name="assetId">Asset id</param>
             <param name="contractAddress">Contract address</param>
@@ -1191,7 +1286,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketChartFromContractAsync(System.String,System.String,System.String,System.Int32,System.Threading.CancellationToken)">
             <summary>
             Get historical market data by contract
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-categories-list" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/coins-categories-list" /><br />
+            Endpoint:<br />
+            GET /api/v3/coins/{assetId}/contract/{contractAddress}/market_chart
+            </para>
             </summary>
             <param name="assetId">Asset id</param>
             <param name="contractAddress">Contract address</param>
@@ -1203,7 +1303,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketDataCategoriesAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Get market data categories
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-categories-list" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/coins-categories-list" /><br />
+            Endpoint:<br />
+            GET /api/v3/coins/categories
+            </para>
             </summary>
             <param name="order">Sorting</param>
             <param name="ct">Cancellation token</param>
@@ -1212,7 +1317,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetMarketsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Get coins market data
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-markets" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/coins-markets" /><br />
+            Endpoint:<br />
+            GET /api/v3/coins/markets
+            </para>
             </summary>
             <param name="quoteAsset">Quote asset</param>
             <param name="assetIds">Asset ids, for example `bitcoin` and `tether`</param>
@@ -1231,7 +1341,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetOhlcAsync(System.String,System.String,System.Int32,System.String,System.Threading.CancellationToken)">
             <summary>
             Get Open/High/Low/Close data, interval is determined automatically: 1-2 days -> 30 minutes, 3-30 days -> 4 hours, 31+ days -> 4 days
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-ohlc" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-ohlc" /><br />
+            Endpoint:<br />
+            GET /api/v3/coins/{assetId}/ohlc
+            </para>
             </summary>
             <param name="assetId">Asset id</param>
             <param name="quoteAsset">Quote asset</param>
@@ -1243,7 +1358,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetPricesAsync(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
             <summary>
             Get prices for specific assets
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/simple-price" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/simple-price" /><br />
+            Endpoint:<br />
+            GET /api/v3/simple/price
+            </para>
             </summary>
             <param name="ids">Asset ids to get data for, for example `bitcoin` and `tether`</param>
             <param name="quoteAssets">Quote assets</param>
@@ -1259,7 +1379,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetQuoteAssetsAsync(System.Threading.CancellationToken)">
             <summary>
             Get list of quote assets
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/simple-supported-currencies" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/simple-supported-currencies" /><br />
+            Endpoint:<br />
+            GET /api/v3/simple/supported_vs_currencies
+            </para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns></returns>
@@ -1267,7 +1392,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetTickersAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Nullable{CoinGecko.Net.Enums.DexPairFormat},System.Threading.CancellationToken)">
             <summary>
             Get tickers for an asset
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-tickers" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-tickers" /><br />
+            Endpoint:<br />
+            GET /api/v3/coins/{assetId}/tickers
+            </para>
             </summary>
             <param name="assetId">Asset id</param>
             <param name="exchangeIds">Exchange ids</param>
@@ -1282,7 +1412,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetTokenPricesAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
             <summary>
             Get prices by token contract addresses
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/simple-token-price" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/simple-token-price" /><br />
+            Endpoint:<br />
+            GET /api/v3/simple/token_price/{platformId}
+            </para>
             </summary>
             <param name="platformId">Platform id</param>
             <param name="contractAddresses">Contract addresses</param>
@@ -1298,7 +1433,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.PingAsync(System.Threading.CancellationToken)">
             <summary>
             Ping the server
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/ping-server" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/ping-server" /><br />
+            Endpoint:<br />
+            GET /api/v3/ping
+            </para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns></returns>
@@ -1306,7 +1446,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetGlobalDataAsync(System.Threading.CancellationToken)">
             <summary>
             Get global crypto data
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/crypto-global" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/crypto-global" /><br />
+            Endpoint:<br />
+            GET /api/v3/global
+            </para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns></returns>
@@ -1314,7 +1459,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetGlobalDefiDataAsync(System.Threading.CancellationToken)">
             <summary>
             Get global defi crypto data
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/global-defi" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/global-defi" /><br />
+            Endpoint:<br />
+            GET /api/v3/global/decentralized_finance_defi
+            </para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns></returns>
@@ -1322,7 +1472,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetNftsAsync(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Get list of nfts
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/nfts-list" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/nfts-list" /><br />
+            Endpoint:<br />
+            GET /api/v3/nfts/list
+            </para>
             </summary>
             <param name="order">Sort</param>
             <param name="page">Page</param>
@@ -1333,7 +1488,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetNftAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Get details on an NFT
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/nfts-id" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/nfts-id" /><br />
+            Endpoint:<br />
+            GET /api/v3/nfts/{id}
+            </para>
             </summary>
             <param name="id">Id</param>
             <param name="ct">Cancellation token</param>
@@ -1342,7 +1502,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetNftByContractAddressAsync(System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Get nft info by contract address
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/nfts-contract-address" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/nfts-contract-address" /><br />
+            Endpoint:<br />
+            GET /api/v3/nfts/{platformId}/contract/{contractAddress}
+            </para>
             </summary>
             <param name="platformId">Platform id</param>
             <param name="contractAddress">Contract address</param>
@@ -1352,7 +1517,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.SearchAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Search for assets, exchanges, categories or nfts
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/search-data" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/search-data" /><br />
+            Endpoint:<br />
+            GET /api/v3/search
+            </para>
             </summary>
             <param name="query">Search query</param>
             <param name="ct">Cancellation token</param>
@@ -1361,7 +1531,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetTrendingSearchesAsync(System.Threading.CancellationToken)">
             <summary>
             Get trending searches
-            <para><a href="https://docs.coingecko.com/v3.0.1/reference/trending-search" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/v3.0.1/reference/trending-search" /><br />
+            Endpoint:<br />
+            GET /api/v3/search/trending
+            </para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns></returns>
@@ -1369,7 +1544,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetCompanyHoldingsAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Get public company holdings for an asset
-            <para><a href="https://docs.coingecko.com/reference/companies-public-treasury" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/reference/companies-public-treasury" /><br />
+            Endpoint:<br />
+            GET /api/v3/companies/public_treasury/{asset}
+            </para>
             </summary>
             <param name="asset">Asset name</param>
             <param name="ct">Cancellation token</param>
@@ -1377,7 +1557,12 @@
         <member name="M:CoinGecko.Net.Interfaces.ICoinGeckoRestClientApi.GetApiUsageAsync(System.Threading.CancellationToken)">
             <summary>
             Get current API usage stats
-            <para><a href="https://docs.coingecko.com/reference/api-usage" /></para>
+            <para>
+            Docs:<br />
+            <a href="https://docs.coingecko.com/reference/api-usage" /><br />
+            Endpoint:<br />
+            GET /api/v3/key
+            </para>
             </summary>
             <param name="ct">Cancellation token</param>
             <returns></returns>

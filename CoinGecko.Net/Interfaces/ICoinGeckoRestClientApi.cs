@@ -17,14 +17,24 @@ namespace CoinGecko.Net.Interfaces
     {
         /// <summary>
         /// Get asset categories
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-categories-list" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/coins-categories-list" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/coins/categories/list
+        /// </para>
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
         Task<WebCallResult<CoinGeckoCategory[]>> GetAssetCategoriesAsync(CancellationToken ct = default);
         /// <summary>
         /// Get asset details
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-id" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/coins-id" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/coins/{assetId}
+        /// </para>
         /// </summary>
         /// <param name="assetId">The asset id</param>
         /// <param name="localization">Include localization</param>
@@ -48,7 +58,12 @@ namespace CoinGecko.Net.Interfaces
             CancellationToken ct = default);
         /// <summary>
         /// Get asset details by contract address
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-contract-address" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/coins-contract-address" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/coins/{assetId}/contract/{contractAddress}
+        /// </para>
         /// </summary>
         /// <param name="assetId">Id of the asset</param>
         /// <param name="contractAddress">Contract address</param>
@@ -57,7 +72,12 @@ namespace CoinGecko.Net.Interfaces
         Task<WebCallResult<CoinGeckoAssetDetails>> GetAssetDetailsFromContractAsync(string assetId, string contractAddress, CancellationToken ct = default);
         /// <summary>
         /// Get asset platforms list
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/asset-platforms-list" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/asset-platforms-list" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/asset_platforms
+        /// </para>
         /// </summary>
         /// <param name="filter">Filter</param>
         /// <param name="ct">Cancellation token</param>
@@ -65,7 +85,12 @@ namespace CoinGecko.Net.Interfaces
         Task<WebCallResult<CoinGeckoAssetPlatform[]>> GetAssetPlatformsAsync(string? filter = null, CancellationToken ct = default);
         /// <summary>
         /// Get list of all assets
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-list" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/coins-list" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/coins/list
+        /// </para>
         /// </summary>
         /// <param name="includePlatform">Include platform contract address</param>
         /// <param name="ct">Cancellation token</param>
@@ -73,28 +98,48 @@ namespace CoinGecko.Net.Interfaces
         Task<WebCallResult<CoinGeckoAsset[]>> GetAssetsAsync(bool? includePlatform = null, CancellationToken ct = default);
         /// <summary>
         /// Get BTC-to-Currency exchange rates
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchange-rates" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/exchange-rates" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/exchange_rates
+        /// </para>
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
         Task<WebCallResult<CoinGeckoExchangeRates>> GetBtcExchangeRatesAsync(CancellationToken ct = default);
         /// <summary>
         /// Get list of derivative tickers
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-tickers" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-tickers" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/derivatives
+        /// </para>
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
         Task<WebCallResult<CoinGeckoDerivative[]>> GetDerivativesAsync(CancellationToken ct = default);
         /// <summary>
         /// List all derivatives exchanges name and identifier
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-exchanges-list" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-exchanges-list" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/derivatives/exchanges/list
+        /// </para>
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
         Task<WebCallResult<CoinGeckoListItem[]>> GetDerivativesExchangesListAsync(CancellationToken ct = default);
         /// <summary>
         /// Get all derivatives exchanges
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-exchanges" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-exchanges" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/derivatives/exchanges
+        /// </para>
         /// </summary>
         /// <param name="page">Page</param>
         /// <param name="pageSize">Page size</param>
@@ -105,7 +150,12 @@ namespace CoinGecko.Net.Interfaces
 
         /// <summary>
         /// Get exchange derivative details
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-exchanges-id" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/derivatives-exchanges-id" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/derivatives/exchanges/{exchangeId}
+        /// </para>
         /// </summary>
         /// <param name="exchangeId">Exchange id</param>
         /// <param name="includeTickers">Include tickers, 'all' or 'unexpired'</param>
@@ -115,7 +165,12 @@ namespace CoinGecko.Net.Interfaces
 
         /// <summary>
         /// Get exchange details
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-id" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-id" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/exchanges/{exchangeId}
+        /// </para>
         /// </summary>
         /// <param name="exchangeId">Id of the exchange</param>
         /// <param name="dexPairFormat">Dex pair formatting. Defaults to ContractAddress</param>
@@ -127,14 +182,24 @@ namespace CoinGecko.Net.Interfaces
             CancellationToken ct = default);
         /// <summary>
         /// Get all exchanges 
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-list" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-list" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/exchanges/list
+        /// </para>
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
         Task<WebCallResult<CoinGeckoListItem[]>> GetExchangeListAsync(CancellationToken ct = default);
         /// <summary>
         /// Get all exchanges
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchanges" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/exchanges" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/exchanges
+        /// </para>
         /// </summary>
         /// <param name="page">Page</param>
         /// <param name="pageSize">Page size</param>
@@ -143,7 +208,12 @@ namespace CoinGecko.Net.Interfaces
         Task<WebCallResult<CoinGeckoExchange[]>> GetExchangesAsync(int? page = null, int? pageSize = null, CancellationToken ct = default);
         /// <summary>
         /// Get exchange tickers
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-id-tickers" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-id-tickers" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/exchanges/{exchangeId}/tickers
+        /// </para>
         /// </summary>
         /// <param name="exchangeId">Exchange id</param>
         /// <param name="assetIds">Asset ids filter</param>
@@ -165,7 +235,12 @@ namespace CoinGecko.Net.Interfaces
             CancellationToken ct = default);
         /// <summary>
         /// Get volume chart data for an exchange, interval is determined automatically: 1 day -> 10 minutes, 7-14 days -> 1 hour, 30+ days -> 1 day
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-id-volume-chart" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/exchanges-id-volume-chart" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/exchanges/{exchangeId}/volume_chart
+        /// </para>
         /// </summary>
         /// <param name="exchangeId">Exchange id</param>
         /// <param name="days">Days history</param>
@@ -174,7 +249,12 @@ namespace CoinGecko.Net.Interfaces
         Task<WebCallResult<CoinGeckoMarketChartValue[]>> GetExchangeVolumeHistoryAsync(string exchangeId, int days, CancellationToken ct = default);
         /// <summary>
         /// Get asset history info
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-history" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-history" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/coins/{assetId}/history
+        /// </para>
         /// </summary>
         /// <param name="assetId">Asset id</param>
         /// <param name="date">Date snapshot time</param>
@@ -184,7 +264,12 @@ namespace CoinGecko.Net.Interfaces
         Task<WebCallResult<CoinGeckoAssetHistory>> GetAssetHistoryAsync(string assetId, DateTime date, bool? localization = null, CancellationToken ct = default);
         /// <summary>
         /// Get historical market data
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-market-chart-range" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-market-chart-range" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/coins/{assetId}/market_chart/range
+        /// </para>
         /// </summary>
         /// <param name="assetId">Asset id</param>
         /// <param name="quoteAsset">Quote asset</param>
@@ -196,7 +281,12 @@ namespace CoinGecko.Net.Interfaces
         Task<WebCallResult<CoinGeckoMarketChart>> GetMarketChartAsync(string assetId, string quoteAsset, DateTime from, DateTime to, string? precision = null, CancellationToken ct = default);
         /// <summary>
         /// Get historical market data
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-market-chart" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-market-chart" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/coins/{assetId}/market_chart
+        /// </para>
         /// </summary>
         /// <param name="assetId">Asset id</param>
         /// <param name="quoteAsset">Quote asset</param>
@@ -208,7 +298,12 @@ namespace CoinGecko.Net.Interfaces
         Task<WebCallResult<CoinGeckoMarketChart>> GetMarketChartAsync(string assetId, string quoteAsset, int days, string? interval = null, string? precision = null, CancellationToken ct = default);
         /// <summary>
         /// Get historical market data by contract
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/contract-address-market-chart-range" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/contract-address-market-chart-range" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/coins/{assetId}/contract/{contractAddress}/market_chart/range
+        /// </para>
         /// </summary>
         /// <param name="assetId">Asset id</param>
         /// <param name="contractAddress">Contract address</param>
@@ -220,7 +315,12 @@ namespace CoinGecko.Net.Interfaces
         Task<WebCallResult<CoinGeckoMarketChart>> GetMarketChartFromContractAsync(string assetId, string contractAddress, string quoteAsset, DateTime from, DateTime to, CancellationToken ct = default);
         /// <summary>
         /// Get historical market data by contract
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-categories-list" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/coins-categories-list" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/coins/{assetId}/contract/{contractAddress}/market_chart
+        /// </para>
         /// </summary>
         /// <param name="assetId">Asset id</param>
         /// <param name="contractAddress">Contract address</param>
@@ -231,7 +331,12 @@ namespace CoinGecko.Net.Interfaces
         Task<WebCallResult<CoinGeckoMarketChart>> GetMarketChartFromContractAsync(string assetId, string contractAddress, string quoteAsset, int days, CancellationToken ct = default);
         /// <summary>
         /// Get market data categories
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-categories-list" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/coins-categories-list" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/coins/categories
+        /// </para>
         /// </summary>
         /// <param name="order">Sorting</param>
         /// <param name="ct">Cancellation token</param>
@@ -239,7 +344,12 @@ namespace CoinGecko.Net.Interfaces
         Task<WebCallResult<CoinGeckoMarketDataCategory[]>> GetMarketDataCategoriesAsync(string? order = null, CancellationToken ct = default);
         /// <summary>
         /// Get coins market data
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-markets" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/coins-markets" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/coins/markets
+        /// </para>
         /// </summary>
         /// <param name="quoteAsset">Quote asset</param>
         /// <param name="assetIds">Asset ids, for example `bitcoin` and `tether`</param>
@@ -270,7 +380,12 @@ namespace CoinGecko.Net.Interfaces
 
         /// <summary>
         /// Get Open/High/Low/Close data, interval is determined automatically: 1-2 days -> 30 minutes, 3-30 days -> 4 hours, 31+ days -> 4 days
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-ohlc" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-ohlc" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/coins/{assetId}/ohlc
+        /// </para>
         /// </summary>
         /// <param name="assetId">Asset id</param>
         /// <param name="quoteAsset">Quote asset</param>
@@ -282,7 +397,12 @@ namespace CoinGecko.Net.Interfaces
 
         /// <summary>
         /// Get prices for specific assets
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/simple-price" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/simple-price" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/simple/price
+        /// </para>
         /// </summary>
         /// <param name="ids">Asset ids to get data for, for example `bitcoin` and `tether`</param>
         /// <param name="quoteAssets">Quote assets</param>
@@ -307,14 +427,24 @@ namespace CoinGecko.Net.Interfaces
 
         /// <summary>
         /// Get list of quote assets
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/simple-supported-currencies" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/simple-supported-currencies" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/simple/supported_vs_currencies
+        /// </para>
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
         Task<WebCallResult<string[]>> GetQuoteAssetsAsync(CancellationToken ct = default);
         /// <summary>
         /// Get tickers for an asset
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-tickers" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/coins-id-tickers" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/coins/{assetId}/tickers
+        /// </para>
         /// </summary>
         /// <param name="assetId">Asset id</param>
         /// <param name="exchangeIds">Exchange ids</param>
@@ -336,7 +466,12 @@ namespace CoinGecko.Net.Interfaces
             CancellationToken ct = default);
         /// <summary>
         /// Get prices by token contract addresses
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/simple-token-price" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/simple-token-price" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/simple/token_price/{platformId}
+        /// </para>
         /// </summary>
         /// <param name="platformId">Platform id</param>
         /// <param name="contractAddresses">Contract addresses</param>
@@ -351,21 +486,36 @@ namespace CoinGecko.Net.Interfaces
         Task<WebCallResult<Dictionary<string, Dictionary<string, decimal?>>>> GetTokenPricesAsync(string platformId, IEnumerable<string> contractAddresses, IEnumerable<string> quoteAssets, bool? includeMarketCap = false, bool? include24hrVolume = false, bool? include24hrChange = false, bool? includeLastUpdatedAt = false, string? precision = null, CancellationToken ct = default);
         /// <summary>
         /// Ping the server
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/ping-server" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/ping-server" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/ping
+        /// </para>
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
         Task<WebCallResult<string>> PingAsync(CancellationToken ct = default);
         /// <summary>
         /// Get global crypto data
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/crypto-global" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/crypto-global" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/global
+        /// </para>
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
         Task<WebCallResult<CoinGeckoGlobalData>> GetGlobalDataAsync(CancellationToken ct = default);
         /// <summary>
         /// Get global defi crypto data
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/global-defi" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/global-defi" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/global/decentralized_finance_defi
+        /// </para>
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
@@ -373,7 +523,12 @@ namespace CoinGecko.Net.Interfaces
 
         /// <summary>
         /// Get list of nfts
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/nfts-list" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/nfts-list" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/nfts/list
+        /// </para>
         /// </summary>
         /// <param name="order">Sort</param>
         /// <param name="page">Page</param>
@@ -384,7 +539,12 @@ namespace CoinGecko.Net.Interfaces
 
         /// <summary>
         /// Get details on an NFT
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/nfts-id" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/nfts-id" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/nfts/{id}
+        /// </para>
         /// </summary>
         /// <param name="id">Id</param>
         /// <param name="ct">Cancellation token</param>
@@ -393,7 +553,12 @@ namespace CoinGecko.Net.Interfaces
 
         /// <summary>
         /// Get nft info by contract address
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/nfts-contract-address" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/nfts-contract-address" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/nfts/{platformId}/contract/{contractAddress}
+        /// </para>
         /// </summary>
         /// <param name="platformId">Platform id</param>
         /// <param name="contractAddress">Contract address</param>
@@ -403,7 +568,12 @@ namespace CoinGecko.Net.Interfaces
 
         /// <summary>
         /// Search for assets, exchanges, categories or nfts
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/search-data" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/search-data" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/search
+        /// </para>
         /// </summary>
         /// <param name="query">Search query</param>
         /// <param name="ct">Cancellation token</param>
@@ -412,7 +582,12 @@ namespace CoinGecko.Net.Interfaces
 
         /// <summary>
         /// Get trending searches
-        /// <para><a href="https://docs.coingecko.com/v3.0.1/reference/trending-search" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/v3.0.1/reference/trending-search" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/search/trending
+        /// </para>
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
@@ -420,7 +595,12 @@ namespace CoinGecko.Net.Interfaces
 
         /// <summary>
         /// Get public company holdings for an asset
-        /// <para><a href="https://docs.coingecko.com/reference/companies-public-treasury" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/reference/companies-public-treasury" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/companies/public_treasury/{asset}
+        /// </para>
         /// </summary>
         /// <param name="asset">Asset name</param>
         /// <param name="ct">Cancellation token</param>
@@ -428,7 +608,12 @@ namespace CoinGecko.Net.Interfaces
 
         /// <summary>
         /// Get current API usage stats
-        /// <para><a href="https://docs.coingecko.com/reference/api-usage" /></para>
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/reference/api-usage" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/key
+        /// </para>
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
