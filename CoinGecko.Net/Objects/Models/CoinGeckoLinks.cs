@@ -11,42 +11,42 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoLinks
     {
         /// <summary>
-        /// Homepage
+        /// ["<c>homepage</c>"] Homepage
         /// </summary>
         [JsonPropertyName("homepage")]
         public string[] Homepage { get; set; } = Array.Empty<string>();
         /// <summary>
-        /// White paper link
+        /// ["<c>whitepaper</c>"] White paper link
         /// </summary>
         [JsonPropertyName("whitepaper")]
         public string? WhitePaper { get; set; }
         /// <summary>
-        /// Blockchain explorer links
+        /// ["<c>blockchain_site</c>"] Blockchain explorer links
         /// </summary>
         [JsonPropertyName("blockchain_site")]
         public string[] BlockchainSites { get; set; } = Array.Empty<string>();
         /// <summary>
-        /// Official forum urls
+        /// ["<c>official_forum_url</c>"] Official forum urls
         /// </summary>
         [JsonPropertyName("official_forum_url")]
         public string[] OfficialForumUrls { get; set; } = Array.Empty<string>();
         /// <summary>
-        /// Chat urls
+        /// ["<c>chat_url</c>"] Chat urls
         /// </summary>
         [JsonPropertyName("chat_url")]
         public string[] ChatUrls { get; set; } = Array.Empty<string>();
         /// <summary>
-        /// Announcement urls
+        /// ["<c>announcement_url</c>"] Announcement urls
         /// </summary>
         [JsonPropertyName("announcement_url")]
         public string[] AnnouncementUrls { get; set; } = Array.Empty<string>();
         /// <summary>
-        /// Twitter name
+        /// ["<c>twitter_screen_name</c>"] Twitter name
         /// </summary>
         [JsonPropertyName("twitter_screen_name")]
         public string TwitterScreenName { get; set; } = string.Empty;
         /// <summary>
-        /// Facebook name
+        /// ["<c>facebook_username</c>"] Facebook name
         /// </summary>
         [JsonPropertyName("facebook_username")]
         public string FacebookName { get; set; } = string.Empty;
@@ -56,22 +56,22 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("bitcointalk_thread_identifier"), JsonConverter(typeof(NumberStringConverter))]
         public string? BitcoinTalkThreadIdentifier { get; set; } = string.Empty;
         /// <summary>
-        /// Telegram channel identifier
+        /// ["<c>telegram_channel_identifier</c>"] Telegram channel identifier
         /// </summary>
         [JsonPropertyName("telegram_channel_identifier")]
         public string? TelegramChannelIdentifier { get; set; } = string.Empty;
         /// <summary>
-        /// Subreddit url
+        /// ["<c>subreddit_url</c>"] Subreddit url
         /// </summary>
         [JsonPropertyName("subreddit_url")]
         public string? SubredditUrl { get; set; } = string.Empty;
         /// <summary>
-        /// Snapshot url
+        /// ["<c>snapshot_url</c>"] Snapshot url
         /// </summary>
         [JsonPropertyName("snapshot_url")]
         public string? SnapshotUrl { get; set; }
         /// <summary>
-        /// Git repository urls
+        /// ["<c>repos_url</c>"] Git repository urls
         /// </summary>
         [JsonPropertyName("repos_url")]
         public Dictionary<string, IEnumerable<string>> RepoUrls { get; set; } = new Dictionary<string, IEnumerable<string>>();

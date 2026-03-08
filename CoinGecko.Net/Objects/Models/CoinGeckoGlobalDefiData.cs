@@ -16,37 +16,37 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoGlobalDefiData
     {
         /// <summary>
-        /// Defi market cap
+        /// ["<c>defi_market_cap</c>"] Defi market cap
         /// </summary>
         [JsonPropertyName("defi_market_cap")]
         public decimal? DefiMarketCap { get; set; }
         /// <summary>
-        /// Eth market cap
+        /// ["<c>eth_market_cap</c>"] Eth market cap
         /// </summary>
         [JsonPropertyName("eth_market_cap")]
         public decimal? EthMarketCap { get; set; }
         /// <summary>
-        /// Defi to eth ratio
+        /// ["<c>defi_to_eth_ratio</c>"] Defi to eth ratio
         /// </summary>
         [JsonPropertyName("defi_to_eth_ratio")]
         public decimal? DefiToEthRatio { get; set; }
         /// <summary>
-        /// Trading volume 24h
+        /// ["<c>trading_volume_24h</c>"] Trading volume 24h
         /// </summary>
         [JsonPropertyName("trading_volume_24h")]
         public decimal? TradingVolume24h { get; set; }
         /// <summary>
-        /// Defi dominance
+        /// ["<c>defi_dominance</c>"] Defi dominance
         /// </summary>
         [JsonPropertyName("defi_dominance")]
         public decimal? DefiDominance { get; set; }
         /// <summary>
-        /// Top asset name
+        /// ["<c>top_coin_name</c>"] Top asset name
         /// </summary>
         [JsonPropertyName("top_coin_name")]
         public string TopAssetName { get; set; } = string.Empty;
         /// <summary>
-        /// Top defi asset dominance
+        /// ["<c>top_coin_defi_dominance</c>"] Top defi asset dominance
         /// </summary>
         [JsonPropertyName("top_coin_defi_dominance")]
         public decimal? TopAssetDefiDominance { get; set; }

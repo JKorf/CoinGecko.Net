@@ -9,22 +9,22 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoAssetExchange
     {
         /// <summary>
-        /// Exchange name
+        /// ["<c>name</c>"] Exchange name
         /// </summary>
         [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
         /// <summary>
-        /// Identifier
+        /// ["<c>identifier</c>"] Identifier
         /// </summary>
         [JsonPropertyName("identifier")]
         public string Identifier { get; set; } = string.Empty;
         /// <summary>
-        /// Has trading incentive
+        /// ["<c>has_trading_incentive</c>"] Has trading incentive
         /// </summary>
         [JsonPropertyName("has_trading_incentive")]
         public bool HasTradingIncentive { get; set; }
         /// <summary>
-        /// Logo
+        /// ["<c>logo</c>"] Logo
         /// </summary>
         [JsonPropertyName("logo")]
         public string? Logo { get; set; }

@@ -10,27 +10,27 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoSearchResult
     {
         /// <summary>
-        /// Assets found
+        /// ["<c>coins</c>"] Assets found
         /// </summary>
         [JsonPropertyName("coins")]
         public CoinGeckoAssetResult[] Assets { get; set; } = Array.Empty<CoinGeckoAssetResult>();
         /// <summary>
-        /// Exchanges found
+        /// ["<c>exchanges</c>"] Exchanges found
         /// </summary>
         [JsonPropertyName("exchanges")]
         public CoinGeckoExchangeResult[] Exchanges { get; set; } = Array.Empty<CoinGeckoExchangeResult>();
         /// <summary>
-        /// Categories found
+        /// ["<c>categories</c>"] Categories found
         /// </summary>
         [JsonPropertyName("categories")]
         public CoinGeckoCategoryResult[] Categories { get; set; } = Array.Empty<CoinGeckoCategoryResult>();
         /// <summary>
-        /// Nfts found
+        /// ["<c>nfts</c>"] Nfts found
         /// </summary>
         [JsonPropertyName("nfts")]
         public CoinGeckoNftResult[] Nfts { get; set; } = Array.Empty<CoinGeckoNftResult>();
         /// <summary>
-        /// Icos
+        /// ["<c>icos</c>"] Icos
         /// </summary>
         [JsonPropertyName("icos")]
         public string[] Icos { get; set; } = Array.Empty<string>();
@@ -43,37 +43,37 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoAssetResult
     {
         /// <summary>
-        /// Id
+        /// ["<c>id</c>"] Id
         /// </summary>
         [JsonPropertyName("id")]
         public string Id { get; set; } = string.Empty;
         /// <summary>
-        /// Name
+        /// ["<c>name</c>"] Name
         /// </summary>
         [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
         /// <summary>
-        /// Api symbol
+        /// ["<c>api_symbol</c>"] Api symbol
         /// </summary>
         [JsonPropertyName("api_symbol")]
         public string? ApiSymbol { get; set; }
         /// <summary>
-        /// Symbol
+        /// ["<c>symbol</c>"] Symbol
         /// </summary>
         [JsonPropertyName("symbol")]
         public string Symbol { get; set; } = string.Empty;
         /// <summary>
-        /// Market cap rank
+        /// ["<c>market_cap_rank</c>"] Market cap rank
         /// </summary>
         [JsonPropertyName("market_cap_rank")]
         public int? MarketCapRank { get; set; }
         /// <summary>
-        /// Thumbnail
+        /// ["<c>thumb</c>"] Thumbnail
         /// </summary>
         [JsonPropertyName("thumb")]
         public string? ThumbnailImage { get; set; }
         /// <summary>
-        /// Large image
+        /// ["<c>large</c>"] Large image
         /// </summary>
         [JsonPropertyName("large")]
         public string? LargeImage { get; set; }
@@ -86,27 +86,27 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoExchangeResult
     {
         /// <summary>
-        /// Id
+        /// ["<c>id</c>"] Id
         /// </summary>
         [JsonPropertyName("id")]
         public string Id { get; set; } = string.Empty;
         /// <summary>
-        /// Name
+        /// ["<c>name</c>"] Name
         /// </summary>
         [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
         /// <summary>
-        /// Market type
+        /// ["<c>market_type</c>"] Market type
         /// </summary>
         [JsonPropertyName("market_type")]
         public string MarketType { get; set; } = string.Empty;
         /// <summary>
-        /// Thumbnail
+        /// ["<c>thumb</c>"] Thumbnail
         /// </summary>
         [JsonPropertyName("thumb")]
         public string? ThumbnailImage { get; set; }
         /// <summary>
-        /// Large image
+        /// ["<c>large</c>"] Large image
         /// </summary>
         [JsonPropertyName("large")]
         public string? LargeImage { get; set; }
@@ -119,12 +119,12 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoCategoryResult
     {
         /// <summary>
-        /// Id
+        /// ["<c>id</c>"] Id
         /// </summary>
         [JsonPropertyName("id")]
         public string Id { get; set; } = string.Empty;
         /// <summary>
-        /// Name
+        /// ["<c>name</c>"] Name
         /// </summary>
         [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
@@ -137,22 +137,22 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoNftResult
     {
         /// <summary>
-        /// Id
+        /// ["<c>id</c>"] Id
         /// </summary>
         [JsonPropertyName("id")]
         public string Id { get; set; } = string.Empty;
         /// <summary>
-        /// Name
+        /// ["<c>name</c>"] Name
         /// </summary>
         [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
         /// <summary>
-        /// Symbol
+        /// ["<c>symbol</c>"] Symbol
         /// </summary>
         [JsonPropertyName("symbol")]
         public string Symbol { get; set; } = string.Empty;
         /// <summary>
-        /// Thumbnail
+        /// ["<c>thumb</c>"] Thumbnail
         /// </summary>
         [JsonPropertyName("thumb")]
         public string? ThumbnailImage { get; set; }

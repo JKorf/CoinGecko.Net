@@ -9,12 +9,12 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoPublicInterestStats
     {
         /// <summary>
-        /// Alexa rank
+        /// ["<c>alexa_rank</c>"] Alexa rank
         /// </summary>
         [JsonPropertyName("alexa_rank")]
         public int? AlexaRank { get; set; }
         /// <summary>
-        /// Bing matches
+        /// ["<c>bing_matches</c>"] Bing matches
         /// </summary>
         [JsonPropertyName("bing_matches")]
         public int? BingMatches { get; set; }

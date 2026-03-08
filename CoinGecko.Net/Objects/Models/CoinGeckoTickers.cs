@@ -10,12 +10,12 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoTickers
     {
         /// <summary>
-        /// Asset name
+        /// ["<c>name</c>"] Asset name
         /// </summary>
         [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
         /// <summary>
-        /// Tickers
+        /// ["<c>tickers</c>"] Tickers
         /// </summary>
         [JsonPropertyName("tickers")]
         public CoinGeckoTicker[] Tickers { get; set; } = Array.Empty<CoinGeckoTicker>();

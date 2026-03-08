@@ -10,62 +10,62 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoDerivative
     {
         /// <summary>
-        /// Market
+        /// ["<c>market</c>"] Market
         /// </summary>
         [JsonPropertyName("market")]
         public string Market { get; set; } = string.Empty;
         /// <summary>
-        /// Symbol
+        /// ["<c>symbol</c>"] Symbol
         /// </summary>
         [JsonPropertyName("symbol")]
         public string Symbol { get; set; } = string.Empty;
         /// <summary>
-        /// Index id
+        /// ["<c>index_id</c>"] Index id
         /// </summary>
         [JsonPropertyName("index_id")]
         public string IndexId { get; set; } = string.Empty;
         /// <summary>
-        /// Price
+        /// ["<c>price</c>"] Price
         /// </summary>
         [JsonPropertyName("price")]
         public decimal? Price { get; set; }
         /// <summary>
-        /// Price change percentage last 24h
+        /// ["<c>price_percentage_change_24h</c>"] Price change percentage last 24h
         /// </summary>
         [JsonPropertyName("price_percentage_change_24h")]
         public decimal? PricePercentageChange24h { get; set; }
         /// <summary>
-        /// Contract type
+        /// ["<c>contract_type</c>"] Contract type
         /// </summary>
         [JsonPropertyName("contract_type")]
         public string ContractType { get; set; } = string.Empty;
         /// <summary>
-        /// Index
+        /// ["<c>index</c>"] Index
         /// </summary>
         [JsonPropertyName("index")]
         public decimal? Index { get; set; }
         /// <summary>
-        /// Basis
+        /// ["<c>basis</c>"] Basis
         /// </summary>
         [JsonPropertyName("basis")]
         public decimal? Basis { get; set; }
         /// <summary>
-        /// Spread
+        /// ["<c>spread</c>"] Spread
         /// </summary>
         [JsonPropertyName("spread")]
         public decimal? Spread { get; set; }
         /// <summary>
-        /// Funding rate
+        /// ["<c>funding_rate</c>"] Funding rate
         /// </summary>
         [JsonPropertyName("funding_rate")]
         public decimal? FundingRate { get; set; }
         /// <summary>
-        /// Open interest
+        /// ["<c>open_interest</c>"] Open interest
         /// </summary>
         [JsonPropertyName("open_interest")]
         public decimal? OpenInterest { get; set; }
         /// <summary>
-        /// Volume last 24h
+        /// ["<c>volume_24h</c>"] Volume last 24h
         /// </summary>
         [JsonPropertyName("volume_24h")]
         public decimal? Volume24h { get; set; }
@@ -76,7 +76,7 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("last_traded_at")]
         public DateTime? LastTradedAt { get; set; }
         /// <summary>
-        /// Expired at
+        /// ["<c>expired_at</c>"] Expired at
         /// </summary>
         [JsonPropertyName("expired_at")]
         [JsonConverter(typeof(DateTimeConverter))]

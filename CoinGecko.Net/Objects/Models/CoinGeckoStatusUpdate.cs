@@ -10,12 +10,12 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoStatusUpdate
     {
         /// <summary>
-        /// Description
+        /// ["<c>description</c>"] Description
         /// </summary>
         [JsonPropertyName("description")]
         public string Description { get; set; } = string.Empty;
         /// <summary>
-        /// Category
+        /// ["<c>category</c>"] Category
         /// </summary>
         [JsonPropertyName("category")]
         public string Category { get; set; } = string.Empty;
@@ -26,22 +26,22 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("created_at")]
         public DateTime CreatedAt { get; set; }
         /// <summary>
-        /// User name
+        /// ["<c>user</c>"] User name
         /// </summary>
         [JsonPropertyName("user")]
         public string User { get; set; } = string.Empty;
         /// <summary>
-        /// User title
+        /// ["<c>user_title</c>"] User title
         /// </summary>
         [JsonPropertyName("user_title")]
         public string UserTitle { get; set; } = string.Empty;
         /// <summary>
-        /// Is pinned
+        /// ["<c>pin</c>"] Is pinned
         /// </summary>
         [JsonPropertyName("pin")]
         public bool Pin { get; set; }
         /// <summary>
-        /// Project info
+        /// ["<c>project</c>"] Project info
         /// </summary>
         [JsonPropertyName("project")]
         public CoinGeckoProject? Project { get; set; }
@@ -54,22 +54,22 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoProject
     {
         /// <summary>
-        /// Type
+        /// ["<c>type</c>"] Type
         /// </summary>
         [JsonPropertyName("type")]
         public string Type { get; set; } = string.Empty;
         /// <summary>
-        /// Id
+        /// ["<c>id</c>"] Id
         /// </summary>
         [JsonPropertyName("id")]
         public string Id { get; set; } = string.Empty;
         /// <summary>
-        /// Name
+        /// ["<c>name</c>"] Name
         /// </summary>
         [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
         /// <summary>
-        /// Images
+        /// ["<c>image</c>"] Images
         /// </summary>
         [JsonPropertyName("image")]
         public CoinGeckoImages? Image { get; set; }

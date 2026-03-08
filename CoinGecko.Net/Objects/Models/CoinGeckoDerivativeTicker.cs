@@ -11,97 +11,97 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoDerivativeTicker
     {
         /// <summary>
-        /// Symbol
+        /// ["<c>symbol</c>"] Symbol
         /// </summary>
         [JsonPropertyName("symbol")]
         public string Symbol { get; set; } = string.Empty;
         /// <summary>
-        /// Base asset
+        /// ["<c>base</c>"] Base asset
         /// </summary>
         [JsonPropertyName("base")]
         public string Base { get; set; } = string.Empty;
         /// <summary>
-        /// Target asset
+        /// ["<c>target</c>"] Target asset
         /// </summary>
         [JsonPropertyName("target")]
         public string Target { get; set; } = string.Empty;
         /// <summary>
-        /// Coin id
+        /// ["<c>coin_id</c>"] Coin id
         /// </summary>
         [JsonPropertyName("coin_id")]
         public string? CoinId { get; set; }
         /// <summary>
-        /// Target coin id
+        /// ["<c>target_coin_id</c>"] Target coin id
         /// </summary>
         [JsonPropertyName("target_coin_id")]
         public string? TargetCoinId { get; set; }
         /// <summary>
-        /// Trade url
+        /// ["<c>trade_url</c>"] Trade url
         /// </summary>
         [JsonPropertyName("trade_url")]
         public string TradeUrl { get; set; } = string.Empty;
         /// <summary>
-        /// Contract type
+        /// ["<c>contract_type</c>"] Contract type
         /// </summary>
         [JsonPropertyName("contract_type")]
         public string ContractType { get; set; } = string.Empty;
         /// <summary>
-        /// Last price
+        /// ["<c>last</c>"] Last price
         /// </summary>
         [JsonPropertyName("last")]
         public decimal? LastPrice { get; set; }
         /// <summary>
-        /// 24 hour percentage change
+        /// ["<c>h24_percentage_change</c>"] 24 hour percentage change
         /// </summary>
         [JsonPropertyName("h24_percentage_change")]
         public decimal? H24PercentageChange { get; set; }
         /// <summary>
-        /// Index price
+        /// ["<c>index</c>"] Index price
         /// </summary>
         [JsonPropertyName("index")]
         public decimal? IndexPrice { get; set; }
         /// <summary>
-        /// Index basis percentage
+        /// ["<c>index_basis_percentage</c>"] Index basis percentage
         /// </summary>
         [JsonPropertyName("index_basis_percentage")]
         public decimal? IndexBasisPercentage { get; set; }
         /// <summary>
-        /// Bid ask spread
+        /// ["<c>bid_ask_spread</c>"] Bid ask spread
         /// </summary>
         [JsonPropertyName("bid_ask_spread")]
         public decimal? BidAskSpread { get; set; }
         /// <summary>
-        /// Funding rate
+        /// ["<c>funding_rate</c>"] Funding rate
         /// </summary>
         [JsonPropertyName("funding_rate")]
         public decimal? FundingRate { get; set; }
         /// <summary>
-        /// Open interest usd
+        /// ["<c>open_interest_usd</c>"] Open interest usd
         /// </summary>
         [JsonPropertyName("open_interest_usd")]
         public decimal? OpenInterestUsd { get; set; }
         /// <summary>
-        /// 24 hour volume
+        /// ["<c>h24_volume</c>"] 24 hour volume
         /// </summary>
         [JsonPropertyName("h24_volume")]
         public decimal? H24Volume { get; set; }
         /// <summary>
-        /// Converted volume
+        /// ["<c>converted_volume</c>"] Converted volume
         /// </summary>
         [JsonPropertyName("converted_volume")]
         public Dictionary<string, decimal?> ConvertedVolume { get; set; } = null!;
         /// <summary>
-        /// Converted last
+        /// ["<c>converted_last</c>"] Converted last
         /// </summary>
         [JsonPropertyName("converted_last")]
         public Dictionary<string, decimal?> ConvertedLast { get; set; } = null!;
         /// <summary>
-        /// Last trade time
+        /// ["<c>last_traded</c>"] Last trade time
         /// </summary>
         [JsonPropertyName("last_traded")]
         public DateTime LastTradeTime { get; set; }
         /// <summary>
-        /// Expired time
+        /// ["<c>expired_at</c>"] Expired time
         /// </summary>
         [JsonPropertyName("expired_at")]
         public DateTime? ExpireTime { get; set; }

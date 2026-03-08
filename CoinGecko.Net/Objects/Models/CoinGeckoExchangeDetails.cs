@@ -10,122 +10,122 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoExchangeDetails
     {
         /// <summary>
-        /// Name
+        /// ["<c>name</c>"] Name
         /// </summary>
         [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
         /// <summary>
-        /// Year established
+        /// ["<c>year_established</c>"] Year established
         /// </summary>
         [JsonPropertyName("year_established")]
         public int? YearEstablished { get; set; }
         /// <summary>
-        /// Country
+        /// ["<c>country</c>"] Country
         /// </summary>
         [JsonPropertyName("country")]
         public string Country { get; set; } = string.Empty;
         /// <summary>
-        /// Description
+        /// ["<c>description</c>"] Description
         /// </summary>
         [JsonPropertyName("description")]
         public string Description { get; set; } = string.Empty;
         /// <summary>
-        /// Url
+        /// ["<c>url</c>"] Url
         /// </summary>
         [JsonPropertyName("url")]
         public string Url { get; set; } = string.Empty;
         /// <summary>
-        /// Image
+        /// ["<c>image</c>"] Image
         /// </summary>
         [JsonPropertyName("image")]
         public string Image { get; set; } = string.Empty;
         /// <summary>
-        /// Facebook url
+        /// ["<c>facebook_url</c>"] Facebook url
         /// </summary>
         [JsonPropertyName("facebook_url")]
         public string FacebookUrl { get; set; } = string.Empty;
         /// <summary>
-        /// Reddit url
+        /// ["<c>reddit_url</c>"] Reddit url
         /// </summary>
         [JsonPropertyName("reddit_url")]
         public string RedditUrl { get; set; } = string.Empty;
         /// <summary>
-        /// Telegram url
+        /// ["<c>telegram_url</c>"] Telegram url
         /// </summary>
         [JsonPropertyName("telegram_url")]
         public string TelegramUrl { get; set; } = string.Empty;
         /// <summary>
-        /// Slack url
+        /// ["<c>slack_url</c>"] Slack url
         /// </summary>
         [JsonPropertyName("slack_url")]
         public string SlackUrl { get; set; } = string.Empty;
         /// <summary>
-        /// Other url 1
+        /// ["<c>other_url_1</c>"] Other url 1
         /// </summary>
         [JsonPropertyName("other_url_1")]
         public string OtherUrl1 { get; set; } = string.Empty;
         /// <summary>
-        /// Other url 2
+        /// ["<c>other_url_2</c>"] Other url 2
         /// </summary>
         [JsonPropertyName("other_url_2")]
         public string OtherUrl2 { get; set; } = string.Empty;
         /// <summary>
-        /// Twitter handle
+        /// ["<c>twitter_handle</c>"] Twitter handle
         /// </summary>
         [JsonPropertyName("twitter_handle")]
         public string TwitterHandle { get; set; } = string.Empty;
         /// <summary>
-        /// Has trading incentive
+        /// ["<c>has_trading_incentive</c>"] Has trading incentive
         /// </summary>
         [JsonPropertyName("has_trading_incentive")]
         public bool HasTradingIncentive { get; set; }
         /// <summary>
-        /// Centralized
+        /// ["<c>centralized</c>"] Centralized
         /// </summary>
         [JsonPropertyName("centralized")]
         public bool Centralized { get; set; }
         /// <summary>
-        /// Public notice
+        /// ["<c>public_notice</c>"] Public notice
         /// </summary>
         [JsonPropertyName("public_notice")]
         public string PublicNotice { get; set; } = string.Empty;
         /// <summary>
-        /// Alert notice
+        /// ["<c>alert_notice</c>"] Alert notice
         /// </summary>
         [JsonPropertyName("alert_notice")]
         public string AlertNotice { get; set; } = string.Empty;
         /// <summary>
-        /// Trust score
+        /// ["<c>trust_score</c>"] Trust score
         /// </summary>
         [JsonPropertyName("trust_score")]
         public int? TrustScore { get; set; }
         /// <summary>
-        /// Trust score rank
+        /// ["<c>trust_score_rank</c>"] Trust score rank
         /// </summary>
         [JsonPropertyName("trust_score_rank")]
         public int? TrustScoreRank { get; set; }
         /// <summary>
-        /// Trade volume in btc last 24h
+        /// ["<c>trade_volume_24h_btc</c>"] Trade volume in btc last 24h
         /// </summary>
         [JsonPropertyName("trade_volume_24h_btc")]
         public decimal? TradeVolume24hBtc { get; set; }
         /// <summary>
-        /// Normalized trade volume in btc last 24h
+        /// ["<c>trade_volume_24h_btc_normalized</c>"] Normalized trade volume in btc last 24h
         /// </summary>
         [JsonPropertyName("trade_volume_24h_btc_normalized")]
         public decimal? TradeVolume24hBtcNormalized { get; set; }
         /// <summary>
-        /// Number of assets
+        /// ["<c>coins</c>"] Number of assets
         /// </summary>
         [JsonPropertyName("coins")]
         public int Assets { get; set; }
         /// <summary>
-        /// Number of symbols
+        /// ["<c>pairs</c>"] Number of symbols
         /// </summary>
         [JsonPropertyName("pairs")]
         public int Symbols { get; set; }
         /// <summary>
-        /// Tickers
+        /// ["<c>tickers</c>"] Tickers
         /// </summary>
         [JsonPropertyName("tickers")]
         public CoinGeckoTicker[] Tickers { get; set; } = Array.Empty<CoinGeckoTicker>();

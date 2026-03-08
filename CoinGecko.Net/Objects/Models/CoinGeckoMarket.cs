@@ -10,102 +10,102 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoMarket
     {
         /// <summary>
-        /// Market id
+        /// ["<c>id</c>"] Market id
         /// </summary>
         [JsonPropertyName("id")]
         public string Id { get; set; } = string.Empty;
         /// <summary>
-        /// Market symbol
+        /// ["<c>symbol</c>"] Market symbol
         /// </summary>
         [JsonPropertyName("symbol")]
         public string Symbol { get; set; } = string.Empty;
         /// <summary>
-        /// Name
+        /// ["<c>name</c>"] Name
         /// </summary>
         [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
         /// <summary>
-        /// Image
+        /// ["<c>image</c>"] Image
         /// </summary>
         [JsonPropertyName("image")]
         public string Image { get; set; } = string.Empty;
         /// <summary>
-        /// Current price
+        /// ["<c>current_price</c>"] Current price
         /// </summary>
         [JsonPropertyName("current_price")]
         public decimal? CurrentPrice { get; set; }
         /// <summary>
-        /// Market cap
+        /// ["<c>market_cap</c>"] Market cap
         /// </summary>
         [JsonPropertyName("market_cap")]
         public decimal? MarketCap { get; set; }
         /// <summary>
-        /// Market cap rank
+        /// ["<c>market_cap_rank</c>"] Market cap rank
         /// </summary>
         [JsonPropertyName("market_cap_rank")]
         public decimal? MarketCapRank { get; set; }
         /// <summary>
-        /// Fully diluted valuation
+        /// ["<c>fully_diluted_valuation</c>"] Fully diluted valuation
         /// </summary>
         [JsonPropertyName("fully_diluted_valuation")]
         public decimal? FullyDilutedValuation { get; set; }
         /// <summary>
-        /// Total trade volume
+        /// ["<c>total_volume</c>"] Total trade volume
         /// </summary>
         [JsonPropertyName("total_volume")]
         public decimal? TotalVolume { get; set; }
         /// <summary>
-        /// 24 hour high price
+        /// ["<c>high_24h</c>"] 24 hour high price
         /// </summary>
         [JsonPropertyName("high_24h")]
         public decimal? High24h { get; set; }
         /// <summary>
-        /// 24 hour low price
+        /// ["<c>low_24h</c>"] 24 hour low price
         /// </summary>
         [JsonPropertyName("low_24h")]
         public decimal? Low24h { get; set; }
         /// <summary>
-        /// 24 hour price change
+        /// ["<c>price_change_24h</c>"] 24 hour price change
         /// </summary>
         [JsonPropertyName("price_change_24h")]
         public decimal? PriceChange24h { get; set; }
         /// <summary>
-        /// 24 hour price change percentage
+        /// ["<c>price_change_percentage_24h</c>"] 24 hour price change percentage
         /// </summary>
         [JsonPropertyName("price_change_percentage_24h")]
         public double? PriceChangePercentage24h { get; set; }
         /// <summary>
-        /// 24 hour market cap change
+        /// ["<c>market_cap_change_24h</c>"] 24 hour market cap change
         /// </summary>
         [JsonPropertyName("market_cap_change_24h")]
         public decimal? MarketCapChange24h { get; set; }
         /// <summary>
-        /// 24 hour market cap change percentage
+        /// ["<c>market_cap_change_percentage_24h</c>"] 24 hour market cap change percentage
         /// </summary>
         [JsonPropertyName("market_cap_change_percentage_24h")]
         public double? MarketCapChangePercentage24h { get; set; }
         /// <summary>
-        /// Circulating supply
+        /// ["<c>circulating_supply</c>"] Circulating supply
         /// </summary>
         [JsonPropertyName("circulating_supply")]
         public decimal? CirculatingSupply { get; set; }
         /// <summary>
-        /// Total supply
+        /// ["<c>total_supply</c>"] Total supply
         /// </summary>
         [JsonPropertyName("total_supply")]
         public decimal? TotalSupply { get; set; }
         /// <summary>
-        /// Max supply
+        /// ["<c>max_supply</c>"] Max supply
         /// </summary>
         [JsonPropertyName("max_supply")]
         public decimal? MaxSupply { get; set; }
         /// <summary>
-        /// All time high price
+        /// ["<c>ath</c>"] All time high price
         /// </summary>
         [JsonPropertyName("ath")]
         public decimal? AllTimeHigh { get; set; }
         /// <summary>
-        /// All time high change percentage
+        /// ["<c>ath_change_percentage</c>"] All time high change percentage
         /// </summary>
         [JsonPropertyName("ath_change_percentage")]
         public double? AllTimeHighChangePercentage { get; set; }
@@ -116,12 +116,12 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("ath_date")]
         public DateTime AllTimeHighTimestamp { get; set; }
         /// <summary>
-        /// All time low price
+        /// ["<c>atl</c>"] All time low price
         /// </summary>
         [JsonPropertyName("atl")]
         public decimal? AllTimeLow { get; set; }
         /// <summary>
-        /// All time low change percentage
+        /// ["<c>atl_change_percentage</c>"] All time low change percentage
         /// </summary>
         [JsonPropertyName("atl_change_percentage")]
         public double? AllTimeLowChangePercentage { get; set; }
@@ -132,7 +132,7 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("atl_date")]
         public DateTime? AllTimeLowTimestamp { get; set; }
         /// <summary>
-        /// Return on investment
+        /// ["<c>roi</c>"] Return on investment
         /// </summary>
         [JsonPropertyName("roi")]
         public CoinGeckoMarketRoi? Roi { get; set; }
@@ -151,17 +151,17 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoMarketRoi
     {
         /// <summary>
-        /// Times
+        /// ["<c>times</c>"] Times
         /// </summary>
         [JsonPropertyName("times")]
         public decimal? Times { get; set; }
         /// <summary>
-        /// Investment asset
+        /// ["<c>currency</c>"] Investment asset
         /// </summary>
         [JsonPropertyName("currency")]
         public string Asset { get; set; } = string.Empty;
         /// <summary>
-        /// Profit percentage
+        /// ["<c>percentage</c>"] Profit percentage
         /// </summary>
         [JsonPropertyName("percentage")]
         public decimal? Percentage { get; set; }

@@ -9,32 +9,32 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoAssetPlatform
     {
         /// <summary>
-        /// Platform id
+        /// ["<c>id</c>"] Platform id
         /// </summary>
         [JsonPropertyName("id")]
         public string Id { get; set; } = string.Empty;
         /// <summary>
-        /// Chain identifier
+        /// ["<c>chain_identifier</c>"] Chain identifier
         /// </summary>
         [JsonPropertyName("chain_identifier")]
         public int? ChainIdentifier { get; set; }
         /// <summary>
-        /// Name
+        /// ["<c>name</c>"] Name
         /// </summary>
         [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
         /// <summary>
-        /// Short name
+        /// ["<c>shortname</c>"] Short name
         /// </summary>
         [JsonPropertyName("shortname")]
         public string? ShortName { get; set; }
         /// <summary>
-        /// Chain native coin id
+        /// ["<c>native_coin_id</c>"] Chain native coin id
         /// </summary>
         [JsonPropertyName("native_coin_id")]
         public string? NativeCoinId { get; set; }
         /// <summary>
-        /// Platform image
+        /// ["<c>image</c>"] Platform image
         /// </summary>
         [JsonPropertyName("image")]
         public CoinGeckoImages? Image { get; set; }

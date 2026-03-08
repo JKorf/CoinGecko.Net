@@ -9,12 +9,12 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoCodeAddDel
     {
         /// <summary>
-        /// Lines added
+        /// ["<c>additions</c>"] Lines added
         /// </summary>
         [JsonPropertyName("additions")]
         public int? Additions { get; set; }
         /// <summary>
-        /// Lines deleted
+        /// ["<c>deletions</c>"] Lines deleted
         /// </summary>
         [JsonPropertyName("deletions")]
         public int? Deletions { get; set; }

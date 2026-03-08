@@ -11,17 +11,17 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoMarketChart
     {
         /// <summary>
-        /// Price history
+        /// ["<c>prices</c>"] Price history
         /// </summary>
         [JsonPropertyName("prices")]
         public CoinGeckoMarketChartValue[] Prices { get; set; } = Array.Empty<CoinGeckoMarketChartValue>();
         /// <summary>
-        /// Market cap history
+        /// ["<c>market_caps</c>"] Market cap history
         /// </summary>
         [JsonPropertyName("market_caps")]
         public CoinGeckoMarketChartValue[] MarketCaps { get; set; } = Array.Empty<CoinGeckoMarketChartValue>();
         /// <summary>
-        /// Volume history
+        /// ["<c>total_volumes</c>"] Volume history
         /// </summary>
         [JsonPropertyName("total_volumes")]
         public CoinGeckoMarketChartValue[] TotalVolumes { get; set; } = Array.Empty<CoinGeckoMarketChartValue>();

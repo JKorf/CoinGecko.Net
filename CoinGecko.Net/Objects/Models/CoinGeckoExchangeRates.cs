@@ -10,7 +10,7 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoExchangeRates
     {
         /// <summary>
-        /// Rates dictionary
+        /// ["<c>rates</c>"] Rates dictionary
         /// </summary>
         [JsonPropertyName("rates")]
         public Dictionary<string, CoinGeckoExchangeRate> Rates { get; set; } = new Dictionary<string, CoinGeckoExchangeRate>();
@@ -23,22 +23,22 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoExchangeRate
     {
         /// <summary>
-        /// Name
+        /// ["<c>name</c>"] Name
         /// </summary>
         [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
         /// <summary>
-        /// Unit
+        /// ["<c>unit</c>"] Unit
         /// </summary>
         [JsonPropertyName("unit")]
         public string Unit { get; set; } = string.Empty;
         /// <summary>
-        /// Value
+        /// ["<c>value</c>"] Value
         /// </summary>
         [JsonPropertyName("value")]
         public decimal? Value { get; set; }
         /// <summary>
-        /// Type
+        /// ["<c>type</c>"] Type
         /// </summary>
         [JsonPropertyName("type")]
         public string Type { get; set; } = string.Empty;

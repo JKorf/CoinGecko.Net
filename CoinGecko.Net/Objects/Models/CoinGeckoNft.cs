@@ -9,27 +9,27 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoNft
     {
         /// <summary>
-        /// Id
+        /// ["<c>id</c>"] Id
         /// </summary>
         [JsonPropertyName("id")]
         public string Id { get; set; } = string.Empty;
         /// <summary>
-        /// Contract address
+        /// ["<c>contract_address</c>"] Contract address
         /// </summary>
         [JsonPropertyName("contract_address")]
         public string ContractAddress { get; set; } = string.Empty;
         /// <summary>
-        /// Name
+        /// ["<c>name</c>"] Name
         /// </summary>
         [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
         /// <summary>
-        /// Asset platform id
+        /// ["<c>asset_platform_id</c>"] Asset platform id
         /// </summary>
         [JsonPropertyName("asset_platform_id")]
         public string AssetPlatformId { get; set; } = string.Empty;
         /// <summary>
-        /// Symbol
+        /// ["<c>symbol</c>"] Symbol
         /// </summary>
         [JsonPropertyName("symbol")]
         public string Symbol { get; set; } = string.Empty;

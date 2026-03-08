@@ -9,12 +9,12 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoPlatform
     {
         /// <summary>
-        /// Decimal places
+        /// ["<c>decimal_place</c>"] Decimal places
         /// </summary>
         [JsonPropertyName("decimal_place")]
         public int? DecimalPlaces { get; set; }
         /// <summary>
-        /// Address
+        /// ["<c>contract_address</c>"] Address
         /// </summary>
         [JsonPropertyName("contract_address")]
         public string ContractAddress { get; set; } = string.Empty;
