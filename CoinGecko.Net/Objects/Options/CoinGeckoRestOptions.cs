@@ -5,7 +5,7 @@ namespace CoinGecko.Net.Objects.Options
     /// <summary>
     /// CoinGecko Rest API options
     /// </summary>
-    public class CoinGeckoRestOptions : RestExchangeOptions<CoinGeckoEnvironment, CoinGeckoApiCredentials>
+    public class CoinGeckoRestOptions : RestExchangeOptions<CoinGeckoEnvironment, CoinGeckoCredentials>
     {
         /// <summary>
         /// Default options for the CoinGecko client
@@ -26,7 +26,7 @@ namespace CoinGecko.Net.Objects.Options
         /// <summary>
         /// Api options
         /// </summary>
-        public RestApiOptions ApiOptions { get; private set; } = new RestApiOptions();
+        public RestApiOptions<CoinGeckoCredentials> ApiOptions { get; private set; } = new RestApiOptions<CoinGeckoCredentials>();
 
         internal CoinGeckoRestOptions Set(CoinGeckoRestOptions targetOptions)
         {

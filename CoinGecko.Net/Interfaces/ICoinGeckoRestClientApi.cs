@@ -13,7 +13,7 @@ namespace CoinGecko.Net.Interfaces
     /// <summary>
     /// CoinGecko API endpoints
     /// </summary>
-    public interface ICoinGeckoRestClientApi: IRestApiClient
+    public interface ICoinGeckoRestClientApi: IRestApiClient<CoinGeckoCredentials>
     {
         /// <summary>
         /// Get asset categories

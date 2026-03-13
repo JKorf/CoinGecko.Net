@@ -6,16 +6,16 @@ using System.Collections.Generic;
 
 namespace CoinGecko.Net
 {
-    internal class CoinGeckoAuthenticationProvider : AuthenticationProvider<CoinGeckoApiCredentials>
+    internal class CoinGeckoAuthenticationProvider : AuthenticationProvider<CoinGeckoCredentials, ApiKeyCredential>
     {
         /// <summary>
         /// Whether or not a demo key is configured
         /// </summary>
-        public bool IsDemo => _credentials.DemoKey;
+        public bool IsDemo => ApiCredentials.DemoKey;
 
         public override ApiCredentialsType[] SupportedCredentialTypes => [ApiCredentialsType.Hmac];
 
-        public CoinGeckoAuthenticationProvider(CoinGeckoApiCredentials credentials) : base(credentials)
+        public CoinGeckoAuthenticationProvider(CoinGeckoCredentials credentials) : base(credentials)
         {
         }
 
@@ -23,10 +23,10 @@ namespace CoinGecko.Net
         {
             request.QueryParameters ??= new Dictionary<string, object>();
 
-            if (_credentials.DemoKey)
-                request.QueryParameters.Add("x_cg_demo_api_key", _credentials.Key);
+            if (IsDemo)
+                request.QueryParameters.Add("x_cg_demo_api_key", Credential.PublicKey);
             else
-                request.QueryParameters.Add("x_cg_pro_api_key", _credentials.Key);
+                request.QueryParameters.Add("x_cg_pro_api_key", Credential.PublicKey);
         }
     }
 }
