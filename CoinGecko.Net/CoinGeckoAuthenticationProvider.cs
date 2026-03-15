@@ -24,9 +24,9 @@ namespace CoinGecko.Net
             request.QueryParameters ??= new Dictionary<string, object>();
 
             if (IsDemo)
-                request.QueryParameters.Add("x_cg_demo_api_key", Credential.PublicKey);
+                request.QueryParameters.Add("x_cg_demo_api_key", Credential.Key);
             else
-                request.QueryParameters.Add("x_cg_pro_api_key", Credential.PublicKey);
+                request.QueryParameters.Add("x_cg_pro_api_key", Credential.Key);
         }
     }
 }

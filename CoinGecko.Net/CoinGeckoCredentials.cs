@@ -1,4 +1,5 @@
 ﻿using CryptoExchange.Net.Authentication;
+using System;
 
 namespace CoinGecko.Net
 {
@@ -11,6 +12,11 @@ namespace CoinGecko.Net
         /// Whether using a demo key
         /// </summary>
         public bool DemoKey { get; }
+
+        /// <summary>
+        /// </summary>
+        [Obsolete("Parameterless constructor is only for deserialization purposes and should not be used directly. Use parameterized constructor instead.")]
+        public CoinGeckoCredentials() { }
 
         /// <summary>
         /// ctor
@@ -30,6 +36,8 @@ namespace CoinGecko.Net
         public CoinGeckoCredentials(ApiKeyCredential credential, bool demoKey = false) : base(credential) { }
 
         /// <inheritdoc />
-        public override ApiCredentials Copy() => new CoinGeckoCredentials(ApiKey!, DemoKey);
+#pragma warning disable CS0618 // Type or member is obsolete
+        public override ApiCredentials Copy() => new CoinGeckoCredentials { CredentialPairs = CredentialPairs };
+#pragma warning restore CS0618 // Type or member is obsolete
     }
 }
