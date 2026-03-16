@@ -30,7 +30,17 @@ namespace Microsoft.Extensions.DependencyInjection
             IConfiguration configuration)
         {
             var options = new CoinGeckoRestOptions();
-            configuration.Bind(options);
+
+            try
+            {
+                configuration.Bind(options);
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException("Invalid configuration provided", ex);
+            }
+
+            LibraryHelpers.ValidateCredentials(options.ApiCredentials);
 
             var restEnvName = options.Environment?.Name ?? options.Environment?.Name ?? CoinGeckoEnvironment.Live.Name;
             options.Environment = CoinGeckoEnvironment.GetEnvironmentByName(restEnvName) ?? options.Environment!;
