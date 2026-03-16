@@ -13,7 +13,7 @@ namespace CoinGecko.Net
         /// </summary>
         public bool IsDemo => ApiCredentials.DemoKey;
 
-        public override ApiCredentialsType[] SupportedCredentialTypes => [ApiCredentialsType.Hmac];
+        public override ApiCredentialsType[] SupportedCredentialTypes => [ApiCredentialsType.HMAC];
 
         public CoinGeckoAuthenticationProvider(CoinGeckoCredentials credentials) : base(credentials)
         {
