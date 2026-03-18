@@ -26,7 +26,7 @@ namespace CoinGecko.Net.Objects.Options
         /// <summary>
         /// Api options
         /// </summary>
-        public RestApiOptions<CoinGeckoCredentials> ApiOptions { get; private set; } = new RestApiOptions<CoinGeckoCredentials>();
+        public RestApiOptions ApiOptions { get; private set; } = new RestApiOptions();
 
         internal CoinGeckoRestOptions Set(CoinGeckoRestOptions targetOptions)
         {
