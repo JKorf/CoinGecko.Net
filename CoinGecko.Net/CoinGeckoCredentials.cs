@@ -11,46 +11,64 @@ namespace CoinGecko.Net
         /// <summary>
         /// Whether using a demo key
         /// </summary>
-        public bool DemoKey { get; }
+        public bool DemoKey { get; set; }
 
-        internal ApiKeyCredential Credential { get; set; }
+        /// <summary>
+        /// API key credential
+        /// </summary>
+        public ApiKeyCredential Credential { get; set; }
 
+        /// <summary>
+        /// Create new credentials
+        /// </summary>
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
         public CoinGeckoCredentials() { }
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
 
-        public CoinGeckoCredentials(string apiKey, bool demoKey = false)
+        /// <summary>
+        /// Create new credentials providing Api key credentials
+        /// </summary>
+        /// <param name="credential">Api key credentials</param>
+        public CoinGeckoCredentials(ApiKeyCredential credential)
         {
-            Credential = new ApiKeyCredential(apiKey);
+            Credential = credential;
+        }
+
+        /// <summary>
+        /// Create new credentials providing Api key credentials
+        /// </summary>
+        /// <param name="key">The API key</param>
+        /// <param name="demoKey">Whether this is a demo key</param>
+        public CoinGeckoCredentials(string key, bool demoKey = false)
+        {
+            Credential = new ApiKeyCredential(key);
             DemoKey = demoKey;
+        }
+
+        /// <summary>
+        /// Specify the ApiKey
+        /// </summary>
+        /// <param name="key">The API key</param>
+        /// <param name="demoKey">Whether this is a demo key</param>
+        public CoinGeckoCredentials WithApiKey(string key, bool demoKey = false)
+        {
+            if (Credential != null) throw new InvalidOperationException("Credentials already set");
+
+            DemoKey = demoKey;
+            Credential = new ApiKeyCredential(key);
+            return this;
         }
 
         /// <inheritdoc />
         public override ApiCredentials Copy() => new CoinGeckoCredentials { Credential = Credential };
 
-        //        /// <summary>
-        //        /// </summary>
-        //        [Obsolete("Parameterless constructor is only for deserialization purposes and should not be used directly. Use parameterized constructor instead.")]
-        //        public CoinGeckoCredentials() { }
+        /// <inheritdoc />
+        public override void Validate()
+        {
+            if (Credential == null)
+                throw new ArgumentException("Credential not set");
 
-        //        /// <summary>
-        //        /// ctor
-        //        /// </summary>
-        //        /// <param name="apiKey">The API key</param>
-        //        /// <param name="demoKey">Whether or not this is a demo key</param>
-        //        public CoinGeckoCredentials(string apiKey, bool demoKey = false) : this(new ApiKeyCredential(apiKey))
-        //        {
-        //            DemoKey = demoKey;
-        //        }
-
-        //        /// <summary>
-        //        /// ctor
-        //        /// </summary>
-        //        /// <param name="credential">The API key credentials</param>
-        //        /// <param name="demoKey">Whether or not this is a demo key</param>
-        //        public CoinGeckoCredentials(ApiKeyCredential credential, bool demoKey = false) : base(credential) { }
-
-        //        /// <inheritdoc />
-        //#pragma warning disable CS0618 // Type or member is obsolete
-        //        public override ApiCredentials Copy() => new CoinGeckoCredentials { CredentialPairs = CredentialPairs };
-        //#pragma warning restore CS0618 // Type or member is obsolete
+            Credential.Validate();
+        }
     }
 }

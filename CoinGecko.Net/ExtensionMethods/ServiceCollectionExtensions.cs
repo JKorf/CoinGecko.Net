@@ -40,8 +40,6 @@ namespace Microsoft.Extensions.DependencyInjection
                 throw new InvalidOperationException("Invalid configuration provided", ex);
             }
 
-            LibraryHelpers.ValidateCredentials(options.ApiCredentials);
-
             var restEnvName = options.Environment?.Name ?? options.Environment?.Name ?? CoinGeckoEnvironment.Live.Name;
             options.Environment = CoinGeckoEnvironment.GetEnvironmentByName(restEnvName) ?? options.Environment!;
             options.ApiCredentials = options.ApiCredentials ?? options.ApiCredentials;
