@@ -21,6 +21,7 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         /// <summary>
         /// Add services such as the ICoinGeckoRestClient. Configures the services based on the provided configuration.
+        /// See <see href="https://github.com/JKorf/CoinGecko.Net/blob/main/Examples/example-config.json" /> for an example of how to set up the configuration.
         /// </summary>
         /// <param name="services">The service collection</param>
         /// <param name="configuration">The configuration(section) containing the options</param>
