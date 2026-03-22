@@ -78,7 +78,6 @@ namespace Microsoft.Extensions.DependencyInjection
                 return LibraryHelpers.CreateHttpClientMessageHandler(options);
             }).SetHandlerLifetime(Timeout.InfiniteTimeSpan);
 
-            services.AddTransient<ICryptoRestClient, CryptoRestClient>();
             return services;
         }
     }
