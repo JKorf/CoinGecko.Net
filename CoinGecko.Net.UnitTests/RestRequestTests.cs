@@ -19,7 +19,7 @@ namespace CoinGecko.Net.UnitTests
             var client = new CoinGeckoRestClient(opts =>
             {
                 opts.AutoTimestamp = false;
-                opts.ApiCredentials = new Objects.CoinGeckoApiCredentials("123");
+                opts.ApiCredentials = new CoinGeckoCredentials("123");
             });
             var tester = new RestRequestValidator<CoinGeckoRestClient>(client, "Endpoints", "https://pro-api.coingecko.com", IsAuthenticated);
             await tester.ValidateAsync(client => client.Api.GetApiUsageAsync(), "GetApiUsage");

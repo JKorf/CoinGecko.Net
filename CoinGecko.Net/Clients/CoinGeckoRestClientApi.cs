@@ -24,7 +24,7 @@ using System.Threading.Tasks;
 namespace CoinGecko.Net.Clients
 {
     /// <inheritdoc />
-    internal class CoinGeckoRestClientApi : RestApiClient, ICoinGeckoRestClientApi
+    internal class CoinGeckoRestClientApi : RestApiClient<CoinGeckoEnvironment, CoinGeckoAuthenticationProvider, CoinGeckoCredentials>, ICoinGeckoRestClientApi
     {
         private static readonly RequestDefinitionCache _definitions = new RequestDefinitionCache();
         private readonly CoinGeckoRestOptions _options;
@@ -676,6 +676,7 @@ namespace CoinGecko.Net.Clients
         }
 
         /// <inheritdoc />
-        protected override AuthenticationProvider CreateAuthenticationProvider(ApiCredentials credentials) => new CoinGeckoAuthenticationProvider((CoinGeckoApiCredentials)credentials);
+        protected override CoinGeckoAuthenticationProvider CreateAuthenticationProvider(CoinGeckoCredentials credentials)
+            => new CoinGeckoAuthenticationProvider(credentials);
     }
 }

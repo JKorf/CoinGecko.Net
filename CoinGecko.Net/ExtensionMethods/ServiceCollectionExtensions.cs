@@ -21,6 +21,7 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         /// <summary>
         /// Add services such as the ICoinGeckoRestClient. Configures the services based on the provided configuration.
+        /// See <see href="https://github.com/JKorf/CoinGecko.Net/blob/main/Examples/example-config.json" /> for an example of how to set up the configuration.
         /// </summary>
         /// <param name="services">The service collection</param>
         /// <param name="configuration">The configuration(section) containing the options</param>
@@ -30,7 +31,15 @@ namespace Microsoft.Extensions.DependencyInjection
             IConfiguration configuration)
         {
             var options = new CoinGeckoRestOptions();
-            configuration.Bind(options);
+
+            try
+            {
+                configuration.Bind(options);
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException("Invalid configuration provided", ex);
+            }
 
             var restEnvName = options.Environment?.Name ?? options.Environment?.Name ?? CoinGeckoEnvironment.Live.Name;
             options.Environment = CoinGeckoEnvironment.GetEnvironmentByName(restEnvName) ?? options.Environment!;
@@ -69,7 +78,6 @@ namespace Microsoft.Extensions.DependencyInjection
                 return LibraryHelpers.CreateHttpClientMessageHandler(options);
             }).SetHandlerLifetime(Timeout.InfiniteTimeSpan);
 
-            services.AddTransient<ICryptoRestClient, CryptoRestClient>();
             return services;
         }
     }

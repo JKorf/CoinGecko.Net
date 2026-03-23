@@ -5,7 +5,7 @@ namespace CoinGecko.Net.Objects.Options
     /// <summary>
     /// CoinGecko Rest API options
     /// </summary>
-    public class CoinGeckoRestOptions : RestExchangeOptions<CoinGeckoEnvironment, CoinGeckoApiCredentials>
+    public class CoinGeckoRestOptions : RestExchangeOptions<CoinGeckoEnvironment, CoinGeckoCredentials>
     {
         /// <summary>
         /// Default options for the CoinGecko client
