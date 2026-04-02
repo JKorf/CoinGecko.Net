@@ -114,7 +114,7 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonConverter(typeof(DateTimeConverter))]
         [JsonPropertyName("ath_date")]
-        public DateTime AllTimeHighTimestamp { get; set; }
+        public DateTime? AllTimeHighTimestamp { get; set; }
         /// <summary>
         /// ["<c>atl</c>"] All time low price
         /// </summary>
@@ -141,7 +141,7 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonConverter(typeof(DateTimeConverter))]
         [JsonPropertyName("last_updated")]
-        public DateTime LastUpdated { get; set; }
+        public DateTime? LastUpdated { get; set; }
     }
 
     /// <summary>
