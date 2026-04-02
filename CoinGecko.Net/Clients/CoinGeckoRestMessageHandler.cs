@@ -33,15 +33,18 @@ namespace CoinGecko.Net.Clients.MessageHandlers
 
             int? code = doc!.RootElement.TryGetProperty("error_code", out var codeProp) ? codeProp.GetInt32() : null;
             var msg = doc.RootElement.TryGetProperty("status", out var statusProp) ? statusProp.TryGetProperty("error_message", out var msgProp) ? msgProp.GetString() : null : null;
+            msg ??= doc.RootElement.TryGetProperty("error", out var errorProp) ? errorProp.GetString() : null;
 
             if (code != null && msg != null)
                 return new ServerError(code.Value, _errorMapping.GetErrorInfo(code.ToString()!, msg));
 
-            code = statusProp.TryGetProperty("error_code", out var statusCodeProp) ? statusCodeProp.GetInt32() : null;
+            if (statusProp.ValueKind != JsonValueKind.Undefined)
+                code =  statusProp.TryGetProperty("error_code", out var statusCodeProp) ? statusCodeProp.GetInt32() : null;
+
             if (code != null && msg != null)
                 return new ServerError(code.Value, _errorMapping.GetErrorInfo(code!.ToString()!, msg));
 
-            return new ServerError(ErrorInfo.Unknown);
+            return new ServerError(ErrorInfo.Unknown with { Message = msg });
 
         }
     }
