@@ -13,5 +13,11 @@ namespace CoinGecko.Net.Interfaces
         /// </summary>
         /// <see cref="ICoinGeckoRestClientApi"/>
         ICoinGeckoRestClientApi Api { get; }
+
+        /// <summary>
+        /// Dex Api endpoints
+        /// </summary>
+        /// <see cref="ICoinGeckoRestClientDexApi"/>
+        ICoinGeckoRestClientDexApi DexApi { get; }
     }
 }

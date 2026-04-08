@@ -67,6 +67,8 @@ namespace CoinGecko.Net.Converters
     [JsonSerializable(typeof(CoinGeckoTrendingNftData[]))]
     [JsonSerializable(typeof(CoinGeckoTrendingCategory[]))]
     [JsonSerializable(typeof(CoinGeckoTrendingCategoryData[]))]
+    [JsonSerializable(typeof(CoinGeckoDexNetworksResponse))]
+    [JsonSerializable(typeof(CoinGeckoDexSearchPoolsResponse))]
     [JsonSerializable(typeof(string))]
     [JsonSerializable(typeof(int?))]
     [JsonSerializable(typeof(int))]
