@@ -12,19 +12,19 @@ namespace CoinGecko.Net.Objects.Models
         /// ["<c>address</c>"] Address
         /// </summary>
         [JsonPropertyName("address")]
-        public string Address { get; set; }
+        public string Address { get; set; } = string.Empty;
 
         /// <summary>
         /// ["<c>name</c>"] Name
         /// </summary>
         [JsonPropertyName("name")]
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// ["<c>symbol</c>"] Symbol
         /// </summary>
         [JsonPropertyName("symbol")]
-        public string Symbol { get; set; }
+        public string Symbol { get; set; } = string.Empty;
 
         /// <summary>
         /// ["<c>icon_url</c>"] Icon URL

@@ -6,13 +6,13 @@ namespace CoinGecko.Net.Objects.Models
     /// Dex item with attributes and relationships
     /// </summary>
     [SerializationModel]
-    public record CoinGeckoDexItem<T, TRelationShip> : CoinGeckoDexItem<T>
+    public record CoinGeckoDexItem<T, TRelationShip> : CoinGeckoDexItem
     {
         /// <summary>
         /// ["<c>relationships</c>"] Relationships
         /// </summary>
         [JsonPropertyName("relationships")]
-        public TRelationShip Details { get; set; }
+        public TRelationShip? Details { get; set; }
     }
 
     /// <summary>
@@ -25,7 +25,7 @@ namespace CoinGecko.Net.Objects.Models
         /// ["<c>attributes</c>"] Attributes
         /// </summary>
         [JsonPropertyName("attributes")]
-        public T Details { get; set; }
+        public T? Details { get; set; }
     }
 
     /// <summary>

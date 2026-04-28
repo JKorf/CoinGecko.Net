@@ -79,19 +79,19 @@ namespace CoinGecko.Net.Objects.Models
         /// ["<c>price_change_percentage</c>"] Price change percentage
         /// </summary>
         [JsonPropertyName("price_change_percentage")]
-        public CoinGeckoDexTimeValues PriceChangePercentage { get; set; }
+        public CoinGeckoDexTimeValues? PriceChangePercentage { get; set; }
 
         /// <summary>
         /// ["<c>transactions</c>"] Transactions
         /// </summary>
         [JsonPropertyName("transactions")]
-        public CoinGeckoDexTransactions Transactions { get; set; }
+        public CoinGeckoDexTransactions? Transactions { get; set; }
 
         /// <summary>
         /// ["<c>volume_usd</c>"] Volume in USD
         /// </summary>
         [JsonPropertyName("volume_usd")]
-        public CoinGeckoDexTimeValues VolumeUsd { get; set; }
+        public CoinGeckoDexTimeValues? VolumeUsd { get; set; }
 
         /// <summary>
         /// ["<c>reserve_in_usd</c>"] Reserve in USD
@@ -153,37 +153,37 @@ namespace CoinGecko.Net.Objects.Models
         /// ["<c>m5</c>"] Five minutes
         /// </summary>
         [JsonPropertyName("m5")]
-        public CoinGeckoDexTransactionCounts FiveMinutes { get; set; }
+        public CoinGeckoDexTransactionCounts? FiveMinutes { get; set; }
 
         /// <summary>
         /// ["<c>m15</c>"] Fifteen minutes
         /// </summary>
         [JsonPropertyName("m15")]
-        public CoinGeckoDexTransactionCounts FifteenMinutes { get; set; }
+        public CoinGeckoDexTransactionCounts? FifteenMinutes { get; set; }
 
         /// <summary>
         /// ["<c>m30</c>"] Thirty minutes
         /// </summary>
         [JsonPropertyName("m30")]
-        public CoinGeckoDexTransactionCounts ThirtyMinutes { get; set; }
+        public CoinGeckoDexTransactionCounts? ThirtyMinutes { get; set; }
 
         /// <summary>
         /// ["<c>h1</c>"] One hour
         /// </summary>
         [JsonPropertyName("h1")]
-        public CoinGeckoDexTransactionCounts OneHour { get; set; }
+        public CoinGeckoDexTransactionCounts? OneHour { get; set; }
 
         /// <summary>
         /// ["<c>h6</c>"] Six hours
         /// </summary>
         [JsonPropertyName("h6")]
-        public CoinGeckoDexTransactionCounts SixHours { get; set; }
+        public CoinGeckoDexTransactionCounts? SixHours { get; set; }
 
         /// <summary>
         /// ["<c>h24</c>"] Twenty four hours
         /// </summary>
         [JsonPropertyName("h24")]
-        public CoinGeckoDexTransactionCounts OneDay { get; set; }
+        public CoinGeckoDexTransactionCounts? OneDay { get; set; }
     }
 
     /// <summary>

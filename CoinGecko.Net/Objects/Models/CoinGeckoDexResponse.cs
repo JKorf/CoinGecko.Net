@@ -14,7 +14,7 @@ namespace CoinGecko.Net.Objects
         /// ["<c>data</c>"] Data
         /// </summary>
         [JsonPropertyName("data")]
-        public TData[] Data { get; set; }
+        public TData[] Data { get; set; } = [];
     }
 
 
@@ -26,12 +26,6 @@ namespace CoinGecko.Net.Objects
         where TData : CoinGeckoDexItem
         where TInclude : CoinGeckoDexItem
     {
-        /// <summary>
-        /// ["<c>includes</c>"] Data
-        /// </summary>
-        [JsonPropertyName("includes")]
-        public TData[] Data { get; set; } = [];
-
         /// <summary>
         /// ["<c>included</c>"] Included items
         /// </summary>

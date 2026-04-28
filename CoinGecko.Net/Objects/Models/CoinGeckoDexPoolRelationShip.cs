@@ -13,19 +13,19 @@ namespace CoinGecko.Net.Objects
         /// ["<c>base_token</c>"] Base token
         /// </summary>
         [JsonPropertyName("base_token")]
-        public CoinGeckoDexPoolRelationShipItem BaseToken { get; set; }
+        public CoinGeckoDexPoolRelationShipItem? BaseToken { get; set; }
 
         /// <summary>
         /// ["<c>quote_token</c>"] Quote token
         /// </summary>
         [JsonPropertyName("quote_token")]
-        public CoinGeckoDexPoolRelationShipItem QuoteToken { get; set; }
+        public CoinGeckoDexPoolRelationShipItem? QuoteToken { get; set; }
 
         /// <summary>
         /// ["<c>dex</c>"] Dex
         /// </summary>
         [JsonPropertyName("dex")]
-        public CoinGeckoDexPoolRelationShipItem Dex { get; set; }
+        public CoinGeckoDexPoolRelationShipItem? Dex { get; set; }
     }
 
     /// <summary>
@@ -38,6 +38,6 @@ namespace CoinGecko.Net.Objects
         /// ["<c>data</c>"] Data
         /// </summary>
         [JsonPropertyName("data")]
-        public CoinGeckoDexItem Data { get; set; }
+        public CoinGeckoDexItem? Data { get; set; }
     }
 }
