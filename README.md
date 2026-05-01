@@ -120,6 +120,9 @@ Make a one time donation in a crypto currency of your choice. If you prefer to d
 Alternatively, sponsor me on Github using [Github Sponsors](https://github.com/sponsors/JKorf). 
 
 ## Release notes
+* Version 5.10.0 - 01 May 2026
+    * Added DexApi implementation
+
 * Version 5.9.2 - 09 Apr 2026
     * Updated CryptoExchange.Net to version 11.1.0, see https://github.com/JKorf/CryptoExchange.Net/releases/ for full release notes
 
