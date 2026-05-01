@@ -10,10 +10,13 @@ using CryptoExchange.Net.Objects.Options;
 namespace CoinGecko.Net.Clients
 {
     /// <inheritdoc />
-    public class CoinGeckoRestClient: BaseRestClient<CoinGeckoEnvironment, CoinGeckoCredentials>, ICoinGeckoRestClient
+    public class CoinGeckoRestClient : BaseRestClient<CoinGeckoEnvironment, CoinGeckoCredentials>, ICoinGeckoRestClient
     {
         /// <inheritdoc />
         public ICoinGeckoRestClientApi Api { get; }
+
+        /// <inheritdoc />
+        public ICoinGeckoRestClientDexApi DexApi { get; }
 
         #region constructor/destructor
         /// <summary>
@@ -37,6 +40,7 @@ namespace CoinGecko.Net.Clients
             Initialize(options.Value);
 
             Api = AddApiClient(new CoinGeckoRestClientApi(this, _logger, httpClient, options.Value));
+DexApi = AddApiClient(new CoinGeckoRestClientDexApi(this, _logger, httpClient, options.Value));
         }
         #endregion
 
