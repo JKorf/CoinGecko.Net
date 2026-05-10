@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -42,6 +43,32 @@ namespace CoinGecko.Net.Interfaces
         /// <returns></returns>
         Task<WebCallResult<CoinGeckoDexSearchPoolsResponse>> SearchPoolsAsync(string query, string? network = null, IEnumerable<string>? include = null, CancellationToken ct = default);
 
-
+        /// <summary>
+        /// Get OHLCV data for a token by its contract address on a given network.
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/reference/token-ohlcv-token-address" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/onchain/networks/{network}/tokens/{token_address}/ohlcv/{timeframe}
+        /// </para>
+        /// </summary>
+        /// <param name="network">The CoinGecko on-chain network id (e.g. "eth", "solana")</param>
+        /// <param name="tokenAddress">The token contract address</param>
+        /// <param name="timeframe">Candle timeframe: "day", "hour", "minute", or "second"</param>
+        /// <param name="aggregate">Time period to aggregate each OHLCV (e.g. 1, 5, 15)</param>
+        /// <param name="limit">Maximum number of candles to return (max 1000, default 100)</param>
+        /// <param name="beforeTimestamp">Return candles before this timestamp (UTC)</param>
+        /// <param name="currency">Quote currency. Either "usd" or "token". Defaults to "usd"</param>
+        /// <param name="ct">Cancellation token</param>
+        /// <returns></returns>
+        Task<WebCallResult<CoinGeckoDexOhlcvResponse>> GetTokenOhlcvAsync(
+            string network,
+            string tokenAddress,
+            string timeframe,
+            int? aggregate = null,
+            int? limit = null,
+            DateTime? beforeTimestamp = null,
+            string? currency = null,
+            CancellationToken ct = default);
     }
 }
