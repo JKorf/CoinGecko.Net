@@ -9,6 +9,7 @@ using CoinGecko.Net.Objects.Models;
 using CoinGecko.Net.Objects.Options;
 using CryptoExchange.Net.Clients;
 using CryptoExchange.Net.Converters.MessageParsing.DynamicConverters;
+using CryptoExchange.Net.Converters.SystemTextJson;
 using CryptoExchange.Net.Interfaces;
 using CryptoExchange.Net.Objects;
 using CryptoExchange.Net.Objects.Errors;
@@ -67,6 +68,32 @@ namespace CoinGecko.Net.Clients
 
             var request = _definitions.GetOrCreate(HttpMethod.Get, "/api/v3/onchain/networks", CoinGeckoApi.RateLimiter.CoinGecko, 1, false);
             return SendAsync<CoinGeckoDexNetworksResponse>(GetBaseAddress(), request, parameters, ct);
+        }
+
+        #endregion
+
+        #region Get Token OHLCV
+
+        /// <inheritdoc />
+        public Task<WebCallResult<CoinGeckoDexOhlcvResponse>> GetTokenOhlcvAsync(
+            string network,
+            string tokenAddress,
+            string timeframe,
+            int? aggregate = null,
+            int? limit = null,
+            DateTime? beforeTimestamp = null,
+            string? currency = null,
+            CancellationToken ct = default)
+        {
+            var parameters = new ParameterCollection();
+            parameters.AddOptional("aggregate", aggregate);
+            parameters.AddOptional("limit", limit);
+            parameters.AddOptional("before_timestamp", beforeTimestamp.HasValue ? DateTimeConverter.ConvertToSeconds(beforeTimestamp.Value) : null);
+            parameters.AddOptional("currency", currency);
+
+            var path = $"/api/v3/onchain/networks/{network}/tokens/{tokenAddress}/ohlcv/{timeframe}";
+            var request = _definitions.GetOrCreate(HttpMethod.Get, path, CoinGeckoApi.RateLimiter.CoinGecko, 1, false);
+            return SendAsync<CoinGeckoDexOhlcvResponse>(GetBaseAddress(), request, parameters, ct);
         }
 
         #endregion
