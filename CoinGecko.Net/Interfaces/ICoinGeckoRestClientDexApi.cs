@@ -25,7 +25,7 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="page">Page number</param>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<CoinGeckoDexNetworksResponse>> GetDexNetworksAsync(int page = 1, CancellationToken ct = default);
+        Task<HttpResult<CoinGeckoDexNetworksResponse>> GetDexNetworksAsync(int page = 1, CancellationToken ct = default);
 
         /// <summary>
         /// Search pools
@@ -41,7 +41,7 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="include">Attributes to include. Available values: base_token, quote_token, dex</param>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<CoinGeckoDexSearchPoolsResponse>> SearchPoolsAsync(string query, string? network = null, IEnumerable<string>? include = null, CancellationToken ct = default);
+        Task<HttpResult<CoinGeckoDexSearchPoolsResponse>> SearchPoolsAsync(string query, string? network = null, IEnumerable<string>? include = null, CancellationToken ct = default);
 
         /// <summary>
         /// Get OHLCV data for a token by its contract address on a given network.
@@ -61,7 +61,7 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="currency">Quote currency. Either "usd" or "token". Defaults to "usd"</param>
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
-        Task<WebCallResult<CoinGeckoDexOhlcvResponse>> GetTokenOhlcvAsync(
+        Task<HttpResult<CoinGeckoDexOhlcvResponse>> GetTokenOhlcvAsync(
             string network,
             string tokenAddress,
             string timeframe,

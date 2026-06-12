@@ -19,7 +19,7 @@ namespace CoinGecko.Net
 
         public override void ProcessRequest(RestApiClient apiClient, RestRequestConfiguration request)
         {
-            request.QueryParameters ??= new Dictionary<string, object>();
+            request.QueryParameters ??= new Parameters(CoinGeckoApi._parameterSerializationSettings);
 
             if (IsDemo)
                 request.QueryParameters.Add("x_cg_demo_api_key", Credential.Key);

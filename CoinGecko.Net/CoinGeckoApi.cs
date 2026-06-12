@@ -38,7 +38,11 @@ namespace CoinGecko.Net
             "https://docs.coingecko.com/"
             };
 
-        internal static JsonSerializerContext SerializationContext { get; } = JsonSerializerContextCache.GetOrCreate<CoinGeckoSourceGenerationContext>();
+        internal static JsonSerializerContext _serializationContext = JsonSerializerContextCache.GetOrCreate<CoinGeckoSourceGenerationContext>();
+        internal static ParameterSerializationSettings _parameterSerializationSettings = new ParameterSerializationSettings
+        {
+
+        };
 
         /// <summary>
         /// Rate limiter configuration for the CoinGecko API

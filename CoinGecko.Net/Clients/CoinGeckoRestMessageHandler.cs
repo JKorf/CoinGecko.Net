@@ -12,7 +12,7 @@ namespace CoinGecko.Net.Clients.MessageHandlers
     {
         private readonly ErrorMapping _errorMapping;
 
-        public override JsonSerializerOptions Options { get; } = SerializerOptions.WithConverters(CoinGeckoApi.SerializationContext);
+        public override JsonSerializerOptions Options { get; } = SerializerOptions.WithConverters(CoinGeckoApi._serializationContext);
 
         public CoinGeckoRestMessageHandler(ErrorMapping errorMapping)
         {

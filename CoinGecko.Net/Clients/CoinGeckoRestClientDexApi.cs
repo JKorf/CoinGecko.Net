@@ -27,7 +27,7 @@ namespace CoinGecko.Net.Clients
         protected override IRestMessageHandler MessageHandler { get; } = new CoinGeckoRestMessageHandler(new ErrorMapping([]));
 
         internal CoinGeckoRestClientDexApi(CoinGeckoRestClient baseClient, ILogger logger, HttpClient? httpClient, CoinGeckoRestOptions options)
-            : base(logger, httpClient, options.Environment.RestApiAddressPublic, options, options.ApiOptions)
+            : base(logger, CoinGeckoApi.Metadata.Id, httpClient, options.Environment.RestApiAddressPublic, options, options.ApiOptions)
         {
             _options = options;
             StandardRequestHeaders = new Dictionary<string, string>
@@ -37,7 +37,7 @@ namespace CoinGecko.Net.Clients
         }
 
         /// <inheritdoc />
-        protected override IMessageSerializer CreateSerializer() => new SystemTextJsonMessageSerializer(SerializerOptions.WithConverters(CoinGeckoApi.SerializationContext));
+        protected override IMessageSerializer CreateSerializer() => new SystemTextJsonMessageSerializer(SerializerOptions.WithConverters(CoinGeckoApi._serializationContext));
 
         /// <inheritdoc />
         public override string FormatSymbol(string baseAsset, string quoteAsset, TradingMode tradingMode, DateTime? deliverTime = null) => throw new NotImplementedException();
@@ -45,15 +45,15 @@ namespace CoinGecko.Net.Clients
         #region Search Pools
 
         /// <inheritdoc />
-        public Task<WebCallResult<CoinGeckoDexSearchPoolsResponse>> SearchPoolsAsync(string query, string? network = null, IEnumerable<string>? include = null, CancellationToken ct = default)
+        public Task<HttpResult<CoinGeckoDexSearchPoolsResponse>> SearchPoolsAsync(string query, string? network = null, IEnumerable<string>? include = null, CancellationToken ct = default)
         {
-            var parameters = new ParameterCollection();
+            var parameters = new Parameters(CoinGeckoApi._parameterSerializationSettings);
             parameters.Add("query", query);
-            parameters.AddOptional("network", network);
-            parameters.AddOptionalCommaSeparated("include", include);
+            parameters.Add("network", network);
+            parameters.AddCommaSeparated("include", include);
 
-            var request = _definitions.GetOrCreate(HttpMethod.Get, "/api/v3/onchain/search/pools", CoinGeckoApi.RateLimiter.CoinGecko, 1, false);
-            return SendAsync<CoinGeckoDexSearchPoolsResponse>(GetBaseAddress(), request, parameters, ct);
+            var request = _definitions.GetOrCreate(HttpMethod.Get, GetBaseAddress(), "/api/v3/onchain/search/pools", CoinGeckoApi.RateLimiter.CoinGecko, 1, false);
+            return SendAsync<CoinGeckoDexSearchPoolsResponse>(request, parameters, ct);
         }
 
         #endregion
@@ -61,13 +61,13 @@ namespace CoinGecko.Net.Clients
         #region Get Networks
 
         /// <inheritdoc />
-        public Task<WebCallResult<CoinGeckoDexNetworksResponse>> GetDexNetworksAsync(int page = 1, CancellationToken ct = default)
+        public Task<HttpResult<CoinGeckoDexNetworksResponse>> GetDexNetworksAsync(int page = 1, CancellationToken ct = default)
         {
-            var parameters = new ParameterCollection();
+            var parameters = new Parameters(CoinGeckoApi._parameterSerializationSettings);
             parameters.Add("page", page);
 
-            var request = _definitions.GetOrCreate(HttpMethod.Get, "/api/v3/onchain/networks", CoinGeckoApi.RateLimiter.CoinGecko, 1, false);
-            return SendAsync<CoinGeckoDexNetworksResponse>(GetBaseAddress(), request, parameters, ct);
+            var request = _definitions.GetOrCreate(HttpMethod.Get, GetBaseAddress(), "/api/v3/onchain/networks", CoinGeckoApi.RateLimiter.CoinGecko, 1, false);
+            return SendAsync<CoinGeckoDexNetworksResponse>(request, parameters, ct);
         }
 
         #endregion
@@ -75,7 +75,7 @@ namespace CoinGecko.Net.Clients
         #region Get Token OHLCV
 
         /// <inheritdoc />
-        public Task<WebCallResult<CoinGeckoDexOhlcvResponse>> GetTokenOhlcvAsync(
+        public Task<HttpResult<CoinGeckoDexOhlcvResponse>> GetTokenOhlcvAsync(
             string network,
             string tokenAddress,
             string timeframe,
@@ -85,20 +85,18 @@ namespace CoinGecko.Net.Clients
             string? currency = null,
             CancellationToken ct = default)
         {
-            var parameters = new ParameterCollection();
-            parameters.AddOptional("aggregate", aggregate);
-            parameters.AddOptional("limit", limit);
-            parameters.AddOptional("before_timestamp", beforeTimestamp.HasValue ? DateTimeConverter.ConvertToSeconds(beforeTimestamp.Value) : null);
-            parameters.AddOptional("currency", currency);
+            var parameters = new Parameters(CoinGeckoApi._parameterSerializationSettings);
+            parameters.Add("aggregate", aggregate);
+            parameters.Add("limit", limit);
+            parameters.Add("before_timestamp", beforeTimestamp.HasValue ? DateTimeConverter.ConvertToSeconds(beforeTimestamp.Value) : null);
+            parameters.Add("currency", currency);
 
             var path = $"/api/v3/onchain/networks/{network}/tokens/{tokenAddress}/ohlcv/{timeframe}";
-            var request = _definitions.GetOrCreate(HttpMethod.Get, path, CoinGeckoApi.RateLimiter.CoinGecko, 1, false);
-            return SendAsync<CoinGeckoDexOhlcvResponse>(GetBaseAddress(), request, parameters, ct);
+            var request = _definitions.GetOrCreate(HttpMethod.Get, GetBaseAddress(), path, CoinGeckoApi.RateLimiter.CoinGecko, 1, false);
+            return SendAsync<CoinGeckoDexOhlcvResponse>(request, parameters, ct);
         }
 
         #endregion
-
-
 
         private string GetBaseAddress()
         {
