@@ -39,8 +39,8 @@ namespace CoinGecko.Net.Clients
         {
             Initialize(options.Value);
 
-            Api = AddApiClient(new CoinGeckoRestClientApi(this, _logger, httpClient, options.Value));
-DexApi = AddApiClient(new CoinGeckoRestClientDexApi(this, _logger, httpClient, options.Value));
+            Api = AddApiClient(new CoinGeckoRestClientApi(this, loggerFactory, httpClient, options.Value));
+DexApi = AddApiClient(new CoinGeckoRestClientDexApi(this, loggerFactory, httpClient, options.Value));
         }
         #endregion
 

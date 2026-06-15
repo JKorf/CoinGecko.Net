@@ -26,8 +26,8 @@ namespace CoinGecko.Net.Clients
 
         protected override IRestMessageHandler MessageHandler { get; } = new CoinGeckoRestMessageHandler(new ErrorMapping([]));
 
-        internal CoinGeckoRestClientDexApi(CoinGeckoRestClient baseClient, ILogger logger, HttpClient? httpClient, CoinGeckoRestOptions options)
-            : base(logger, CoinGeckoApi.Metadata.Id, httpClient, options.Environment.RestApiAddressPublic, options, options.ApiOptions)
+        internal CoinGeckoRestClientDexApi(CoinGeckoRestClient baseClient, ILoggerFactory? loggerFactory, HttpClient? httpClient, CoinGeckoRestOptions options)
+            : base(loggerFactory, CoinGeckoApi.Metadata.Id, httpClient, options.Environment.RestApiAddressPublic, options, options.ApiOptions)
         {
             _options = options;
             StandardRequestHeaders = new Dictionary<string, string>
