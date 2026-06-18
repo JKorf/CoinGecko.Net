@@ -47,7 +47,7 @@ namespace CoinGecko.Net
         /// <summary>
         /// Rate limiter configuration for the CoinGecko API
         /// </summary>
-        public static CoinGeckoRateLimiters RateLimiter { get; } = new CoinGeckoRateLimiters();
+        public static CoinGeckoRateLimiters RateLimiter { get; set; } = new CoinGeckoRateLimiters();
     }
 
     /// <summary>
@@ -61,13 +61,19 @@ namespace CoinGecko.Net
         public event Action<RateLimitEvent> RateLimitTriggered;
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        internal CoinGeckoRateLimiters()
+        /// <summary>
+        /// ctor
+        /// </summary>
+        public CoinGeckoRateLimiters()
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             Initialize();
         }
 
-        private void Initialize()
+        /// <summary>
+        /// Initialize the rate limits
+        /// </summary>
+        protected virtual void Initialize()
         {
             CoinGecko = new RateLimitGate("CoinGecko");
             CoinGecko.RateLimitTriggered += (x) => RateLimitTriggered?.Invoke(x);
