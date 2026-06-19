@@ -23,7 +23,8 @@ namespace CoinGecko.Net
                 "https://www.coingecko.com",
                 ["https://docs.coingecko.com/"],
                 PlatformType.Other,
-                CentralizationType.Centralized
+                CentralizationType.Centralized,
+                [CoinGeckoEnvironment.Live.Name]
                 );
 
         /// <summary>
