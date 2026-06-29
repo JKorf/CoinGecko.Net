@@ -65,6 +65,6 @@ namespace CoinGecko.Net.UnitTests
         }
 
 
-        private bool IsAuthenticated(WebCallResult result) => result.RequestUrl.Contains("x_cg_pro_api_key");
+        private bool IsAuthenticated(IHttpResult result) => result.RequestUrl.Contains("x_cg_pro_api_key");
     }
 }

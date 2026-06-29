@@ -37,9 +37,29 @@ The NuGet package files are added along side the source with the latest GitHub r
 
 ```csharp
 // Get the ETH price via rest request
+var restClient = new CoinGeckoRestClient();
 var tickerResult = await restClient.Api.GetMarketsAsync("USD");
+if (!tickerResult.Success)
+{
+    Console.WriteLine(tickerResult.Error);
+    return;
+}
+
 var lastPrice = tickerResult.Data.Single(x => x.Name == "Ethereum").CurrentPrice;
 Console.ReadLine();
+```
+
+REST requests return `HttpResult<T>`. Always check `.Success` before reading `.Data`; API, rate-limit, and network errors are available via `.Error`.
+
+DEx endpoints are available through `restClient.DexApi`:
+
+```csharp
+var networks = await restClient.DexApi.GetDexNetworksAsync();
+if (!networks.Success)
+{
+    Console.WriteLine(networks.Error);
+    return;
+}
 ```
 
 For information on the clients, dependency injection, response processing and more see the [CoinGecko.Net documentation](https://cryptoexchange.jkorf.dev?library=CoinGecko.Net) or have a look at the examples [here](https://github.com/JKorf/CoinGecko.Net/tree/master/Examples) or [here](https://github.com/JKorf/CryptoExchange.Net/tree/master/Examples).
@@ -105,6 +125,14 @@ Note that only the public endpoints are supported, but setting API key is suppor
 |Trending|✓|`restClient.Api`|
 |Global|✓|`restClient.Api`|
 |Companies|✓|`restClient.Api`|
+|API usage|✓|`restClient.Api`|
+
+### DEX API
+|API|Supported|Location|
+|--|--:|--|
+|Networks|✓|`restClient.DexApi.GetDexNetworksAsync()`|
+|Search pools|✓|`restClient.DexApi.SearchPoolsAsync(...)`|
+|Token OHLCV|✓|`restClient.DexApi.GetTokenOhlcvAsync(...)`|
 
 ## Support the project
 Any support is greatly appreciated.

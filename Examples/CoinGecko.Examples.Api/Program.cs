@@ -30,4 +30,11 @@ app.MapGet("/{asset}", async ([FromServices] ICoinGeckoRestClient client, string
 })
 .WithOpenApi();
 
+app.MapGet("/dex/networks", async ([FromServices] ICoinGeckoRestClient client) =>
+{
+    var result = await client.DexApi.GetDexNetworksAsync();
+    return (object)(result.Success ? result.Data : result.Error!);
+})
+.WithOpenApi();
+
 app.Run();
