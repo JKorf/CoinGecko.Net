@@ -148,6 +148,21 @@ Make a one time donation in a crypto currency of your choice. If you prefer to d
 Alternatively, sponsor me on Github using [Github Sponsors](https://github.com/sponsors/JKorf). 
 
 ## Release notes
+* Version 6.0.0 - 29 Jun 2026
+    * Result types:
+      * (Web)CallResult types are replaced by HttpResult with the same logic
+      * Updated result types to record type
+      * Removed implicit result type conversion to bool, `if (result)` no longer works, instead use `if (result.Success)`
+      * Fixed result object nullability hinting, for example Data might be null if Success isn't checked for true
+    * Clients:
+      * Added ToString overrides on base API types
+      * Added Exchange property on BaseApiClient
+      * Added ApiCredentials property on Api clients
+      * Updated ILogger source from client name to topic specific client name
+      * Removed logging from client creation
+    * Added SupportedEnvironments property to PlatformInfo
+    * Various small performance improvements
+
 * Version 5.12.0 - 08 Jun 2026
     * Updated CryptoExchange.Net to version 11.2.2
     * Added Dex GetTokenOhlcvAsync endpoint
