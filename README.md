@@ -149,6 +149,9 @@ Make a one time donation in a crypto currency of your choice. If you prefer to d
 Alternatively, sponsor me on Github using [Github Sponsors](https://github.com/sponsors/JKorf). 
 
 ## Release notes
+* Version 6.4.0 - 21 Aug 2026
+    * Updated to CryptoExchange.Net v12.5.0
+
 * Version 6.3.0 - 29 Jul 2026
     * Updated CryptoExchange.Net to version 12.4.0
     * Added DebuggerDisplay attributes to Result models
