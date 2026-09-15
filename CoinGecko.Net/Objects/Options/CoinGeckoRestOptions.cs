@@ -1,5 +1,8 @@
 ﻿using CryptoExchange.Net.Objects.Options;
 
+using Microsoft.Extensions.Configuration;
+using System;
+
 namespace CoinGecko.Net.Objects.Options
 {
     /// <summary>
@@ -33,6 +36,53 @@ namespace CoinGecko.Net.Objects.Options
             targetOptions = base.Set<CoinGeckoRestOptions>(targetOptions);
             targetOptions.ApiOptions = ApiOptions.Set(targetOptions.ApiOptions);
             return targetOptions;
+        }
+
+        /// <summary>
+        /// Create CoinGeckoRestOptions instance using the provided configuration action
+        /// </summary>
+        public static CoinGeckoRestOptions Create(Action<CoinGeckoRestOptions>? configure = null)
+        {
+            var options = CreateUnconfigured();
+            configure?.Invoke(options);
+            return Normalize(options);
+        }
+
+        /// <summary>
+        /// Create CoinGeckoRestOptions using the provided IConfiguration
+        /// </summary>
+        public static CoinGeckoRestOptions CreateFromConfiguration(IConfiguration configuration)
+        {
+            if (configuration == null)
+                throw new ArgumentNullException(nameof(configuration));
+
+            var options = CreateUnconfigured();
+            try
+            {
+                configuration.Bind(options);
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException("Invalid CoinGecko configuration provided", ex);
+            }
+
+            if (options.Environment != null)
+                options.Environment = CoinGeckoEnvironment.GetEnvironmentByName(options.Environment.Name) ?? options.Environment;
+
+            return Normalize(options);
+        }
+
+        private static CoinGeckoRestOptions CreateUnconfigured()
+        {
+            var options = new CoinGeckoRestOptions();
+            options.Environment = null!;
+            return options;
+        }
+
+        private static CoinGeckoRestOptions Normalize(CoinGeckoRestOptions options)
+        {
+            options.Environment ??= CoinGeckoEnvironment.Live;
+            return options;
         }
     }
 }
