@@ -30,22 +30,9 @@ namespace Microsoft.Extensions.DependencyInjection
             this IServiceCollection services,
             IConfiguration configuration)
         {
-            var options = new CoinGeckoRestOptions();
+            var options = CoinGeckoRestOptions.CreateFromConfiguration(configuration);
 
-            try
-            {
-                configuration.Bind(options);
-            }
-            catch (InvalidOperationException ex)
-            {
-                throw new InvalidOperationException("Invalid configuration provided", ex);
-            }
-
-            var restEnvName = options.Environment?.Name ?? options.Environment?.Name ?? CoinGeckoEnvironment.Live.Name;
-            options.Environment = CoinGeckoEnvironment.GetEnvironmentByName(restEnvName) ?? options.Environment!;
-            options.ApiCredentials = options.ApiCredentials ?? options.ApiCredentials;
-
-            services.AddSingleton(x => Options.Options.Create(options));
+            services.AddSingleton(Options.Options.Create(options));
 
             return AddCoinGeckoCore(services);
         }
@@ -60,7 +47,9 @@ namespace Microsoft.Extensions.DependencyInjection
             this IServiceCollection services,
             Action<CoinGeckoRestOptions>? optionsDelegate = null)
         {
-            services.Configure<CoinGeckoRestOptions>((x) => { optionsDelegate?.Invoke(x); });
+            var options = CoinGeckoRestOptions.Create(optionsDelegate);
+
+            services.AddSingleton(Options.Options.Create(options));
 
             return AddCoinGeckoCore(services);
         }
