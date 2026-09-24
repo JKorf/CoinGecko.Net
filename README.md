@@ -150,6 +150,17 @@ Make a one time donation in a crypto currency of your choice. If you prefer to d
 Alternatively, sponsor me on Github using [Github Sponsors](https://github.com/sponsors/JKorf). 
 
 ## Release notes
+* Version 6.5.0 - 24 Sep 2026
+    * Updated CryptoExchange.Net to v13.0.0
+    * Rate limiting
+      * Added rate limit admission callback to client options to allow rate limit admission ruling on request definition
+      * Added `WithRateLimitAdmissionAsync` to client to allow rate limit admission ruling on a specific request
+      * Update rate limit safety margin logic
+      * Fixed some rate limit calculation issues
+    * Request coalescing
+      * Sending identical public GET requests on the same client at the same time will only send a single request to the server and use the same response
+      * Coalescing is enabled by default and can be disabled with the `RequestCoalescingEnabled` client option
+
 * Version 6.4.0 - 21 Aug 2026
     * Updated to CryptoExchange.Net v12.5.0
 
