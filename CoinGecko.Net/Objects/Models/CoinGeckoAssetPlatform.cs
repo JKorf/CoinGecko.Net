@@ -17,7 +17,7 @@ namespace CoinGecko.Net.Objects.Models
         /// ["<c>chain_identifier</c>"] Chain identifier
         /// </summary>
         [JsonPropertyName("chain_identifier")]
-        public int? ChainIdentifier { get; set; }
+        public long? ChainIdentifier { get; set; }
         /// <summary>
         /// ["<c>name</c>"] Name
         /// </summary>
