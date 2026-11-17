@@ -1,0 +1,18 @@
+{
+  "baseBranch": "main",
+  "sdk": "11.0.100",
+  "packages": [
+    {
+      "key": "coingecko",
+      "project": "CoinGecko.Net/CoinGecko.Net.csproj",
+      "testProjects": [
+        "CoinGecko.Net.UnitTests/CoinGecko.Net.UnitTests.csproj"
+      ],
+      "packageId": "CoinGecko.Net",
+      "readme": "README.md",
+      "tagPrefix": "CoinGecko.Net.",
+      "releaseIntegrationTests": false,
+      "publishToGitHubPackages": true
+    }
+  ]
+}
