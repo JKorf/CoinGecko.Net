@@ -1,0 +1,53 @@
+GET
+/api/v3/onchain/networks/eth/pools/0x06da0fd433c1a5d7a4faa01111c044910a184553/trades
+true
+UriParams: {"trade_volume_in_usd_greater_than":"1"}
+{
+  "data": [
+    {
+      "id": "eth_25191329_0x90a746e28f4db27b2595b8ac55ef999914ed09453d5924b1424b2c050fd053c3_99_1779941075",
+      "type": "trade",
+      "attributes": {
+        "block_number": 25191329,
+        "tx_hash": "0x90a746e28f4db27b2595b8ac55ef999914ed09453d5924b1424b2c050fd053c3",
+        "tx_from_address": "0x0b0d1579b739b1996d28c53c4ff11e2c541a1188",
+        "from_token_amount": "0.106968578509495",
+        "to_token_amount": "211.331589",
+        "price_from_in_currency_token": "1.0",
+        "price_to_in_currency_token": "0.000506164643987487",
+        "price_from_in_usd": "1976.18881048696",
+        "price_to_in_usd": "1.00027690571219",
+        "block_timestamp": "2026-05-28T04:04:11Z",
+        "kind": "buy",
+        "volume_in_usd": "211.39010792416",
+        "from_token_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "to_token_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "is_anomalous": false
+      }
+    },
+    {
+      "id": "eth_25191103_0x8c7d19881344e94e69f69f44a3910a32183652b84156537ec23313bfa01ff054_804_1779938350",
+      "type": "trade",
+      "attributes": {
+        "block_number": 25191103,
+        "tx_hash": "0x8c7d19881344e94e69f69f44a3910a32183652b84156537ec23313bfa01ff054",
+        "tx_from_address": "0x39b9a705f5aa2fdf315bf5cc8ecd71dc821f45b1",
+        "from_token_amount": "192.459164",
+        "to_token_amount": "0.096413761161719",
+        "price_from_in_currency_token": "0.000500956977874636",
+        "price_to_in_currency_token": "1.0",
+        "price_from_in_usd": "0.992388076121959",
+        "price_to_in_usd": "1980.98463531194",
+        "block_timestamp": "2026-05-28T03:18:47Z",
+        "kind": "sell",
+        "volume_in_usd": "190.994179494001",
+        "from_token_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "to_token_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "is_anomalous": false
+      }
+    }
+  ],
+  "meta": {
+    "next_cursor": null
+  }
+}

@@ -46,7 +46,7 @@ namespace CoinGecko.Net.Objects.Models
         /// ["<c>symbol</c>"] Symbol
         /// </summary>
         [JsonPropertyName("symbol")]
-        public string Symbol { get; set; } = string.Empty;
+        public string? Symbol { get; set; }
         /// <summary>
         /// ["<c>country</c>"] Country
         /// </summary>

@@ -9,6 +9,12 @@ namespace CoinGecko.Net.Objects.Models
     public record CoinGeckoDexItem<T, TRelationShip> : CoinGeckoDexItem
     {
         /// <summary>
+        /// ["<c>attributes</c>"] Attributes
+        /// </summary>
+        [JsonPropertyName("attributes")]
+        public T? Attributes { get; set; }
+
+        /// <summary>
         /// ["<c>relationships</c>"] Relationships
         /// </summary>
         [JsonPropertyName("relationships")]

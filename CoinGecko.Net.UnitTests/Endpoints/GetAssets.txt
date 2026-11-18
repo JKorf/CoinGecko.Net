@@ -1,6 +1,7 @@
 GET
 /api/v3/coins/list
 false
+UriParams: {"status":"active"}
 [
   {
     "id": "0chain",

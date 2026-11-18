@@ -1,0 +1,44 @@
+GET
+/api/v3/onchain/networks/eth/pools/0x06da0fd433c1a5d7a4faa01111c044910a184553/ohlcv/day
+true
+UriParams: {"aggregate":"1"}
+{
+  "data": {
+    "id": "c2728da2-1bc8-4b3a-94ca-6248a3c6e966",
+    "type": "ohlcv_request_response",
+    "attributes": {
+      "ohlcv_list": [
+        [
+          1779926400,
+          1.00208165944741,
+          1.00257871811779,
+          0.985925654401274,
+          1.00027690571219,
+          3481.679733097695
+        ],
+        [
+          1779840000,
+          0.996152188066521,
+          1.0040610548489,
+          0.996152188066521,
+          1.00208165944741,
+          11911.669491500581
+        ]
+      ]
+    }
+  },
+  "meta": {
+    "base": {
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "coingecko_coin_id": "tether",
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7"
+    },
+    "quote": {
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "coingecko_coin_id": "weth",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+GET
+/api/v3/onchain/networks/solana/tokens/Dfh5DzRgSvvCFDoYc2ciTkMrbDfRKybA4SoFbPmApump/holders_chart
+true
+UriParams: {"days":"7"}
+{
+  "data": {
+    "id": "1dc4b7d5-f0fc-431e-893b-91490652148e",
+    "type": "token_holders_snapshot",
+    "attributes": {
+      "token_holders_list": [
+        [
+          "2026-04-28T00:00:00.000Z",
+          52790
+        ],
+        [
+          "2026-04-29T00:00:00.000Z",
+          52865
+        ]
+      ]
+    }
+  },
+  "meta": {
+    "token": {
+      "name": "Pippin",
+      "symbol": "pippin",
+      "coingecko_coin_id": "pippin",
+      "address": "Dfh5DzRgSvvCFDoYc2ciTkMrbDfRKybA4SoFbPmApump"
+    }
+  }
+}

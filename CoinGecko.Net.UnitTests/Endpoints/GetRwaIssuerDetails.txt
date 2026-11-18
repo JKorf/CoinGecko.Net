@@ -1,0 +1,44 @@
+GET
+/api/v3/rwas/issuers/xstocks-ecosystem
+true
+{
+  "id": "xstocks-ecosystem",
+  "name": "xStocks",
+  "market_cap": 752085126.6637836,
+  "market_cap_change_24h": -79476493.49518394,
+  "volume_24h": 240421573.38793087,
+  "image": {
+    "thumb": "https://coin-images.coingecko.com/categories/images/20712/thumb/xstock_400x400.jpg?1777808932",
+    "small": "https://coin-images.coingecko.com/categories/images/20712/small/xstock_400x400.jpg?1777808932",
+    "large": "https://coin-images.coingecko.com/categories/images/20712/large/xstock_400x400.jpg?1777808932"
+  },
+  "tokens": [
+    {
+      "id": "alphabet-xstock",
+      "symbol": "googlx",
+      "name": "Alphabet xStock",
+      "platforms": {
+        "arbitrum-one": "0xe92f673ca36c5e2efd2de7628f815f84807e803f",
+        "ethereum": "0xe92f673ca36c5e2efd2de7628f815f84807e803f",
+        "binance-smart-chain": "0xe92f673ca36c5e2efd2de7628f815f84807e803f",
+        "solana": "XsCPL9dNWBMvFtTmwcCA5v3xWPSMEBCszbQdiLLq6aN",
+        "the-open-network": "EQALwJzXnxFjckNsurCi9O2kVg_0b1KdtjOSfvOedlY37iZc",
+        "mantle": "0xe92f673ca36c5e2efd2de7628f815f84807e803f"
+      }
+    },
+    {
+      "id": "amazon-xstock",
+      "symbol": "amznx",
+      "name": "Amazon xStock",
+      "platforms": {
+        "arbitrum-one": "0x3557ba345b01efa20a1bddc61f573bfd87195081",
+        "binance-smart-chain": "0x3557ba345b01efa20a1bddc61f573bfd87195081",
+        "mantle": "0x3557ba345b01efa20a1bddc61f573bfd87195081",
+        "ethereum": "0x3557ba345b01efa20a1bddc61f573bfd87195081",
+        "solana": "Xs3eBt7uRfJX8QUs4suhyU8p2M6DoUDrJyWBa8LLZsg",
+        "the-open-network": "EQCtD2-7qxHhQoNhxri2JSzH-dlmWqKYCDtlEZqRi3-56gd9"
+      }
+    }
+  ],
+  "updated_at": "2026-09-10T03:00:00Z"
+}

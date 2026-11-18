@@ -75,5 +75,6 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("repos_url")]
         public Dictionary<string, IEnumerable<string>> RepoUrls { get; set; } = new Dictionary<string, IEnumerable<string>>();
+
     }
 }

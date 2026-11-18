@@ -1,0 +1,39 @@
+GET
+/api/v3/rwas/markets
+true
+UriParams: {"asset_type":"stock"}
+[
+  {
+    "id": "gold",
+    "symbol": "xau",
+    "name": "Gold",
+    "asset_type": "commodity",
+    "image": "https://coin-images.coingecko.com/coins/images/10481/large/logo.png?1774627372",
+    "tokenized_market_data": {
+      "current_price": 4572.12,
+      "market_cap": 5472900361,
+      "total_volume": 351992224,
+      "high_24h": 4606.42,
+      "low_24h": 4562.05,
+      "price_change_24h": -29.774769179191026,
+      "price_change_percentage_24h": -0.64701,
+      "market_cap_change_24h": -26139969.102690697,
+      "market_cap_change_percentage_24h": -0.47536,
+      "last_updated": "2026-08-28T05:30:10Z",
+      "sparkline_in_7d": {
+        "price": [
+          4521.62,
+          4532.59,
+          4542.46
+        ]
+      },
+      "price_change_percentage_1h_in_currency": -0.01708,
+      "price_change_percentage_24h_in_currency": -0.64701,
+      "price_change_percentage_7d_in_currency": 1.13883,
+      "price_change_percentage_14d_in_currency": 5.94825,
+      "price_change_percentage_30d_in_currency": 13.84206,
+      "price_change_percentage_200d_in_currency": -9.11489,
+      "price_change_percentage_1y_in_currency": 34.69983
+    }
+  }
+]

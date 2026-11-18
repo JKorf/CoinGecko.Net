@@ -1,6 +1,7 @@
 GET
 /api/v3/coins/ethereum/contract/123/market_chart
 false
+UriParams: {"interval":"daily","precision":"4"}
 {
   "prices": [
     [

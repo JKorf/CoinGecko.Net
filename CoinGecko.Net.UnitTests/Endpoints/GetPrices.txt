@@ -1,4 +1,5 @@
 GET
 /api/v3/simple/price
 false
+UriParams: {"names":"Ethereum","include_tokens":"top"}
 {"ethereum":{"usd":1498.64}}

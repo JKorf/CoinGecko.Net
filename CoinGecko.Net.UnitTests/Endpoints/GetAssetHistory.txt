@@ -1,6 +1,7 @@
 GET
 /api/v3/coins/ethereum/history
 false
+UriParams: {"date":"2025-01-01"}
 {
   "id": "bitcoin",
   "symbol": "btc",

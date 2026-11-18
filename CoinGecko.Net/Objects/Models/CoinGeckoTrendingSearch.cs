@@ -88,6 +88,12 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("score")]
         public int Score { get; set; }
+
+        /// <summary>
+        /// ["<c>data</c>"] Data
+        /// </summary>
+        [JsonPropertyName("data")]
+        public CoinGeckoTrendingAssetData? Data { get; set; }
     }
 
     /// <summary>
@@ -174,6 +180,12 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("sparkline")]
         public string Sparkline { get; set; } = string.Empty;
+
+        /// <summary>
+        /// ["<c>content</c>"] Content
+        /// </summary>
+        [JsonPropertyName("content")]
+        public CoinGeckoTrendingNftDataContent? Content { get; set; }
     }
 
     /// <summary>
@@ -212,6 +224,12 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("data")]
         public CoinGeckoTrendingCategoryData Data { get; set; } = null!;
+
+        /// <summary>
+        /// ["<c>top_3_coins_images</c>"] Top 3 coins image URLs in the category
+        /// </summary>
+        [JsonPropertyName("top_3_coins_images")]
+        public string[]? Top3CoinsImages { get; set; }
     }
 
     /// <summary>

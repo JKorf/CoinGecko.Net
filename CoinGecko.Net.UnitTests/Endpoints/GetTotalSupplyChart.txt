@@ -1,0 +1,20 @@
+GET
+/api/v3/coins/bitcoin/total_supply_chart
+true
+UriParams: {"days":"1","interval":"daily"}
+{
+  "total_supply": [
+    [
+      1779700797940,
+      "20034078.0"
+    ],
+    [
+      1779701097614,
+      "20034078.0"
+    ],
+    [
+      1779701399178,
+      "20034078.0"
+    ]
+  ]
+}

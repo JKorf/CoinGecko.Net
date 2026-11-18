@@ -1,6 +1,7 @@
 GET
 /api/v3/coins/ethereum/ohlc
 false
+UriParams: {"days":"max","interval":"daily"}
 [
   [
     1709395200000,

@@ -1,0 +1,88 @@
+GET
+/api/v3/onchain/tokens/info_recently_updated
+true
+UriParams: {"include":"network"}
+{
+  "data": [
+    {
+      "id": "ton_EQDCSrwrZPe4ZW-OBU1vxxalRxDeozKl_mU9Onhj-amUwHD-",
+      "type": "token",
+      "attributes": {
+        "address": "EQDCSrwrZPe4ZW-OBU1vxxalRxDeozKl_mU9Onhj-amUwHD-",
+        "name": "abrdn Physical Platinum Shares xStock",
+        "symbol": "PPLTx",
+        "decimals": 9,
+        "image_url": "https://coin-images.coingecko.com/coins/images/102171960/large/Ticker_PPLTx__Company_Name_Physical_Platinum_Shares_ETF__Size_64x64.png?1770653933",
+        "coingecko_coin_id": "abrdn-physical-platinum-shares-xstock",
+        "websites": [
+          "https://xstocks.fi"
+        ],
+        "discord_url": null,
+        "farcaster_url": null,
+        "zora_url": null,
+        "telegram_handle": "xstocksfi",
+        "twitter_handle": "xstocksfi",
+        "description": "For too long, investing has come with barriers. Borders. Brokers. Limitations.",
+        "gt_score": null,
+        "metadata_updated_at": "2026-05-28T01:52:27Z"
+      },
+      "relationships": {
+        "network": {
+          "data": {
+            "id": "ton",
+            "type": "network"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_Xst6eFD4YT6sz9RLMysN9SyvaZWtraSdVJQGu5ZkAme",
+      "type": "token",
+      "attributes": {
+        "address": "Xst6eFD4YT6sz9RLMysN9SyvaZWtraSdVJQGu5ZkAme",
+        "name": "abrdn Physical Platinum Shares xStock",
+        "symbol": "PPLTx",
+        "decimals": 8,
+        "image_url": "https://coin-images.coingecko.com/coins/images/102171960/large/Ticker_PPLTx__Company_Name_Physical_Platinum_Shares_ETF__Size_64x64.png?1770653933",
+        "coingecko_coin_id": "abrdn-physical-platinum-shares-xstock",
+        "websites": [
+          "https://xstocks.fi"
+        ],
+        "discord_url": null,
+        "farcaster_url": null,
+        "zora_url": null,
+        "telegram_handle": "xstocksfi",
+        "twitter_handle": "xstocksfi",
+        "description": "For too long, investing has come with barriers. Borders. Brokers. Limitations.",
+        "gt_score": null,
+        "metadata_updated_at": "2026-05-28T01:52:27Z"
+      },
+      "relationships": {
+        "network": {
+          "data": {
+            "id": "solana",
+            "type": "network"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "ton",
+      "type": "network",
+      "attributes": {
+        "name": "TON",
+        "coingecko_asset_platform_id": "the-open-network"
+      }
+    },
+    {
+      "id": "solana",
+      "type": "network",
+      "attributes": {
+        "name": "Solana",
+        "coingecko_asset_platform_id": "solana"
+      }
+    }
+  ]
+}

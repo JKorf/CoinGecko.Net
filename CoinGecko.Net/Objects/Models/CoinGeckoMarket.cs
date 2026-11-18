@@ -142,6 +142,60 @@ namespace CoinGecko.Net.Objects.Models
         [JsonConverter(typeof(DateTimeConverter))]
         [JsonPropertyName("last_updated")]
         public DateTime? LastUpdated { get; set; }
+
+        /// <summary>
+        /// ["<c>market_cap_rank_with_rehypothecated</c>"] Market cap rank including rehypothecated tokens
+        /// </summary>
+        [JsonPropertyName("market_cap_rank_with_rehypothecated")]
+        public int? MarketCapRankWithRehypothecated { get; set; }
+
+        /// <summary>
+        /// ["<c>sparkline_in_7d</c>"] Sparkline price data for the last 7 days
+        /// </summary>
+        [JsonPropertyName("sparkline_in_7d")]
+        public CoinGeckoSparkline? SparklineIn7d { get; set; }
+
+        /// <summary>
+        /// ["<c>price_change_percentage_1h_in_currency</c>"] 1-hour price change percentage in target currency
+        /// </summary>
+        [JsonPropertyName("price_change_percentage_1h_in_currency")]
+        public decimal? PriceChangePercentage1hInCurrency { get; set; }
+
+        /// <summary>
+        /// ["<c>price_change_percentage_24h_in_currency</c>"] 24-hour price change percentage in target currency
+        /// </summary>
+        [JsonPropertyName("price_change_percentage_24h_in_currency")]
+        public decimal? PriceChangePercentage24hInCurrency { get; set; }
+
+        /// <summary>
+        /// ["<c>price_change_percentage_7d_in_currency</c>"] 7-day price change percentage in target currency
+        /// </summary>
+        [JsonPropertyName("price_change_percentage_7d_in_currency")]
+        public decimal? PriceChangePercentage7dInCurrency { get; set; }
+
+        /// <summary>
+        /// ["<c>price_change_percentage_14d_in_currency</c>"] 14-day price change percentage in target currency
+        /// </summary>
+        [JsonPropertyName("price_change_percentage_14d_in_currency")]
+        public decimal? PriceChangePercentage14dInCurrency { get; set; }
+
+        /// <summary>
+        /// ["<c>price_change_percentage_30d_in_currency</c>"] 30-day price change percentage in target currency
+        /// </summary>
+        [JsonPropertyName("price_change_percentage_30d_in_currency")]
+        public decimal? PriceChangePercentage30dInCurrency { get; set; }
+
+        /// <summary>
+        /// ["<c>price_change_percentage_200d_in_currency</c>"] 200-day price change percentage in target currency
+        /// </summary>
+        [JsonPropertyName("price_change_percentage_200d_in_currency")]
+        public decimal? PriceChangePercentage200dInCurrency { get; set; }
+
+        /// <summary>
+        /// ["<c>price_change_percentage_1y_in_currency</c>"] 1-year price change percentage in target currency
+        /// </summary>
+        [JsonPropertyName("price_change_percentage_1y_in_currency")]
+        public decimal? PriceChangePercentage1yInCurrency { get; set; }
     }
 
     /// <summary>

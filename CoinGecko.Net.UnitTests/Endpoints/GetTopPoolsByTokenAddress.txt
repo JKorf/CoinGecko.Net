@@ -1,0 +1,137 @@
+GET
+/api/v3/onchain/networks/eth/tokens/0xdac17f958d2ee523a2206206994597c13d831ec7/pools
+true
+UriParams: {"include":"base_token"}
+{
+  "data": [
+    {
+      "id": "eth_0x395f91b34aa34a477ce3bc6505639a821b286a62b1a164fc1887fa3a5ef713a5",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "1.0008763651",
+        "base_token_price_native_currency": "0.000482317790072442",
+        "quote_token_price_usd": "0.998449563724543",
+        "quote_token_price_native_currency": "0.000481148325490986",
+        "base_token_price_quote_token": "1.0024305698",
+        "quote_token_price_base_token": "0.9975753236",
+        "address": "0x395f91b34aa34a477ce3bc6505639a821b286a62b1a164fc1887fa3a5ef713a5",
+        "name": "USDC / USDT",
+        "pool_created_at": "2025-04-13T14:45:47Z",
+        "token_price_usd": "0.998449563724543",
+        "fdv_usd": "96921299344.3568",
+        "market_cap_usd": "189288747230.058",
+        "price_change_percentage": {
+          "m5": "0",
+          "m15": "-0.08",
+          "m30": "-0.02",
+          "h1": "-0.55",
+          "h6": "0.23",
+          "h24": "-0.21"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 1,
+            "sells": 0,
+            "buyers": 1,
+            "sellers": 0
+          },
+          "m15": {
+            "buys": 2,
+            "sells": 13,
+            "buyers": 2,
+            "sellers": 12
+          },
+          "m30": {
+            "buys": 16,
+            "sells": 22,
+            "buyers": 15,
+            "sellers": 21
+          },
+          "h1": {
+            "buys": 44,
+            "sells": 50,
+            "buyers": 41,
+            "sellers": 46
+          },
+          "h6": {
+            "buys": 306,
+            "sells": 373,
+            "buyers": 240,
+            "sellers": 305
+          },
+          "h24": {
+            "buys": 1062,
+            "sells": 1217,
+            "buyers": 677,
+            "sellers": 803
+          }
+        },
+        "volume_usd": {
+          "m5": "100.4170370205",
+          "m15": "44354.6645720277",
+          "m30": "2972422.02951497",
+          "h1": "6273480.14455755",
+          "h6": "31080731.7699018",
+          "h24": "65665560.4792908"
+        },
+        "reserve_in_usd": "545933958.0815",
+        "sentiment_vote_positive_percentage": 0,
+        "sentiment_vote_negative_percentage": 0,
+        "community_sus_report": 2
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "eth_0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "eth_0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "uniswap-v4-ethereum",
+            "type": "dex"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "eth_0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "type": "token",
+      "attributes": {
+        "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "decimals": 6,
+        "image_url": "https://coin-images.coingecko.com/coins/images/6319/large/USDC.png?1769615602",
+        "coingecko_coin_id": "usd-coin"
+      }
+    },
+    {
+      "id": "eth_0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "type": "token",
+      "attributes": {
+        "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "name": "Tether USD",
+        "symbol": "USDT",
+        "decimals": 6,
+        "image_url": "https://coin-images.coingecko.com/coins/images/325/large/Tether.png?1696501661",
+        "coingecko_coin_id": "tether"
+      }
+    },
+    {
+      "id": "uniswap-v4-ethereum",
+      "type": "dex",
+      "attributes": {
+        "name": "Uniswap V4 (Ethereum)"
+      }
+    }
+  ]
+}

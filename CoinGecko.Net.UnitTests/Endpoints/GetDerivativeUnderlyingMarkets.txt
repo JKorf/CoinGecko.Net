@@ -1,0 +1,32 @@
+GET
+/api/v3/derivatives/underlyings
+true
+UriParams: {"coin_ids":"bitcoin"}
+[
+  {
+    "id": "bitcoin",
+    "symbol": "btc",
+    "name": "Bitcoin",
+    "underlying_type": "coin",
+    "current_price": 68708.23462448928,
+    "price_change_percentage_24h": -6.6178,
+    "open_interest": 45451655842.73,
+    "open_interest_change_percentage_1h": 0.4049687860147835,
+    "open_interest_change_percentage_24h": -0.6338842407777445,
+    "funding_rate": -0.0000804249910959869,
+    "total_volume": 434673824874.8
+  },
+  {
+    "id": "gold",
+    "symbol": "xau",
+    "name": "Gold",
+    "underlying_type": "rwa",
+    "current_price": 3898.7874770946237,
+    "price_change_percentage_24h": -0.9,
+    "open_interest": 2910420695.36,
+    "open_interest_change_percentage_1h": -1.3335382491530214,
+    "open_interest_change_percentage_24h": 3.701439230747514,
+    "funding_rate": 0.01218484286453822,
+    "total_volume": 12515917595.08
+  }
+]

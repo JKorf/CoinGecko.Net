@@ -1,0 +1,144 @@
+GET
+/api/v3/onchain/networks/solana/tokens/8J69rbLTzWWgUJziFY8jeu5tDwEPBwUz4pKBMr5rpump
+true
+UriParams: {"include":"top_pools"}
+{
+  "data": {
+    "id": "solana_8J69rbLTzWWgUJziFY8jeu5tDwEPBwUz4pKBMr5rpump",
+    "type": "token",
+    "attributes": {
+      "address": "8J69rbLTzWWgUJziFY8jeu5tDwEPBwUz4pKBMr5rpump",
+      "name": "Wojak",
+      "symbol": "WOJAK",
+      "decimals": 6,
+      "image_url": "https://coin-images.coingecko.com/coins/images/70552/large/o6zl61yh9k32fu3rimuoe4sxlfeq.?1762469550",
+      "coingecko_coin_id": "wojak-4",
+      "total_supply": "999846202569505.0",
+      "normalized_total_supply": "999846202.569505",
+      "price_usd": "0.002108045566",
+      "fdv_usd": "2107721.35423239",
+      "total_reserve_in_usd": "324836.697324327524302253045722035111416063520235345591137965837590196823952",
+      "volume_usd": {
+        "h24": "235212.154504941"
+      },
+      "market_cap_usd": "2107721.3542324",
+      "launchpad_details": {
+        "graduation_percentage": 100,
+        "completed": true,
+        "completed_at": "2025-11-03T20:41:29.000Z",
+        "migrated_destination_pool_address": "FDrY5i5kuadZ1ik8gPS26qjj9Rw9mpufXMegGC2HNSP7"
+      },
+      "last_trade_timestamp": "1790730160"
+    },
+    "relationships": {
+      "top_pools": {
+        "data": [
+          {
+            "id": "solana_FDrY5i5kuadZ1ik8gPS26qjj9Rw9mpufXMegGC2HNSP7",
+            "type": "pool"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "solana_FDrY5i5kuadZ1ik8gPS26qjj9Rw9mpufXMegGC2HNSP7",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.00210804556622384486732684033609689566750787551092744720636443282",
+        "base_token_price_native_currency": "0.0000176991479492709",
+        "base_token_balance": "89850308.783025",
+        "base_token_liquidity_usd": "189262.4977768931995821450829183274527396144422153271057",
+        "quote_token_price_usd": "119.104353060718103222982579358448975276457545138",
+        "quote_token_price_native_currency": "1.0",
+        "quote_token_balance": "1587.903236302",
+        "quote_token_liquidity_usd": "188980.3581231072840151000952817560870073139787",
+        "base_token_price_quote_token": "0.00001769914795",
+        "quote_token_price_base_token": "56499.8949591353",
+        "address": "FDrY5i5kuadZ1ik8gPS26qjj9Rw9mpufXMegGC2HNSP7",
+        "name": "WOJAK / SOL",
+        "pool_created_at": "2025-11-03T20:41:29Z",
+        "token_price_usd": "0.00210804556622384486732684033609689566750787551092744720636443282",
+        "fdv_usd": "2107721.35400858",
+        "market_cap_usd": "2107721.35400859",
+        "price_change_percentage": {
+          "m5": "0",
+          "m15": "0.21",
+          "m30": "0.36",
+          "h1": "0.29",
+          "h6": "-4.34",
+          "h24": "-18.37"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 1,
+            "sells": 0,
+            "buyers": 1,
+            "sellers": 0
+          },
+          "m15": {
+            "buys": 2,
+            "sells": 0,
+            "buyers": 2,
+            "sellers": 0
+          },
+          "m30": {
+            "buys": 7,
+            "sells": 3,
+            "buyers": 4,
+            "sellers": 3
+          },
+          "h1": {
+            "buys": 10,
+            "sells": 3,
+            "buyers": 7,
+            "sellers": 3
+          },
+          "h6": {
+            "buys": 90,
+            "sells": 103,
+            "buyers": 60,
+            "sellers": 74
+          },
+          "h24": {
+            "buys": 718,
+            "sells": 756,
+            "buyers": 449,
+            "sellers": 478
+          }
+        },
+        "volume_usd": {
+          "m5": "95.7039366558",
+          "m15": "101.6537126364",
+          "m30": "412.9239965688",
+          "h1": "418.5146583339",
+          "h6": "21670.2337988852",
+          "h24": "196594.914390978"
+        },
+        "reserve_in_usd": "378242.8559",
+        "last_trade_timestamp": "1790730702"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_8J69rbLTzWWgUJziFY8jeu5tDwEPBwUz4pKBMr5rpump",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pumpswap",
+            "type": "dex"
+          }
+        }
+      }
+    }
+  ]
+}

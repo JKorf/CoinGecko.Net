@@ -1,0 +1,78 @@
+GET
+/api/v3/rwas/gold/tickers
+true
+UriParams: {"issuer_ids":"xstocks-ecosystem"}
+{
+  "name": "Gold",
+  "tickers": [
+    {
+      "base": "XAUT",
+      "target": "USD",
+      "market": {
+        "name": "Crypto.com Exchange",
+        "identifier": "crypto_com",
+        "has_trading_incentive": false,
+        "logo": "https://coin-images.coingecko.com/markets/images/589/small/h2oMjPp6_400x400.jpg?1706864542"
+      },
+      "last": 4567.32,
+      "volume": 153.448,
+      "cost_to_move_up_usd": 542225.427472,
+      "cost_to_move_down_usd": 521806.08197900007,
+      "converted_last": {
+        "btc": 0.05734964,
+        "eth": 1.833638,
+        "usd": 4567.14
+      },
+      "converted_volume": {
+        "btc": 8.800188,
+        "eth": 281.368,
+        "usd": 700818
+      },
+      "bid_ask_spread_percentage": 0.013356,
+      "timestamp": "2026-08-28T05:38:53+00:00",
+      "last_traded_at": "2026-08-28T05:38:53+00:00",
+      "last_fetch_at": "2026-08-28T05:38:40+00:00",
+      "is_anomaly": false,
+      "is_stale": false,
+      "trade_url": "https://crypto.com/exchange/trade/spot/XAUT_USD",
+      "token_info_url": null,
+      "coin_id": "tether-gold",
+      "coin_mcap_usd": 2798942188.930659
+    },
+    {
+      "base": "0X68749665FF8D2D112FA859AA293F07A622782F38",
+      "target": "0XDAC17F958D2EE523A2206206994597C13D831EC7",
+      "market": {
+        "name": "Uniswap V3 (Ethereum)",
+        "identifier": "uniswap_v3",
+        "has_trading_incentive": false,
+        "logo": "https://coin-images.coingecko.com/markets/images/665/small/uniswap-v3.png?1706864608"
+      },
+      "last": 4567.7045219483,
+      "volume": 255.232446,
+      "cost_to_move_up_usd": 49972.871057876204,
+      "cost_to_move_down_usd": 49822.71951147504,
+      "converted_last": {
+        "btc": 0.05726298,
+        "eth": 1.83394,
+        "usd": 4567.89
+      },
+      "converted_volume": {
+        "btc": 14.615369,
+        "eth": 468.081,
+        "usd": 1165873
+      },
+      "bid_ask_spread_percentage": 0.602829,
+      "timestamp": "2026-08-28T05:38:51+00:00",
+      "last_traded_at": "2026-08-28T05:38:51+00:00",
+      "last_fetch_at": "2026-08-28T05:38:40+00:00",
+      "is_anomaly": false,
+      "is_stale": false,
+      "trade_url": null,
+      "token_info_url": null,
+      "coin_id": "tether-gold",
+      "target_coin_id": "tether",
+      "coin_mcap_usd": 2798942188.930659
+    }
+  ]
+}

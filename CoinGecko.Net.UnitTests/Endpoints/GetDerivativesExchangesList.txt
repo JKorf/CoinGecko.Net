@@ -1,0 +1,13 @@
+GET
+/api/v3/derivatives/exchanges/list
+true
+[
+  {
+    "id": "binance_futures",
+    "name": "Binance (Futures)"
+  },
+  {
+    "id": "bybit",
+    "name": "Bybit (Futures)"
+  }
+]

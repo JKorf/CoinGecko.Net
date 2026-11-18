@@ -1,0 +1,26 @@
+GET
+/api/v3/public_treasury/strategy/bitcoin/holding_chart
+true
+UriParams: {"days":"365","include_empty_intervals":"true"}
+{
+  "holdings": [
+    [
+      1748736000000,
+      580955
+    ],
+    [
+      1749340800000,
+      582000
+    ]
+  ],
+  "holding_value_in_usd": [
+    [
+      1748736000000,
+      60818730878.617355
+    ],
+    [
+      1749340800000,
+      61506606585.45032
+    ]
+  ]
+}

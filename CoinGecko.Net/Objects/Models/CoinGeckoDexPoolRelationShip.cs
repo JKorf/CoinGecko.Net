@@ -26,6 +26,12 @@ namespace CoinGecko.Net.Objects
         /// </summary>
         [JsonPropertyName("dex")]
         public CoinGeckoDexPoolRelationShipItem? Dex { get; set; }
+
+        /// <summary>
+        /// ["<c>network</c>"] Network
+        /// </summary>
+        [JsonPropertyName("network")]
+        public CoinGeckoDexPoolRelationShipItem? Network { get; set; }
     }
 
     /// <summary>

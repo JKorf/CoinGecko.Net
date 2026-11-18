@@ -1,0 +1,150 @@
+GET
+/api/v3/onchain/networks/trending_pools
+true
+UriParams: {"include":"base_token"}
+{
+  "data": [
+    {
+      "id": "base_0xec33256bf1ded407a57fd3c1965e7556e42ac14db09bc4e6fef57d5e2eb0b0b9",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.0000738759066917531",
+        "base_token_price_native_currency": "0.0000000363525310457453",
+        "quote_token_price_usd": "2076.36",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.00000003635253105",
+        "quote_token_price_base_token": "27508400.9622774",
+        "address": "0xec33256bf1ded407a57fd3c1965e7556e42ac14db09bc4e6fef57d5e2eb0b0b9",
+        "name": "GITLAWB / WETH",
+        "pool_created_at": "2026-03-11T02:00:07Z",
+        "fdv_usd": "7378641.34604051",
+        "market_cap_usd": "7387590.669",
+        "price_change_percentage": {
+          "m5": "-0.298",
+          "m15": "-0.016",
+          "m30": "-4.618",
+          "h1": "-9.394",
+          "h6": "-19.15",
+          "h24": "-30.893"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 9,
+            "sells": 1,
+            "buyers": 9,
+            "sellers": 1
+          },
+          "m15": {
+            "buys": 28,
+            "sells": 9,
+            "buyers": 22,
+            "sellers": 9
+          },
+          "m30": {
+            "buys": 100,
+            "sells": 42,
+            "buyers": 76,
+            "sellers": 37
+          },
+          "h1": {
+            "buys": 187,
+            "sells": 77,
+            "buyers": 125,
+            "sellers": 62
+          },
+          "h6": {
+            "buys": 396,
+            "sells": 206,
+            "buyers": 237,
+            "sellers": 159
+          },
+          "h24": {
+            "buys": 1827,
+            "sells": 1119,
+            "buyers": 874,
+            "sellers": 642
+          }
+        },
+        "volume_usd": {
+          "m5": "4903.1102054097",
+          "m15": "10538.6429382093",
+          "m30": "79639.1969896469",
+          "h1": "144469.00760098",
+          "h6": "361229.128078271",
+          "h24": "2108583.76373177"
+        },
+        "reserve_in_usd": "2471839.0983",
+        "sentiment_vote_positive_percentage": 83.33333333333334,
+        "sentiment_vote_negative_percentage": 16.666666666666664,
+        "community_sus_report": 6
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "base_0x5f980dcfc4c0fa3911554cf5ab288ed0eb13dba3",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "base_0x4200000000000000000000000000000000000006",
+            "type": "token"
+          }
+        },
+        "network": {
+          "data": {
+            "id": "base",
+            "type": "network"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "uniswap-v4-base",
+            "type": "dex"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "base_0x5f980dcfc4c0fa3911554cf5ab288ed0eb13dba3",
+      "type": "token",
+      "attributes": {
+        "address": "0x5f980dcfc4c0fa3911554cf5ab288ed0eb13dba3",
+        "name": "gitlawb",
+        "symbol": "GITLAWB",
+        "decimals": 18,
+        "image_url": "https://coin-images.coingecko.com/coins/images/102172941/large/b16bfbf1-8384-43fc-9797-88fba91ddca5.png?1776736251",
+        "coingecko_coin_id": "gitlawb"
+      }
+    },
+    {
+      "id": "base_0x4200000000000000000000000000000000000006",
+      "type": "token",
+      "attributes": {
+        "address": "0x4200000000000000000000000000000000000006",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18,
+        "image_url": "https://coin-images.coingecko.com/coins/images/39810/large/weth.png?1724139790",
+        "coingecko_coin_id": "l2-standard-bridged-weth-base"
+      }
+    },
+    {
+      "id": "uniswap-v4-base",
+      "type": "dex",
+      "attributes": {
+        "name": "Uniswap V4 (Base)"
+      }
+    },
+    {
+      "id": "base",
+      "type": "network",
+      "attributes": {
+        "name": "Base",
+        "coingecko_asset_platform_id": "base"
+      }
+    }
+  ]
+}

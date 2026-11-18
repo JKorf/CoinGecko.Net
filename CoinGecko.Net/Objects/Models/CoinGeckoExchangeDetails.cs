@@ -129,5 +129,11 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("tickers")]
         public CoinGeckoTicker[] Tickers { get; set; } = Array.Empty<CoinGeckoTicker>();
+
+        /// <summary>
+        /// ["<c>status_updates</c>"] Status updates
+        /// </summary>
+        [JsonPropertyName("status_updates")]
+        public CoinGeckoStatusUpdate[]? StatusUpdates { get; set; }
     }
 }

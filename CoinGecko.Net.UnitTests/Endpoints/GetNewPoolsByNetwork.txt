@@ -1,0 +1,136 @@
+GET
+/api/v3/onchain/networks/eth/new_pools
+true
+UriParams: {"include":"base_token"}
+{
+  "data": [
+    {
+      "id": "eth_0x4b025567ef3e47e7c6f091ba2e224d250eaeedadfddcee292c5281f632fbea07",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.0000462785114387554",
+        "base_token_price_native_currency": "0.0000000194777059991249",
+        "quote_token_price_usd": "2064.36505232757",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.000000019477706",
+        "quote_token_price_base_token": "51340748.2403178",
+        "address": "0x4b025567ef3e47e7c6f091ba2e224d250eaeedadfddcee292c5281f632fbea07",
+        "name": "GOSLINGS / ETH 1%",
+        "pool_created_at": "2026-05-27T15:05:59Z",
+        "fdv_usd": "46060.39188",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "46.095",
+          "m15": "46.095",
+          "m30": "46.095",
+          "h1": "46.095",
+          "h6": "46.095",
+          "h24": "46.095"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 5,
+            "sells": 1,
+            "buyers": 5,
+            "sellers": 1
+          },
+          "m15": {
+            "buys": 5,
+            "sells": 1,
+            "buyers": 5,
+            "sellers": 1
+          },
+          "m30": {
+            "buys": 5,
+            "sells": 1,
+            "buyers": 5,
+            "sellers": 1
+          },
+          "h1": {
+            "buys": 5,
+            "sells": 1,
+            "buyers": 5,
+            "sellers": 1
+          },
+          "h6": {
+            "buys": 5,
+            "sells": 1,
+            "buyers": 5,
+            "sellers": 1
+          },
+          "h24": {
+            "buys": 5,
+            "sells": 1,
+            "buyers": 5,
+            "sellers": 1
+          }
+        },
+        "volume_usd": {
+          "m5": "1522.0126601069",
+          "m15": "1522.0126601069",
+          "m30": "1522.0126601069",
+          "h1": "1522.0126601069",
+          "h6": "1522.0126601069",
+          "h24": "1522.0126601069"
+        },
+        "reserve_in_usd": "-97.3671492356286",
+        "sentiment_vote_positive_percentage": 0,
+        "sentiment_vote_negative_percentage": 0,
+        "community_sus_report": 0
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "eth_0xd4c24d1172813702439ab03b914a7c6e1c65b110",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "eth_0x0000000000000000000000000000000000000000",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "uniswap-v4-ethereum",
+            "type": "dex"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "eth_0xd4c24d1172813702439ab03b914a7c6e1c65b110",
+      "type": "token",
+      "attributes": {
+        "address": "0xd4c24d1172813702439ab03b914a7c6e1c65b110",
+        "name": "Justice for Goslings",
+        "symbol": "GOSLINGS",
+        "decimals": 18,
+        "image_url": null,
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "eth_0x0000000000000000000000000000000000000000",
+      "type": "token",
+      "attributes": {
+        "address": "0x0000000000000000000000000000000000000000",
+        "name": "Ether",
+        "symbol": "ETH",
+        "decimals": 18,
+        "image_url": null,
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "uniswap-v4-ethereum",
+      "type": "dex",
+      "attributes": {
+        "name": "Uniswap V4 (Ethereum)"
+      }
+    }
+  ]
+}

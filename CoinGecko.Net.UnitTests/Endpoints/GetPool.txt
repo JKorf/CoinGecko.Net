@@ -1,0 +1,107 @@
+GET
+/api/v3/onchain/networks/eth/pools/0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640
+true
+UriParams: {"include":"base_token"}
+{
+  "data": {
+    "id": "solana_E6RbuozUjZshXH3sRKgCaoXPzfc7EMFiyu4HRxf6ERrH",
+    "type": "pool",
+    "attributes": {
+      "base_token_price_usd": "0.00006785892126",
+      "base_token_price_native_currency": "0.000000402213205044735",
+      "quote_token_price_usd": "166.1681210425",
+      "quote_token_price_native_currency": "1.0",
+      "base_token_price_quote_token": "0.000000402213205",
+      "quote_token_price_base_token": "2486243.58289972",
+      "address": "E6RbuozUjZshXH3sRKgCaoXPzfc7EMFiyu4HRxf6ERrH",
+      "name": "WOJAK / SOL",
+      "pool_name": "WOJAK / SOL",
+      "pool_fee_percentage": null,
+      "pool_created_at": "2025-11-03T00:11:28Z",
+      "fdv_usd": "67858.2887710887",
+      "market_cap_usd": "67848.4847322741",
+      "price_change_percentage": {
+        "m5": "0",
+        "m15": "0",
+        "m30": "0",
+        "h1": "0",
+        "h6": "0",
+        "h24": "0"
+      },
+      "transactions": {
+        "m5": {
+          "buys": 0,
+          "sells": 0,
+          "buyers": 0,
+          "sellers": 0
+        },
+        "m15": {
+          "buys": 0,
+          "sells": 0,
+          "buyers": 0,
+          "sellers": 0
+        },
+        "m30": {
+          "buys": 0,
+          "sells": 0,
+          "buyers": 0,
+          "sellers": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0,
+          "buyers": 0,
+          "sellers": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 0,
+          "buyers": 0,
+          "sellers": 0
+        },
+        "h24": {
+          "buys": 0,
+          "sells": 0,
+          "buyers": 0,
+          "sellers": 0
+        }
+      },
+      "volume_usd": {
+        "m5": "0.0",
+        "m15": "0.0",
+        "m30": "0.0",
+        "h1": "0.0",
+        "h6": "0.0",
+        "h24": "0.0"
+      },
+      "reserve_in_usd": "13843.8176",
+      "locked_liquidity_percentage": null,
+      "launchpad_details": {
+        "graduation_percentage": 100,
+        "completed": true,
+        "completed_at": "2025-11-03T20:41:29.000Z",
+        "migrated_destination_pool_address": "FDrY5i5kuadZ1ik8gPS26qjj9Rw9mpufXMegGC2HNSP7"
+      }
+    },
+    "relationships": {
+      "base_token": {
+        "data": {
+          "id": "solana_8J69rbLTzWWgUJziFY8jeu5tDwEPBwUz4pKBMr5rpump",
+          "type": "token"
+        }
+      },
+      "quote_token": {
+        "data": {
+          "id": "solana_So11111111111111111111111111111111111111112",
+          "type": "token"
+        }
+      },
+      "dex": {
+        "data": {
+          "id": "pump-fun",
+          "type": "dex"
+        }
+      }
+    }
+  }
+}

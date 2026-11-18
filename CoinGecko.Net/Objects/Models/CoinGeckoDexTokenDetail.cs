@@ -43,5 +43,17 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("coingecko_coin_id")]
         public string? CoinGeckoCoinId { get; set; }
+
+        /// <summary>
+        /// ["<c>image_url</c>"] ImageUrl
+        /// </summary>
+        [JsonPropertyName("image_url")]
+        public string? ImageUrl { get; set; }
+
+        /// <summary>
+        /// ["<c>coingecko_asset_platform_id</c>"] CoingeckoAssetPlatformId
+        /// </summary>
+        [JsonPropertyName("coingecko_asset_platform_id")]
+        public string? CoingeckoAssetPlatformId { get; set; }
     }
 }

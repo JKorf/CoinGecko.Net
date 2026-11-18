@@ -1,0 +1,157 @@
+GET
+/api/v3/onchain/networks/solana/pools/8WwcNqdZjCY5Pt7AkhupAFknV2txca9sq6YBkGzLbvdt/info
+true
+UriParams: {"include":"pool"}
+{
+  "data": [
+    {
+      "id": "solana_8J69rbLTzWWgUJziFY8jeu5tDwEPBwUz4pKBMr5rpump",
+      "type": "token",
+      "attributes": {
+        "address": "8J69rbLTzWWgUJziFY8jeu5tDwEPBwUz4pKBMr5rpump",
+        "name": "Wojak",
+        "symbol": "WOJAK",
+        "decimals": 6,
+        "image_url": "https://coin-images.coingecko.com/coins/images/70552/large/o6zl61yh9k32fu3rimuoe4sxlfeq.?1762469550",
+        "image": {
+          "thumb": "https://coin-images.coingecko.com/coins/images/70552/thumb/o6zl61yh9k32fu3rimuoe4sxlfeq.?1762469550",
+          "small": "https://coin-images.coingecko.com/coins/images/70552/small/o6zl61yh9k32fu3rimuoe4sxlfeq.?1762469550",
+          "large": "https://coin-images.coingecko.com/coins/images/70552/large/o6zl61yh9k32fu3rimuoe4sxlfeq.?1762469550"
+        },
+        "banner_image_url": "https://assets.geckoterminal.com/jqqvglmmbsvkrafnplr30mcp6783",
+        "coingecko_coin_id": "wojak-4",
+        "websites": [
+          "https://wojakmeme.fun"
+        ],
+        "discord_url": null,
+        "farcaster_url": null,
+        "zora_url": null,
+        "telegram_handle": null,
+        "twitter_handle": "wojakonx",
+        "description": "Wojak aka Feels Guy - the biggest meme in crypto",
+        "gt_score": 56.33488323351274,
+        "gt_score_details": {
+          "pool": 28.571,
+          "transaction": 64,
+          "creation": 0,
+          "info": 100,
+          "holders": 81.25
+        },
+        "gt_verified": true,
+        "categories": [
+          "Pump Fun",
+          "Wojak"
+        ],
+        "gt_category_ids": [
+          "pump-fun",
+          "wojak"
+        ],
+        "holders": {
+          "count": 19901,
+          "distribution_percentage": {
+            "top_10": "32.9547",
+            "11_20": "7.1417",
+            "21_40": "9.5026",
+            "rest": "50.401"
+          },
+          "last_updated": "2026-09-29T03:08:40Z"
+        },
+        "mint_authority": "no",
+        "freeze_authority": "no",
+        "is_honeypot": "unknown",
+        "is_nsfw": false,
+        "developer_address": "J3k4T9XHhhAGrZ64ukcya19FApC8jf8xaTWwYJfjTR4p",
+        "developer_holding_percentage": "10.72",
+        "launchpad_details": {
+          "graduation_percentage": 100,
+          "completed": true,
+          "completed_at": "2025-11-03T20:41:29.000Z",
+          "migrated_destination_pool_address": "FDrY5i5kuadZ1ik8gPS26qjj9Rw9mpufXMegGC2HNSP7"
+        }
+      },
+      "relationships": {
+        "pool": {
+          "data": {
+            "id": "solana_E6RbuozUjZshXH3sRKgCaoXPzfc7EMFiyu4HRxf6ERrH",
+            "type": "pool"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_So11111111111111111111111111111111111111112",
+      "type": "token",
+      "attributes": {
+        "address": "So11111111111111111111111111111111111111112",
+        "name": "Wrapped SOL",
+        "symbol": "SOL",
+        "decimals": 9,
+        "image_url": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989",
+        "image": {
+          "thumb": "https://coin-images.coingecko.com/coins/images/21629/thumb/solana.jpg?1696520989",
+          "small": "https://coin-images.coingecko.com/coins/images/21629/small/solana.jpg?1696520989",
+          "large": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989"
+        },
+        "banner_image_url": null,
+        "coingecko_coin_id": "wrapped-solana",
+        "websites": [
+          "https://solana.com"
+        ],
+        "discord_url": "https://discordapp.com/invite/pquxPsq",
+        "farcaster_url": null,
+        "zora_url": null,
+        "telegram_handle": null,
+        "twitter_handle": "solana",
+        "description": "",
+        "gt_score": 71.42857142857143,
+        "gt_score_details": {
+          "pool": 28.571,
+          "transaction": 100,
+          "creation": 0,
+          "info": 100,
+          "holders": 93.75
+        },
+        "gt_verified": true,
+        "categories": [],
+        "gt_category_ids": [],
+        "holders": {
+          "count": 8480544,
+          "distribution_percentage": {
+            "top_10": "19.531",
+            "11_20": "3.9956",
+            "21_40": "3.7316",
+            "rest": "72.7418"
+          },
+          "last_updated": "2026-09-30T01:45:19Z"
+        },
+        "mint_authority": "no",
+        "freeze_authority": "no",
+        "is_honeypot": "unknown",
+        "is_nsfw": false,
+        "developer_address": null,
+        "developer_holding_percentage": null
+      },
+      "relationships": {
+        "pool": {
+          "data": {
+            "id": "solana_E6RbuozUjZshXH3sRKgCaoXPzfc7EMFiyu4HRxf6ERrH",
+            "type": "pool"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "solana_E6RbuozUjZshXH3sRKgCaoXPzfc7EMFiyu4HRxf6ERrH",
+      "type": "pool",
+      "attributes": {
+        "base_token_address": "8J69rbLTzWWgUJziFY8jeu5tDwEPBwUz4pKBMr5rpump",
+        "quote_token_address": "So11111111111111111111111111111111111111112",
+        "sentiment_vote_positive_percentage": 0,
+        "sentiment_vote_negative_percentage": 0,
+        "community_sus_report": 0
+      }
+    }
+  ]
+}

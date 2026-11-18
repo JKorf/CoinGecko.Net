@@ -1,0 +1,44 @@
+GET
+/api/v3/onchain/categories
+true
+UriParams: {"page":"1"}
+{
+  "data": [
+    {
+      "id": "basedotmeme-launchpad",
+      "type": "category",
+      "attributes": {
+        "name": "Basedotmeme Launchpad",
+        "description": "Tokens launched from base.meme launchpad. (https://base.meme/)",
+        "volume_change_percentage": {
+          "h1": "-80.77",
+          "h6": "132756.5",
+          "h12": "12603.22",
+          "h24": "5165.63"
+        },
+        "reserve_in_usd": "25598.43",
+        "fdv_usd": "79496.96",
+        "h24_volume_usd": "622.05",
+        "h24_tx_count": 7
+      }
+    },
+    {
+      "id": "ape",
+      "type": "category",
+      "attributes": {
+        "name": "Ape",
+        "description": "Tokens related to the great apes ",
+        "volume_change_percentage": {
+          "h1": "1527.94",
+          "h6": "9972.78",
+          "h12": "5575.81",
+          "h24": "3266.85"
+        },
+        "reserve_in_usd": "22471204.46",
+        "fdv_usd": "16309303406314.87",
+        "h24_volume_usd": "26749165.82",
+        "h24_tx_count": 103967
+      }
+    }
+  ]
+}

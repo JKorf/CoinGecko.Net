@@ -1,0 +1,25 @@
+GET
+/api/v3/coins/uniswap/supply_breakdown
+true
+{
+  "id": "uniswap",
+  "symbol": "uni",
+  "name": "Uniswap",
+  "supply_data": {
+    "total_supply": 894182420.0329479,
+    "circulating_supply": 622047561.5538775,
+    "outstanding_supply": 0,
+    "non_circulating_supply": 272134858.4790704,
+    "last_updated": "2026-06-15T04:23:07.552Z"
+  },
+  "non_circulating_wallets": [
+    {
+      "address": "0x1a9C8182C09F50C8318d769245beA52c32BE35BC",
+      "label": "UNI Timelock",
+      "balance": 272134858.4790704,
+      "percentage_of_total_supply": 30.4329777849204,
+      "anomaly": false,
+      "last_updated": "2026-06-14T12:10:34.565Z"
+    }
+  ]
+}

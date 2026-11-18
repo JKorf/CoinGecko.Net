@@ -1,0 +1,18 @@
+GET
+/api/v3/global/fear_and_greed_chart
+true
+UriParams: {"days":"1"}
+{
+  "fear_and_greed": [
+    [
+      1792281600000,
+      44,
+      "fear"
+    ],
+    [
+      1792368000000,
+      44,
+      "fear"
+    ]
+  ]
+}

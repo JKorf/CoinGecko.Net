@@ -1,0 +1,19 @@
+GET
+/api/v3/governments/public_treasury/bitcoin
+true
+{
+  "total_holdings": 40997,
+  "total_value_usd": 4000000000,
+  "market_cap_dominance": 0.2,
+  "governments": [
+    {
+      "name": "Example government",
+      "symbol": null,
+      "country": "US",
+      "total_holdings": 40997,
+      "total_entry_value_usd": 0,
+      "total_current_value_usd": 4000000000,
+      "percentage_of_total_supply": 0.2
+    }
+  ]
+}

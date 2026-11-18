@@ -1,6 +1,7 @@
 GET
 /api/v3/coins/markets
 false
+UriParams: {"include_tokens":"all","include_rehypothecated":"true","price_change_percentage":"1h%2C24h"}
 [
   {
     "id": "bitcoin",

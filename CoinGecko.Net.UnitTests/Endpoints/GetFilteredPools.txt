@@ -1,0 +1,147 @@
+GET
+/api/v3/onchain/pools/megafilter
+true
+UriParams: {"networks":"sample"}
+{
+  "data": [
+    {
+      "id": "base_0x3e97c5ec8c73e7d566aca606472141a9b9a8c1fa",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.05193801053",
+        "base_token_price_native_currency": "0.000025326242378315592946540670776322410025776",
+        "quote_token_price_usd": "0.776158829933404",
+        "quote_token_price_native_currency": "0.000376082386826923",
+        "base_token_price_quote_token": "0.06734227197",
+        "quote_token_price_base_token": "14.8495138445",
+        "address": "0x3e97c5ec8c73e7d566aca606472141a9b9a8c1fa",
+        "name": "DEUS / VIRTUAL",
+        "pool_created_at": "2026-05-27T13:04:51Z",
+        "fdv_usd": "45464410.8007355",
+        "market_cap_usd": "0.0",
+        "price_change_percentage": {
+          "m5": "-3.42",
+          "m15": "-9.171",
+          "m30": "4.444",
+          "h1": "5.06",
+          "h6": "28.62",
+          "h24": "28.62"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 20,
+            "sells": 10,
+            "buyers": 16,
+            "sellers": 9
+          },
+          "m15": {
+            "buys": 71,
+            "sells": 30,
+            "buyers": 51,
+            "sellers": 27
+          },
+          "m30": {
+            "buys": 139,
+            "sells": 63,
+            "buyers": 88,
+            "sellers": 50
+          },
+          "h1": {
+            "buys": 288,
+            "sells": 163,
+            "buyers": 167,
+            "sellers": 120
+          },
+          "h6": {
+            "buys": 2719,
+            "sells": 1502,
+            "buyers": 974,
+            "sellers": 709
+          },
+          "h24": {
+            "buys": 2719,
+            "sells": 1502,
+            "buyers": 974,
+            "sellers": 709
+          }
+        },
+        "volume_usd": {
+          "m5": "14594.3019415648",
+          "m15": "67379.9374046351",
+          "m30": "133544.558315085",
+          "h1": "375498.056536124",
+          "h6": "4631158.03685961",
+          "h24": "4631158.03685961"
+        },
+        "reserve_in_usd": "1257212.6821"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "base_0x940a319b75861014a220d9c6c144d108552b089b",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "base_0x0b3e328455c4059eeb9e3f84b5543f74e24e7e1b",
+            "type": "token"
+          }
+        },
+        "network": {
+          "data": {
+            "id": "base",
+            "type": "network"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "aerodrome-base",
+            "type": "dex"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "base_0x940a319b75861014a220d9c6c144d108552b089b",
+      "type": "token",
+      "attributes": {
+        "address": "0x940a319b75861014a220d9c6c144d108552b089b",
+        "name": "DEUS Token",
+        "symbol": "DEUS",
+        "decimals": 18,
+        "image_url": "https://coin-images.coingecko.com/coins/images/68133/large/Screenshot_2025-08-07_at_8.52.11%E2%80%AFPM.png?1754901254",
+        "coingecko_coin_id": "xmaquina"
+      }
+    },
+    {
+      "id": "base_0x0b3e328455c4059eeb9e3f84b5543f74e24e7e1b",
+      "type": "token",
+      "attributes": {
+        "address": "0x0b3e328455c4059eeb9e3f84b5543f74e24e7e1b",
+        "name": "Virtual Protocol",
+        "symbol": "VIRTUAL",
+        "decimals": 18,
+        "image_url": "https://coin-images.coingecko.com/coins/images/34057/large/LOGOMARK.png?1708356054",
+        "coingecko_coin_id": "virtual-protocol"
+      }
+    },
+    {
+      "id": "aerodrome-base",
+      "type": "dex",
+      "attributes": {
+        "name": "Aerodrome (Base)"
+      }
+    },
+    {
+      "id": "base",
+      "type": "network",
+      "attributes": {
+        "name": "Base",
+        "coingecko_asset_platform_id": "base"
+      }
+    }
+  ]
+}

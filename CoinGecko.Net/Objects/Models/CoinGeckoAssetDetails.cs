@@ -161,5 +161,29 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("tickers")]
         public CoinGeckoTicker[] Tickers { get; set; } = Array.Empty<CoinGeckoTicker>();
+
+        /// <summary>
+        /// ["<c>categories_details</c>"] Detailed coin categories
+        /// </summary>
+        [JsonPropertyName("categories_details")]
+        public CoinGeckoAssetDetailsCategoriesDetail[]? CategoriesDetails { get; set; }
+
+        /// <summary>
+        /// ["<c>has_supply_breakdown</c>"] Whether detailed supply breakdown data is available via /coins/supply_breakdown
+        /// </summary>
+        [JsonPropertyName("has_supply_breakdown")]
+        public bool? HasSupplyBreakdown { get; set; }
+
+        /// <summary>
+        /// ["<c>ico_data</c>"] ICO data
+        /// </summary>
+        [JsonPropertyName("ico_data")]
+        public CoinGeckoAssetDetailsIcoData? IcoData { get; set; }
+
+        /// <summary>
+        /// ["<c>market_cap_rank_with_rehypothecated</c>"] Market cap rank including rehypothecated tokens
+        /// </summary>
+        [JsonPropertyName("market_cap_rank_with_rehypothecated")]
+        public int? MarketCapRankWithRehypothecated { get; set; }
     }
 }

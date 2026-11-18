@@ -68,5 +68,17 @@ namespace CoinGecko.Net.Objects.Models
         [JsonConverter(typeof(DateTimeConverter))]
         [JsonPropertyName("updated_at")]
         public DateTime UpdatedAt { get; set; }
+
+        /// <summary>
+        /// ["<c>volume_change_percentage_24h_usd</c>"] Volume change percentage in 24 hours in USD
+        /// </summary>
+        [JsonPropertyName("volume_change_percentage_24h_usd")]
+        public decimal? VolumeChangePercentage24hUsd { get; set; }
+
+        /// <summary>
+        /// ["<c>fear_and_greed_index</c>"] Crypto Fear &amp; Greed Index
+        /// </summary>
+        [JsonPropertyName("fear_and_greed_index")]
+        public CoinGeckoGlobalDataFearAndGreedIndex? FearAndGreedIndex { get; set; }
     }
 }

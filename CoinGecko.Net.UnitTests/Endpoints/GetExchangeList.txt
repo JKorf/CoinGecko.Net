@@ -1,6 +1,7 @@
 GET
 /api/v3/exchanges/list
 false
+UriParams: {"status":"active"}
 [
   {
     "id": "10kswap-starknet-alpha",

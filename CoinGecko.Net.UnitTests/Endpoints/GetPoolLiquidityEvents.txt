@@ -1,0 +1,29 @@
+GET
+/api/v3/onchain/networks/solana/pools/G9YxfMcZQiW7EmsU1Asxuomcm5iQrBDKpbozuTM2iwne/liquidity_events
+true
+UriParams: {"kind":"add"}
+{
+  "data": [
+    {
+      "id": "solana_457611113_ya1EoX4PYj6vh3h5iVnqpXrs1K4tB2u1xsYadxU27kbKzGgfNihLgek1qSU68ws3o4VYsngpGFw4HNGqfbKaoVv_20_1792148006",
+      "type": "liquidity_event",
+      "attributes": {
+        "block_number": 457611113,
+        "tx_hash": "ya1EoX4PYj6vh3h5iVnqpXrs1K4tB2u1xsYadxU27kbKzGgfNihLgek1qSU68ws3o4VYsngpGFw4HNGqfbKaoVv",
+        "tx_from_address": "8wUyLahcTw85GWGxsXWNgPF7DEbMPH45zpkjJnxPYrNP",
+        "block_timestamp": "2026-10-16T10:53:26Z",
+        "kind": "remove",
+        "base_token_address": "3GP5xgK7cdSeWkgmcAh4vomARuDYoWi89saU3AKZnhKm",
+        "base_token_amount": "131587980.65415",
+        "quote_token_address": "So11111111111111111111111111111111111111112",
+        "quote_token_amount": "187.258906",
+        "base_token_price_in_usd": "0.0001417",
+        "quote_token_price_in_usd": "106.496866",
+        "volume_in_usd": "38593.231589"
+      }
+    }
+  ],
+  "meta": {
+    "next_cursor": null
+  }
+}

@@ -1,0 +1,133 @@
+GET
+/api/v3/onchain/search/pools
+false
+UriParams: {"query":"weth","page":"2"}
+{
+  "data": [
+    {
+      "id": "eth_0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "2084.57214039429",
+        "base_token_price_native_currency": "1.0",
+        "quote_token_price_usd": "1.00359565004917",
+        "quote_token_price_native_currency": "0.00048094599624371",
+        "base_token_price_quote_token": "2079.235522928",
+        "quote_token_price_base_token": "0.0004809459962",
+        "address": "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640",
+        "name": "WETH / USDC 0.05%",
+        "pool_created_at": "2021-12-29T12:35:14Z",
+        "fdv_usd": "4700091001.66103",
+        "market_cap_usd": "4706648770.97887",
+        "price_change_percentage": {
+          "m5": "0",
+          "m15": "0",
+          "m30": "0",
+          "h1": "0",
+          "h6": "0.599",
+          "h24": "-1.887"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 1,
+            "sells": 1,
+            "buyers": 1,
+            "sellers": 1
+          },
+          "m15": {
+            "buys": 7,
+            "sells": 24,
+            "buyers": 7,
+            "sellers": 18
+          },
+          "m30": {
+            "buys": 21,
+            "sells": 53,
+            "buyers": 15,
+            "sellers": 41
+          },
+          "h1": {
+            "buys": 57,
+            "sells": 123,
+            "buyers": 39,
+            "sellers": 88
+          },
+          "h6": {
+            "buys": 431,
+            "sells": 477,
+            "buyers": 194,
+            "sellers": 279
+          },
+          "h24": {
+            "buys": 2436,
+            "sells": 2385,
+            "buyers": 863,
+            "sellers": 989
+          }
+        },
+        "volume_usd": {
+          "m5": "2407.6289853096",
+          "m15": "210244.509017768",
+          "m30": "1067809.71712486",
+          "h1": "2766027.68033409",
+          "h6": "17336676.2757229",
+          "h24": "122795216.58555"
+        },
+        "reserve_in_usd": "101050763.5099"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "eth_0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "eth_0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "uniswap_v3",
+            "type": "dex"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "eth_0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "type": "token",
+      "attributes": {
+        "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18,
+        "image_url": "https://coin-images.coingecko.com/coins/images/2518/large/weth.png?1696503332",
+        "coingecko_coin_id": "weth"
+      }
+    },
+    {
+      "id": "eth_0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "type": "token",
+      "attributes": {
+        "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "decimals": 6,
+        "image_url": "https://coin-images.coingecko.com/coins/images/6319/large/USDC.png?1769615602",
+        "coingecko_coin_id": "usd-coin"
+      }
+    },
+    {
+      "id": "uniswap_v3",
+      "type": "dex",
+      "attributes": {
+        "name": "Uniswap V3"
+      }
+    }
+  ]
+}

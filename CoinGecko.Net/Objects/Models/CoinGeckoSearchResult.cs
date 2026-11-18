@@ -34,6 +34,12 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("icos")]
         public string[] Icos { get; set; } = Array.Empty<string>();
+
+        /// <summary>
+        /// ["<c>rwas</c>"] Rwas
+        /// </summary>
+        [JsonPropertyName("rwas")]
+        public CoinGeckoSearchResultRwa[]? Rwas { get; set; }
     }
 
     /// <summary>

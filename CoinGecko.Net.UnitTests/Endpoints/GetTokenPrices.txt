@@ -1,0 +1,13 @@
+GET
+/api/v3/simple/token_price/ethereum
+true
+UriParams: {"contract_addresses":"0xdac17f958d2ee523a2206206994597c13d831ec7","vs_currencies":"usd"}
+{
+  "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599": {
+    "usd": 76721,
+    "usd_market_cap": 9008047197.715635,
+    "usd_24h_vol": 181232010.10689816,
+    "usd_24h_change": -1.6069562341774564,
+    "last_updated_at": 1779094527
+  }
+}

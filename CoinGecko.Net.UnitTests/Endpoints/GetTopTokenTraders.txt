@@ -1,0 +1,50 @@
+GET
+/api/v3/onchain/networks/solana/tokens/Dfh5DzRgSvvCFDoYc2ciTkMrbDfRKybA4SoFbPmApump/top_traders
+true
+UriParams: {"traders":"10"}
+{
+  "data": {
+    "id": "solana_Dfh5DzRgSvvCFDoYc2ciTkMrbDfRKybA4SoFbPmApump",
+    "type": "top_trader",
+    "attributes": {
+      "traders": [
+        {
+          "address": "9PHm2cYU8DhwBrbRsqqAjhW9uXVrNR1RaLsvo9oGVeaq",
+          "name": null,
+          "label": null,
+          "type": null,
+          "realized_pnl_usd": "31244842.94313992596882866680186718799091028666087696697895",
+          "unrealized_pnl_usd": null,
+          "token_balance": null,
+          "average_buy_price_usd": "0.107742029472092394285546782411629689178068069842295415369698476220071093",
+          "average_sell_price_usd": "0.185768700769238679578034408599493144222248390198249281897411569987021326",
+          "total_buy_count": 52433,
+          "total_sell_count": 110413,
+          "total_buy_token_amount": "270927018.63336",
+          "total_sell_token_amount": "325324285.088228",
+          "total_buy_usd": "29190226.8263815983907078691029715903175106331012100198765",
+          "total_sell_usd": "60435069.76952152435953653590483877830842091976208698685545",
+          "explorer_url": "https://solscan.io/account/9PHm2cYU8DhwBrbRsqqAjhW9uXVrNR1RaLsvo9oGVeaq"
+        },
+        {
+          "address": "EmDewJpfQaxWqxthX1FUyBCCPNGt8Ac5ek4M4pnGTgxC",
+          "name": null,
+          "label": null,
+          "type": null,
+          "realized_pnl_usd": "15905876.28067880560869831706113433929706359106197218605713",
+          "unrealized_pnl_usd": null,
+          "token_balance": null,
+          "average_buy_price_usd": "0.184253360370337436869211178097415145516564034725531545632817230594310635",
+          "average_sell_price_usd": "0.453961635984295417495686933363702788250069562233497749126971620666784823",
+          "total_buy_count": 17794,
+          "total_sell_count": 83977,
+          "total_buy_token_amount": "17256482.108901",
+          "total_sell_token_amount": "42041969.15458",
+          "total_buy_usd": "3179564.81673561651094979626153080521112057472898785000329",
+          "total_sell_usd": "19085441.09741442211964811332266514450818416579096003606042",
+          "explorer_url": "https://solscan.io/account/EmDewJpfQaxWqxthX1FUyBCCPNGt8Ac5ek4M4pnGTgxC"
+        }
+      ]
+    }
+  }
+}
