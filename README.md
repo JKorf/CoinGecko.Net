@@ -148,6 +148,13 @@ Make a one time donation in a crypto currency of your choice. If you prefer to d
 Alternatively, sponsor me on Github using [Github Sponsors](https://github.com/sponsors/JKorf). 
 
 ## Release notes
+* Version 7.0.0 - 18 Nov 2026
+    * Full API Update
+      * Added additional parameters for existing endpoints
+      * Added missing endpoints
+      * Updated various string types to Enum
+      * Updated XML doc references
+
 * Version 6.7.1 - 17 Nov 2026
     * Fix CryptoExchange.Net reference version
 
