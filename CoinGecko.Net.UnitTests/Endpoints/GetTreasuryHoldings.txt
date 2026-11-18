@@ -1,0 +1,29 @@
+GET
+/api/v3/companies/public_treasury/bitcoin
+true
+UriParams: {"per_page":"1"}
+{
+  "total_holdings": 1272129.0267804659,
+  "total_value_usd": 97225044888.65527,
+  "market_cap_dominance": 6.06,
+  "companies": [
+    {
+      "name": "Strategy",
+      "symbol": "MSTR.US",
+      "country": "US",
+      "total_holdings": 843738,
+      "total_entry_value_usd": 63870055699,
+      "total_current_value_usd": 64484706340.107254,
+      "percentage_of_total_supply": 4.018
+    },
+    {
+      "name": "XXI",
+      "symbol": "XXI.US",
+      "country": "US",
+      "total_holdings": 43514,
+      "total_entry_value_usd": 0,
+      "total_current_value_usd": 3325662126.967645,
+      "percentage_of_total_supply": 0.207
+    }
+  ]
+}

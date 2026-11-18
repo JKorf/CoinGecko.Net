@@ -1,0 +1,30 @@
+GET
+/api/v3/onchain/simple/networks/eth/token_price/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+true
+UriParams: {"include_market_cap":"true"}
+{
+  "data": {
+    "id": "49dd0b90-d99d-48b6-8fe2-03e826fbcef2",
+    "type": "simple_token_price",
+    "attributes": {
+      "token_prices": {
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": "2084.57379936447"
+      },
+      "market_cap_usd": {
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": "4706652516.682727"
+      },
+      "h24_volume_usd": {
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": "313441016.145429"
+      },
+      "h24_price_change_percentage": {
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": "-1.8867250098940773"
+      },
+      "total_reserve_in_usd": {
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": "1015673598.896450024556193850116628967"
+      },
+      "last_trade_timestamp": {
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": "1779882383"
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+GET
+/api/v3/insights
+true
+UriParams: {"page":"1","from":"2026-01-01","to":"2026-01-31"}
+[
+  {
+    "title": "Solana Experiences Surge in Memecoin Launches and Impersonation Scams",
+    "description": "Solana's network is seeing a rise in memecoin launches and rapid pumps. However, this speculative activity is accompanied by impersonation scams, posing risks to the ecosystem.",
+    "related_coin_ids": [
+      "wrapped-solana"
+    ],
+    "posted_at": "2026-06-15T03:56:19.514666Z"
+  },
+  {
+    "title": "Solana Sees Rising Tokenized Asset Volumes and Institutional RWA Products",
+    "description": "Blockworks data indicates growing tokenized-asset volumes on Solana across various categories. Institutional products, like OnRe's dollar/reinsurance-backed offering, are emerging, increasing RWA activity.",
+    "related_coin_ids": [
+      "wrapped-solana"
+    ],
+    "posted_at": "2026-06-15T03:56:19.486886Z"
+  }
+]

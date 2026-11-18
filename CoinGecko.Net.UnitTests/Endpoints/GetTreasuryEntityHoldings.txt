@@ -1,0 +1,47 @@
+GET
+/api/v3/public_treasury/strategy
+true
+UriParams: {"holding_amount_change":"7d"}
+{
+  "name": "Strategy",
+  "id": "strategy",
+  "type": "company",
+  "symbol": "MSTR.US",
+  "country": "US",
+  "figi": "BBG000GQJPZ0",
+  "website_url": "https://www.strategy.com/",
+  "twitter_screen_name": "Strategy",
+  "total_treasury_value_usd": 64383151578.86817,
+  "unrealized_pnl": 513095879.8681717,
+  "m_nav": 1.03,
+  "total_asset_value_per_share_usd": 179.74079167746558,
+  "holdings": [
+    {
+      "coin_id": "bitcoin",
+      "amount": 843738,
+      "percentage_of_total_supply": 4.018,
+      "amount_per_share": 0.002355494137353434,
+      "entity_value_usd_percentage": 100,
+      "current_value_usd": 64383151578.86817,
+      "total_entry_value_usd": 63870055699,
+      "average_entry_value_usd": 75698.9203982753,
+      "unrealized_pnl": 513095879.8681717,
+      "holding_amount_change": {
+        "7d": 0,
+        "14d": 24869,
+        "30d": 28677,
+        "90d": 126016,
+        "1y": 263488,
+        "ytd": 171238
+      },
+      "holding_change_percentage": {
+        "7d": 0,
+        "14d": 3.037,
+        "30d": 3.518,
+        "90d": 17.558,
+        "1y": 45.409,
+        "ytd": 25.463
+      }
+    }
+  ]
+}

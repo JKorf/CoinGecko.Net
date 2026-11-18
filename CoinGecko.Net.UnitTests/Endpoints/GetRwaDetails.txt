@@ -1,0 +1,81 @@
+GET
+/api/v3/rwas/gold
+true
+UriParams: {"sparkline":"true"}
+{
+  "id": "gold",
+  "symbol": "xau",
+  "name": "Gold",
+  "asset_type": "commodity",
+  "image": {
+    "thumb": "https://coin-images.coingecko.com/coins/images/10481/thumb/logo.png?1774627372",
+    "small": "https://coin-images.coingecko.com/coins/images/10481/small/logo.png?1774627372",
+    "large": "https://coin-images.coingecko.com/coins/images/10481/large/logo.png?1774627372"
+  },
+  "web_slug": "gold",
+  "tokens": [
+    {
+      "id": "tether-gold",
+      "symbol": "xaut",
+      "name": "Tether Gold",
+      "platforms": {
+        "ethereum": "0x68749665ff8d2d112fa859aa293f07a622782f38"
+      },
+      "issuer_details": {
+        "id": "tether-ecosystem",
+        "name": "Tether"
+      },
+      "perps_market_data": {
+        "volume_24h": 1954758829.5191464,
+        "open_interest_24h": 1336589057.9573011
+      }
+    },
+    {
+      "id": "pax-gold",
+      "symbol": "paxg",
+      "name": "PAX Gold",
+      "platforms": {
+        "ethereum": "0x45804880de22913dafe09f4980848ece6ecbaf78"
+      },
+      "issuer_details": {
+        "id": "paxos-ecosystem",
+        "name": "Paxos Global"
+      },
+      "perps_market_data": {
+        "volume_24h": 444834538.1260172,
+        "open_interest_24h": 563850051.3234763
+      }
+    }
+  ],
+  "tokenized_market_data": {
+    "current_price": 4325.388412841455,
+    "market_cap": 5226930984.54683,
+    "total_volume": 370143676.04940695,
+    "high_24h": 4337.636910965984,
+    "low_24h": 4265.225091868207,
+    "price_change_24h": 31.508789145972514,
+    "price_change_percentage_24h": 0.73381,
+    "market_cap_change_24h": 42665678.302101135,
+    "market_cap_change_percentage_24h": 0.82298,
+    "last_updated": "2026-09-16T06:49:00Z",
+    "sparkline_in_7d": {
+      "price": [
+        4398.794934375798,
+        4399.814826523387,
+        4407.595134436859
+      ]
+    },
+    "price_change_percentage_1h_in_currency": -0.07102,
+    "price_change_percentage_24h_in_currency": 0.73381,
+    "price_change_percentage_7d_in_currency": -1.65248,
+    "price_change_percentage_14d_in_currency": 0.03663,
+    "price_change_percentage_30d_in_currency": -1.19872,
+    "price_change_percentage_200d_in_currency": -17.96545,
+    "price_change_percentage_1y_in_currency": 11.51039
+  },
+  "perps_market_data": {
+    "volume_24h": 7416589039.8701,
+    "open_interest_24h": 4536346045.728076
+  },
+  "last_updated": "2026-09-16T06:49:00Z"
+}

@@ -1,0 +1,57 @@
+GET
+/api/v3/onchain/networks/eth/tokens/0xdac17f958d2ee523a2206206994597c13d831ec7/trades/range
+true
+UriParams: {"from":"1735689600","to":"1735689600","trade_volume_in_usd_greater_than":"1"}
+{
+  "data": [
+    {
+      "id": "eth_25928919_0xe5278132946375ba292473819aa96c86fd7219d66009a067ed280f679bdf45eb_73_1788825611",
+      "type": "trade",
+      "attributes": {
+        "pool_address": "0x0fb0e40cec3bb23e13abc585958a93c796fbea56955e19a23727a716a0423239",
+        "pool_dex": "uniswap-v4-ethereum",
+        "block_number": 25928919,
+        "tx_hash": "0xe5278132946375ba292473819aa96c86fd7219d66009a067ed280f679bdf45eb",
+        "tx_from_address": "0xb5469a903df8dad9df1da1341a85f84fd434c724",
+        "from_token_amount": "2489.650395",
+        "to_token_amount": "2489.845103",
+        "price_from_in_currency_token": "0.000401610882268168",
+        "price_to_in_currency_token": "0.000401008437871588",
+        "price_from_in_usd": "1.00030427279179",
+        "price_to_in_usd": "0.9988037464599",
+        "block_timestamp": "2026-09-07T23:59:59Z",
+        "kind": "sell",
+        "volume_in_usd": "2490.40792787628",
+        "from_token_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "to_token_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "is_anomalous": false
+      }
+    },
+    {
+      "id": "eth_25928919_0xe5278132946375ba292473819aa96c86fd7219d66009a067ed280f679bdf45eb_67_1788825611",
+      "type": "trade",
+      "attributes": {
+        "pool_address": "0x3b1b1f2e775a6db1664f8e7d59ad568605ea2406312c11aef03146c0cf89d5b9",
+        "pool_dex": "uniswap-v4-ethereum",
+        "block_number": 25928919,
+        "tx_hash": "0xe5278132946375ba292473819aa96c86fd7219d66009a067ed280f679bdf45eb",
+        "tx_from_address": "0xb5469a903df8dad9df1da1341a85f84fd434c724",
+        "from_token_amount": "19917.582875",
+        "to_token_amount": "19919.253008",
+        "price_from_in_currency_token": "0.000401042063308448",
+        "price_to_in_currency_token": "0.000401008437871588",
+        "price_from_in_usd": "0.998887498344251",
+        "price_to_in_usd": "0.9988037464599",
+        "block_timestamp": "2026-09-07T23:59:59Z",
+        "kind": "buy",
+        "volume_in_usd": "19895.424531073",
+        "from_token_address": "0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+        "to_token_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "is_anomalous": false
+      }
+    }
+  ],
+  "meta": {
+    "next_cursor": "eyJidCI6IjIwMjYtMDktMDdUMjM6NTk6NTkuMDAwMDAwMDAwWiIsImJuIjoyNTkyODkxOSwidHgiOiIweGU1Mjc4MTMyOTQ2Mzc1YmEyOTI0NzM4MTlhYTk2Yzg2ZmQ3MjE5ZDY2MDA5YTA2N2VkMjgwZjY3OWJkZjQ1ZWIiLCJsaSI6NjcsIndmIjoxNzg4MjIwODAwLCJmcCI6IjBkYzBiMzc1ZjU5NGE5Y2Y0ZjVkOWRlOTNkN2UxNjU2NTQzZTZlODJlOTEwN2IwMmUxYzRlZjNkZTFiNjgwODAiLCJpYXQiOjE3ODg5Mzk0NDN9"
+  }
+}

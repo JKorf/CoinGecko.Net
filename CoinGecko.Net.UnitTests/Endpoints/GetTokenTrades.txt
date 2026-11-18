@@ -1,0 +1,57 @@
+GET
+/api/v3/onchain/networks/eth/tokens/0xdac17f958d2ee523a2206206994597c13d831ec7/trades
+true
+UriParams: {"trade_volume_in_usd_greater_than":"1"}
+{
+  "data": [
+    {
+      "id": "eth_25191526_0xe9d83fd4f20bd9a4d262df47aaed68822d8312adc903623dc08f004d0db42c48_418_1779943449",
+      "type": "trade",
+      "attributes": {
+        "pool_address": "0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852",
+        "pool_dex": "uniswap_v2",
+        "block_number": 25191526,
+        "tx_hash": "0xe9d83fd4f20bd9a4d262df47aaed68822d8312adc903623dc08f004d0db42c48",
+        "tx_from_address": "0xabba7bef6dffba87d66e6c3d2d612b1a57df2303",
+        "from_token_amount": "18.0",
+        "to_token_amount": "0.00906223763828302",
+        "price_from_in_currency_token": "0.000503457646571279",
+        "price_to_in_currency_token": "1.0",
+        "price_from_in_usd": "0.996563779970825",
+        "price_to_in_usd": "1979.43915790687",
+        "block_timestamp": "2026-05-28T04:43:59Z",
+        "kind": "buy",
+        "volume_in_usd": "17.9381480394748",
+        "from_token_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "to_token_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "is_anomalous": false
+      }
+    },
+    {
+      "id": "eth_25191526_0x41533cb177c05e4b651a1bac8cfb9497a7d325275b668ba6d42d0a2dbf01c3bc_121_1779943444",
+      "type": "trade",
+      "attributes": {
+        "pool_address": "0x54578b6f942aeb23b67a8cef24220651306b8e26",
+        "pool_dex": "uniswap_v3",
+        "block_number": 25191526,
+        "tx_hash": "0x41533cb177c05e4b651a1bac8cfb9497a7d325275b668ba6d42d0a2dbf01c3bc",
+        "tx_from_address": "0x930b88a592a045c428f3d99f7f3e5f95e3967508",
+        "from_token_amount": "1267.21454522135",
+        "to_token_amount": "116.882923",
+        "price_from_in_currency_token": "0.0000464421678267092",
+        "price_to_in_currency_token": "0.000503514021305036",
+        "price_from_in_usd": "0.0919444428573566",
+        "price_to_in_usd": "0.996837967006657",
+        "block_timestamp": "2026-05-28T04:43:59Z",
+        "kind": "sell",
+        "volume_in_usd": "116.513335341116",
+        "from_token_address": "0x9aab071b4129b083b01cb5a0cb513ce7eca26fa5",
+        "to_token_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "is_anomalous": false
+      }
+    }
+  ],
+  "meta": {
+    "next_cursor": null
+  }
+}

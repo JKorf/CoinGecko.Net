@@ -1,6 +1,7 @@
 GET
 /api/v3/derivatives
 false
+UriParams: {"page":"2","per_page":"100"}
 [
   {
     "market": "Deepcoin (Derivatives)",

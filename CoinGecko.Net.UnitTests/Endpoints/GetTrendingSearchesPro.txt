@@ -1,0 +1,82 @@
+GET
+/api/v3/search/trending
+true
+UriParams: {"show_max":"coins"}
+{
+  "coins": [
+    {
+      "item": {
+        "id": "bonk",
+        "coin_id": 28600,
+        "name": "Bonk",
+        "symbol": "BONK",
+        "market_cap_rank": 103,
+        "thumb": "https://coin-images.coingecko.com/coins/images/28600/standard/bonk.jpg?1696527587",
+        "small": "https://coin-images.coingecko.com/coins/images/28600/small/bonk.jpg?1696527587",
+        "large": "https://coin-images.coingecko.com/coins/images/28600/large/bonk.jpg?1696527587",
+        "slug": "bonk",
+        "price_btc": 7.821066970851871e-11,
+        "score": 0,
+        "data": {
+          "price": 0.000005938674704566297,
+          "price_btc": "0.00000000007821066970851871",
+          "price_change_percentage_24h": {
+            "usd": -3.2712597351582655,
+            "btc": -1.2567575303632434
+          },
+          "market_cap": "$521,967,819",
+          "market_cap_btc": "6883.418982779206",
+          "total_volume": "$31,701,707",
+          "total_volume_btc": "417.50253280497",
+          "sparkline": "https://www.coingecko.com/coins/28600/sparkline.svg",
+          "content": null
+        }
+      }
+    }
+  ],
+  "nfts": [
+    {
+      "id": "beeple-everydays-the-2020-collection",
+      "name": "BEEPLE: EVERYDAYS - THE 2020 COLLECTION",
+      "symbol": "BEEPLE2",
+      "thumb": "https://coin-images.coingecko.com/nft_contracts/images/1327/standard/beeple-everydays-the-2020-collection.jpg?1707287783",
+      "nft_contract_id": 1327,
+      "native_currency_symbol": "eth",
+      "floor_price_in_native_currency": 6.98,
+      "floor_price_24h_percentage_change": 8.231790820932737,
+      "data": {
+        "floor_price": "6.98 ETH",
+        "floor_price_in_usd_24h_percentage_change": "8.231790820932737",
+        "h24_volume": "6.10 ETH",
+        "h24_average_sale_price": "6.10 ETH",
+        "sparkline": "https://www.coingecko.com/nft/1327/sparkline.svg",
+        "content": null
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": 102120809,
+      "name": "Base Native",
+      "top_3_coins_images": [
+        "https://assets.coingecko.com/coins/images/40008/small/USR_LOGO.png?1725222638",
+        "https://assets.coingecko.com/coins/images/13187/small/7739.png?1696512969",
+        "https://assets.coingecko.com/coins/images/70556/small/elizaOS_token_logo_high_quality.png?1763494093"
+      ],
+      "market_cap_1h_change": 0.1591461077485745,
+      "slug": "base-native",
+      "coins_count": "573",
+      "data": {
+        "market_cap": 117316549202.14426,
+        "market_cap_btc": 1545658.5276991604,
+        "total_volume": 16971131961.734743,
+        "total_volume_btc": 223596.5430262045,
+        "market_cap_change_percentage_24h": {
+          "usd": 0.14714515711689605,
+          "btc": 1.5918443786835867
+        },
+        "sparkline": "https://www.coingecko.com/categories/102120809/sparkline.svg"
+      }
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+GET
+/api/v3/onchain/networks/new_pools
+true
+UriParams: {"include":"base_token"}
+{
+  "data": [
+    {
+      "id": "solana_6EiJDBoHqRA3m6FqYBphpGomspmFxtj4mawUKYMZtcVG",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.00000148440590295321912651916468624641639408545041453058498522449228",
+        "base_token_price_native_currency": null,
+        "quote_token_price_usd": "83.768359508641337467584153811084885016464255852",
+        "quote_token_price_native_currency": null,
+        "base_token_price_quote_token": null,
+        "quote_token_price_base_token": null,
+        "address": "6EiJDBoHqRA3m6FqYBphpGomspmFxtj4mawUKYMZtcVG",
+        "name": "MadDonkey / SOL",
+        "pool_created_at": "2026-05-27T14:58:17Z",
+        "fdv_usd": "3847.309588",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "-18.046",
+          "m15": "-18.046",
+          "m30": "-18.046",
+          "h1": "-18.046",
+          "h6": "-18.046",
+          "h24": "-18.046"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 1,
+            "sells": 1,
+            "buyers": 1,
+            "sellers": 1
+          },
+          "m15": {
+            "buys": 1,
+            "sells": 1,
+            "buyers": 1,
+            "sellers": 1
+          },
+          "m30": {
+            "buys": 1,
+            "sells": 1,
+            "buyers": 1,
+            "sellers": 1
+          },
+          "h1": {
+            "buys": 1,
+            "sells": 1,
+            "buyers": 1,
+            "sellers": 1
+          },
+          "h6": {
+            "buys": 1,
+            "sells": 1,
+            "buyers": 1,
+            "sellers": 1
+          },
+          "h24": {
+            "buys": 1,
+            "sells": 1,
+            "buyers": 1,
+            "sellers": 1
+          }
+        },
+        "volume_usd": {
+          "m5": "6.7101798706",
+          "m15": "6.7101798706",
+          "m30": "6.7101798706",
+          "h1": "6.7101798706",
+          "h6": "6.7101798706",
+          "h24": "6.7101798706"
+        },
+        "reserve_in_usd": null,
+        "sentiment_vote_positive_percentage": 0,
+        "sentiment_vote_negative_percentage": 0,
+        "community_sus_report": 0
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_2R33cGC6WaP1j2wcvmkAvGjTeEy1N1hvwZtBykmypump",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "network": {
+          "data": {
+            "id": "solana",
+            "type": "network"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pump-fun",
+            "type": "dex"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "solana_2R33cGC6WaP1j2wcvmkAvGjTeEy1N1hvwZtBykmypump",
+      "type": "token",
+      "attributes": {
+        "address": "2R33cGC6WaP1j2wcvmkAvGjTeEy1N1hvwZtBykmypump",
+        "name": "Donkey",
+        "symbol": "MadDonkey",
+        "decimals": 6,
+        "image_url": null,
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_So11111111111111111111111111111111111111112",
+      "type": "token",
+      "attributes": {
+        "address": "So11111111111111111111111111111111111111112",
+        "name": "Wrapped SOL",
+        "symbol": "SOL",
+        "decimals": 9,
+        "image_url": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989",
+        "coingecko_coin_id": "wrapped-solana"
+      }
+    },
+    {
+      "id": "pump-fun",
+      "type": "dex",
+      "attributes": {
+        "name": "Pump.fun"
+      }
+    }
+  ]
+}

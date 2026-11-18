@@ -1,0 +1,61 @@
+GET
+/api/v3/onchain/wallets/0x9642b23ed1e01df1092b92641051881a322f5d4e/balances
+true
+UriParams: {"networks":"eth%2Cbase","sort":"value_usd_desc"}
+{
+  "data": {
+    "id": "0x9642b23ed1e01df1092b92641051881a322f5d4e",
+    "type": "wallet_balance",
+    "attributes": {
+      "wallet_address": "0x9642b23ed1e01df1092b92641051881a322f5d4e",
+      "total_value_usd": "91333695.8924553249294795652",
+      "total_holdings": 3235,
+      "networks": [
+        {
+          "network": "eth",
+          "value_usd": "91333647.2139247191042473531",
+          "holdings": 2784,
+          "last_updated_at": "2026-09-09T04:53:53Z"
+        },
+        {
+          "network": "base",
+          "value_usd": "48.6785306058252322121",
+          "holdings": 451,
+          "last_updated_at": "2026-09-09T04:54:00Z"
+        }
+      ],
+      "balances": [
+        {
+          "network": "eth",
+          "address": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84",
+          "token_type": "erc20",
+          "name": "Liquid staked Ether 2.0",
+          "symbol": "stETH",
+          "decimals": 18,
+          "coingecko_coin_id": "staked-ether",
+          "balance_raw": "1285426654835126578249",
+          "balance": "1285.426654835126578249",
+          "price_usd": "2505.0197550041",
+          "value_usd": "3220019.16397083",
+          "h24_price_change_percentage": "1.1092026358",
+          "total_reserve_in_usd": "76309888.5752643"
+        },
+        {
+          "network": "base",
+          "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "token_type": "native",
+          "name": "Ether",
+          "symbol": "ETH",
+          "decimals": 18,
+          "coingecko_coin_id": "ethereum",
+          "balance_raw": "5689474631933105",
+          "balance": "0.005689474631933105",
+          "price_usd": "2509.94",
+          "value_usd": "14.2802399576741775637",
+          "h24_price_change_percentage": "1.1788611331",
+          "total_reserve_in_usd": "278512639.260865"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+GET
+/api/v3/onchain/networks/eth/pools/0x06da0fd433c1a5d7a4faa01111c044910a184553/trades/range
+true
+UriParams: {"from":"1735689600","to":"1735689600","trade_volume_in_usd_greater_than":"1"}
+{
+  "data": [
+    {
+      "id": "eth_25928873_0x2d17e7f893da1d87e893dd6ddcc42366ea3680c13d4be129d6d1ebac271bac40_167_1788825063",
+      "type": "trade",
+      "attributes": {
+        "block_number": 25928873,
+        "tx_hash": "0x2d17e7f893da1d87e893dd6ddcc42366ea3680c13d4be129d6d1ebac271bac40",
+        "tx_from_address": "0x0000000000f8492ebaf65b3c0457cca8948badfe",
+        "from_token_amount": "0.475091",
+        "to_token_amount": "0.00019056174944482",
+        "price_from_in_currency_token": "0.000401105786985693",
+        "price_to_in_currency_token": "1.0",
+        "price_from_in_usd": "0.999728096656752",
+        "price_to_in_usd": "2492.43",
+        "block_timestamp": "2026-09-07T23:50:47Z",
+        "kind": "sell",
+        "volume_in_usd": "0.474961821168753",
+        "from_token_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "to_token_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "is_anomalous": false
+      }
+    },
+    {
+      "id": "eth_25928873_0x05a0ba340fc07a23a5179ed0c7b68c0a7fe5e40487f1d2bb5d96f5d2eda6a1cb_26_1788825060",
+      "type": "trade",
+      "attributes": {
+        "block_number": 25928873,
+        "tx_hash": "0x05a0ba340fc07a23a5179ed0c7b68c0a7fe5e40487f1d2bb5d96f5d2eda6a1cb",
+        "tx_from_address": "0x0e14a3e9af1afdfc60554e3e2a40c8284d647093",
+        "from_token_amount": "42.234864",
+        "to_token_amount": "0.0169429755714377",
+        "price_from_in_currency_token": "0.000401160888583367",
+        "price_to_in_currency_token": "1.0",
+        "price_from_in_usd": "0.999865433531841",
+        "price_to_in_usd": "2492.43",
+        "block_timestamp": "2026-09-07T23:50:47Z",
+        "kind": "sell",
+        "volume_in_usd": "42.2291806035184",
+        "from_token_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "to_token_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "is_anomalous": false
+      }
+    }
+  ],
+  "meta": {
+    "next_cursor": "eyJidCI6IjIwMjYtMDktMDdUMjM6NTA6NDcuMDAwMDAwMDAwWiIsImJuIjoyNTkyODg3MywidHgiOiIweDA1YTBiYTM0MGZjMDdhMjNhNTE3OWVkMGM3YjY4YzBhN2ZlNWU0MDQ4N2YxZDJiYjVkOTZmNWQyZWRhNmExY2IiLCJsaSI6MjYsIndmIjoxNzg4MjIwODAwLCJmcCI6Ijk1OGY2N2VkZmU2NDRjMmU2ZTE5NTlkNWQ2ZThmM2FjZDY3YTFiYWYzYWI3YzJmMTVhYmUzNjkzMjhhNjEyZTAiLCJpYXQiOjE3ODg5Mzk0MjF9"
+  }
+}

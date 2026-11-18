@@ -60,7 +60,7 @@ namespace CoinGecko.Net
         }
 
         /// <inheritdoc />
-        public override ApiCredentials Copy() => new CoinGeckoCredentials { Credential = Credential };
+        public override ApiCredentials Copy() => new CoinGeckoCredentials { Credential = Credential, DemoKey = DemoKey };
 
         /// <inheritdoc />
         public override void Validate()

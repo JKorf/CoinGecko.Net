@@ -1,0 +1,12 @@
+GET
+/api/v3/derivatives/underlyings/list
+true
+UriParams: { "underlying_type": "rwa" }
+[
+  {
+    "id": "gold",
+    "symbol": "xau",
+    "name": "Gold",
+    "underlying_type": "rwa"
+  }
+]

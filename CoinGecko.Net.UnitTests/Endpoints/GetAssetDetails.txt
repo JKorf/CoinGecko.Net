@@ -1,6 +1,7 @@
 GET
 /api/v3/coins/ethereum
 false
+UriParams: {"include_categories_details":"true","sparkline":"true"}
 {
   "id": "bitcoin",
   "symbol": "btc",
@@ -86,6 +87,7 @@ false
   "watchlist_portfolio_users": 1541900,
   "market_cap_rank": 1,
   "market_data": {
+    "sparkline_7d": { "price": [2500.25, 2525.50] },
     "current_price": {
       "aed": 256486,
       "ars": 60101017,

@@ -1,0 +1,17 @@
+GET
+/api/v3/coins/list/new
+true
+[
+  {
+    "id": "upside-down-cat",
+    "symbol": "USDC",
+    "name": "UpSide Down Cat",
+    "activated_at": 1778737128
+  },
+  {
+    "id": "chinification",
+    "symbol": "chinify",
+    "name": "Chinification",
+    "activated_at": 1778705764
+  }
+]

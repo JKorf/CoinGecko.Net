@@ -1,0 +1,9 @@
+GET
+/api/v3/rwas/issuers/list
+true
+[
+  {
+    "id": "xstocks-ecosystem",
+    "name": "xStocks"
+  }
+]

@@ -1,0 +1,12 @@
+GET
+/api/v3/entities/list
+true
+UriParams: { "entity_type": "government", "page": 2, "per_page": 10 }
+[
+  {
+    "id": "texas",
+    "symbol": "",
+    "name": "Texas",
+    "country": "US"
+  }
+]

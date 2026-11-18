@@ -195,6 +195,12 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("explorers")]
         public CoinGeckoNftLink[] Explorers { get; set; } = Array.Empty<CoinGeckoNftLink>();
+
+        /// <summary>
+        /// ["<c>web_slug</c>"] NFT collection web slug
+        /// </summary>
+        [JsonPropertyName("web_slug")]
+        public string? WebSlug { get; set; }
     }
 
     /// <summary>

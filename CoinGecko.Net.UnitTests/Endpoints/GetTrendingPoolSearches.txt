@@ -1,0 +1,91 @@
+GET
+/api/v3/onchain/pools/trending_search
+true
+UriParams: {"include":"base_token"}
+{
+  "data": [
+    {
+      "id": "solana_ojW3ZwJMh9J1K2QS7g4YvoMrBso6saH2s7fthijqyoh",
+      "type": "pool",
+      "attributes": {
+        "trending_rank": 0,
+        "address": "ojW3ZwJMh9J1K2QS7g4YvoMrBso6saH2s7fthijqyoh",
+        "name": "CYPAW / SOL",
+        "pool_created_at": "2026-05-26T12:22:03Z",
+        "fdv_usd": "2521.4293653196",
+        "market_cap_usd": null,
+        "volume_usd": {
+          "h24": "1283.0470400706"
+        },
+        "reserve_in_usd": "3899.9791"
+      },
+      "relationships": {
+        "network": {
+          "data": {
+            "id": "solana",
+            "type": "network"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pumpswap",
+            "type": "dex"
+          }
+        },
+        "base_token": {
+          "data": {
+            "id": "solana_JCMoQSqzxNGkQWr4bPK4AzAi7wbBJEJ71ex1qKAxpump",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "solana_JCMoQSqzxNGkQWr4bPK4AzAi7wbBJEJ71ex1qKAxpump",
+      "type": "token",
+      "attributes": {
+        "address": "JCMoQSqzxNGkQWr4bPK4AzAi7wbBJEJ71ex1qKAxpump",
+        "name": "CyberPaws",
+        "symbol": "CYPAW",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/q0m4wsxl5elcsvbwep1zflp1nbnf",
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_So11111111111111111111111111111111111111112",
+      "type": "token",
+      "attributes": {
+        "address": "So11111111111111111111111111111111111111112",
+        "name": "Wrapped SOL",
+        "symbol": "SOL",
+        "decimals": 9,
+        "image_url": "https://coin-images.coingecko.com/coins/images/21629/large/solana.jpg?1696520989",
+        "coingecko_coin_id": "wrapped-solana"
+      }
+    },
+    {
+      "id": "pumpswap",
+      "type": "dex",
+      "attributes": {
+        "name": "PumpSwap"
+      }
+    },
+    {
+      "id": "solana",
+      "type": "network",
+      "attributes": {
+        "name": "Solana",
+        "coingecko_asset_platform_id": "solana"
+      }
+    }
+  ]
+}

@@ -56,8 +56,9 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("converted_volume")]
         public Dictionary<string, decimal?> ConvertedVolume { get; set; } = new Dictionary<string, decimal?>();
         /// <summary>
-        /// ["<c>trust_score</c>"] Trust score
+        /// ["<c>trust_score</c>"] Deprecated ticker trust score. CoinGecko now returns null.
         /// </summary>
+        [Obsolete("CoinGecko no longer returns a ticker trust score.")]
         [JsonPropertyName("trust_score")]
         public string? TrustScore { get; set; }
         /// <summary>
@@ -113,5 +114,11 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("target_coin_id")]
         public string? TargetCoinId { get; set; }
+
+        /// <summary>
+        /// ["<c>coin_mcap_usd</c>"] Market cap in USD
+        /// </summary>
+        [JsonPropertyName("coin_mcap_usd")]
+        public decimal? CoinMarketCapUsd { get; set; }
     }
 }

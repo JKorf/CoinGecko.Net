@@ -1,0 +1,36 @@
+GET
+/api/v3/onchain/simple/token_price/multi
+true
+UriParams: {"tokens":"eth%3A0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2%2Csolana%3A6NwarBvDkXhByqVp2Qkq5i9XbtA2B3Bwe8SWGu9vpump","include_market_cap":"true"}
+{
+  "data": {
+    "id": "1965b339-94a3-4a77-9475-2c3248081bcf",
+    "type": "simple_token_price",
+    "attributes": {
+      "token_prices": {
+        "solana:6NwarBvDkXhByqVp2Qkq5i9XbtA2B3Bwe8SWGu9vpump": "0.00725052986758138039267632966543134822451730159307662487006330525",
+        "eth:0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": "2472.55"
+      },
+      "market_cap_usd": {
+        "solana:6NwarBvDkXhByqVp2Qkq5i9XbtA2B3Bwe8SWGu9vpump": "7247388.521391886",
+        "eth:0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": "5102178003.805862"
+      },
+      "h24_volume_usd": {
+        "solana:6NwarBvDkXhByqVp2Qkq5i9XbtA2B3Bwe8SWGu9vpump": "675469.233689449",
+        "eth:0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": "375011671.541306"
+      },
+      "h24_price_change_percentage": {
+        "solana:6NwarBvDkXhByqVp2Qkq5i9XbtA2B3Bwe8SWGu9vpump": "-25.041400507465255",
+        "eth:0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": "-1.7249945348675306"
+      },
+      "total_reserve_in_usd": {
+        "solana:6NwarBvDkXhByqVp2Qkq5i9XbtA2B3Bwe8SWGu9vpump": "269041.15769788764465650874159",
+        "eth:0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": "897342937.857452743743894395950846065408962664417022104817193141774571367472718031454441201623527425"
+      },
+      "last_trade_timestamp": {
+        "solana:6NwarBvDkXhByqVp2Qkq5i9XbtA2B3Bwe8SWGu9vpump": "1789028068",
+        "eth:0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": "1789027367"
+      }
+    }
+  }
+}

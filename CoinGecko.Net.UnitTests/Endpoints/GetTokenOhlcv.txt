@@ -1,0 +1,44 @@
+GET
+/api/v3/onchain/networks/solana/tokens/So11111111111111111111111111111111111111112/ohlcv/day
+true
+UriParams: {"include_empty_intervals":"true","include_inactive_source":"true"}
+{
+  "data": {
+    "id": "2dea0d2f-bf0f-4fa6-a934-db61d9375dbe",
+    "type": "ohlcv_request_response",
+    "attributes": {
+      "ohlcv_list": [
+        [
+          1779926400,
+          82.26780088646034,
+          83.8971583220568,
+          79.9616,
+          80.4112417847994,
+          31314919.221351475
+        ],
+        [
+          1779840000,
+          83.65257586508716,
+          84.8896434634975,
+          81.99,
+          82.26780088646034,
+          118334565.59596911
+        ]
+      ]
+    }
+  },
+  "meta": {
+    "base": {
+      "name": "Wrapped SOL",
+      "symbol": "SOL",
+      "coingecko_coin_id": "wrapped-solana",
+      "address": "So11111111111111111111111111111111111111112"
+    },
+    "quote": {
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "coingecko_coin_id": "usd-coin",
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+    }
+  }
+}

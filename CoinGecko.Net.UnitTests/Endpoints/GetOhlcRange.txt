@@ -1,0 +1,20 @@
+GET
+/api/v3/coins/bitcoin/ohlc/range
+true
+UriParams: {"vs_currency":"usd","from":"1735689600","to":"1735689600","interval":"daily"}
+[
+  [
+    1764547200000,
+    90832,
+    91905,
+    90406,
+    90406
+  ],
+  [
+    1764633600000,
+    90360,
+    90360,
+    83989,
+    86281
+  ]
+]

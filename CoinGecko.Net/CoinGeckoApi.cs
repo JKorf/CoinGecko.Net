@@ -42,7 +42,7 @@ namespace CoinGecko.Net
         internal static JsonSerializerContext _serializationContext = JsonSerializerContextCache.GetOrCreate<CoinGeckoSourceGenerationContext>();
         internal static ParameterSerializationSettings _parameterSerializationSettings = new ParameterSerializationSettings
         {
-
+            Bool = BoolSerialization.String
         };
 
         /// <summary>

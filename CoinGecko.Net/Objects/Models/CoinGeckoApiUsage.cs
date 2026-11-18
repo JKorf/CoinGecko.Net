@@ -33,6 +33,24 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("current_remaining_monthly_calls")]
         public long CurrentRemainingMonthlyCalls { get; set; }
+
+        /// <summary>
+        /// ["<c>api_key_rate_limit_request_per_minute</c>"] Rate limit per minute configured for this API key
+        /// </summary>
+        [JsonPropertyName("api_key_rate_limit_request_per_minute")]
+        public long? ApiKeyRateLimitRequestPerMinute { get; set; }
+
+        /// <summary>
+        /// ["<c>api_key_monthly_call_credit</c>"] Monthly call credit limit configured for this API key
+        /// </summary>
+        [JsonPropertyName("api_key_monthly_call_credit")]
+        public long? ApiKeyMonthlyCallCredit { get; set; }
+
+        /// <summary>
+        /// ["<c>api_key_current_total_monthly_calls</c>"] Total API calls made this month by this API key
+        /// </summary>
+        [JsonPropertyName("api_key_current_total_monthly_calls")]
+        public long? ApiKeyCurrentTotalMonthlyCalls { get; set; }
     }
 
 

@@ -1,0 +1,12 @@
+GET
+/api/v3/rwas/list
+true
+UriParams: { "asset_type": "commodity" }
+[
+  {
+    "id": "gold",
+    "symbol": "XAU",
+    "name": "Gold",
+    "asset_type": "commodity"
+  }
+]

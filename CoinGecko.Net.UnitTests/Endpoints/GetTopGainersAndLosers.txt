@@ -1,0 +1,44 @@
+GET
+/api/v3/coins/top_gainers_losers
+true
+UriParams: {"vs_currency":"usd","duration":"1h"}
+{
+  "top_gainers": [
+    {
+      "id": "maga-bitcoin",
+      "symbol": "mbtc",
+      "name": "MAGA Bitcoin",
+      "image": "https://coin-images.coingecko.com/coins/images/102172497/original/image0-removebg-preview.webp?1773518858",
+      "market_cap_rank": 189,
+      "usd": 0.17408997149936514,
+      "usd_24h_vol": 50396.8060000212,
+      "usd_24h_change": 150.5022699272054,
+      "usd_1h_change": -6.503819291482131,
+      "usd_7d_change": 519.1190967122302,
+      "usd_14d_change": 461.9068555244123,
+      "usd_30d_change": 448.72555160441027,
+      "usd_60d_change": 67.38949093422981,
+      "usd_200d_change": null,
+      "usd_1y_change": null
+    }
+  ],
+  "top_losers": [
+    {
+      "id": "irys",
+      "symbol": "irys",
+      "name": "Irys",
+      "image": "https://coin-images.coingecko.com/coins/images/70808/original/irys.png?1764757341",
+      "market_cap_rank": 352,
+      "usd": 0.038636564524228145,
+      "usd_24h_vol": 77344929.5624576,
+      "usd_24h_change": -19.511341677152053,
+      "usd_1h_change": 1.6279519726091103,
+      "usd_7d_change": 0.8723104841951528,
+      "usd_14d_change": -3.0080471375482483,
+      "usd_30d_change": 35.11913273728426,
+      "usd_60d_change": 119.67467634522242,
+      "usd_200d_change": null,
+      "usd_1y_change": null
+    }
+  ]
+}

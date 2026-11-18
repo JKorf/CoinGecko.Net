@@ -1,0 +1,28 @@
+GET
+/api/v3/public_treasury/strategy/transaction_history
+true
+UriParams: {"per_page":"1"}
+{
+  "transactions": [
+    {
+      "date": 1779062400000,
+      "source_url": "https://assets.contentstack.io/v3/assets/bltf8d808d9b8cebd37/bltc0d0f9d2d325a368/6a0a710811de4f7e170ba045/form-8-k_05-18-2026.pdf",
+      "coin_id": "bitcoin",
+      "type": "buy",
+      "holding_net_change": 24869,
+      "transaction_value_usd": 2014015965,
+      "holding_balance": 843738,
+      "average_entry_value_usd": 80985
+    },
+    {
+      "date": 1778457600000,
+      "source_url": "https://assets.contentstack.io/v3/assets/bltf8d808d9b8cebd37/blt7653ead16575975e/6a01462c750c63f12be32cf8/form-8-k_05-11-2026.pdf",
+      "coin_id": "bitcoin",
+      "type": "buy",
+      "holding_net_change": 535,
+      "transaction_value_usd": 42981900,
+      "holding_balance": 818869,
+      "average_entry_value_usd": 80340
+    }
+  ]
+}

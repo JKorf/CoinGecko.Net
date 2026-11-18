@@ -226,5 +226,35 @@ namespace CoinGecko.Net.Objects.Models
         [JsonPropertyName("last_updated")]
         [JsonConverter(typeof(DateTimeConverter))]
         public DateTime? LastUpdated { get; set; }
+
+        /// <summary>
+        /// ["<c>outstanding_token_value_usd</c>"] Outstanding token value in USD
+        /// </summary>
+        [JsonPropertyName("outstanding_token_value_usd")]
+        public decimal? OutstandingTokenValueUsd { get; set; }
+
+        /// <summary>
+        /// ["<c>market_cap_rank_with_rehypothecated</c>"] Market cap rank including rehypothecated tokens
+        /// </summary>
+        [JsonPropertyName("market_cap_rank_with_rehypothecated")]
+        public int? MarketCapRankWithRehypothecated { get; set; }
+
+        /// <summary>
+        /// ["<c>max_supply_infinite</c>"] Max supply infinite
+        /// </summary>
+        [JsonPropertyName("max_supply_infinite")]
+        public bool? MaxSupplyInfinite { get; set; }
+
+        /// <summary>
+        /// ["<c>outstanding_supply</c>"] Tokens outstanding in the market
+        /// </summary>
+        [JsonPropertyName("outstanding_supply")]
+        public decimal? OutstandingSupply { get; set; }
+
+        /// <summary>
+        /// ["<c>sparkline_7d</c>"] Sparkline 7-day price data
+        /// </summary>
+        [JsonPropertyName("sparkline_7d")]
+        public CoinGeckoSparkline? Sparkline7d { get; set; }
     }
 }

@@ -1,0 +1,47 @@
+GET
+/api/v3/onchain/networks/eth/wallets/0x9642b23ed1e01df1092b92641051881a322f5d4e/transfers
+true
+UriParams: {"token":"sample"}
+{
+  "data": [
+    {
+      "id": "eth_25937833_0xe3d3005d33af5e5ea60ebe3c16436691ac44a862f7f7bdf133114c0b4110d9f0_299_out",
+      "type": "transfer",
+      "attributes": {
+        "block_number": 25937833,
+        "tx_hash": "0xe3d3005d33af5e5ea60ebe3c16436691ac44a862f7f7bdf133114c0b4110d9f0",
+        "direction": "out",
+        "token_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "amount_raw": "7999906000",
+        "amount": "7999.906",
+        "block_timestamp": "2026-09-09T05:50:11Z",
+        "from_address": "0x9642b23ed1e01df1092b92641051881a322f5d4e",
+        "to_address": "0xf8932784396f4f122bbb7ff62fab2a85e400646b",
+        "name": "Tether USD",
+        "symbol": "USDT",
+        "decimals": 6
+      }
+    },
+    {
+      "id": "eth_25937832_0x0f8c5a214905a7590e9b4f55821e89dd790e8569f2f91db46cce0cb13f8023fb_144_in",
+      "type": "transfer",
+      "attributes": {
+        "block_number": 25937832,
+        "tx_hash": "0x0f8c5a214905a7590e9b4f55821e89dd790e8569f2f91db46cce0cb13f8023fb",
+        "direction": "in",
+        "token_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "amount_raw": "3401000000",
+        "amount": "3401.0",
+        "block_timestamp": "2026-09-09T05:49:59Z",
+        "from_address": "0x5fa654326317a2a5d69bc97e5a0ea9fe6f092cd5",
+        "to_address": "0x9642b23ed1e01df1092b92641051881a322f5d4e",
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "decimals": 6
+      }
+    }
+  ],
+  "meta": {
+    "next_cursor": "eyJibG9ja19udW1iZXIiOjI1OTM3ODMyLCJsb2dfaW5kZXgiOjE0NCwiZGlyZWN0aW9uIjoiaW4iLCJmcm9tIjoxNzg4MzI4MjQ3LCJ0byI6MTc4ODkzMzA0N30"
+  }
+}

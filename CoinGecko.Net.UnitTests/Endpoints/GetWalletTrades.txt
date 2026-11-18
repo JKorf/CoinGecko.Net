@@ -1,0 +1,57 @@
+GET
+/api/v3/onchain/networks/eth/wallets/0x7942262a7a5637e6eb0eec9b91b55ec232141f87/trades
+true
+UriParams: {"token":"sample"}
+{
+  "data": [
+    {
+      "id": "eth_26014653_0x62cea982714040d1e3ccbbb7b34f2038b21ad8f0807f38ab5b649937328f2e21_70_1789858264",
+      "type": "trade",
+      "attributes": {
+        "pool_address": "0x86ce2637f272a2972b0652492c4830458d008d29",
+        "pool_dex": "uniswap_v2",
+        "block_number": 26014653,
+        "block_timestamp": "2026-09-19T22:50:59Z",
+        "tx_hash": "0x62cea982714040d1e3ccbbb7b34f2038b21ad8f0807f38ab5b649937328f2e21",
+        "tx_from_address": "0x7942262a7a5637e6eb0eec9b91b55ec232141f87",
+        "kind": "sell",
+        "from_token_address": "0x12419a0427c2a27a61c1cb4a49f5fad24fd4e671",
+        "to_token_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "from_token_amount": "103506.532814702",
+        "to_token_amount": "0.00501453238225022",
+        "price_from_in_usd": "0.000127363990398952",
+        "price_to_in_usd": "2628.96",
+        "price_from_in_currency_token": "0.0000000484465303385948",
+        "price_to_in_currency_token": "1.0",
+        "volume_in_usd": "13.1830050516405",
+        "is_anomalous": false
+      }
+    },
+    {
+      "id": "eth_26010581_0x7ee572c77ff5ff2fa994eb75ae2a02220313eae9cd68e057bf505a83330d63a9_146_1789809092",
+      "type": "trade",
+      "attributes": {
+        "pool_address": "0x40efafe9250b43b7c1be0ec1a75e4e7526559507",
+        "pool_dex": "uniswap_v2",
+        "block_number": 26010581,
+        "block_timestamp": "2026-09-19T09:11:23Z",
+        "tx_hash": "0x7ee572c77ff5ff2fa994eb75ae2a02220313eae9cd68e057bf505a83330d63a9",
+        "tx_from_address": "0x7942262a7a5637e6eb0eec9b91b55ec232141f87",
+        "kind": "buy",
+        "from_token_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "to_token_address": "0x57737ded3870e43fed7d80d31e0ced3d5fb0cccc",
+        "from_token_amount": "0.198",
+        "to_token_amount": "2119603.73334363",
+        "price_from_in_usd": "2652.59",
+        "price_to_in_usd": "0.00024778821236151",
+        "price_from_in_currency_token": "1.0",
+        "price_to_in_currency_token": "0.0000000934136871365381",
+        "volume_in_usd": "525.21282",
+        "is_anomalous": false
+      }
+    }
+  ],
+  "meta": {
+    "next_cursor": null
+  }
+}

@@ -1,0 +1,20 @@
+GET
+/api/v3/coins/bitcoin/circulating_supply_chart/range
+true
+UriParams: {"from":"1735689600","to":"1735689600"}
+{
+  "circulating_supply": [
+    [
+      1735689600000,
+      "19803921.0"
+    ],
+    [
+      1735776000000,
+      "19804340.0"
+    ],
+    [
+      1735862400000,
+      "19804871.0"
+    ]
+  ]
+}

@@ -1,0 +1,47 @@
+GET
+/api/v3/onchain/networks/solana/tokens/Dfh5DzRgSvvCFDoYc2ciTkMrbDfRKybA4SoFbPmApump/top_holders
+true
+UriParams: {"holders":"10"}
+{
+  "data": {
+    "id": "solana_Dfh5DzRgSvvCFDoYc2ciTkMrbDfRKybA4SoFbPmApump",
+    "type": "top_holder",
+    "attributes": {
+      "last_updated_at": "2026-05-28T03:21:51.545Z",
+      "holders": [
+        {
+          "rank": 1,
+          "address": "u6PJ8DtQuPFnfmwHbGFULQ4u4EgjDiyYKjVEsynXq2w",
+          "label": "Wallet 1",
+          "amount": "310021323.445634",
+          "percentage": "31.0041",
+          "value": "6157733.22",
+          "average_buy_price_usd": null,
+          "total_buy_count": null,
+          "total_sell_count": null,
+          "unrealized_pnl_usd": null,
+          "unrealized_pnl_percentage": null,
+          "realized_pnl_usd": null,
+          "realized_pnl_percentage": null,
+          "explorer_url": "https://solscan.io/account/u6PJ8DtQuPFnfmwHbGFULQ4u4EgjDiyYKjVEsynXq2w"
+        },
+        {
+          "rank": 2,
+          "address": "28RWPC6XPxSxUVjd27KiNRtcHVxKtd6cjms7eBcxiqdV",
+          "label": null,
+          "amount": "87536939.662678",
+          "percentage": "8.7543",
+          "value": "1738684.02",
+          "average_buy_price_usd": null,
+          "total_buy_count": null,
+          "total_sell_count": null,
+          "unrealized_pnl_usd": null,
+          "unrealized_pnl_percentage": null,
+          "realized_pnl_usd": null,
+          "realized_pnl_percentage": null,
+          "explorer_url": "https://solscan.io/account/28RWPC6XPxSxUVjd27KiNRtcHVxKtd6cjms7eBcxiqdV"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,66 @@
+GET
+/api/v3/onchain/wallets/0x4b3f1048c55faa0c0873e249e541139360501f2a/pnl
+true
+UriParams: {"networks":"eth%2Cbase","sort":"realized_pnl_usd_desc"}
+{
+  "data": {
+    "id": "0x4b3f1048c55faa0c0873e249e541139360501f2a",
+    "type": "wallet_pnl",
+    "attributes": {
+      "wallet_address": "0x4b3f1048c55faa0c0873e249e541139360501f2a",
+      "total_realized_pnl_usd": "17831328.189418429",
+      "total_unrealized_pnl_usd": "-5265158.4349284421",
+      "total_tokens": 47,
+      "networks": [
+        {
+          "network": "eth",
+          "realized_pnl_usd": "13365120.67931429",
+          "unrealized_pnl_usd": "-1425379.6227395136",
+          "tokens": 35
+        },
+        {
+          "network": "base",
+          "realized_pnl_usd": "4466207.510104139",
+          "unrealized_pnl_usd": "-3839778.8121889285",
+          "tokens": 12
+        }
+      ],
+      "token_stats": [
+        {
+          "network": "eth",
+          "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+          "name": "Wrapped liquid staked Ether 2.0",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "realized_pnl_usd": "4301337.150173959",
+          "unrealized_pnl_usd": null,
+          "average_buy_price_usd": "3948.371209968930021553881069349236062352",
+          "average_sell_price_usd": "3711.766598724373102968109799056730691612",
+          "total_buy_count": 13,
+          "total_sell_count": 15,
+          "total_buy_token_amount": "1999.0764297846674",
+          "total_sell_token_amount": "3285.344767166688",
+          "total_buy_usd": "7893095.821889256",
+          "total_sell_usd": "12194432.972063215"
+        },
+        {
+          "network": "base",
+          "address": "0xb095274743941e953c746f9c228da9c18bb6ec29",
+          "name": "LAPTOP",
+          "symbol": "LAPTOP",
+          "decimals": 18,
+          "realized_pnl_usd": "2148309.480276389",
+          "unrealized_pnl_usd": null,
+          "average_buy_price_usd": "0.0",
+          "average_sell_price_usd": "3.621834900281358161020306665",
+          "total_buy_count": 0,
+          "total_sell_count": 416,
+          "total_buy_token_amount": "0.0",
+          "total_sell_token_amount": "593155.0",
+          "total_buy_usd": "0.0",
+          "total_sell_usd": "2148309.480276389"
+        }
+      ]
+    }
+  }
+}

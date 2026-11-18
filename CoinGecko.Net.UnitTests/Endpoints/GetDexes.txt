@@ -1,0 +1,22 @@
+GET
+/api/v3/onchain/networks/eth/dexes
+true
+UriParams: {"page":"1"}
+{
+  "data": [
+    {
+      "id": "uniswap_v2",
+      "type": "dex",
+      "attributes": {
+        "name": "Uniswap V2"
+      }
+    },
+    {
+      "id": "sushiswap",
+      "type": "dex",
+      "attributes": {
+        "name": "SushiSwap"
+      }
+    }
+  ]
+}

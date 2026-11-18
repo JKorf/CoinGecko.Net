@@ -1,0 +1,32 @@
+GET
+/api/v3/derivatives/exchanges
+true
+UriParams: {"page":"2","per_page":"5"}
+[
+  {
+    "name": "Binance (Futures)",
+    "id": "binance_futures",
+    "open_interest_btc": 332790.5,
+    "trade_volume_24h_btc": "588597.24",
+    "number_of_perpetual_pairs": 592,
+    "number_of_futures_pairs": 72,
+    "image": "https://coin-images.coingecko.com/markets/images/466/small/binance_futures.jpg?1706864452",
+    "year_established": 2019,
+    "country": "Cayman Islands",
+    "description": "",
+    "url": "https://www.binance.com/"
+  },
+  {
+    "name": "Bybit (Futures)",
+    "id": "bybit",
+    "open_interest_btc": 148377.99,
+    "trade_volume_24h_btc": "162793.82",
+    "number_of_perpetual_pairs": 673,
+    "number_of_futures_pairs": 68,
+    "image": "https://coin-images.coingecko.com/markets/images/460/small/photo_2021-08-12_18-27-50.jpg?1706864447",
+    "year_established": 2018,
+    "country": "Seychelles",
+    "description": "Bybit is the world's second-largest cryptocurrency exchange by trading volume, serving a global community of over 60 million users.",
+    "url": "https://www.bybit.com"
+  }
+]

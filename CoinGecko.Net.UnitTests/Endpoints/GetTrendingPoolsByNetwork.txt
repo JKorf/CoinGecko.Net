@@ -1,0 +1,136 @@
+GET
+/api/v3/onchain/networks/eth/trending_pools
+true
+UriParams: {"include":"base_token"}
+{
+  "data": [
+    {
+      "id": "eth_0x76a411f14a704099ba476ce8dffc288a53295218",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.000157869028295179",
+        "base_token_price_native_currency": "0.000000076174152494787",
+        "quote_token_price_usd": "2066.59098774463",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.00000007617415249",
+        "quote_token_price_base_token": "13127812.6142386",
+        "address": "0x76a411f14a704099ba476ce8dffc288a53295218",
+        "name": "ASTEROID / WETH",
+        "pool_created_at": "2024-09-10T10:18:23Z",
+        "fdv_usd": "66412125.220192",
+        "market_cap_usd": "66413921.515527",
+        "price_change_percentage": {
+          "m5": "-0.355",
+          "m15": "-0.228",
+          "m30": "0.284",
+          "h1": "-4.605",
+          "h6": "-13.908",
+          "h24": "-20.721"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 7,
+            "sells": 4,
+            "buyers": 7,
+            "sellers": 4
+          },
+          "m15": {
+            "buys": 24,
+            "sells": 11,
+            "buyers": 24,
+            "sellers": 11
+          },
+          "m30": {
+            "buys": 62,
+            "sells": 40,
+            "buyers": 54,
+            "sellers": 34
+          },
+          "h1": {
+            "buys": 218,
+            "sells": 174,
+            "buyers": 153,
+            "sellers": 116
+          },
+          "h6": {
+            "buys": 784,
+            "sells": 520,
+            "buyers": 422,
+            "sellers": 344
+          },
+          "h24": {
+            "buys": 3175,
+            "sells": 2431,
+            "buyers": 1290,
+            "sellers": 1169
+          }
+        },
+        "volume_usd": {
+          "m5": "5610.858166059",
+          "m15": "10926.8813342462",
+          "m30": "92508.9175387338",
+          "h1": "471159.035768368",
+          "h6": "1738275.01961596",
+          "h24": "7900631.31777918"
+        },
+        "reserve_in_usd": "2471711.2255",
+        "sentiment_vote_positive_percentage": 0,
+        "sentiment_vote_negative_percentage": 0,
+        "community_sus_report": 4
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "eth_0xf280b16ef293d8e534e370794ef26bf312694126",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "eth_0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "uniswap_v2",
+            "type": "dex"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "eth_0xf280b16ef293d8e534e370794ef26bf312694126",
+      "type": "token",
+      "attributes": {
+        "address": "0xf280b16ef293d8e534e370794ef26bf312694126",
+        "name": "Asteroid Shiba",
+        "symbol": "ASTEROID",
+        "decimals": 9,
+        "image_url": "https://coin-images.coingecko.com/coins/images/50333/large/IMG_0728.jpeg?1727384521",
+        "coingecko_coin_id": "asteroid-shiba"
+      }
+    },
+    {
+      "id": "eth_0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "type": "token",
+      "attributes": {
+        "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18,
+        "image_url": "https://coin-images.coingecko.com/coins/images/2518/large/weth.png?1696503332",
+        "coingecko_coin_id": "weth"
+      }
+    },
+    {
+      "id": "uniswap_v2",
+      "type": "dex",
+      "attributes": {
+        "name": "Uniswap V2"
+      }
+    }
+  ]
+}

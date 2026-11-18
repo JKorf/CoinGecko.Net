@@ -1,0 +1,100 @@
+GET
+/api/v3/nfts/markets
+true
+UriParams: {"asset_platform_id":"sample"}
+[
+  {
+    "id": "cryptopunks",
+    "contract_address": "0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB",
+    "asset_platform_id": "ethereum",
+    "name": "CryptoPunks",
+    "symbol": "PUNK",
+    "image": {
+      "small": "https://coin-images.coingecko.com/nft_contracts/images/270/small/cryptopunks.png?1707287245",
+      "small_2x": "https://coin-images.coingecko.com/nft_contracts/images/270/small_2x/cryptopunks.png?1707287245"
+    },
+    "description": "<h3 dir=\"ltr\">What Is the CryptoPunks NFT Collection?</h3>\r\n\r\n<p dir=\"ltr\">CryptoPunks is an Ethereum-based NFT collection of 10,000 unique art characters.",
+    "native_currency": "ethereum",
+    "native_currency_symbol": "ETH",
+    "floor_price": {
+      "native_currency": 32.99,
+      "usd": 68598
+    },
+    "market_cap": {
+      "native_currency": 329702,
+      "usd": 685567614
+    },
+    "volume_24h": {
+      "native_currency": 0,
+      "usd": 0
+    },
+    "floor_price_in_usd_24h_percentage_change": -2.61445,
+    "floor_price_24h_percentage_change": {
+      "usd": -2.614447557256636,
+      "native_currency": -0.7222389407162203
+    },
+    "market_cap_24h_percentage_change": {
+      "usd": -2.6144475572566117,
+      "native_currency": -0.7222389407162202
+    },
+    "volume_24h_percentage_change": {
+      "usd": -100,
+      "native_currency": -100
+    },
+    "number_of_unique_addresses": 100,
+    "number_of_unique_addresses_24h_percentage_change": 0,
+    "volume_in_usd_24h_percentage_change": -100,
+    "total_supply": 9994,
+    "one_day_sales": null,
+    "one_day_sales_24h_percentage_change": 0,
+    "one_day_average_sale_price": null,
+    "one_day_average_sale_price_24h_percentage_change": 0
+  },
+  {
+    "id": "bored-ape-yacht-club",
+    "contract_address": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+    "asset_platform_id": "ethereum",
+    "name": "Bored Ape Yacht Club",
+    "symbol": "BAYC",
+    "image": {
+      "small": "https://coin-images.coingecko.com/nft_contracts/images/20/small/bored-ape-yacht-club.png?1707287177",
+      "small_2x": "https://coin-images.coingecko.com/nft_contracts/images/20/small_2x/bored-ape-yacht-club.png?1707287177"
+    },
+    "description": "<h3>What Is the Bored Ape Yacht Club NFT Collection?</h3>\r\n\r\n<p>The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs, which showcase a series of apes with different characteristics and expressions.",
+    "native_currency": "ethereum",
+    "native_currency_symbol": "ETH",
+    "floor_price": {
+      "native_currency": 8.69,
+      "usd": 18036.28
+    },
+    "market_cap": {
+      "native_currency": 86883,
+      "usd": 180326699
+    },
+    "volume_24h": {
+      "native_currency": 166.12,
+      "usd": 344783
+    },
+    "floor_price_in_usd_24h_percentage_change": -4.33779,
+    "floor_price_24h_percentage_change": {
+      "usd": -4.33779438865101,
+      "native_currency": -1.7857142857131758
+    },
+    "market_cap_24h_percentage_change": {
+      "usd": -4.337794388651022,
+      "native_currency": -1.7857142857131754
+    },
+    "volume_24h_percentage_change": {
+      "usd": 10.090203438665934,
+      "native_currency": 27.149001523165122
+    },
+    "number_of_unique_addresses": 5653,
+    "number_of_unique_addresses_24h_percentage_change": -0.05304,
+    "volume_in_usd_24h_percentage_change": 10.0902,
+    "total_supply": 9998,
+    "one_day_sales": 18,
+    "one_day_sales_24h_percentage_change": 50,
+    "one_day_average_sale_price": 9.228827722222222,
+    "one_day_average_sale_price_24h_percentage_change": -15.23399898455658
+  }
+]

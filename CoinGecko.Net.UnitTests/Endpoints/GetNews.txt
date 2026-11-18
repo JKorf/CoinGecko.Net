@@ -1,0 +1,32 @@
+GET
+/api/v3/news
+true
+UriParams: {"page":"1"}
+[
+  {
+    "title": "European Union debates limits on Big Tech access to cloud tenders",
+    "url": "https://cryptobriefing.com/eu-big-tech-cloud-tender-limits/",
+    "image": "https://assets.coingecko.com/articles/images/107301317/large/open-uri20260527-7-l3llje.?1779877857",
+    "author": "Editorial Team",
+    "posted_at": "2026-05-27T10:27:57Z",
+    "type": "news",
+    "source_name": "Crypto Briefing",
+    "related_coin_ids": [
+      "could",
+      "union-2"
+    ]
+  },
+  {
+    "title": "Implied Volatility and IV Crush in Bitcoin Options Explained",
+    "url": "https://www.coingecko.com/learn/implied-volatility-iv-crush-bitcoin-options",
+    "image": "https://coin-images.coingecko.com/posts/images/102135679/large/Implied_Volatility_Options.png?1779696471",
+    "author": "Hans Be",
+    "posted_at": "2026-05-25T13:08:37Z",
+    "type": "guide",
+    "source_name": "CoinGecko",
+    "related_coin_ids": [
+      "bitcoin",
+      "ethereum"
+    ]
+  }
+]

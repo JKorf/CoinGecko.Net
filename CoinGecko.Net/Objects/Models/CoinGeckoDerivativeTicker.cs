@@ -105,5 +105,11 @@ namespace CoinGecko.Net.Objects.Models
         /// </summary>
         [JsonPropertyName("expired_at")]
         public DateTime? ExpireTime { get; set; }
+
+        /// <summary>
+        /// ["<c>rwa_id</c>"] Derivative reference asset RWA ID
+        /// </summary>
+        [JsonPropertyName("rwa_id")]
+        public string? RwaId { get; set; }
     }
 }

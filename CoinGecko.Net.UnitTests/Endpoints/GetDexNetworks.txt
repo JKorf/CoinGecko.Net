@@ -1,0 +1,24 @@
+GET
+/api/v3/onchain/networks
+false
+UriParams: {"page":"2"}
+{
+  "data": [
+    {
+      "id": "eth",
+      "type": "network",
+      "attributes": {
+        "name": "Ethereum",
+        "coingecko_asset_platform_id": "ethereum"
+      }
+    },
+    {
+      "id": "bsc",
+      "type": "network",
+      "attributes": {
+        "name": "BNB Chain",
+        "coingecko_asset_platform_id": "binance-smart-chain"
+      }
+    }
+  ]
+}

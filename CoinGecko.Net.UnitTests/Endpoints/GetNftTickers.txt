@@ -1,0 +1,29 @@
+GET
+/api/v3/nfts/pudgy-penguins/tickers
+true
+{
+  "tickers": [
+    {
+      "floor_price_in_native_currency": 5.57,
+      "h24_volume_in_native_currency": 4.56,
+      "native_currency": "ethereum",
+      "native_currency_symbol": "ETH",
+      "updated_at": "2026-05-26T17:00:49.982Z",
+      "nft_marketplace_id": "opensea",
+      "name": "OpenSea",
+      "image": "https://coin-images.coingecko.com/nft_marketplaces/images/1/small/Opensea.png?1686193426",
+      "nft_collection_url": "https://opensea.io/collection/pudgypenguins"
+    },
+    {
+      "floor_price_in_native_currency": 4.67,
+      "h24_volume_in_native_currency": 28.12,
+      "native_currency": "ethereum",
+      "native_currency_symbol": "ETH",
+      "updated_at": "2026-05-26T17:00:49.862Z",
+      "nft_marketplace_id": "blur",
+      "name": "Blur",
+      "image": "https://coin-images.coingecko.com/nft_marketplaces/images/20/small/blur_logo.jpg?1690993708",
+      "nft_collection_url": "https://blur.io/collection/pudgypenguins"
+    }
+  ]
+}
