@@ -415,6 +415,31 @@ namespace CoinGecko.Net.Clients
 
         #endregion
 
+        #region Get Real World Assets
+
+        /// <inheritdoc />
+        public async Task<HttpResult<CoinGeckoRwa[]>> GetRwasAsync(RwaAssetType? assetType = null, CancellationToken ct = default)
+        {
+            var parameters = new Parameters(CoinGeckoApi._parameterSerializationSettings);
+            parameters.Add("asset_type", assetType);
+
+            var request = _definitions.GetOrCreate(HttpMethod.Get, GetBaseAddress(), "/api/v3/rwas/list", CoinGeckoApi.RateLimiter.CoinGecko, 1, true);
+            return await SendAsync<CoinGeckoRwa[]>(request, parameters, ct).ConfigureAwait(false);
+        }
+
+        #endregion
+
+        #region Get Real World Asset Issuers
+
+        /// <inheritdoc />
+        public async Task<HttpResult<CoinGeckoListItem[]>> GetRwaIssuersAsync(CancellationToken ct = default)
+        {
+            var request = _definitions.GetOrCreate(HttpMethod.Get, GetBaseAddress(), "/api/v3/rwas/issuers/list", CoinGeckoApi.RateLimiter.CoinGecko, 1, true);
+            return await SendAsync<CoinGeckoListItem[]>(request, null, ct).ConfigureAwait(false);
+        }
+
+        #endregion
+
         #region Get Exchanges
 
         /// <inheritdoc />
@@ -501,6 +526,22 @@ namespace CoinGecko.Net.Clients
             var parameters = new Parameters(CoinGeckoApi._parameterSerializationSettings);
             var request = _definitions.GetOrCreate(HttpMethod.Get, GetBaseAddress(), $"api/v3/derivatives", CoinGeckoApi.RateLimiter.CoinGecko, 1, false);
             return await SendAsync<CoinGeckoDerivative[]>(request, parameters, ct).ConfigureAwait(false);
+        }
+
+        #endregion
+
+        #region Get Derivative Underlying Assets
+
+        /// <inheritdoc />
+        public async Task<HttpResult<CoinGeckoDerivativeUnderlyingAsset[]>> GetDerivativeUnderlyingAssetsAsync(
+            DerivativeUnderlyingType? underlyingType = null,
+            CancellationToken ct = default)
+        {
+            var parameters = new Parameters(CoinGeckoApi._parameterSerializationSettings);
+            parameters.Add("underlying_type", underlyingType);
+
+            var request = _definitions.GetOrCreate(HttpMethod.Get, GetBaseAddress(), "/api/v3/derivatives/underlyings/list", CoinGeckoApi.RateLimiter.CoinGecko, 1, true);
+            return await SendAsync<CoinGeckoDerivativeUnderlyingAsset[]>(request, parameters, ct).ConfigureAwait(false);
         }
 
         #endregion
@@ -635,6 +676,26 @@ namespace CoinGecko.Net.Clients
         {
             var request = _definitions.GetOrCreate(HttpMethod.Get, GetBaseAddress(), $"api/v3/search/trending", CoinGeckoApi.RateLimiter.CoinGecko, 1, false);
             return await SendAsync<CoinGeckoTrendingSearch>(request, null, ct).ConfigureAwait(false);
+        }
+
+        #endregion
+
+        #region Get Treasury Entities
+
+        /// <inheritdoc />
+        public async Task<HttpResult<CoinGeckoTreasuryEntity[]>> GetTreasuryEntitiesAsync(
+            TreasuryEntityType? entityType = null,
+            int? page = null,
+            int? pageSize = null,
+            CancellationToken ct = default)
+        {
+            var parameters = new Parameters(CoinGeckoApi._parameterSerializationSettings);
+            parameters.Add("entity_type", entityType);
+            parameters.Add("per_page", pageSize);
+            parameters.Add("page", page);
+
+            var request = _definitions.GetOrCreate(HttpMethod.Get, GetBaseAddress(), "/api/v3/entities/list", CoinGeckoApi.RateLimiter.CoinGecko, 1, true);
+            return await SendAsync<CoinGeckoTreasuryEntity[]>(request, parameters, ct).ConfigureAwait(false);
         }
 
         #endregion

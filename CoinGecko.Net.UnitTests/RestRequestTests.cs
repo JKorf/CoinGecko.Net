@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CryptoExchange.Net.Authentication;
 using System.Linq;
 using CoinGecko.Net.Clients;
+using CoinGecko.Net.Enums;
 using System;
 
 namespace CoinGecko.Net.UnitTests
@@ -23,6 +24,35 @@ namespace CoinGecko.Net.UnitTests
             });
             var tester = new RestRequestValidator<CoinGeckoRestClient>(client, "Endpoints", "https://pro-api.coingecko.com", IsAuthenticated);
             await tester.ValidateAsync(client => client.Api.GetApiUsageAsync(), "GetApiUsage");
+        }
+
+        [TestCase(true, "https://api.coingecko.com", "x_cg_demo_api_key")]
+        [TestCase(false, "https://pro-api.coingecko.com", "x_cg_pro_api_key")]
+        public async Task ValidateRwaCalls(bool demoKey, string baseAddress, string apiKeyParameter)
+        {
+            var client = new CoinGeckoRestClient(opts =>
+            {
+                opts.AutoTimestamp = false;
+                opts.ApiCredentials = new CoinGeckoCredentials("123", demoKey);
+            });
+            var tester = new RestRequestValidator<CoinGeckoRestClient>(client, "Endpoints", baseAddress, result => result.RequestUrl.Contains(apiKeyParameter));
+            await tester.ValidateAsync(client => client.Api.GetRwasAsync(RwaAssetType.Commodity), "GetRwas");
+            await tester.ValidateAsync(client => client.Api.GetRwaIssuersAsync(), "GetRwaIssuers");
+        }
+
+        [TestCase(true, "https://api.coingecko.com", "x_cg_demo_api_key", TreasuryEntityType.Government, "GetTreasuryEntitiesDemo")]
+        [TestCase(false, "https://pro-api.coingecko.com", "x_cg_pro_api_key", TreasuryEntityType.Company, "GetTreasuryEntitiesPro")]
+        public async Task ValidateDerivativeUnderlyingAssetsAndTreasuryEntities(
+            bool demoKey, string baseAddress, string apiKeyParameter, TreasuryEntityType entityType, string entityFixture)
+        {
+            var client = new CoinGeckoRestClient(opts =>
+            {
+                opts.AutoTimestamp = false;
+                opts.ApiCredentials = new CoinGeckoCredentials("123", demoKey);
+            });
+            var tester = new RestRequestValidator<CoinGeckoRestClient>(client, "Endpoints", baseAddress, result => result.RequestUrl.Contains(apiKeyParameter));
+            await tester.ValidateAsync(client => client.Api.GetDerivativeUnderlyingAssetsAsync(DerivativeUnderlyingType.Rwa), "GetDerivativeUnderlyingAssets");
+            await tester.ValidateAsync(client => client.Api.GetTreasuryEntitiesAsync(entityType, page: 2, pageSize: 10), entityFixture);
         }
 
         [Test]

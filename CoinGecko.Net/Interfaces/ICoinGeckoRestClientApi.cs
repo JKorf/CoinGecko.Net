@@ -121,6 +121,21 @@ namespace CoinGecko.Net.Interfaces
         /// <returns></returns>
         Task<HttpResult<CoinGeckoDerivative[]>> GetDerivativesAsync(CancellationToken ct = default);
         /// <summary>
+        /// Get supported underlying assets for derivatives. Requires a Demo or Pro API key.
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/reference/derivatives-underlyings-list" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/derivatives/underlyings/list
+        /// </para>
+        /// </summary>
+        /// <param name="underlyingType">["<c>underlying_type</c>"] Filter by underlying asset type</param>
+        /// <param name="ct">Cancellation token</param>
+        /// <returns></returns>
+        Task<HttpResult<CoinGeckoDerivativeUnderlyingAsset[]>> GetDerivativeUnderlyingAssetsAsync(
+            DerivativeUnderlyingType? underlyingType = null,
+            CancellationToken ct = default);
+        /// <summary>
         /// List all derivatives exchanges name and identifier
         /// <para>
         /// Docs:<br />
@@ -438,6 +453,31 @@ namespace CoinGecko.Net.Interfaces
         /// <returns></returns>
         Task<HttpResult<string[]>> GetQuoteAssetsAsync(CancellationToken ct = default);
         /// <summary>
+        /// Get supported tokenized real-world assets. Requires a Demo or Pro API key.
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/demo/reference/rwas-list" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/rwas/list
+        /// </para>
+        /// </summary>
+        /// <param name="assetType">["<c>asset_type</c>"] Filter by <c>stock</c>, <c>commodity</c> or <c>etf</c></param>
+        /// <param name="ct">Cancellation token</param>
+        /// <returns></returns>
+        Task<HttpResult<CoinGeckoRwa[]>> GetRwasAsync(RwaAssetType? assetType = null, CancellationToken ct = default);
+        /// <summary>
+        /// Get supported issuers of tokenized real-world assets. Requires a Demo or Pro API key.
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/demo/reference/rwas-issuers-list" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/rwas/issuers/list
+        /// </para>
+        /// </summary>
+        /// <param name="ct">Cancellation token</param>
+        /// <returns></returns>
+        Task<HttpResult<CoinGeckoListItem[]>> GetRwaIssuersAsync(CancellationToken ct = default);
+        /// <summary>
         /// Get tickers for an asset
         /// <para>
         /// Docs:<br />
@@ -592,6 +632,26 @@ namespace CoinGecko.Net.Interfaces
         /// <param name="ct">Cancellation token</param>
         /// <returns></returns>
         Task<HttpResult<CoinGeckoTrendingSearch>> GetTrendingSearchesAsync(CancellationToken ct = default);
+
+        /// <summary>
+        /// Get public companies and governments tracked by CoinGecko. Requires a Demo or Pro API key.
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://docs.coingecko.com/reference/entities-list" /><br />
+        /// Endpoint:<br />
+        /// GET /api/v3/entities/list
+        /// </para>
+        /// </summary>
+        /// <param name="entityType">["<c>entity_type</c>"] Filter by entity type</param>
+        /// <param name="page">["<c>page</c>"] Page number. Defaults to 1</param>
+        /// <param name="pageSize">["<c>per_page</c>"] Results per page, from 1 to 250. Defaults to 100</param>
+        /// <param name="ct">Cancellation token</param>
+        /// <returns></returns>
+        Task<HttpResult<CoinGeckoTreasuryEntity[]>> GetTreasuryEntitiesAsync(
+            TreasuryEntityType? entityType = null,
+            int? page = null,
+            int? pageSize = null,
+            CancellationToken ct = default);
 
         /// <summary>
         /// Get public company holdings for an asset
